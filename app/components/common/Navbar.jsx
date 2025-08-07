@@ -6,6 +6,7 @@ import { FaBars } from 'react-icons/fa';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [serSt,setserSt]=useState(false)
 
   return (
     <nav className="bg-[#001f3f] text-white shadow-lg sticky top-0 z-50 p-2">
@@ -38,13 +39,34 @@ const Navbar = () => {
                 About
                 <span className="absolute left-0 bottom-0 h-0.5 bg-[#FFD700] w-0 group-hover:w-full transition-all duration-300"></span>
               </Link>
-              <Link 
-                className="text-white hover:text-[#FFD700] transition-colors duration-300 font-medium relative group"
+              <li className='relative list-none  '
+              onMouseEnter={()=>setserSt(true)}
+              onMouseLeave={()=>setserSt(false)}
+              >
+                <Link 
+                className="text-white  hover:text-[#FFD700] transition-colors duration-300 font-medium relative group"
                 href="/services"
+                 onMouseEnter={()=>setserSt(true)}
+              onMouseLeave={()=>setserSt(false)}
               >
                 Services
                 <span className="absolute left-0 bottom-0 h-0.5 bg-[#FFD700] w-0 group-hover:w-full transition-all duration-300"></span>
               </Link>
+              {serSt &&
+              
+              <div className='absolute bg-[#001F3F] text-black pr-5 pl-2 pt-10 pb-5 top-5  left-0'
+               onMouseEnter={()=>setserSt(true)}
+              onMouseLeave={()=>setserSt(false)}
+              >
+                <ul className='flex flex-col gap-3'>
+                  <Link href="/IndvidualCustomer"><li className='whitespace-nowrap hover:text-amber-400 transition font-semibold text-sm text-white'>Individual Customers</li></Link>
+                  <Link href="/governorg"><li className='whitespace-nowrap hover:text-amber-400 transition font-semibold text-sm text-white'>Govt Organization</li></Link>
+                  <Link href="/corporate"><li className='whitespace-nowrap hover:text-amber-400 transition font-semibold text-sm text-white'>Corporate Business</li></Link>
+                </ul>
+              </div>
+              }
+              </li>
+
               <Link 
                 className="text-white hover:text-[#FFD700] transition-colors duration-300 font-medium relative group"
                 href="/whyus"
@@ -98,7 +120,7 @@ const Navbar = () => {
             </Link>
             <Link 
               className="px-3 py-2 text-center  rounded-md text-white hover:text-[#FFD700] hover:bg-[#00264d] transition-colors duration-300 font-medium"
-              href="/services"
+              href="/Services"
               onClick={() => setOpen(false)}
             >
               Services
