@@ -1,15 +1,13 @@
 'use client';
-
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [serSt, setserSt] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
@@ -18,7 +16,6 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (open && !e.target.closest('.mobile-menu-container')) {
@@ -30,250 +27,208 @@ const Navbar = () => {
   }, [open]);
 
   return (
-    <nav className={`bg-[#001f3f] text-white sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'shadow-xl py-0' : 'shadow-lg py-2'}`}>
+    <nav className={`bg-[#0D1B2A] text-white sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'shadow-xl py-0' : 'shadow-lg py-2'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo with brand name - Left side */}
-          <Link href="/" className="flex-shrink-0 flex items-center space-x-2 group">
-            <img
-              className="h-8 w-8 transition-transform duration-300 group-hover:scale-110"
-              src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bd/Reddit_Logo_Icon.svg/220px-Reddit_Logo_Icon.svg.png"
-              alt="Law Firm Logo"
-            />
-            <span className="text-xl font-semibold tracking-tight group-hover:text-[#FFD700] transition-colors duration-300">
-              Lawyer
+        <div className="flex justify-between items-center h-20">
+          {/* Logo */}
+          <Link href="/" className="flex-shrink-0 flex items-center space-x-3 group">
+            <div className="h-10 w-10 bg-[#D4AF37] rounded-full flex items-center justify-center text-[#0D1B2A] font-bold text-lg transition-transform duration-300 group-hover:rotate-12">
+              AK
+            </div>
+            <span className="text-2xl font-bold tracking-tight group-hover:text-[#D4AF37] transition-colors duration-300">
+              Al-Khaldi
             </span>
           </Link>
 
-          {/* Desktop Navigation - Centered */}
+          {/* Desktop Navigation */}
           <div className="hidden md:flex flex-1 justify-center">
-            <div className="flex space-x-8 lg:space-x">
+            <div className="flex space-x-5">
               <Link 
-                className="px-3 py-2 text-white hover:text-[#FFD700] transition-all duration-300 font-medium relative group"
+                className="px-4 py-2 text-white hover:text-[#D4AF37] transition-all duration-300 font-semibold text-lg relative group"
                 href="/"
               >
                 Home
-                <span className="absolute left-1/2 bottom-0 h-0.5 bg-[#FFD700] w-0 group-hover:w-full group-hover:left-0 transition-all duration-300"></span>
+                <span className="absolute left-0 bottom-0 h-1 bg-[#D4AF37] w-0 group-hover:w-full transition-all duration-300"></span>
               </Link>
               <Link 
-                className="px-3 py-2 text-white hover:text-[#FFD700] transition-all duration-300 font-medium relative group"
+                className="px-4 py-2 text-white hover:text-[#D4AF37] transition-all duration-300 font-semibold text-lg relative group"
                 href="/about"
               >
                 About
-                <span className="absolute left-1/2 bottom-0 h-0.5 bg-[#FFD700] w-0 group-hover:w-full group-hover:left-0 transition-all duration-300"></span>
+                <span className="absolute left-0 bottom-0 h-1 bg-[#D4AF37] w-0 group-hover:w-full transition-all duration-300"></span>
               </Link>
               
               {/* Services Dropdown */}
               <div 
-                className="relative list-none"
+                className="relative"
                 onMouseEnter={() => setserSt(true)}
                 onMouseLeave={() => setserSt(false)}
               >
-                <Link 
-                  className="px-3 py-2 text-white hover:text-[#FFD700] transition-all duration-300 font-medium relative group flex items-center"
-                  href="/services"
+                <button 
+                  className="px-4 py-2 text-white hover:text-[#D4AF37] transition-all duration-300 font-semibold text-lg relative group flex items-center"
                 >
                   Services
-                  <span className="absolute left-1/2 bottom-0 h-0.5 bg-[#FFD700] w-0 group-hover:w-full group-hover:left-0 transition-all duration-300"></span>
-                  <svg 
-                    className={`ml-1 w-4 h-4 transition-transform duration-200 ${serSt ? 'transform rotate-180' : ''}`} 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24" 
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </Link>
+                  <span className="absolute left-0 bottom-0 h-1 bg-[#D4AF37] w-0 group-hover:w-full transition-all duration-300"></span>
+                  <FaChevronDown className={`ml-2 text-sm transition-transform ${serSt ? 'transform rotate-180' : ''}`} />
+                </button>
                 
                 {serSt && (
                   <div 
-                    className="absolute bg-[#001F3F] pt-2 pb-3 pl-4 pr-8 top-full left-0 rounded-b-lg shadow-xl border-t-2 border-[#FFD700]/30 animate-fadeIn"
+                    className="absolute bg-[#0D1B2A] pt-2 pb-4 pl-4 pr-8 top-full left-0 rounded-b-lg shadow-xl border-t-2 border-[#D4AF37] animate-fadeIn"
                     onMouseEnter={() => setserSt(true)}
                     onMouseLeave={() => setserSt(false)}
                   >
                     <ul className='flex flex-col gap-3'>
                       <li>
                         <Link 
-                          href="/IndvidualCustomer" 
-                          className="whitespace-nowrap hover:text-[#FFD700] transition-all duration-200 font-medium text-white flex items-center"
+                          href="/individual" 
+                          className="whitespace-nowrap hover:text-[#D4AF37] transition-all duration-200 font-semibold text-white flex items-center"
                         >
-                          <span className="w-1.5 h-1.5 bg-[#FFD700] rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
-                          Individual Customers
+                          <span className="w-2 h-2 bg-[#D4AF37] rounded-full mr-3"></span>
+                          Individual Clients
                         </Link>
                       </li>
                       <li>
                         <Link 
-                          href="/governorg" 
-                          className="whitespace-nowrap hover:text-[#FFD700] transition-all duration-200 font-medium text-white flex items-center"
+                          href="/government" 
+                          className="whitespace-nowrap hover:text-[#D4AF37] transition-all duration-200 font-semibold text-white flex items-center"
                         >
-                          <span className="w-1.5 h-1.5 bg-[#FFD700] rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
-                          Govt Organization
+                          <span className="w-2 h-2 bg-[#D4AF37] rounded-full mr-3"></span>
+                          Government
                         </Link>
                       </li>
                       <li>
                         <Link 
                           href="/corporate" 
-                          className="whitespace-nowrap hover:text-[#FFD700] transition-all duration-200 font-medium text-white flex items-center"
+                          className="whitespace-nowrap hover:text-[#D4AF37] transition-all duration-200 font-semibold text-white flex items-center"
                         >
-                          <span className="w-1.5 h-1.5 bg-[#FFD700] rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
-                          Corporate Business
+                          <span className="w-2 h-2 bg-[#D4AF37] rounded-full mr-3"></span>
+                          Corporate
                         </Link>
                       </li>
                     </ul>
                   </div>
                 )}
               </div>
-                  <Link 
-                className="px-3 py-2 text-white hover:text-[#FFD700] transition-all duration-300 font-medium relative group"
+
+              <Link 
+                className="px-4 py-2 text-white hover:text-[#D4AF37] transition-all duration-300 font-semibold text-lg relative group"
                 href="/blog"
               >
                 Blog
-                <span className="absolute left-1/2 bottom-0 h-0.5 bg-[#FFD700] w-0 group-hover:w-full group-hover:left-0 transition-all duration-300"></span>
+                <span className="absolute left-0 bottom-0 h-1 bg-[#D4AF37] w-0 group-hover:w-full transition-all duration-300"></span>
               </Link>
               <Link 
-                className="px-3 py-2 text-white hover:text-[#FFD700] transition-all duration-300 font-medium relative group"
+                className="px-4 py-2 text-white hover:text-[#D4AF37] transition-all duration-300 font-semibold text-lg relative group"
                 href="/whyus"
               >
                 Why Us
-                <span className="absolute left-1/2 bottom-0 h-0.5 bg-[#FFD700] w-0 group-hover:w-full group-hover:left-0 transition-all duration-300"></span>
+                <span className="absolute left-0 bottom-0 h-1 bg-[#D4AF37] w-0 group-hover:w-full transition-all duration-300"></span>
               </Link>
-            
             </div>
           </div>
 
-          {/* Contact Button - Right side */}
-         <div className="hidden md:flex items-center">
-  <Link
-    href="/contact"
-    className="relative overflow-hidden group rounded-lg px-6 py-2.5 border-2 border-[#FFD700] text-white font-medium transition-all duration-500 ease-out hover:duration-300"
-  >
-    {/* Shine effect */}
-    <span className="absolute inset-0 bg-[#FFD700] opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
-    
-    {/* Animated border effect */}
-    <span className="absolute inset-0 border-t-2 border-b-2 border-transparent group-hover:border-[#FFD700] transition-all duration-500 ease-out hover:duration-300">
-      <span className="absolute top-0 left-0 w-0 h-0.5 bg-[#FFD700] group-hover:w-full transition-all duration-500 ease-out hover:duration-300"></span>
-      <span className="absolute bottom-0 right-0 w-0 h-0.5 bg-[#FFD700] group-hover:w-full transition-all duration-500 ease-out hover:duration-300"></span>
-    </span>
-    
-    {/* Text with gold shine on hover */}
-    <span className="relative z-10 flex items-center justify-center gap-1">
-      <span className="group-hover:text-[#FFD700] transition-colors duration-300">Contact</span>
-      <svg 
-        className="w-4 h-4 -mr-1 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" 
-        fill="none" 
-        stroke="currentColor" 
-        viewBox="0 0 24 24" 
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-      </svg>
-    </span>
-    
-    {/* Gold fill effect on hover */}
-    <span className="absolute inset-0 w-0 bg-[#FFD700] group-hover:w-full transition-all duration-300 ease-in-out -z-10"></span>
-  </Link>
-</div>
+          {/* Contact Button */}
+          <div className="hidden md:flex items-center">
+          <Link href="/contact">
+                           <button className="px-10 py-3 cursor-pointer text-white bg-[#D4AF37]  font-semibold rounded-sm hover:bg-amber-500 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                             Contact Us
+                           </button>
+                         </Link>
+          </div>
+
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setOpen(!open)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-[#FFD700] focus:outline-none transition-all duration-200"
+              className="inline-flex items-center justify-center p-3 rounded-md text-white hover:text-[#D4AF37] focus:outline-none transition-all duration-200"
               aria-label="Main menu"
             >
               {open ? (
-                <FaTimes className="h-6 w-6" />
+                <FaTimes className="h-7 w-7" />
               ) : (
-                <FaBars className="h-6 w-6" />
+                <FaBars className="h-7 w-7" />
               )}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Dropdown Menu */}
-      <div className={`md:hidden mobile-menu-container bg-[#001a35] shadow-xl transition-all duration-300 ease-in-out overflow-hidden ${open ? 'max-h-96' : 'max-h-0'}`}>
-        <div className="px-4 pt-2 pb-4 space-y-2 flex flex-col">
+      {/* Mobile Menu */}
+      <div className={`md:hidden mobile-menu-container bg-[#0D1B2A] shadow-xl transition-all duration-300 ease-in-out overflow-hidden ${open ? 'max-h-screen' : 'max-h-0'}`}>
+        <div className="px-4 pt-4 pb-6 space-y-3">
           <Link 
-            className="px-4 py-3 text-center rounded-lg text-white hover:text-[#FFD700] hover:bg-[#00264d] transition-all duration-200 font-medium border-b border-[#003366]"
+            className="block px-4 py-4 text-xl font-bold text-white hover:text-[#D4AF37] hover:bg-[#1B263B] rounded-lg transition-all duration-200"
             href="/"
             onClick={() => setOpen(false)}
           >
             Home
           </Link>
           <Link 
-            className="px-4 py-3 text-center rounded-lg text-white hover:text-[#FFD700] hover:bg-[#00264d] transition-all duration-200 font-medium border-b border-[#003366]"
+            className="block px-4 py-4 text-xl font-bold text-white hover:text-[#D4AF37] hover:bg-[#1B263B] rounded-lg transition-all duration-200"
             href="/about"
             onClick={() => setOpen(false)}
           >
             About
           </Link>
           
-          {/* Mobile Services Dropdown */}
-          <div className="border-b border-[#003366]">
+          <div>
             <button 
-              className="w-full px-4 py-3 text-center rounded-lg text-white hover:text-[#FFD700] hover:bg-[#00264d] transition-all duration-200 font-medium flex items-center justify-center"
+              className="w-full flex justify-between items-center px-4 py-4 text-xl font-bold text-white hover:text-[#D4AF37] hover:bg-[#1B263B] rounded-lg transition-all duration-200"
               onClick={() => setserSt(!serSt)}
             >
               Services
-              <svg 
-                className={`ml-2 w-4 h-4 transition-transform duration-200 ${serSt ? 'transform rotate-180' : ''}`} 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24" 
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
+              <FaChevronDown className={`transition-transform ${serSt ? 'transform rotate-180' : ''}`} />
             </button>
             
             {serSt && (
-              <div className="pl-6 pr-4 py-2 space-y-2 bg-[#001f3f] rounded-lg m-2">
+              <div className="pl-6 pr-4 py-2 space-y-3 bg-[#1B263B] rounded-lg mt-1">
                 <Link 
-                  href="/IndvidualCustomer"
-                  className="block px-3 py-2 rounded-md text-white hover:text-[#FFD700] hover:bg-[#00264d] transition-all duration-200 text-sm font-medium"
+                  href="/individual"
+                  className="block px-4 py-3 text-lg font-bold text-white hover:text-[#D4AF37] rounded-lg transition-all duration-200"
                   onClick={() => setOpen(false)}
                 >
-                  Individual Customers
+                  Individual Clients
                 </Link>
                 <Link 
-                  href="/governorg"
-                  className="block px-3 py-2 rounded-md text-white hover:text-[#FFD700] hover:bg-[#00264d] transition-all duration-200 text-sm font-medium"
+                  href="/government"
+                  className="block px-4 py-3 text-lg font-bold text-white hover:text-[#D4AF37] rounded-lg transition-all duration-200"
                   onClick={() => setOpen(false)}
                 >
-                  Govt Organization
+                  Government
                 </Link>
                 <Link 
                   href="/corporate"
-                  className="block px-3 py-2 rounded-md text-white hover:text-[#FFD700] hover:bg-[#00264d] transition-all duration-200 text-sm font-medium"
+                  className="block px-4 py-3 text-lg font-bold text-white hover:text-[#D4AF37] rounded-lg transition-all duration-200"
                   onClick={() => setOpen(false)}
                 >
-                  Corporate Business
+                  Corporate
                 </Link>
               </div>
             )}
           </div>
-              <Link 
-                className="px-3 py-2 text-white text-center hover:text-[#FFD700] transition-all duration-300 font-medium relative group"
-                href="/blog"
-              >
-                Blog
-                <span className="absolute left-1/2 bottom-0 h-0.5 bg-[#FFD700] w-0 group-hover:w-full group-hover:left-0 transition-all duration-300"></span>
-              </Link>
+
           <Link 
-            className="px-4 py-3 text-center rounded-lg text-white hover:text-[#FFD700] hover:bg-[#00264d] transition-all duration-200 font-medium border-b border-[#003366]"
+            className="block px-4 py-4 text-xl font-bold text-white hover:text-[#D4AF37] hover:bg-[#1B263B] rounded-lg transition-all duration-200"
+            href="/blog"
+            onClick={() => setOpen(false)}
+          >
+            Blog
+          </Link>
+          <Link 
+            className="block px-4 py-4 text-xl font-bold text-white hover:text-[#D4AF37] hover:bg-[#1B263B] rounded-lg transition-all duration-200"
             href="/whyus"
             onClick={() => setOpen(false)}
           >
             Why Us
           </Link>
+
           <Link
-            className="mt-2 mx-2 px-4 py-3 rounded-lg border-2 border-[#FFD700] text-white hover:bg-[#FFD700] hover:text-[#001f3f] transition-all duration-200 font-medium text-center active:scale-95"
+            className="block mt-4 px-4 py-4 text-xl font-bold text-center bg-[#D4AF37] text-[#0D1B2A] hover:bg-[#E8C252] rounded-lg shadow transition-all duration-200"
             href="/contact"
             onClick={() => setOpen(false)}
           >
-            Contact
+            Contact Us
           </Link>
         </div>
       </div>
