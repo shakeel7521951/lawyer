@@ -2,7 +2,7 @@ import React from 'react';
 
 const MapSection = () => {
   return (
-    <section className="relative py-24 bg-gradient-to-b from-blue-50 to-white">
+    <section className="relative py-16 bg-gradient-to-b from-blue-50 to-white">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-full opacity-10">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-blue-400 filter blur-3xl"></div>
@@ -25,7 +25,7 @@ const MapSection = () => {
         </div>
 
         {/* Map Container */}
-        <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-[#001f3f]">
+        <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-[#001f3f]">
           {/* Map Frame */}
           <div className="h-[500px] w-full relative">
             <iframe
@@ -67,10 +67,10 @@ const MapSection = () => {
                     </div>
                   </div>
                   <a
-                    href="https://goo.gl/maps/example"
+                    href="https://www.google.com/maps/@29.4013395,71.6877518,16z?entry=ttu&g_ep=EgoyMDI1MDgwNS4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center mt-4 px-4 py-2 bg-[#001f3f] hover:bg-blue-800 text-white rounded-lg transition-all duration-300"
+                    className="inline-flex items-center mt-4 px-4 py-2 bg-[#001f3f] hover:bg-yellow-500 text-white rounded-lg transition-all duration-300"
                   >
                     <span>Get Directions</span>
                     <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

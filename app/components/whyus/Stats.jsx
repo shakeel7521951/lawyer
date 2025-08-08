@@ -1,6 +1,21 @@
 import React from 'react';
 
 const Stats = () => {
+  const statsData = [
+    {
+      value: "20+",
+      label: "Years of Experience",
+    },
+    {
+      value: "500+",
+      label: "Satisfied Clients",
+    },
+    {
+      value: "95%",
+      label: "Case Success Rate",
+    }
+  ];
+
   return (
     <section className="relative py-24 bg-gradient-to-r from-[#001f3f] to-blue-900 text-white overflow-hidden">
       {/* Decorative elements */}
@@ -12,32 +27,18 @@ const Stats = () => {
       <div className="relative container mx-auto px-6">
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Stat 1 */}
-          <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-500">
-            <div className="text-center">
-              <h3 className="text-6xl font-bold text-yellow-400 mb-4">20+</h3>
-              <p className="text-xl font-medium text-blue-100">Years of Experience</p>
-              <div className="w-16 h-1 bg-yellow-300 mx-auto mt-6"></div>
+          {statsData.map((stat, index) => (
+            <div 
+              key={index}
+              className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-500"
+            >
+              <div className="text-center">
+                <h3 className="text-6xl font-bold text-yellow-400 mb-4">{stat.value}</h3>
+                <p className="text-xl font-medium text-blue-100">{stat.label}</p>
+                <div className="w-16 h-1 bg-yellow-300 mx-auto mt-6"></div>
+              </div>
             </div>
-          </div>
-          
-          {/* Stat 2 */}
-          <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-500">
-            <div className="text-center">
-              <h3 className="text-6xl font-bold text-yellow-400 mb-4">500+</h3>
-              <p className="text-xl font-medium text-blue-100">Satisfied Clients</p>
-              <div className="w-16 h-1 bg-yellow-300 mx-auto mt-6"></div>
-            </div>
-          </div>
-          
-          {/* Stat 3 */}
-          <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-500">
-            <div className="text-center">
-              <h3 className="text-6xl font-bold text-yellow-400 mb-4">95%</h3>
-              <p className="text-xl font-medium text-blue-100">Case Success Rate</p>
-              <div className="w-16 h-1 bg-yellow-300 mx-auto mt-6"></div>
-            </div>
-          </div>
+          ))}
         </div>
         
         {/* Bottom Decoration */}
