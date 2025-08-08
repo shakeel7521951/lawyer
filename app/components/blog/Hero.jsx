@@ -13,7 +13,7 @@ const Hero = () => {
 
       {/* Text */}
       <div className="relative z-10 text-center text-white px-4">
-        <h1 className="text-4xl md:text-5xl font-bold mb-3">Our Blog</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-3">Our Blogs</h1>
         <p className="text-lg md:text-xl max-w-2xl mx-auto">
           Stay updated with the latest legal news, insights, and expert advice
           from Al Khaldi Law Firm.

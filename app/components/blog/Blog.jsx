@@ -35,7 +35,7 @@ const Blog = () => {
       {/* Header */}
       <div className="text-center mb-10">
         <h1 className="text-4xl font-bold text-gray-800 mb-4">
-          Al Khaldi Law Firm Blog
+          Al Khaldi Law Firm Blogs
         </h1>
         <p className="text-lg text-gray-600">
           Stay updated with our latest legal tips, insights, and news to help you make informed decisions.
@@ -101,7 +101,7 @@ const Blog = () => {
                     <p className="text-sm text-gray-500 mb-4">{post.date}</p>
                     <p className="text-gray-600 mb-4">{post.description}</p>
                     <button
-                      className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
+                      className="bg-blue-600 text-white cursor-pointer px-4 py-2 rounded-md hover:bg-blue-700 transition"
                       onClick={() => moveToDetailPg(post)}
                     >
                       Read More
@@ -121,7 +121,7 @@ const Blog = () => {
               <button
                 onClick={() => goToPage(currentPage - 1)}
                 disabled={currentPage === 1}
-                className="px-3 py-1 bg-gray-300 rounded disabled:opacity-50"
+                className="px-3 py-1 bg-gray-300 cursor-pointer rounded disabled:opacity-50"
               >
                 Previous
               </button>
@@ -131,7 +131,7 @@ const Blog = () => {
                 <button
                   key={index + 1}
                   onClick={() => goToPage(index + 1)}
-                  className={`px-3 py-1 rounded ${
+                  className={`px-3 py-1 cursor-pointer rounded ${
                     currentPage === index + 1
                       ? "bg-blue-600 text-white"
                       : "bg-gray-200 text-gray-800"
@@ -145,7 +145,7 @@ const Blog = () => {
               <button
                 onClick={() => goToPage(currentPage + 1)}
                 disabled={currentPage === totalPages}
-                className="px-3 py-1 bg-gray-300 rounded disabled:opacity-50"
+                className="px-3 py-1 bg-gray-300 cursor-pointer rounded disabled:opacity-50"
               >
                 Next
               </button>
