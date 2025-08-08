@@ -11,8 +11,8 @@ const Hero = () => {
     >
       <div className="container mx-auto px-6 relative z-10 text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            About <span className="text-blue-300">Al Khaldi Services</span>
+          <h1 className="text-4xl md:text-5xl  lg:text-6xl font-bold mb-6 leading-tight">
+            About <span className="text-amber-300">Al Khaldi Services</span>
           </h1>
           <p className="text-xl text-blue-100 mb-8">
             Trusted legal advisors with over 20 years of experience serving clients with excellence and integrity.

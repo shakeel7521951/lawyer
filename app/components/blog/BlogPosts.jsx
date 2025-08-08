@@ -1,0 +1,126 @@
+import React from 'react'
+
+const BlogPosts = [
+    {
+      id: 1,
+      title: "Understanding Your Legal Rights in Qatar",
+      date: "August 5, 2025",
+      detail:"Living, working, or doing business in Qatar requires a clear understanding of your legal rights and responsibilities. Qatar’s legal system is a blend of civil law principles, Sharia law, and specific regulations tailored to the country’s social and economic framework. Whether you are a Qatari citizen, a resident expatriate, or a foreign investor, knowing your rights helps you navigate daily life and avoid legal disputes.For employees, the Qatar Labour Law outlines clear provisions regarding working hours, wages, leave entitlements, and contract termination. As a consumer, you are protected under laws that safeguard against unfair practices, defective products, and false advertising. Investors and entrepreneurs benefit from regulations that encourage fair trade, protect intellectual property, and promote economic growth.If you are involved in any legal matter—be it civil, commercial, or criminal—it is your right to seek legal counsel and be represented in court. Foreign residents should be aware of visa and residency regulations, while drivers must follow strict traffic laws to avoid penalties.",
+      detail2:"Qatar also ensures the right to a fair trial, the presumption of innocence until proven guilty, and access to translation services for non-Arabic speakers in legal proceedings. Understanding these rights not only protects you but also empowers you to fulfill your obligations under the law.In a country where cultural values and legal frameworks work hand in hand, staying informed is your first step toward a secure and compliant life in Qatar. When in doubt, consulting a qualified legal professional is the safest path forward.",
+      description:
+        "A simple guide to help individuals and businesses understand their basic rights under Qatari law.",
+      image: "https://images.unsplash.com/photo-1593115057322-e94b77572f20?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGxhd3xlbnwwfHwwfHx8MA%3D%3D",
+    },
+    {
+      id: 2,
+      title: "How to Choose the Right Lawyer",
+      date: "July 20, 2025",
+            detail:"Living, working, or doing business in Qatar requires a clear understanding of your legal rights and responsibilities. Qatar’s legal system is a blend of civil law principles, Sharia law, and specific regulations tailored to the country’s social and economic framework. Whether you are a Qatari citizen, a resident expatriate, or a foreign investor, knowing your rights helps you navigate daily life and avoid legal disputes.For employees, the Qatar Labour Law outlines clear provisions regarding working hours, wages, leave entitlements, and contract termination. As a consumer, you are protected under laws that safeguard against unfair practices, defective products, and false advertising. Investors and entrepreneurs benefit from regulations that encourage fair trade, protect intellectual property, and promote economic growth.If you are involved in any legal matter—be it civil, commercial, or criminal—it is your right to seek legal counsel and be represented in court. Foreign residents should be aware of visa and residency regulations, while drivers must follow strict traffic laws to avoid penalties.",
+      detail2:"Qatar also ensures the right to a fair trial, the presumption of innocence until proven guilty, and access to translation services for non-Arabic speakers in legal proceedings. Understanding these rights not only protects you but also empowers you to fulfill your obligations under the law.In a country where cultural values and legal frameworks work hand in hand, staying informed is your first step toward a secure and compliant life in Qatar. When in doubt, consulting a qualified legal professional is the safest path forward.",
+      description:
+        "Key tips on selecting the right lawyer for your specific needs, whether personal or corporate.",
+      image: "https://media.istockphoto.com/id/1411630763/photo/wooden-brown-judge-gavel-on-the-table-copy-space-banner-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=HYkop7Bv98vPh6IIdFDJUzwYyuQOchMslapWzlV6V8I=",
+    },
+    {
+      id: 3,
+      title: "Corporate Law Updates in Qatar",
+      date: "July 10, 2025",
+            detail:"Living, working, or doing business in Qatar requires a clear understanding of your legal rights and responsibilities. Qatar’s legal system is a blend of civil law principles, Sharia law, and specific regulations tailored to the country’s social and economic framework. Whether you are a Qatari citizen, a resident expatriate, or a foreign investor, knowing your rights helps you navigate daily life and avoid legal disputes.For employees, the Qatar Labour Law outlines clear provisions regarding working hours, wages, leave entitlements, and contract termination. As a consumer, you are protected under laws that safeguard against unfair practices, defective products, and false advertising. Investors and entrepreneurs benefit from regulations that encourage fair trade, protect intellectual property, and promote economic growth.If you are involved in any legal matter—be it civil, commercial, or criminal—it is your right to seek legal counsel and be represented in court. Foreign residents should be aware of visa and residency regulations, while drivers must follow strict traffic laws to avoid penalties.",
+      detail2:"Qatar also ensures the right to a fair trial, the presumption of innocence until proven guilty, and access to translation services for non-Arabic speakers in legal proceedings. Understanding these rights not only protects you but also empowers you to fulfill your obligations under the law.In a country where cultural values and legal frameworks work hand in hand, staying informed is your first step toward a secure and compliant life in Qatar. When in doubt, consulting a qualified legal professional is the safest path forward.",
+      description:
+        "Recent changes in Qatari corporate law that every business owner should know about.",
+      image: "https://images.unsplash.com/photo-1593115057322-e94b77572f20?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGxhd3xlbnwwfHwwfHx8MA%3D%3D",
+    },
+    {
+      id: 4,
+      title: "Real Estate Legal Advice",
+      date: "June 28, 2025",
+            detail:"Living, working, or doing business in Qatar requires a clear understanding of your legal rights and responsibilities. Qatar’s legal system is a blend of civil law principles, Sharia law, and specific regulations tailored to the country’s social and economic framework. Whether you are a Qatari citizen, a resident expatriate, or a foreign investor, knowing your rights helps you navigate daily life and avoid legal disputes.For employees, the Qatar Labour Law outlines clear provisions regarding working hours, wages, leave entitlements, and contract termination. As a consumer, you are protected under laws that safeguard against unfair practices, defective products, and false advertising. Investors and entrepreneurs benefit from regulations that encourage fair trade, protect intellectual property, and promote economic growth.If you are involved in any legal matter—be it civil, commercial, or criminal—it is your right to seek legal counsel and be represented in court. Foreign residents should be aware of visa and residency regulations, while drivers must follow strict traffic laws to avoid penalties.",
+      detail2:"Qatar also ensures the right to a fair trial, the presumption of innocence until proven guilty, and access to translation services for non-Arabic speakers in legal proceedings. Understanding these rights not only protects you but also empowers you to fulfill your obligations under the law.In a country where cultural values and legal frameworks work hand in hand, staying informed is your first step toward a secure and compliant life in Qatar. When in doubt, consulting a qualified legal professional is the safest path forward.",
+      description:
+        "Legal considerations when buying, selling, or leasing property in Qatar.",
+      image: "https://media.istockphoto.com/id/1411630763/photo/wooden-brown-judge-gavel-on-the-table-copy-space-banner-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=HYkop7Bv98vPh6IIdFDJUzwYyuQOchMslapWzlV6V8I=",
+    },
+    {
+      id: 5,
+      title: "Government Contracts & Tenders",
+      date: "June 15, 2025",
+            detail:"Living, working, or doing business in Qatar requires a clear understanding of your legal rights and responsibilities. Qatar’s legal system is a blend of civil law principles, Sharia law, and specific regulations tailored to the country’s social and economic framework. Whether you are a Qatari citizen, a resident expatriate, or a foreign investor, knowing your rights helps you navigate daily life and avoid legal disputes.For employees, the Qatar Labour Law outlines clear provisions regarding working hours, wages, leave entitlements, and contract termination. As a consumer, you are protected under laws that safeguard against unfair practices, defective products, and false advertising. Investors and entrepreneurs benefit from regulations that encourage fair trade, protect intellectual property, and promote economic growth.If you are involved in any legal matter—be it civil, commercial, or criminal—it is your right to seek legal counsel and be represented in court. Foreign residents should be aware of visa and residency regulations, while drivers must follow strict traffic laws to avoid penalties.",
+      detail2:"Qatar also ensures the right to a fair trial, the presumption of innocence until proven guilty, and access to translation services for non-Arabic speakers in legal proceedings. Understanding these rights not only protects you but also empowers you to fulfill your obligations under the law.In a country where cultural values and legal frameworks work hand in hand, staying informed is your first step toward a secure and compliant life in Qatar. When in doubt, consulting a qualified legal professional is the safest path forward.",
+      description:
+        "An overview of the legal framework for government contracts and tender processes.",
+      image: "https://images.unsplash.com/photo-1593115057322-e94b77572f20?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGxhd3xlbnwwfHwwfHx8MA%3D%3D",
+    },
+    {
+      id: 6,
+      title: "Family Law in Qatar",
+      date: "June 1, 2025",
+            detail:"Living, working, or doing business in Qatar requires a clear understanding of your legal rights and responsibilities. Qatar’s legal system is a blend of civil law principles, Sharia law, and specific regulations tailored to the country’s social and economic framework. Whether you are a Qatari citizen, a resident expatriate, or a foreign investor, knowing your rights helps you navigate daily life and avoid legal disputes.For employees, the Qatar Labour Law outlines clear provisions regarding working hours, wages, leave entitlements, and contract termination. As a consumer, you are protected under laws that safeguard against unfair practices, defective products, and false advertising. Investors and entrepreneurs benefit from regulations that encourage fair trade, protect intellectual property, and promote economic growth.If you are involved in any legal matter—be it civil, commercial, or criminal—it is your right to seek legal counsel and be represented in court. Foreign residents should be aware of visa and residency regulations, while drivers must follow strict traffic laws to avoid penalties.",
+      detail2:"Qatar also ensures the right to a fair trial, the presumption of innocence until proven guilty, and access to translation services for non-Arabic speakers in legal proceedings. Understanding these rights not only protects you but also empowers you to fulfill your obligations under the law.In a country where cultural values and legal frameworks work hand in hand, staying informed is your first step toward a secure and compliant life in Qatar. When in doubt, consulting a qualified legal professional is the safest path forward.",
+      description:
+        "Understanding divorce, custody, and inheritance laws under Qatari regulations.",
+      image: "https://media.istockphoto.com/id/1411630763/photo/wooden-brown-judge-gavel-on-the-table-copy-space-banner-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=HYkop7Bv98vPh6IIdFDJUzwYyuQOchMslapWzlV6V8I=",
+    },
+    {
+      id: 7,
+      title: "Employment Law Compliance",
+      date: "May 20, 2025",
+        detail:"Living, working, or doing business in Qatar requires a clear understanding of your legal rights and responsibilities. Qatar’s legal system is a blend of civil law principles, Sharia law, and specific regulations tailored to the country’s social and economic framework. Whether you are a Qatari citizen, a resident expatriate, or a foreign investor, knowing your rights helps you navigate daily life and avoid legal disputes.For employees, the Qatar Labour Law outlines clear provisions regarding working hours, wages, leave entitlements, and contract termination. As a consumer, you are protected under laws that safeguard against unfair practices, defective products, and false advertising. Investors and entrepreneurs benefit from regulations that encourage fair trade, protect intellectual property, and promote economic growth.If you are involved in any legal matter—be it civil, commercial, or criminal—it is your right to seek legal counsel and be represented in court. Foreign residents should be aware of visa and residency regulations, while drivers must follow strict traffic laws to avoid penalties.",
+      detail2:"Qatar also ensures the right to a fair trial, the presumption of innocence until proven guilty, and access to translation services for non-Arabic speakers in legal proceedings. Understanding these rights not only protects you but also empowers you to fulfill your obligations under the law.In a country where cultural values and legal frameworks work hand in hand, staying informed is your first step toward a secure and compliant life in Qatar. When in doubt, consulting a qualified legal professional is the safest path forward.",
+      description:
+        "Key employment law requirements businesses must comply with in Qatar.",
+      image: "https://images.unsplash.com/photo-1593115057322-e94b77572f20?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGxhd3xlbnwwfHwwfHx8MA%3D%3D",
+    },
+    {
+      id: 8,
+      title: "Dispute Resolution & Arbitration",
+      date: "May 5, 2025",
+        detail:"Living, working, or doing business in Qatar requires a clear understanding of your legal rights and responsibilities. Qatar’s legal system is a blend of civil law principles, Sharia law, and specific regulations tailored to the country’s social and economic framework. Whether you are a Qatari citizen, a resident expatriate, or a foreign investor, knowing your rights helps you navigate daily life and avoid legal disputes.For employees, the Qatar Labour Law outlines clear provisions regarding working hours, wages, leave entitlements, and contract termination. As a consumer, you are protected under laws that safeguard against unfair practices, defective products, and false advertising. Investors and entrepreneurs benefit from regulations that encourage fair trade, protect intellectual property, and promote economic growth.If you are involved in any legal matter—be it civil, commercial, or criminal—it is your right to seek legal counsel and be represented in court. Foreign residents should be aware of visa and residency regulations, while drivers must follow strict traffic laws to avoid penalties.",
+      detail2:"Qatar also ensures the right to a fair trial, the presumption of innocence until proven guilty, and access to translation services for non-Arabic speakers in legal proceedings. Understanding these rights not only protects you but also empowers you to fulfill your obligations under the law.In a country where cultural values and legal frameworks work hand in hand, staying informed is your first step toward a secure and compliant life in Qatar. When in doubt, consulting a qualified legal professional is the safest path forward.",
+      description:
+        "When and how to use arbitration instead of court litigation in legal disputes.",
+      image: "https://media.istockphoto.com/id/1411630763/photo/wooden-brown-judge-gavel-on-the-table-copy-space-banner-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=HYkop7Bv98vPh6IIdFDJUzwYyuQOchMslapWzlV6V8I=",
+    },
+    {
+      id: 9,
+      title: "Tax Law Essentials for Businesses",
+      date: "April 25, 2025",
+        detail:"Living, working, or doing business in Qatar requires a clear understanding of your legal rights and responsibilities. Qatar’s legal system is a blend of civil law principles, Sharia law, and specific regulations tailored to the country’s social and economic framework. Whether you are a Qatari citizen, a resident expatriate, or a foreign investor, knowing your rights helps you navigate daily life and avoid legal disputes.For employees, the Qatar Labour Law outlines clear provisions regarding working hours, wages, leave entitlements, and contract termination. As a consumer, you are protected under laws that safeguard against unfair practices, defective products, and false advertising. Investors and entrepreneurs benefit from regulations that encourage fair trade, protect intellectual property, and promote economic growth.If you are involved in any legal matter—be it civil, commercial, or criminal—it is your right to seek legal counsel and be represented in court. Foreign residents should be aware of visa and residency regulations, while drivers must follow strict traffic laws to avoid penalties.",
+      detail2:"Qatar also ensures the right to a fair trial, the presumption of innocence until proven guilty, and access to translation services for non-Arabic speakers in legal proceedings. Understanding these rights not only protects you but also empowers you to fulfill your obligations under the law.In a country where cultural values and legal frameworks work hand in hand, staying informed is your first step toward a secure and compliant life in Qatar. When in doubt, consulting a qualified legal professional is the safest path forward.",
+      description:
+        "Important tax considerations for companies operating in Qatar.",
+      image: "https://images.unsplash.com/photo-1593115057322-e94b77572f20?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGxhd3xlbnwwfHwwfHx8MA%3D%3D",
+    },
+    {
+      id: 10,
+      title: "Protecting Intellectual Property",
+      date: "April 10, 2025",
+        detail:"Living, working, or doing business in Qatar requires a clear understanding of your legal rights and responsibilities. Qatar’s legal system is a blend of civil law principles, Sharia law, and specific regulations tailored to the country’s social and economic framework. Whether you are a Qatari citizen, a resident expatriate, or a foreign investor, knowing your rights helps you navigate daily life and avoid legal disputes.For employees, the Qatar Labour Law outlines clear provisions regarding working hours, wages, leave entitlements, and contract termination. As a consumer, you are protected under laws that safeguard against unfair practices, defective products, and false advertising. Investors and entrepreneurs benefit from regulations that encourage fair trade, protect intellectual property, and promote economic growth.If you are involved in any legal matter—be it civil, commercial, or criminal—it is your right to seek legal counsel and be represented in court. Foreign residents should be aware of visa and residency regulations, while drivers must follow strict traffic laws to avoid penalties.",
+      detail2:"Qatar also ensures the right to a fair trial, the presumption of innocence until proven guilty, and access to translation services for non-Arabic speakers in legal proceedings. Understanding these rights not only protects you but also empowers you to fulfill your obligations under the law.In a country where cultural values and legal frameworks work hand in hand, staying informed is your first step toward a secure and compliant life in Qatar. When in doubt, consulting a qualified legal professional is the safest path forward.",
+      description:
+        "How to safeguard trademarks, copyrights, and patents in Qatar.",
+      image: "https://media.istockphoto.com/id/1411630763/photo/wooden-brown-judge-gavel-on-the-table-copy-space-banner-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=HYkop7Bv98vPh6IIdFDJUzwYyuQOchMslapWzlV6V8I=",
+    },
+    {
+      id: 11,
+      title: "Legal Support for Startups",
+      date: "March 28, 2025",
+        detail:"Living, working, or doing business in Qatar requires a clear understanding of your legal rights and responsibilities. Qatar’s legal system is a blend of civil law principles, Sharia law, and specific regulations tailored to the country’s social and economic framework. Whether you are a Qatari citizen, a resident expatriate, or a foreign investor, knowing your rights helps you navigate daily life and avoid legal disputes.For employees, the Qatar Labour Law outlines clear provisions regarding working hours, wages, leave entitlements, and contract termination. As a consumer, you are protected under laws that safeguard against unfair practices, defective products, and false advertising. Investors and entrepreneurs benefit from regulations that encourage fair trade, protect intellectual property, and promote economic growth.If you are involved in any legal matter—be it civil, commercial, or criminal—it is your right to seek legal counsel and be represented in court. Foreign residents should be aware of visa and residency regulations, while drivers must follow strict traffic laws to avoid penalties.",
+      detail2:"Qatar also ensures the right to a fair trial, the presumption of innocence until proven guilty, and access to translation services for non-Arabic speakers in legal proceedings. Understanding these rights not only protects you but also empowers you to fulfill your obligations under the law.In a country where cultural values and legal frameworks work hand in hand, staying informed is your first step toward a secure and compliant life in Qatar. When in doubt, consulting a qualified legal professional is the safest path forward.",
+      description:
+        "Essential legal steps for starting and registering a business in Qatar.",
+      image: "https://images.unsplash.com/photo-1593115057322-e94b77572f20?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGxhd3xlbnwwfHwwfHx8MA%3D%3D",
+    },
+    {
+      id: 12,
+      title: "Consumer Protection Laws",
+      date: "March 15, 2025",
+        detail:"Living, working, or doing business in Qatar requires a clear understanding of your legal rights and responsibilities. Qatar’s legal system is a blend of civil law principles, Sharia law, and specific regulations tailored to the country’s social and economic framework. Whether you are a Qatari citizen, a resident expatriate, or a foreign investor, knowing your rights helps you navigate daily life and avoid legal disputes.For employees, the Qatar Labour Law outlines clear provisions regarding working hours, wages, leave entitlements, and contract termination. As a consumer, you are protected under laws that safeguard against unfair practices, defective products, and false advertising. Investors and entrepreneurs benefit from regulations that encourage fair trade, protect intellectual property, and promote economic growth.If you are involved in any legal matter—be it civil, commercial, or criminal—it is your right to seek legal counsel and be represented in court. Foreign residents should be aware of visa and residency regulations, while drivers must follow strict traffic laws to avoid penalties.",
+      detail2:"Qatar also ensures the right to a fair trial, the presumption of innocence until proven guilty, and access to translation services for non-Arabic speakers in legal proceedings. Understanding these rights not only protects you but also empowers you to fulfill your obligations under the law.In a country where cultural values and legal frameworks work hand in hand, staying informed is your first step toward a secure and compliant life in Qatar. When in doubt, consulting a qualified legal professional is the safest path forward.",
+      description:
+        "Know your rights as a consumer and the obligations of businesses in Qatar.",
+      image: "https://media.istockphoto.com/id/1411630763/photo/wooden-brown-judge-gavel-on-the-table-copy-space-banner-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=HYkop7Bv98vPh6IIdFDJUzwYyuQOchMslapWzlV6V8I=",
+    },
+  ];
+
+export default BlogPosts;
