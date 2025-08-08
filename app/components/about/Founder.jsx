@@ -27,7 +27,7 @@ const Founder = () => {
               <span className="text-[#001f3f]">Abdulaziz Al Khaldi</span>, <br />
               Visionary Legal Expert
             </h2>
-            
+          
             <div className="space-y-6">
               <p className="text-gray-700 text-lg leading-relaxed">
                 With over 20 years of distinguished experience in Qatari and international law, Sheikh Abdulaziz Al Khaldi established Al Khaldi Law Firm with a singular vision: to bridge the gap between local legal traditions and global best practices.
@@ -37,7 +37,7 @@ const Founder = () => {
                 Recognized by <span className="font-semibold text-[#001f3f]">Legal 500</span> and <span className="font-semibold text-[#001f3f]">Chambers & Partners</span> as a leading authority in corporate and government legal matters, his strategic counsel has shaped landmark cases and transactions across the Gulf region.
               </p>
               
-              <div className="border-l-4 border-blue-600 pl-6 my-8">
+              <div className="border-l-4 border-[#001f3f] pl-6 my-8">
                 <p className="text-gray-900 italic text-xl font-medium">
                   "We don't just practice law - we redefine what's possible for our clients through innovative, culturally-attuned legal solutions."
                 </p>

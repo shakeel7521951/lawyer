@@ -1,6 +1,8 @@
 "use client"
 import React, { useState } from 'react';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaPaperPlane } from 'react-icons/fa';
+import { FaEnvelope, FaMapMarkerAlt, FaClock, FaPaperPlane } from 'react-icons/fa';
+import { FaPhoneAlt } from "react-icons/fa";
+
 
 const ContactForm = () => {
     const initialFormState = {
@@ -17,7 +19,7 @@ const ContactForm = () => {
     const [submitSuccess, setSubmitSuccess] = useState(false);
 
     const contactInfo = [
-        { icon: FaPhone, title: 'Phone', items: ['+974 1234 5678', '+974 8765 4321'] },
+        { icon: FaPhoneAlt, title: 'Phone', items: ['+974 1234 5678', '+974 8765 4321'] },
         { icon: FaEnvelope, title: 'Email', items: ['contact@alkhaldilaw.com', 'support@alkhaldilaw.com'] },
         { icon: FaMapMarkerAlt, title: 'Address', items: ['Al Fardan Towers', 'West Bay, Doha, Qatar'] },
         { icon: FaClock, title: 'Working Hours', items: ['Sunday - Thursday: 8AM - 6PM', 'Friday - Saturday: Closed'] }

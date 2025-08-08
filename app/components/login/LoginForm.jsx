@@ -1,0 +1,91 @@
+"use client";
+import { FaLock, FaEnvelope, FaEye, FaEyeSlash } from "react-icons/fa";
+import { useState } from "react";
+import Link from "next/link";
+
+export default function LoginForm() {
+  const [showPassword, setShowPassword] = useState(false);
+
+  return (
+    <div className="min-h-screen flex items-center justify-center px-4 sm:px-8 md:px-12 lg:px-16 py-12 bg-gray-100">
+      {/* Luxury Card */}
+      <div className="w-full max-w-4xl bg-white shadow-xl rounded-lg overflow-hidden border border-[#001f3f]">
+        {/* Gold Header */}
+        <div className="bg-[#001f3f] py-6 px-4 sm:px-8 text-center">
+          <h1 className="text-[#ffd700] font-serif text-2xl sm:text-3xl font-bold">
+            Al Khaldi Law Firm
+          </h1>
+        </div>
+
+        {/* Body */}
+        <div className="p-6 sm:p-8">
+          <h2 className="mb-6 text-center text-2xl sm:text-3xl font-serif font-bold text-[#001f3f]">
+            Welcome Back
+          </h2>
+
+          {/* Email Field */}
+          <div className="mb-4">
+            <label className="block text-[#001f3f] font-semibold mb-2">
+              Email Address
+            </label>
+            <div className="relative">
+              <FaEnvelope className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#001f3f]" size={18} />
+              <input
+                type="email"
+                placeholder="example@example.com"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-[#ffd700] transition-all duration-200 outline-none"
+              />
+            </div>
+          </div>
+
+          {/* Password Field */}
+          <div className="mb-6">
+            <label className="block text-[#001f3f] font-semibold mb-2">
+              Password
+            </label>
+            <div className="relative">
+              <FaLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#001f3f]" size={18} />
+              <input
+                type={showPassword ? "text" : "password"}
+                className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-[#ffd700] transition-all duration-200 outline-none"
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#001f3f]"
+              >
+                {showPassword ? <FaEyeSlash size={18} /> : <FaEye size={18} />}
+              </button>
+            </div>
+          </div>
+
+          {/* Forgot Password */}
+          <div className="text-right mb-6">
+            <Link
+              href="/forgot-password"
+              className="text-[#ffd700] hover:underline text-sm"
+            >
+              Forgot Password?
+            </Link>
+          </div>
+
+          {/* Login Button */}
+          <button className="w-full bg-[#001f3f] hover:bg-[#ffd700] hover:text-[#001f3f] text-white font-bold py-2 px-4 rounded transition duration-200">
+            Login
+          </button>
+
+          {/* Signup Link */}
+          <div className="mt-6 text-center text-[#001f3f]">
+            <span>Don't have an account? </span>
+            <Link
+              href="/signup"
+              className="text-[#ffd700] hover:text-[#001f3f] hover:underline font-medium"
+            >
+              Sign Up
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

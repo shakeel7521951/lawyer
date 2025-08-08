@@ -1,5 +1,7 @@
 import React from 'react';
 import { FaGlobe, FaEnvelope, FaLinkedin, FaFileAlt } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa6";
+
 
 const Team = () => {
   const teamMembers = [
@@ -38,7 +40,7 @@ const Team = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-[#001f3f] to-blue-900">
+    <section className="py-16 bg-gradient-to-b from-[#001f3f] to-blue-900">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-1 bg-blue-100 text-[#001f3f] rounded-full text-sm font-semibold tracking-wider mb-4">LEGAL EXPERTISE</span>
@@ -71,14 +73,14 @@ const Team = () => {
               <div className="bg-white p-6">
                 <p className="text-gray-700 mb-4">{member.bio}</p>
                 <div className="flex space-x-4">
-                  <a href="#" className="text-blue-700 hover:text-blue-900 transition-colors">
-                    <FaLinkedin className="text-lg" />
+                  <a href="#" className="text-blue-700 hover:text-blue-900 border border-[#ffd700] py-2 px-2 rounded-full transition-all duration-300 hover:bg-[#FFD700] hover:scale-110 hover:shadow-lg">
+                    <FaFacebookF className="text-sx" />
                   </a>
-                  <a href="#" className="text-blue-700 hover:text-blue-900 transition-colors">
-                    <FaEnvelope className="text-lg" />
+                  <a href="#" className="text-blue-700 hover:text-blue-900 border border-[#ffd700] py-2 px-2 rounded-full transition-all duration-300 hover:bg-[#FFD700] hover:scale-110 hover:shadow-lg">
+                    <FaTwitter className="text-lg" />
                   </a>
-                  <a href="#" className="text-blue-700 hover:text-blue-900 transition-colors">
-                    <FaFileAlt className="text-lg" />
+                  <a href="#" className="text-blue-700 hover:text-blue-900 border border-[#ffd700] py-2 px-2 rounded-full transition-all duration-300 hover:bg-[#FFD700] hover:scale-110 hover:shadow-lg">
+                    <FaLinkedinIn className="text-lg" />
                   </a>
                 </div>
               </div>
