@@ -38,10 +38,10 @@ const Team = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-blue-900 to-blue-800">
+    <section className="py-24 bg-gradient-to-b from-[#001f3f] to-blue-900">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center mb-16">
-          <span className="text-blue-300 font-semibold tracking-wider uppercase text-sm">LEGAL EXPERTISE</span>
+          <span className="inline-block px-4 py-1 bg-blue-100 text-[#001f3f] rounded-full text-sm font-semibold tracking-wider mb-4">LEGAL EXPERTISE</span>
           <h2 className="text-4xl font-bold text-white mt-4 mb-6">
             Our <span className="text-yellow-400">Distinguished</span> Team
           </h2>
@@ -83,7 +83,7 @@ const Team = () => {
                 </div>
               </div>
               
-              <div className="absolute top-4 right-4 bg-yellow-500 text-blue-900 px-3 py-1 rounded-full text-xs font-bold shadow-md">
+              <div className="absolute top-4 right-4 bg-[#ffd700] hover:bg-yellow-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-md">
                 {member.id === 1 ? 'FOUNDER' : 'PARTNER'}
               </div>
             </div>
@@ -91,7 +91,7 @@ const Team = () => {
         </div>
         
         <div className="mt-16 text-center">
-          <button className="px-8 py-3 bg-gradient-to-r from-yellow-500 to-yellow-600 text-blue-900 font-semibold rounded-full shadow-lg hover:shadow-xl transition-all hover:from-yellow-400 hover:to-yellow-500">
+          <button className="px-8 py-3 bg-[#ffd700] hover:bg-yellow-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all ">
             Meet Full Team
           </button>
         </div>

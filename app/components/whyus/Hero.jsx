@@ -12,7 +12,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto">
         {/* Main Heading */}
-          <h1 className="text-4xl  font-bold text-white mb-6 leading-tight">
+          <h1 className="text-4xl font-bold text-white mb-6 leading-tight">
             Why Choose <span className="text-yellow-400">Al Khaldi</span> Law Firm?
           </h1>
           
@@ -22,14 +22,14 @@ const Hero = () => {
           </p>
         
             {/* CTA Button */}
-          <button className="px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-lg shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+          <button className="px-4 py-3 border-2 border-[#FFD700] text-white hover:bg-[#FFD700] hover:text-[#001f3f] font-bold rounded-lg shadow-md transition duration-300 transform hover:-translate-y-1">
             Schedule Consultation
           </button>
         </div>
       </div>
       
       {/* Bottom Gradient */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-blue-900 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#001f3f] to-transparent"></div>
     </div>
   );
 };

@@ -60,7 +60,7 @@ const ContactForm = () => {
             <div className="bg-white rounded-xl shadow-2xl overflow-hidden border border-gray-200">
                 <div className="md:flex">
                     {/* Contact Information Sidebar */}
-                    <div className="md:w-1/3 bg-gradient-to-b from-blue-900 to-blue-800 p-10 text-white">
+                    <div className="md:w-1/3 bg-gradient-to-b from-[#001f3f] to-blue-900 p-10 text-white">
                         <h3 className="text-2xl font-bold mb-8 border-b border-gold-500 pb-4">Get in Touch</h3>
                         <div className="space-y-8">
                             {contactInfo.map((item, index) => (
@@ -81,7 +81,7 @@ const ContactForm = () => {
 
                     {/* Contact Form */}
                     <div className="md:w-2/3 p-10">
-                        <h2 className="text-3xl font-bold text-navy-900 mb-2">Contact Our Legal Team</h2>
+                        <h2 className="text-2xl sm:text-4xl font-bold text-[#001f3f] mb-2">Contact Our Legal Team</h2>
                         <p className="text-gray-600 mb-8">Complete the form below and we'll respond within 24 hours</p>
 
                         {submitSuccess && (
@@ -102,7 +102,7 @@ const ContactForm = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 {['name', 'email', 'phone', 'subject'].map(field => (
                                     <div key={field}>
-                                        <label htmlFor={field} className="block text-sm font-medium text-navy-700 mb-2">
+                                        <label htmlFor={field} className="block text-sm font-medium text-[#001f3f] mb-2">
                                             {field === 'phone' ? 'Phone' : `${field.charAt(0).toUpperCase() + field.slice(1)} *`}
                                         </label>
                                         {field === 'subject' ? (
@@ -139,7 +139,7 @@ const ContactForm = () => {
                             </div>
 
                             <div>
-                                <label htmlFor="message" className="block text-sm font-medium text-navy-700 mb-2">Your Message *</label>
+                                <label htmlFor="message" className="block text-sm font-medium text-[#001f3f] mb-2">Your Message *</label>
                                 <textarea
                                     id="message"
                                     name="message"

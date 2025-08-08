@@ -40,13 +40,13 @@ const Features = () => {
       <div className="container mx-auto px-6 max-w-7xl">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold tracking-wider mb-4">
+          <span className="inline-block px-4 py-1 bg-blue-100 text-[#001f3f] rounded-full text-sm font-semibold tracking-wider mb-4">
             OUR ADVANTAGES
           </span>
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Why <span className="text-blue-700">Clients Choose</span> Our Firm
+            Why <span className="text-[#001f3f]">Clients Choose</span> Our Firm
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-[#001f3f] to-blue-800 mx-auto"></div>
         </div>
 
         {/* Features Grid */}
@@ -61,8 +61,8 @@ const Features = () => {
               
               <div className="relative p-8 h-full">
                 {/* Icon Container */}
-                <div className="mb-6 p-4 bg-blue-100 rounded-xl inline-flex items-center justify-center group-hover:bg-blue-600 transition-all duration-300">
-                  <div className="text-blue-600 group-hover:text-white transition-colors duration-300">
+                <div className="mb-6 p-4 bg-blue-100 rounded-xl inline-flex items-center justify-center group-hover:bg-[#001f3f] transition-all duration-300">
+                  <div className="text-[#001f3f] group-hover:text-white transition-colors duration-300">
                     {feature.icon}
                   </div>
                 </div>
@@ -72,7 +72,7 @@ const Features = () => {
                 <p className="text-gray-600 leading-relaxed">{feature.description}</p>
                 
                 {/* Decorative Bottom Line */}
-                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#001f3f] to-blue-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </div>
           ))}
@@ -80,8 +80,8 @@ const Features = () => {
 
         {/* CTA */}
         <div className="mt-16 text-center">
-          <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-800 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition-all hover:from-blue-700 hover:to-blue-900 transform hover:-translate-y-1">
-            Learn More About Our Firm
+          <button className="px-4 py-3 bg-gradient-to-r from-[#001f3f] to-blue-800 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition-all hover:from-blue-700 hover:to-[#001f3f] transform hover:-translate-y-1">
+            Learn More
           </button>
         </div>
       </div>

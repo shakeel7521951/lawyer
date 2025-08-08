@@ -63,11 +63,11 @@ const Testimonial = () => {
       <div className="container mx-auto px-6 max-w-6xl">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <span className="text-blue-600 font-semibold tracking-wider uppercase text-sm">CLIENT TESTIMONIALS</span>
+          <span className="inline-block px-4 py-1 bg-blue-100 text-[#001f3f] rounded-full text-sm font-semibold  mb-4 tracking-wider uppercase">CLIENT TESTIMONIALS</span>
           <h2 className="text-4xl font-bold text-gray-900 mt-4 mb-6">
-            Trusted by <span className="text-blue-700">Leading</span> Clients
+            Trusted by <span className="text-[#001f3f]">Leading</span> Clients
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-[#001f3f] to-blue-800 mx-auto"></div>
         </div>
 
         {/* Testimonials Carousel */}
@@ -100,7 +100,7 @@ const Testimonial = () => {
                       </div>
                       <div>
                         <h4 className="font-bold text-gray-900 text-lg">{testimonial.name}</h4>
-                        <p className="text-blue-600">{testimonial.title}</p>
+                        <p className="text-blue-800">{testimonial.title}</p>
                       </div>
                     </div>
                   </div>
@@ -117,7 +117,7 @@ const Testimonial = () => {
             className="p-2 rounded-full bg-white shadow-md hover:bg-blue-50 transition-colors"
             aria-label="Previous testimonial"
           >
-            <FaChevronLeft className="text-blue-700" />
+            <FaChevronLeft className="text-blue-900" />
           </button>
           
           {/* Indicators */}
@@ -129,7 +129,7 @@ const Testimonial = () => {
                   setCurrentIndex(index);
                   setIsAutoPlaying(false);
                 }}
-                className={`w-3 h-3 rounded-full ${index === currentIndex ? 'bg-blue-600' : 'bg-blue-300'}`}
+                className={`w-3 h-3 rounded-full ${index === currentIndex ? 'bg-blue-800' : 'bg-blue-600'}`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
             ))}
@@ -140,7 +140,7 @@ const Testimonial = () => {
             className="p-2 rounded-full bg-white shadow-md hover:bg-blue-50 transition-colors"
             aria-label="Next testimonial"
           >
-            <FaChevronRight className="text-blue-700" />
+            <FaChevronRight className="text-blue-900" />
           </button>
         </div>
       </div>

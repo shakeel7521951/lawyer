@@ -5,16 +5,16 @@ const Firm = () => {
     <section className="py-24 bg-gradient-to-b from-blue-50 to-white">
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="text-center mb-20">
-          <span className="text-blue-600 font-semibold tracking-wider uppercase text-sm">OUR LEGACY</span>
+          <span className="nline-block px-4 py-1 bg-blue-100 text-[#001f3f] rounded-full text-sm font-semibold tracking-wider mb-4">OUR LEGACY</span>
           <h2 className="text-4xl font-bold text-gray-900 mt-4 mb-6">
-            The <span className="text-blue-700">Al Khaldi</span> Journey
+            The <span className="text-[#001f3f]"> Al Khaldi</span> Journey
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-[#001f3f] to-blue-800 mx-auto"></div>
         </div>
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="hidden md:block absolute left-1/2 h-full w-1 bg-gradient-to-b from-blue-400 to-blue-600 transform -translate-x-1/2"></div>
+          <div className="hidden md:block absolute left-1/2 h-full w-1 bg-gradient-to-b from-[#001f3f] to-blue-800 transform -translate-x-1/2"></div>
 
           {/* Timeline items */}
           <div className="space-y-16">
@@ -22,7 +22,7 @@ const Firm = () => {
             <div className="relative group">
               <div className="md:flex justify-between items-stretch">
                 <div className="md:w-5/12 md:pr-10 md:text-right mb-8 md:mb-0">
-                  <div className="relative bg-white p-8 rounded-xl shadow-lg border-l-4 border-blue-500 md:border-l-0 md:border-r-4 md:mr-6 transform transition-all duration-300 group-hover:scale-105">
+                  <div className="relative bg-white p-8 rounded-xl shadow-lg border-l-4 border-[#001f3f] md:border-l-0 md:border-r-4 md:mr-6 transform transition-all duration-300 group-hover:scale-105">
                     <div className="absolute -top-3 -left-3 w-6 h-6 bg-blue-600 rounded-full md:hidden"></div>
                     <h3 className="text-2xl font-bold text-blue-800 mb-2">2005</h3>
                     <p className="text-gray-600 leading-relaxed">
@@ -32,7 +32,7 @@ const Firm = () => {
                 </div>
 
                 <div className="hidden md:block absolute left-1/2 -ml-4">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-600 to-blue-800 border-4 border-white shadow-xl transform transition-all duration-300 group-hover:scale-125"></div>
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#001f3f] to-blue-800 border-4 border-white shadow-xl transform transition-all duration-300 group-hover:scale-125"></div>
                 </div>
 
                 <div className="md:w-5/12 md:pl-10">
@@ -61,11 +61,11 @@ const Firm = () => {
                 </div>
 
                 <div className="hidden md:block absolute left-1/2 -ml-4">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-600 to-blue-800 border-4 border-white shadow-xl transform transition-all duration-300 group-hover:scale-125"></div>
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#001f3f] to-blue-800 border-4 border-white shadow-xl transform transition-all duration-300 group-hover:scale-125"></div>
                 </div>
 
                 <div className="md:w-5/12 md:pl-10">
-                  <div className="relative bg-white p-8 rounded-xl shadow-lg border-l-4 border-blue-500 md:border-l-0 md:border-r-4 md:mr-6 transform transition-all duration-300 group-hover:scale-105">
+                  <div className="relative bg-white p-8 rounded-xl shadow-lg border-l-4 border-[#001f3f] md:border-l-0 md:border-r-4 md:mr-6 transform transition-all duration-300 group-hover:scale-105">
                     <div className="absolute -top-3 -left-3 w-6 h-6 bg-blue-600 rounded-full md:hidden"></div>
                     <h3 className="text-2xl font-bold text-blue-800 mb-2">2012</h3>
                     <p className="text-gray-600 leading-relaxed">
@@ -80,7 +80,7 @@ const Firm = () => {
             <div className="relative group">
               <div className="md:flex justify-between items-stretch">
                 <div className="md:w-5/12 md:pr-10 md:text-right mb-8 md:mb-0">
-                  <div className="relative bg-white p-8 rounded-xl shadow-lg border-l-4 border-blue-500 md:border-l-0 md:border-r-4 md:mr-6 transform transition-all duration-300 group-hover:scale-105">
+                  <div className="relative bg-white p-8 rounded-xl shadow-lg border-l-4 border-[#001f3f] md:border-l-0 md:border-r-4 md:mr-6 transform transition-all duration-300 group-hover:scale-105">
                     <div className="absolute -top-3 -left-3 w-6 h-6 bg-blue-600 rounded-full md:hidden"></div>
                     <h3 className="text-2xl font-bold text-blue-800 mb-2">Present</h3>
                     <p className="text-gray-600 leading-relaxed">
@@ -90,7 +90,7 @@ const Firm = () => {
                 </div>
 
                 <div className="hidden md:block absolute left-1/2 -ml-4">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-600 to-blue-800 border-4 border-white shadow-xl transform transition-all duration-300 group-hover:scale-125"></div>
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#001f3f] to-blue-800 border-4 border-white shadow-xl transform transition-all duration-300 group-hover:scale-125"></div>
                 </div>
 
                 <div className="md:w-5/12 md:pl-10">
@@ -108,7 +108,7 @@ const Firm = () => {
         </div>
 
         <div className="mt-20 text-center">
-          <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-800 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all hover:from-blue-700 hover:to-blue-900 transform hover:-translate-y-1">
+          <button className="px-8 py-3 bg-gradient-to-r from-[#001f3f] to-blue-800 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all hover:from-blue-700 hover:to-[#001f3f] transform hover:-translate-y-1">
             Explore Our Full History
           </button>
         </div>

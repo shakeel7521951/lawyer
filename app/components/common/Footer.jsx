@@ -69,17 +69,26 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-bold text-[#FFD700] mb-5 pb-2 border-b border-[#FFD700]/70">Follow Us</h3>
           <div className="flex space-x-5 mb-6">
-            <a href="#" className=" p-3 border border-[#FFD700] rounded-full text-[#FFD700] hover:bg-[#FFD700] hover:text-[#1877F2] transition-all duration-300">
+            <a
+              href="#"
+              className="p-3 border border-[#FFD700] rounded-full text-[#FFD700] hover:bg-[#FFD700] hover:text-[#1877F2] transition-all duration-300 transform hover:scale-110"
+            >
               <FaFacebookF className="w-4 h-4" />
             </a>
-            <a href="#" className="border border-[#FFD700] p-3 rounded-full text-[#FFD700] hover:bg-[#FFD700] hover:text-[#1DA1F2] transition-all duration-300">
+            <a
+              href="#"
+              className="border border-[#FFD700] p-3 rounded-full text-[#FFD700] hover:bg-[#FFD700] hover:text-[#1DA1F2] transition-all duration-300 transform hover:scale-110"
+            >
               <FaTwitter className="w-4 h-4" />
             </a>
-            <a href="#" className="border border-[#FFD700] p-3 rounded-full text-[#FFD700] hover:bg-[#FFD700] hover:text-[#0A66C2] transition-all duration-300">
+            <a
+              href="#"
+              className="border border-[#FFD700] p-3 rounded-full text-[#FFD700] hover:bg-[#FFD700] hover:text-[#0A66C2] transition-all duration-300 transform hover:scale-110"
+            >
               <FaLinkedinIn className="w-4 h-4" />
             </a>
           </div>
-          
+
         </div>
       </div>
 

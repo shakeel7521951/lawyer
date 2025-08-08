@@ -80,7 +80,7 @@ const Navbar = () => {
           {/* Contact Button - Right side */}
           <div className="hidden md:flex">
             <Link
-              className="rounded-lg px-4 py-2 border-2 border-[#FFD700] text-[#FFD700] hover:bg-[#FFD700] hover:text-[#001f3f] transition-all duration-300 font-medium hover:shadow-lg hover:shadow-[#FFD700]/30"
+              className="rounded-lg px-4 py-2 border-2 border-[#FFD700] text-white hover:bg-[#FFD700] hover:text-[#001f3f] transition-all duration-300 font-medium hover:shadow-lg hover:shadow-[#FFD700]/30"
               href="/contact"
             >
               Contact
@@ -133,7 +133,7 @@ const Navbar = () => {
               Why Us
             </Link>
             <Link
-              className="mt-2 mx-3 px-3 py-2 rounded-md border-2 border-[#FFD700] text-[#FFD700] hover:bg-[#FFD700] hover:text-[#001f3f] transition-colors duration-300 font-medium text-center"
+              className="mt-2 mx-3 px-3 py-2 rounded-md border-2 border-[#FFD700] text-white hover:bg-[#FFD700] hover:text-[#001f3f] transition-colors duration-300 font-medium text-center"
               href="/contact"
               onClick={() => setOpen(false)}
             >

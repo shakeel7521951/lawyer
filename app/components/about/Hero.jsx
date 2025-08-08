@@ -11,17 +11,17 @@ const Hero = () => {
     >
       <div className="container mx-auto px-6 relative z-10 text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            About <span className="text-blue-300">Our Firm</span>
+          <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight text-white">
+            About <span className="text-yellow-400">Our</span> Firm
           </h1>
           <p className="text-xl text-blue-100 mb-8">
             Trusted legal advisors with over 20 years of experience serving clients with excellence and integrity.
           </p>
           <div className="flex justify-center space-x-4 mb-8">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+            <button className="bg-[#ffd700] hover:bg-yellow-500 text-white font-semibold py-3 px-4 rounded-lg shadow-md transition duration-300 transform hover:-translate-y-1">
               Our Services
             </button>
-            <button className="bg-transparent hover:bg-blue-600 text-blue-200 font-semibold hover:text-white py-3 px-6 border border-blue-300 hover:border-transparent rounded-lg transition duration-300">
+            <button className="bg-transparent hover:bg-[#ffd700] text-white font-semibold py-3 px-4 border border-[#ffd700] hover:border-transparent rounded-lg transition duration-300 transform hover:-translate-y-1">
               Contact Us
             </button>
           </div>
@@ -29,7 +29,7 @@ const Hero = () => {
       </div>
       
       {/* Decorative elements */}
-      <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-blue-900 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-[#001f3f] to-transparent"></div>
     </div>
   );
 };

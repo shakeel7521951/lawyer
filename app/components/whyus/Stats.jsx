@@ -2,7 +2,7 @@ import React from 'react';
 
 const Stats = () => {
   return (
-    <section className="relative py-24 bg-gradient-to-r from-blue-900 to-blue-800 text-white overflow-hidden">
+    <section className="relative py-24 bg-gradient-to-r from-[#001f3f] to-blue-900 text-white overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-full opacity-10">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-blue-600 filter blur-3xl"></div>
@@ -17,7 +17,7 @@ const Stats = () => {
             <div className="text-center">
               <h3 className="text-6xl font-bold text-yellow-400 mb-4">20+</h3>
               <p className="text-xl font-medium text-blue-100">Years of Experience</p>
-              <div className="w-16 h-1 bg-yellow-500 mx-auto mt-6"></div>
+              <div className="w-16 h-1 bg-yellow-300 mx-auto mt-6"></div>
             </div>
           </div>
           
@@ -26,7 +26,7 @@ const Stats = () => {
             <div className="text-center">
               <h3 className="text-6xl font-bold text-yellow-400 mb-4">500+</h3>
               <p className="text-xl font-medium text-blue-100">Satisfied Clients</p>
-              <div className="w-16 h-1 bg-yellow-500 mx-auto mt-6"></div>
+              <div className="w-16 h-1 bg-yellow-300 mx-auto mt-6"></div>
             </div>
           </div>
           
@@ -35,7 +35,7 @@ const Stats = () => {
             <div className="text-center">
               <h3 className="text-6xl font-bold text-yellow-400 mb-4">95%</h3>
               <p className="text-xl font-medium text-blue-100">Case Success Rate</p>
-              <div className="w-16 h-1 bg-yellow-500 mx-auto mt-6"></div>
+              <div className="w-16 h-1 bg-yellow-300 mx-auto mt-6"></div>
             </div>
           </div>
         </div>
