@@ -11,15 +11,15 @@ const Team = () => {
       title: "Founding Partner",
       specialty: "Corporate & Commercial Law",
       bio: "Harvard-educated with 25+ years experience advising Fortune 500 companies and government entities.",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+      image: "./about/ab.jpeg"
     },
     {
       id: 2,
-      name: "Dr. Aisha Al-Mansoori",
+      name: "Dr. Ali Al-Mansoori",
       title: "Senior Partner",
       specialty: "International Arbitration",
       bio: "Recognized by Chambers Global as a leading arbitration expert in the Middle East.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+      image: "./about/ab2.jpeg"
     },
     {
       id: 3,
@@ -27,15 +27,15 @@ const Team = () => {
       title: "Partner",
       specialty: "Energy & Infrastructure",
       bio: "Former general counsel for major Qatari energy corporation with deep sector expertise.",
-      image: "https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+      image: "./about/ab3.jpeg"
     },
     {
       id: 4,
-      name: "Sarah Al-Kuwari",
+      name: "Waqas Al-Kuwari",
       title: "Partner",
       specialty: "Technology & IP Law",
       bio: "Leads our digital transformation practice and AI legal framework development.",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+      image: "./about/ab4.jpeg"
     }
   ];
 

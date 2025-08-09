@@ -11,7 +11,7 @@ const Founder = () => {
             <div className="relative group">
               <div className="absolute -inset-2 bg-gradient-to-r from-[#001f3f] to-blue-900 rounded-2xl opacity-75 group-hover:opacity-100 transition-all duration-300 blur-md"></div>
               <img 
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" 
+                src="./about/ab.jpeg" 
                 alt="Founder of Al Khaldi Law Firm"
                 className="relative w-full h-auto rounded-xl shadow-xl object-cover"
               />

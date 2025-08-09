@@ -5,7 +5,7 @@ const Hero = () => {
     <div 
       className="relative bg-cover bg-center h-[32rem] flex items-center justify-center"
       style={{ 
-        backgroundImage: "linear-gradient(rgba(0, 41, 107, 0.50), rgba(0, 41, 107, 0.50)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"
+        backgroundImage: "linear-gradient(rgba(0, 41, 107, 0.50), rgba(0, 41, 107, 0.50)), url('./contact/abhe.jpg')"
       }}
     >
       <div className="container mx-auto px-6 text-center">
