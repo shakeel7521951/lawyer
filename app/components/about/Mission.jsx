@@ -1,60 +1,65 @@
 import React from 'react';
-import { FaBalanceScale, FaGavel, FaHandshake } from 'react-icons/fa';
 
 const Mission = () => {
-  const missionData = [
-    {
-      icon: <FaBalanceScale className="text-white text-2xl" />,
-      title: "Integrity",
-      description: "We operate with uncompromising ethics, providing transparent counsel that clients can trust completely in all legal matters."
-    },
-    {
-      icon: <FaGavel className="text-white text-2xl" />,
-      title: "Excellence",
-      description: "Our team delivers exceptional legal services through meticulous attention to detail and unparalleled expertise in Qatari law."
-    },
-    {
-      icon: <FaHandshake className="text-white text-2xl" />,
-      title: "Client Focus",
-      description: "We build lasting relationships by tailoring solutions to each client's unique needs and delivering measurable results."
-    }
-  ];
-
   return (
-    <section className="py-14 bg-gradient-to-bl from-blue-50 to-blue-100">
-      <div className="container mx-auto px-6 max-w-6xl">
-        <div className="text-center mb-20">
-          <span className="inline-block px-4 py-1 bg-blue-100 text-[#001f3f] rounded-full text-sm font-semibold tracking-wider mb-4">
-            OUR PHILOSOPHY
-          </span>
-          <h2 className="text-4xl font-bold text-gray-900 mt-4 mb-6">
-            Guiding <span className="text-[#001f3f]"> Principles </span> That Define Us
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#001f3f] to-blue-800 mx-auto"></div>
+    <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-16 bg-[#F9F9F9] text-dark">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Our Core Principles</h2>
+          <div className="w-24 h-1.5 bg-[#D4AF37] mx-auto rounded-full"></div>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8">
-          {missionData.map((item, index) => (
-            <div key={index} className="group relative overflow-hidden bg-white rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="relative p-8 h-full flex flex-col items-center">
-                <div className="mb-6 p-4 bg-gradient-to-r from-[#001f3f] to-blue-800 rounded-full shadow-lg transform group-hover:-translate-y-2 transition-transform duration-300">
-                  {item.icon}
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{item.title}</h3>
-                <p className="text-gray-600 text-center leading-relaxed">
-                  {item.description}
-                </p>
-                <div className="mt-6 w-12 h-1 bg-[#001f3f] group-hover:w-20 transition-all duration-300"></div>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          {/* Mission Card */}
+          <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-[#D4AF37] overflow-hidden group">
+            <div className="relative h-40 mb-6 rounded-lg overflow-hidden">
+              <img
+                src="./about/mo.avif"
+                alt="Mission"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-[#0D1B2A]/20"></div>
             </div>
-          ))}
-        </div>
-        
-        <div className="mt-16 text-center">
-          <button className="px-8 py-3 bg-gradient-to-r from-[#001f3f] to-blue-800 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all hover:from-blue-700 hover:to-[#001f3f]">
-            Learn More
-          </button>
+            <h3 className="text-xl md:text-2xl font-bold mb-4 text-[#0D1B2A]">Mission</h3>
+            <p className="text-dark/90 text-sm md:text-base">
+              To simplify business establishment in the GCC through integrated legal, advisory, and digital solutions, enabling entrepreneurs to focus on growth.
+            </p>
+          </div>
+          
+          {/* Vision Card */}
+          <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-[#D4AF37] overflow-hidden group">
+            <div className="relative h-40 mb-6 rounded-lg overflow-hidden">
+              <img
+                src="./about/mt.avif"
+                alt="Vision"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-[#0D1B2A]/20"></div>
+            </div>
+            <h3 className="text-xl md:text-2xl font-bold mb-4 text-[#0D1B2A]">Vision</h3>
+            <p className="text-dark/90 text-sm md:text-base">
+              Become the most trusted partner for foreign investors seeking seamless market entry and sustainable growth in the Middle East.
+            </p>
+          </div>
+          
+          {/* Values Card */}
+          <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-[#D4AF37] overflow-hidden group">
+            <div className="relative h-40 mb-6 rounded-lg overflow-hidden">
+              <img
+                src="./about/mh.avif"
+                alt="Values"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-[#0D1B2A]/20"></div>
+            </div>
+            <h3 className="text-xl md:text-2xl font-bold mb-4 text-[#0D1B2A]">Values</h3>
+            <ul className="list-disc pl-5 text-dark/90 space-y-2 text-sm md:text-base">
+              <li>Integrity in all dealings</li>
+              <li>Client-centric innovation</li>
+              <li>Regional expertise</li>
+              <li>Technology-driven solutions</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
