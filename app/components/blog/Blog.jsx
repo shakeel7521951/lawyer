@@ -42,7 +42,7 @@ const Blog = () => {
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-10 px-10 mx-auto max-w-7xl">
+      <div className="flex flex-col md:flex-row gap-10 sm:px-10 mx-auto max-w-7xl">
         {/* Left Sidebar */}
         <div className="md:w-1/3 md:sticky top-24 border h-fit border-gray-200 rounded-lg p-5 bg-white shadow">
           {/* Search Bar */}
