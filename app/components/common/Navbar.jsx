@@ -27,7 +27,7 @@ const Navbar = () => {
   }, [open]);
 
   return (
-    <nav className={`bg-[#0D1B2A] text-white sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'shadow-xl py-0' : 'shadow-lg py-2'}`}>
+    <nav className="bg-[#0D1B2A] text-white sticky top-0 z-50 transition-all duration-300 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
