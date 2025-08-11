@@ -79,14 +79,14 @@ const Hero = () => {
               <p className="text-xl md:text-2xl text-gray-200 font-light max-w-lg animate-fadeIn delay-200">
                 {item.description}
               </p>
-              <div className="flex gap-4 animate-fadeIn delay-300">
+              <div className="flex flex-col mb-20 sm:mb-10 items-center sm:items-start  sm:flex-row gap-4 animate-fadeIn delay-300">
                 <Link href={item.path}>
-                  <button className="px-8 py-4 bg-[#D4AF37] text-[#0D1B2A] font-semibold rounded-sm hover:bg-amber-500 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                  <button className="sm:px-8 px-3 sm:py-4 py-2 text-sm whitespace-nowrap bg-[#D4AF37] text-[#0D1B2A] font-semibold rounded-sm hover:bg-amber-500 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                     {item.btn}
                   </button>
                 </Link>
                 <Link href="/contact">
-                  <button className="px-8 py-4 border-2 border-[#D4AF37] text-white font-semibold rounded-sm hover:bg-[#D4AF37]/10 transition-all duration-300">
+                  <button className="sm:px-8 px-3 sm:py-4 py-2  text-sm border-2 whitespace-nowrap border-[#D4AF37] text-white font-semibold rounded-sm hover:bg-[#D4AF37]/10 transition-all duration-300">
                     Emergency Contact
                   </button>
                 </Link>
