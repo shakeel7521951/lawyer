@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { FaBuilding, FaHandshake, FaChartLine } from "react-icons/fa";
-
+import Link from 'next/link'
 const corporateServices = [
   {
     icon: <FaBuilding size={40} className="text-gold" />,
@@ -28,7 +28,7 @@ const CorporatePg = () => {
   return (
     <div className="bg-white text-black min-h-screen">
       {/* Hero Section */}
-      <div className="bg-blue-950 text-white py-20 px-6 text-center">
+      <div className="bg-[#0D1B2A]  text-white py-20 px-6 text-center">
         <h1 className="text-4xl font-bold mb-4 text-gold">Corporate Services</h1>
         <p className="max-w-2xl mx-auto text-lg">
           Al Khaldi Law Firm provides specialized legal solutions for corporate clients, delivering
@@ -39,7 +39,7 @@ const CorporatePg = () => {
       {/* Image & Intro */}
       <div className="flex flex-col md:flex-row gap-6 items-center justify-center bg-white py-10 px-6">
       <img
-            src="https://media.istockphoto.com/id/1471444483/photo/customer-satisfaction-survey-concept-users-rate-service-experiences-on-online-application.webp?a=1&b=1&s=612x612&w=0&k=20&c=vTedWOsRo4-O5hO_ZblfrCYNEHvmdTcU6cPCW8I1u60="
+            src="/about/h3.avif"
             alt="Trusted by Government"
             className="w-full md:w-1/2 rounded-xl shadow-md object-cover"
           />
@@ -60,9 +60,9 @@ const CorporatePg = () => {
           {corporateServices.map((service, index) => (
             <div
               key={index}
-              className="bg-blue-950 p-6 rounded-xl shadow-md hover:scale-105 transition-transform duration-300"
+              className="bg-[#0D1B2A]  p-6 rounded-xl shadow-md hover:scale-105 transition-transform duration-300"
             >
-              <div className="mb-4">{service.icon}</div>
+              <div className="mb-4 text-yellow-500">{service.icon}</div>
               <h3 className="text-xl font-semibold text-gold mb-2">{service.title}</h3>
               <p className="text-gray-300">{service.description}</p>
             </div>
@@ -71,15 +71,15 @@ const CorporatePg = () => {
       </div>
 
       {/* Call to Action */}
-      <div className="bg-blue-950 text-white  text-center py-12 px-6">
+      <div className="bg-[#0D1B2A]  text-white  text-center py-12 px-6">
         <h2 className="text-3xl font-bold mb-4">Partner With Legal Experts</h2>
         <p className="mb-6 max-w-xl mx-auto">
           Secure your corporate future with Al Khaldi Law Firm. Schedule a consultation today and
           experience legal excellence.
         </p>
-        <button className="bg-black text-white px-6 py-3 rounded-lg hover:bg-navy transition-colors duration-300">
+     <Link href="/contact">   <button className="bg-yellow-500 hover:bg-yellow-400 text-black font-semibold cursor-pointer  px-6 py-3 rounded-lg hover:bg-navy transition-colors duration-300">
           Book Consultation
-        </button>
+        </button></Link>
       </div>
     </div>
   );

@@ -18,10 +18,10 @@ const Hero = () => {
             Trusted legal advisors with over 20 years of experience serving clients with excellence and integrity.
           </p>
           <div className="flex justify-center space-x-4 mb-8">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+            <button className="bg-yellow-500 cursor-pointer hover:bg-yellow-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
               Our Services
             </button>
-            <button className="bg-transparent hover:bg-blue-600 text-blue-200 font-semibold hover:text-white py-3 px-6 border border-blue-300 hover:border-transparent rounded-lg transition duration-300">
+            <button className="bg-transparent hover:bg-yellow-500 text-yellow-200 font-semibold hover:text-white py-3 px-6 border border-yellow-300 cursor-pointer hover:border-transparent rounded-lg transition duration-300">
               Contact Us
             </button>
           </div>

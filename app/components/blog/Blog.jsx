@@ -98,10 +98,10 @@ const Blog = () => {
                     <h2 className="text-xl font-semibold text-gray-800 mb-2">
                       {post.title}
                     </h2>
-                    <p className="text-sm text-gray-500 mb-4">{post.date}</p>
+                    <p className="text-sm text-yellow-500 mb-4">{post.date}</p>
                     <p className="text-gray-600 mb-4">{post.description}</p>
                     <button
-                      className="bg-blue-600 text-white cursor-pointer px-4 py-2 rounded-md hover:bg-blue-700 transition"
+                      className="bg-yellow-500 font-semibold text-white cursor-pointer px-4 py-2 rounded-md hover:bg-yellow-400 transition"
                       onClick={() => moveToDetailPg(post)}
                     >
                       Read More
@@ -133,7 +133,7 @@ const Blog = () => {
                   onClick={() => goToPage(index + 1)}
                   className={`px-3 py-1 cursor-pointer rounded ${
                     currentPage === index + 1
-                      ? "bg-blue-600 text-white"
+                      ? "bg-yellow-500 text-white"
                       : "bg-gray-200 text-gray-800"
                   }`}
                 >
