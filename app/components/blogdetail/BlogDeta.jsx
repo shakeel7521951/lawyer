@@ -20,7 +20,7 @@ export default function BlogDeta() {
     <div className=" w-full px-10 py-10">
        <Link href="/blog">  <button
               type="submit"
-              className=" mr-10 flex items-center gap-2 cursor-pointer w-full md:w-auto px-6 py-3 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center"
+              className=" mr-10 flex items-center gap-2 cursor-pointer w-full md:w-auto px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center"
             >
               <IoIosArrowRoundBack />
 Back to Blog
@@ -94,7 +94,7 @@ Back to Blog
             
             <button
               type="submit"
-              className="mt-4 w-full md:w-auto px-6 py-3 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center"
+              className="mt-4 w-full md:w-auto px-6 py-3 bg-yellow-500 hover:bg-yellow-400 cursor-pointer text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center"
             >
               Send Message
               
