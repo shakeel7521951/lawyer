@@ -98,14 +98,25 @@ const ContactForm = () => {
   return (
     <div className="min-h-screen bg-[#F9F9F9] text-[#0D1B2A]">
       {/* Hero Section */}
-      <div className="relative bg-[#0D1B2A] text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Get In Touch With Us</h1>
-          <p className="text-xl max-w-2xl mx-auto">
-            Ready to start your business in the GCC? Our team is here to help you every step of the way.
+      <div className="relative bg-gradient-to-br from-[#0D1B2A] via-[#1B263B] to-[#415A77] text-white py-24 overflow-hidden">
+        {/* Decorative Circles */}
+        <div className="absolute -top-20 -left-20 w-96 h-96 bg-[#E0E1DD]/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-72 h-72 bg-[#778DA9]/20 rounded-full blur-2xl animate-pulse delay-200"></div>
+
+        <div className="container mx-auto px-6 text-center relative z-10">
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight tracking-tight">
+            Get In Touch <span className="text-[#E0E1DD]">With Us</span>
+          </h1>
+          <p className="text-lg md:text-xl max-w-2xl mx-auto text-[#E0E1DD]/80 mb-8">
+            Ready to start your business in the GCC?
+            Our expert team is here to guide you every step of the way.
           </p>
+          <button className="bg-[#E0E1DD] text-[#0D1B2A] px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition duration-300">
+            Contact Us
+          </button>
         </div>
       </div>
+
 
       {/* Contact Information */}
       <div className="container mx-auto px-4 py-16">
@@ -119,7 +130,7 @@ const ContactForm = () => {
                 <h3 className="text-xl font-bold">{card.title}</h3>
               </div>
               <p className="text-gray-600 mb-4">{card.description}</p>
-              
+
               {card.items && (
                 <div className="space-y-2">
                   {card.items.map((item, i) => (
@@ -132,7 +143,7 @@ const ContactForm = () => {
                   ))}
                 </div>
               )}
-              
+
               {card.buttons && (
                 <div className="space-y-4">
                   {card.buttons.map((button, i) => (
@@ -183,28 +194,28 @@ const ContactForm = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
                     <label htmlFor="name" className="block text-gray-700 mb-2">Full Name</label>
-                    <input 
-                      type="text" 
-                      id="name" 
+                    <input
+                      type="text"
+                      id="name"
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"
                       placeholder="Your name"
                     />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-gray-700 mb-2">Email Address</label>
-                    <input 
-                      type="email" 
-                      id="email" 
+                    <input
+                      type="email"
+                      id="email"
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"
                       placeholder="Your email"
                     />
                   </div>
                 </div>
-                
+
                 <div className="mb-6">
                   <label htmlFor="country" className="block text-gray-700 mb-2">Country of Interest</label>
-                  <select 
-                    id="country" 
+                  <select
+                    id="country"
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"
                   >
                     <option value="">Select a country</option>
@@ -213,11 +224,11 @@ const ContactForm = () => {
                     ))}
                   </select>
                 </div>
-                
+
                 <div className="mb-6">
                   <label htmlFor="service" className="block text-gray-700 mb-2">Service Needed</label>
-                  <select 
-                    id="service" 
+                  <select
+                    id="service"
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"
                   >
                     <option value="">Select a service</option>
@@ -226,35 +237,35 @@ const ContactForm = () => {
                     ))}
                   </select>
                 </div>
-                
+
                 <div className="mb-6">
                   <label htmlFor="message" className="block text-gray-700 mb-2">Your Message</label>
-                  <textarea 
-                    id="message" 
-                    rows="5" 
+                  <textarea
+                    id="message"
+                    rows="5"
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"
                     placeholder="Tell us about your business needs"
                   ></textarea>
                 </div>
-                
-                <button 
-                  type="submit" 
+
+                <button
+                  type="submit"
                   className="bg-[#0D1B2A] hover:bg-[#1C1C1C] text-white px-8 py-3 rounded-lg font-semibold transition"
                 >
                   Send Message
                 </button>
               </form>
             </div>
-            
+
             {/* Support Section */}
             <div className="md:w-1/3 bg-[#0D1B2A] text-white p-8">
               <div className="flex items-center mb-6">
                 <MdOutlineSupportAgent className="text-[#D4AF37] text-3xl mr-3" />
                 <h3 className="text-xl font-bold">Need Immediate Assistance?</h3>
               </div>
-              
+
               <p className="mb-6">Our support team is ready to help you with any questions about business setup in the GCC.</p>
-              
+
               <div className="space-y-4">
                 {supportFeatures.map((feature, index) => (
                   <div key={index} className="flex items-start">
@@ -265,14 +276,14 @@ const ContactForm = () => {
                     </div>
                   </div>
                 ))}
-                
+
                 <div className="pt-6">
                   <h4 className="font-semibold mb-3">Connect With Us</h4>
                   <div className="flex space-x-4">
                     {socialLinks.map((social, index) => (
-                      <a 
-                        key={index} 
-                        href={social.href} 
+                      <a
+                        key={index}
+                        href={social.href}
                         className="bg-[#D4AF37] hover:bg-amber-500 text-[#0D1B2A] p-2 rounded-full transition"
                       >
                         <social.icon className="text-xl" />
