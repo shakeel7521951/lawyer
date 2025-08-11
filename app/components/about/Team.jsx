@@ -75,7 +75,7 @@ const Team = () => {
                     </a>
                   </div>
                 </div>
-                <div className="absolute top-4 right-4 bg-[#D4AF37] text-[#1C1C1C] p-3 rounded-lg">
+                <div className="absolute top-4 right-4 bg-gray-200 text-[#1C1C1C] p-3 rounded-lg">
                   {member.icon}
                 </div>
               </div>

@@ -9,50 +9,50 @@ export default function LoginForm() {
   return (
     <div className="min-h-screen flex items-center justify-center px-4 sm:px-8 md:px-12 lg:px-16 py-12 bg-gray-100">
       {/* Luxury Card */}
-      <div className="w-full max-w-4xl bg-white shadow-xl rounded-lg overflow-hidden border border-[#001f3f]">
+      <div className="w-full max-w-4xl bg-white shadow-xl rounded-lg overflow-hidden border border-[#0D1B2A]">
         {/* Gold Header */}
-        <div className="bg-[#001f3f] py-6 px-4 sm:px-8 text-center">
-          <h1 className="text-[#ffd700] font-serif text-2xl sm:text-3xl font-bold">
+        <div className="bg-[#0D1B2A] py-6 px-4 sm:px-8 text-center">
+          <h1 className="text-[#D4AF37] font-serif text-2xl sm:text-3xl font-bold">
             Al Khaldi Law Firm
           </h1>
         </div>
 
         {/* Body */}
         <div className="p-6 sm:p-8">
-          <h2 className="mb-6 text-center text-2xl sm:text-3xl font-serif font-bold text-[#001f3f]">
+          <h2 className="mb-6 text-center text-2xl sm:text-3xl font-serif font-bold text-[#0D1B2A]">
             Welcome Back
           </h2>
 
           {/* Email Field */}
           <div className="mb-4">
-            <label className="block text-[#001f3f] font-semibold mb-2">
+            <label className="block text-[#0D1B2A] font-semibold mb-2">
               Email Address
             </label>
             <div className="relative">
-              <FaEnvelope className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#001f3f]" size={18} />
+              <FaEnvelope className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#0D1B2A]" size={18} />
               <input
                 type="email"
                 placeholder="example@example.com"
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-[#ffd700] transition-all duration-200 outline-none"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-[#D4AF37] transition-all duration-200 outline-none"
               />
             </div>
           </div>
 
           {/* Password Field */}
           <div className="mb-6">
-            <label className="block text-[#001f3f] font-semibold mb-2">
+            <label className="block text-[#0D1B2A] font-semibold mb-2">
               Password
             </label>
             <div className="relative">
-              <FaLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#001f3f]" size={18} />
+              <FaLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#0D1B2A]" size={18} />
               <input
                 type={showPassword ? "text" : "password"}
-                className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-[#ffd700] transition-all duration-200 outline-none"
+                className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-[#D4AF37] transition-all duration-200 outline-none"
               />
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#001f3f]"
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#0D1B2A]"
               >
                 {showPassword ? <FaEyeSlash size={18} /> : <FaEye size={18} />}
               </button>
@@ -63,23 +63,23 @@ export default function LoginForm() {
           <div className="text-right mb-6">
             <Link
               href="/forgot-password"
-              className="text-[#ffd700] hover:underline text-sm"
+              className="text-[#D4AF37] hover:underline text-sm"
             >
               Forgot Password?
             </Link>
           </div>
 
           {/* Login Button */}
-          <button className="w-full bg-[#001f3f] hover:bg-[#ffd700] hover:text-[#001f3f] text-white font-bold py-2 px-4 rounded transition duration-200">
+          <button className="w-full bg-[#0D1B2A] hover:bg-[#D4AF37] hover:text-[#0D1B2A] text-white font-bold py-2 px-4 rounded transition duration-200">
             Login
           </button>
 
           {/* Signup Link */}
-          <div className="mt-6 text-center text-[#001f3f]">
+          <div className="mt-6 text-center text-[#0D1B2A]">
             <span>Don't have an account? </span>
             <Link
               href="/signup"
-              className="text-[#ffd700] hover:text-[#001f3f] hover:underline font-medium"
+              className="text-[#D4AF37] hover:text-[#0D1B2A] hover:underline font-medium"
             >
               Sign Up
             </Link>
