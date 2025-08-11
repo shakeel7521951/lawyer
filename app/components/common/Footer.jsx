@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#001f3f] text-white">
+    <footer className="bg-[#0D1B2A] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Logo & Description */}
         <div className="space-y-4">
@@ -35,6 +35,12 @@ export default function Footer() {
               <Link href="/services" className="text-white hover:text-[#FFD700] transition-colors duration-300 flex items-start">
                 <span className="mr-2 text-[#FFD700]">•</span>
                 <span>Services</span>
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog" className="text-white hover:text-[#FFD700] transition-colors duration-300 flex items-start">
+                <span className="mr-2 text-[#FFD700]">•</span>
+                <span>Blog</span>
               </Link>
             </li>
             <li>
@@ -93,7 +99,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-[#001f3f] py-6">
+      <div className="bg-[#0D1B2A] py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white text-sm">
           <div className="border-t border-gray-500 pt-6">
             © {new Date().getFullYear()} Al Khaldi Law Firm. All rights reserved.

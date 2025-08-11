@@ -47,7 +47,7 @@ const Objectives = () => {
           Our Objectives
         </h1>
         <p className="text-lg text-gray-600">
-          At <span className="font-semibold text-blue-700">Al Khaldi Law Firm</span>, 
+          At <span className="font-semibold text-yellow-700">Al Khaldi Law Firm</span>, 
           our mission is to provide top-tier legal services, 
           ensuring trust, transparency, and success for every client.
         </p>

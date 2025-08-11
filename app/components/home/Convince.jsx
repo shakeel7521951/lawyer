@@ -7,7 +7,7 @@ const Convince = () => {
       {/* Heading */}
       <div className="text-center mb-10">
         <h1 className="text-4xl font-bold text-gray-800 mb-4">
-          Why Choose <span className="text-blue-600">Al Khaldi Law Firm</span>?
+          Why Choose <span className="text-yellow-600">Al Khaldi Law Firm</span>?
         </h1>
         <p className="text-gray-600 max-w-3xl mx-auto">
           Selecting the right legal partner is a decision that can greatly influence the outcome of your case. 
@@ -39,28 +39,28 @@ const Convince = () => {
       {/* Points Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div className="bg-white p-6 rounded-lg shadow-md text-center">
-          <FaBalanceScale className="text-blue-600 text-4xl mx-auto mb-4" />
+          <FaBalanceScale className="text-yellow-600 text-4xl mx-auto mb-4" />
           <h3 className="text-xl font-semibold mb-2">Expert Legal Advice</h3>
           <p className="text-gray-600">
             Decades of combined legal experience in Qatar’s judicial system.
           </p>
         </div>
         <div className="bg-white p-6 rounded-lg shadow-md text-center">
-          <FaHandshake className="text-blue-600 text-4xl mx-auto mb-4" />
+          <FaHandshake className="text-yellow-600 text-4xl mx-auto mb-4" />
           <h3 className="text-xl font-semibold mb-2">Client-Centered Approach</h3>
           <p className="text-gray-600">
             We listen, understand, and work closely with you to achieve the best results.
           </p>
         </div>
         <div className="bg-white p-6 rounded-lg shadow-md text-center">
-          <FaUserShield className="text-blue-600 text-4xl mx-auto mb-4" />
+          <FaUserShield className="text-yellow-600 text-4xl mx-auto mb-4" />
           <h3 className="text-xl font-semibold mb-2">Strong Representation</h3>
           <p className="text-gray-600">
             Aggressive advocacy to protect your rights and interests.
           </p>
         </div>
         <div className="bg-white p-6 rounded-lg shadow-md text-center">
-          <FaClock className="text-blue-600 text-4xl mx-auto mb-4" />
+          <FaClock className="text-yellow-600 text-4xl mx-auto mb-4" />
           <h3 className="text-xl font-semibold mb-2">Efficient & Timely</h3>
           <p className="text-gray-600">
             Fast response and resolution without compromising on quality.

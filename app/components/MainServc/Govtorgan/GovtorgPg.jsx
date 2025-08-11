@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaBalanceScale, FaHandshake, FaGavel, FaRegFileAlt } from 'react-icons/fa';
-
+import Link from 'next/link'
 const govtServices = [
   {
     title: 'Administrative Law & Public Policy',
@@ -40,7 +40,7 @@ const GovtorgPg = () => {
             alt="Government Services"
             className="w-full h-72 object-cover rounded-2xl shadow-lg"
           />
-          <div className="absolute inset-0 bg-blue-950 bg-opacity-60 flex items-center justify-center rounded-2xl">
+          <div className="absolute inset-0 bg-[#0D1B2A] bg-opacity-60 flex items-center justify-center rounded-2xl">
             <h1 className="text-4xl md:text-5xl font-bold text-white text-center px-4">
               Government & Semi-Government Legal Services
             </h1>
@@ -60,7 +60,7 @@ const GovtorgPg = () => {
           {govtServices.map((service, index) => (
             <div
               key={index}
-              className="bg-blue-950 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 text-center group"
+              className="bg-[#0D1B2A] p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 text-center group"
             >
               <div className="text-yellow-400 text-4xl mb-4 group-hover:scale-110 transition-transform">
                 {service.icon}
@@ -74,12 +74,12 @@ const GovtorgPg = () => {
         {/* Two Column Info */}
         <div className="flex flex-col md:flex-row gap-10 mb-20 items-center">
           <img
-            src="https://images.unsplash.com/photo-1669131196184-a567e41f7236?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aW5zdGl0dXRpb258ZW58MHx8MHx8fDA%3D"
+            src="/about/abh.jpg"
             alt="Trusted by Government"
             className="w-full md:w-1/2 rounded-xl shadow-md object-cover"
           />
           <div>
-            <h2 className="text-2xl font-bold text-blue-900 mb-4">
+            <h2 className="text-2xl font-bold text-yellow-500 mb-4">
               Trusted by Ministries & Public Institutions
             </h2>
             <p className="text-black">
@@ -89,7 +89,7 @@ const GovtorgPg = () => {
         </div>
 
         {/* CTA */}
-        <div className="bg-blue-950 p-8 rounded-xl flex flex-col md:flex-row justify-between items-center gap-6 shadow-lg">
+        <div className="bg-[#0D1B2A] p-8 rounded-xl flex flex-col md:flex-row justify-between items-center gap-6 shadow-lg">
           <div>
             <h3 className="text-xl font-bold text-white mb-2">
               Looking for Expert Government Legal Counsel?
@@ -98,9 +98,9 @@ const GovtorgPg = () => {
               Connect with our legal team today — we're ready to serve your department or organization with elite, bilingual legal expertise.
             </p>
           </div>
-          <button className="bg-yellow-500 text-black px-6 py-3 rounded-full hover:bg-yellow-400 transition duration-300">
+         <Link href="/contact"> <button className="bg-yellow-500 cursor-pointer text-black px-6 py-3 rounded-full hover:bg-yellow-400 transition duration-300">
             Contact Our Legal Team
-          </button>
+          </button></Link>
         </div>
       </div>
     </div>

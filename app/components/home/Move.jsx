@@ -14,12 +14,11 @@ const Move = () => {
         semi-government, corporate, and individual clients — ensuring justice,
         compliance, and peace of mind.
       </p>
-      <button
-       
-        className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300 shadow-lg"
-      >
-        Contact Us
-      </button>
+     <div className="mt-16 text-center">
+          <button className="px-8 cursor-pointer py-4 bg-gradient-to-r from-[#0D1B2A] to-[#1C1C1C] text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all hover:from-[#D4AF37] hover:to-amber-600 transform hover:-translate-y-1">
+            Contact Us
+          </button>
+        </div>
     </div>
   );
 };

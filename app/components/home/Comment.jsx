@@ -39,11 +39,11 @@ const Comment = () => {
             <img
               src={comment.img}
               alt={comment.name}
-              className="w-20 h-20 rounded-full border-4 border-indigo-500 mb-4 object-cover"
+              className="w-20 h-20 rounded-full border-4 border-yellow-500 mb-4 object-cover"
             />
             <p className="text-gray-600 italic mb-4">"{comment.text}"</p>
             <h3 className="text-lg font-semibold text-gray-800">{comment.name}</h3>
-            <span className="text-sm text-indigo-600">{comment.role}</span>
+            <span className="text-sm text-yellow-600">{comment.role}</span>
           </div>
         ))}
       </div>
