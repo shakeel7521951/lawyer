@@ -1,10 +1,16 @@
 import React from 'react'
-import HeroWhy from '../components/whyus/HeroWhy'
+import HeroChoose from '../components/whyus/HeroChoose'
+import OurProcess from '../components/whyus/OurProcess'
+import Testimonials from '../components/whyus/Testimonials'
+import CatTrust from '../components/whyus/CatTrust'
 
 const page = () => {
   return (
     <div>
-      <HeroWhy/>
+      <HeroChoose/>
+      <OurProcess/>
+      <Testimonials/>
+      <CatTrust/>
     </div>
   )
 }

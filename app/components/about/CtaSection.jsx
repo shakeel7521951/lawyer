@@ -21,10 +21,10 @@ const CtaSection = () => {
           Our team of experts is ready to guide you through every step of establishing and growing your business in the Gulf region.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4 md:gap-6">
-          <button className="bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#1C1C1C] px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-[#D4AF37]/30">
+          <button className="bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#1C1C1C] px-5 py-3 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-[#D4AF37]/30">
             Book Free Consultation
           </button>
-          <button className="border-2 border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37]/10 px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105">
+          <button className="border-2 border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37]/10 px-5 py-3 rounded-lg font-semibold text-lg transition-all transform hover:scale-105">
             Contact Our Team
           </button>
         </div>
