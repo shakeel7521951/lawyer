@@ -3,7 +3,7 @@ import React from 'react'
 
 const Paragraph = () => {
   return (
-    <section className="w-full bg-gradient-to-b from-[#F9F9F9] to-white py-24 px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-gradient-to-b from-[#F9F9F9] to-white py-10 sm:py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         {/* Left Content */}
         <div className="order-2 md:order-1">

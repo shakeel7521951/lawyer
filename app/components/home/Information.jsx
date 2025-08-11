@@ -35,7 +35,7 @@ const services = [
 
 const Information = () => {
   return (
-    <section className="w-full bg-gradient-to-b from-[#F9F9F9] to-white py-24 px-4 sm:px-6 lg:px-8">
+    <section className="w-full  bg-gradient-to-b from-[#F9F9F9] to-white py-14 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-2 bg-blue-100 text-[#0D1B2A] rounded-full text-sm font-semibold tracking-wider mb-4">
@@ -80,7 +80,7 @@ const Information = () => {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-5 sm:mt-16 text-center">
           <button className="px-8 py-4 cursor-pointer bg-gradient-to-r from-[#0D1B2A] to-[#1C1C1C] text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all hover:from-[#D4AF37] hover:to-amber-600 transform hover:-translate-y-1">
             Book Your Free Consultation
           </button>

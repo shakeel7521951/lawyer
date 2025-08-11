@@ -36,7 +36,7 @@ const Dignity = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-[#F9F9F9] to-white">
+    <section className="py-10 sm:py-10 bg-gradient-to-b from-[#F9F9F9] to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-2 bg-blue-100 text-[#0D1B2A] rounded-full text-sm font-semibold tracking-wider mb-4">
