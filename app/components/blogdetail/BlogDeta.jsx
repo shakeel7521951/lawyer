@@ -3,10 +3,11 @@ import { useSearchParams } from "next/navigation";
 import BlogPosts from "./../blog/BlogPosts";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { useRouter } from "next/navigation";
-import Link from 'next/link'
+import Link from "next/link";
+import { Suspense } from "react";
 
-export default function BlogDetail() {
-   const router = useRouter();
+function BlogDetailContent() {
+  const router = useRouter();
   const searchParams = useSearchParams();
   const id = searchParams.get("id");
 
@@ -20,14 +21,13 @@ export default function BlogDetail() {
     router.push(`/blogdetail?id=${blog.id}`);
   };
 
-
   return (
     <>
       <div className="w-full px-4 sm:px-10 py-10">
         <Link href="/blog">
           <button
             type="button"
-            className="flex items-center  gap-2 cursor-pointer w-45  md:w-auto px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all"
+            className="flex items-center gap-2 cursor-pointer w-45 md:w-auto px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all"
           >
             <IoIosArrowRoundBack />
             Back to Blog
@@ -35,9 +35,9 @@ export default function BlogDetail() {
         </Link>
       </div>
 
-      <div className="flex  flex-col-reverse lg:flex-row gap-8 px-4 sm:px-6 lg:px-8 pb-8">
+      <div className="flex flex-col-reverse lg:flex-row gap-8 px-4 sm:px-6 lg:px-8 pb-8">
         <div className="w-full lg:w-2/3">
-          <div className="bg-white rounded-xl  overflow-hidden">
+          <div className="bg-white rounded-xl overflow-hidden">
             <img
               src={post.image}
               alt={post.title}
@@ -50,7 +50,7 @@ export default function BlogDetail() {
                 </h1>
               </div>
               <p className="mt-2 text-gray-500 text-sm">{post.date}</p>
-              
+
               <div className="prose max-w-none mt-6 text-gray-700">
                 <p className="text-lg font-medium mb-4">
                   {post.content || post.description}
@@ -71,7 +71,7 @@ export default function BlogDetail() {
               <p className="text-gray-600 mb-6">
                 Contact our legal experts for personalized advice
               </p>
-              
+
               <form className="space-y-4">
                 <div>
                   <textarea
@@ -81,18 +81,21 @@ export default function BlogDetail() {
                     placeholder="Message"
                   ></textarea>
                 </div>
-                
+
                 <div className="flex items-center">
                   <input
                     id="consent"
                     type="checkbox"
                     className="h-4 w-4 text-amber-600 focus:ring-amber-500 border-gray-300 rounded"
                   />
-                  <label htmlFor="consent" className="ml-2 block text-sm text-gray-700">
+                  <label
+                    htmlFor="consent"
+                    className="ml-2 block text-sm text-gray-700"
+                  >
                     I agree to receive communications about this inquiry
                   </label>
                 </div>
-                
+
                 <button
                   type="submit"
                   className="mt-4 w-full md:w-auto px-6 py-3 bg-yellow-500 hover:bg-yellow-400 cursor-pointer text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all"
@@ -106,29 +109,36 @@ export default function BlogDetail() {
 
         <div className="w-full lg:w-1/3">
           <div className="bg-white border border-gray-400 p-6 rounded-xl shadow-lg">
-         
-          {BlogPosts.slice(0, 4).map((post) => (
-            <div
-              key={post.id}
-              className="flex lg:flex-col gap-5 flex-col sm:flex-row items-center mb-4  p-2 rounded-md transition cursor-pointer"
-              onClick={() => movebhtDetailPg(post)}
-            >
-              <img
-                src={post.image}
-                alt={post.title}
-                className="lg:w-50 w-40  lg:h-20 object-cover rounded"
-              />
-              <div className="ml-3 text-sm">
-                <h3 className="font-medium text-gray-800 leading-snug">{post.title}</h3>
-                <p className="text-gray-500 text-xs">{post.date}</p>
+            {BlogPosts.slice(0, 4).map((post) => (
+              <div
+                key={post.id}
+                className="flex lg:flex-col gap-5 flex-col sm:flex-row items-center mb-4 p-2 rounded-md transition cursor-pointer"
+                onClick={() => movebhtDetailPg(post)}
+              >
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  className="lg:w-50 w-40 lg:h-20 object-cover rounded"
+                />
+                <div className="ml-3 text-sm">
+                  <h3 className="font-medium text-gray-800 leading-snug">
+                    {post.title}
+                  </h3>
+                  <p className="text-gray-500 text-xs">{post.date}</p>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-        </div>
+            ))}
           </div>
-        
-      
+        </div>
+      </div>
     </>
+  );
+}
+
+export default function BlogDetail() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <BlogDetailContent />
+    </Suspense>
   );
 }
