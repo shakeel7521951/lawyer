@@ -1,14 +1,20 @@
-import React from 'react'
-import Hero from '../components/blog/Hero';
-import Blog from '../components/blog/Blog';
+"use client";
+import React, { Suspense } from "react";
+import Hero from "../components/blog/Hero";
+import Blog from "../components/blog/Blog";
 
-const page = () => {
+const Page = () => {
   return (
     <div>
-        <Hero/>
-        <Blog/>
-    </div>
-  )
-}
+      <Suspense fallback={<div>Loading hero...</div>}>
+        <Hero />
+      </Suspense>
 
-export default page;
+      <Suspense fallback={<div>Loading blog...</div>}>
+        <Blog />
+      </Suspense>
+    </div>
+  );
+};
+
+export default Page;
