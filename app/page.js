@@ -7,23 +7,24 @@ import Move from "./components/home/Move";
 import Points from "./components/home/Points";
 import Dignity from "./components/home/Dignity";
 import Convince from "./components/home/Convince";
+import HeroSection from "./components/home/Hero";
 // import Header from "./components/home/Header";
 
 export default function Home() {
   return (
     <div>
       {/* <Header /> */}
-      <Hero/>
+      <HeroSection/>
       <Information/>
       <Paragraph/>
       <Points/>
-      <Dignity/>
+      {/*<Dignity/>*/}
       <Objectives/>
 
       <Comment/>
       <Convince/>
       
-      <Move/>
+      {/*<Move/>*/}
     </div>
   );
 }

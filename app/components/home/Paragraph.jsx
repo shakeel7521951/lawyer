@@ -1,78 +1,199 @@
 'use client'
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
+import { Scale, Award, Building2, Globe } from 'lucide-react'
 
 const Paragraph = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="w-full bg-gradient-to-b from-[#F9F9F9] to-white py-10 sm:py-24 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-        {/* Left Content */}
-        <div className="order-2 md:order-1">
-          <span className="inline-block px-4 py-2 bg-blue-100 text-[#0D1B2A] rounded-full text-sm font-semibold tracking-wider mb-4">
-            OUR PHILOSOPHY
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1C1C1C] mb-6">
-            Redefining <span className="text-[#D4AF37]">Legal Excellence</span> in the GCC
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#0D1B2A] to-[#D4AF37] mb-8"></div>
-          
-          <div className="space-y-6">
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Al-Khaldi isn't just a law firm - we're strategic partners in your GCC success. Our integrated approach combines legal expertise with business acumen, helping government entities, corporations, and entrepreneurs navigate complex regulations while seizing growth opportunities.
-            </p>
-            
-            <p className="text-lg text-gray-700 leading-relaxed">
-              With offices in Qatar, Oman, and Saudi Arabia, we've guided 500+ businesses through seamless setup, compliance, and expansion. Our unique ecosystem connects legal services with Nerou's technology solutions and our "I Want to Grow" media platform for complete market readiness.
-            </p>
-            
-            <ul className="grid grid-cols-2 gap-4 mt-8">
-              <li className="flex items-center">
-                <svg className="w-5 h-5 text-[#D4AF37] mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-                <span className="text-gray-700">100% Foreign Ownership</span>
-              </li>
-              <li className="flex items-center">
-                <svg className="w-5 h-5 text-[#D4AF37] mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-                <span className="text-gray-700">PRO & Government Services</span>
-              </li>
-              <li className="flex items-center">
-                <svg className="w-5 h-5 text-[#D4AF37] mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-                <span className="text-gray-700">Visa & Licensing</span>
-              </li>
-              <li className="flex items-center">
-                <svg className="w-5 h-5 text-[#D4AF37] mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-                <span className="text-gray-700">Digital Growth Systems</span>
-              </li>
-            </ul>
-          </div>
-          
-          <button className="mt-10 px-8 py-3 bg-gradient-to-r from-[#0D1B2A] to-[#1C1C1C] text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all hover:from-[#D4AF37] hover:to-amber-600 transform hover:-translate-y-1">
-            Explore Our Ecosystem
-          </button>
+    <>
+      {/* Google Fonts */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet"
+      />
+
+      <section
+        ref={sectionRef}
+        className="w-full bg-gradient-to-br from-[#494c52] via-[#494c52] to-[#9f8660] py-16 sm:py-20 relative overflow-hidden"
+      >
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 bg-repeat opacity-30" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0 11.046 8.954 20 20 20s20-8.954 20-20-8.954-20-20-20-20 8.954-20 20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+          }}></div>
         </div>
 
-        {/* Right Image - Using regular img tag instead of Next.js Image */}
-        <div className="relative order-1 md:order-2 w-full h-[500px] rounded-xl overflow-hidden shadow-2xl">
-          <img
-            src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGxlZ2FsJTIwb2ZmaWNlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60"
-            alt="Al-Khaldi Law Firm Team"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A] to-transparent opacity-40"></div>
-          <div className="absolute bottom-0 left-0 p-8 text-white">
-            <h3 className="text-2xl font-bold mb-2">500+ Successful Cases</h3>
-            <p className="text-blue-100">Trusted by government entities and Fortune 500 companies</p>
+        {/* Floating Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-2 h-2 bg-[#c0b688] rounded-full animate-pulse opacity-40"></div>
+          <div className="absolute top-40 right-20 w-1 h-1 bg-[#c0b688] rounded-full animate-pulse opacity-30 delay-1000"></div>
+          <div className="absolute bottom-32 left-32 w-3 h-3 bg-[#9f8660] rounded-full animate-pulse opacity-35 delay-500"></div>
+          <div className="absolute top-1/3 right-1/4 w-1.5 h-1.5 bg-white rounded-full animate-pulse opacity-25 delay-700"></div>
+        </div>
+
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+            {/* Left Content */}
+            <div className={`order-2 lg:order-1 transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
+
+              {/* Badge */}
+              <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 border border-[#c0b688]/30 mb-6">
+                <Scale className="w-4 h-4 text-[#c0b688]" />
+                <span className="text-[#c0b688] font-semibold text-sm tracking-wider" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  OUR PHILOSOPHY
+                </span>
+              </div>
+
+              {/* Main Heading */}
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                Redefining{' '}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c0b688] to-[#9f8660]">
+                  Legal Excellence
+                </span>
+                <br />in the GCC
+              </h2>
+
+              {/* Decorative Line */}
+              <div className="flex items-center space-x-4 mb-8">
+                <div className="w-16 h-1 bg-gradient-to-r from-[#c0b688] to-white rounded-full"></div>
+                <div className="w-2 h-2 bg-[#c0b688] rounded-full animate-pulse"></div>
+              </div>
+
+              {/* Content Paragraphs */}
+              <div className="space-y-6">
+                <p className="text-lg text-white/90 leading-relaxed" style={{ fontFamily: "'Crimson Text', serif" }}>
+                  <span className="font-semibold text-[#c0b688]">الخالدي</span> isn't just a law firm - we're strategic partners in your GCC success. Our integrated approach combines legal expertise with business acumen, helping government entities, corporations, and entrepreneurs navigate complex regulations while seizing growth opportunities.
+                </p>
+
+                <p className="text-lg text-white/85 leading-relaxed" style={{ fontFamily: "'Crimson Text', serif" }}>
+                  With offices across the GCC region, we've guided <span className="font-semibold text-[#c0b688]">500+ businesses</span> through seamless setup, compliance, and expansion. Our unique ecosystem connects comprehensive legal services with cutting-edge solutions for complete market readiness.
+                </p>
+
+                {/* Key Stats */}
+                <div className="grid grid-cols-3 gap-4 pt-6 mt-8 border-t border-white/20">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-[#c0b688] mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>25+</div>
+                    <div className="text-sm text-white/70" style={{ fontFamily: "'Inter', sans-serif" }}>Years</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-[#c0b688] mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>500+</div>
+                    <div className="text-sm text-white/70" style={{ fontFamily: "'Inter', sans-serif" }}>Clients</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-[#c0b688] mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>6</div>
+                    <div className="text-sm text-white/70" style={{ fontFamily: "'Inter', sans-serif" }}>Countries</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Content - Image/Visual */}
+            <div className={`order-1 lg:order-2 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
+              <div className="relative">
+
+                {/* Main Image - Reduced Height */}
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                  <img
+                    src="/about/ab.jpeg"
+                    alt="Al-Khaldi Legal Excellence"
+                    className="w-full h-80 lg:h-96 object-cover"
+                  />
+                  {/* Elegant Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#494c52]/80 via-transparent to-transparent"></div>
+
+                  {/* Content Over Image */}
+                  <div className="absolute bottom-6 left-6 right-6">
+                    <div className="bg-white/15 backdrop-blur-lg rounded-xl p-6 border border-white/20 shadow-lg">
+                      <h3 className="text-xl font-bold text-white mb-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                        الخالدي Legal Framework
+                      </h3>
+                      <p className="text-sm text-white/90 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+                        Comprehensive legal solutions across corporate, government, and individual sectors throughout the GCC region.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Floating Elements */}
+                <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-[#c0b688] to-[#9f8660] rounded-2xl flex items-center justify-center shadow-lg">
+                  <Award className="w-8 h-8 text-white" />
+                </div>
+
+                <div className="absolute -bottom-4 -left-4 w-14 h-14 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center shadow-lg border border-white/30">
+                  <Building2 className="w-6 h-6 text-white" />
+                </div>
+
+                {/* Background Decorative Elements */}
+                <div className="absolute -z-10 top-8 right-8 w-32 h-32 bg-[#c0b688]/20 rounded-full blur-xl"></div>
+                <div className="absolute -z-10 bottom-8 left-8 w-24 h-24 bg-white/10 rounded-full blur-xl"></div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+
+        {/* Bottom Section - Trust Indicators */}
+        <div className={`max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-12 border-t border-white/20 transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+
+            <div className="space-y-3">
+              <div className="w-12 h-12 bg-gradient-to-r from-[#c0b688] to-[#9f8660] rounded-lg flex items-center justify-center mx-auto">
+                <Scale className="w-6 h-6 text-white" />
+              </div>
+              <h4 className="font-semibold text-white" style={{ fontFamily: "'Inter', sans-serif" }}>Legal Excellence</h4>
+              <p className="text-sm text-white/70">Uncompromising quality</p>
+            </div>
+
+            <div className="space-y-3">
+              <div className="w-12 h-12 bg-gradient-to-r from-[#c0b688] to-[#9f8660] rounded-lg flex items-center justify-center mx-auto">
+                <Globe className="w-6 h-6 text-white" />
+              </div>
+              <h4 className="font-semibold text-white" style={{ fontFamily: "'Inter', sans-serif" }}>GCC Expertise</h4>
+              <p className="text-sm text-white/70">Regional knowledge</p>
+            </div>
+
+            <div className="space-y-3">
+              <div className="w-12 h-12 bg-gradient-to-r from-[#c0b688] to-[#9f8660] rounded-lg flex items-center justify-center mx-auto">
+                <Building2 className="w-6 h-6 text-white" />
+              </div>
+              <h4 className="font-semibold text-white" style={{ fontFamily: "'Inter', sans-serif" }}>Strategic Partners</h4>
+              <p className="text-sm text-white/70">Business-focused approach</p>
+            </div>
+
+            <div className="space-y-3">
+              <div className="w-12 h-12 bg-gradient-to-r from-[#c0b688] to-[#9f8660] rounded-lg flex items-center justify-center mx-auto">
+                <Award className="w-6 h-6 text-white" />
+              </div>
+              <h4 className="font-semibold text-white" style={{ fontFamily: "'Inter', sans-serif" }}>Proven Results</h4>
+              <p className="text-sm text-white/70">500+ success stories</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </>
   )
 }
 
-export default Paragraph;
+export default Paragraph
