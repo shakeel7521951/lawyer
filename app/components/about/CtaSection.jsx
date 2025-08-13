@@ -14,7 +14,7 @@ const CtaSection = () => {
       </div>
       
       <div className="relative z-10 max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
           Ready to Start Your <span className="text-[#D4AF37]">GCC Business Journey</span>?
         </h2>
         <p className="text-[#F9F9F9]/90 mb-8 text-lg md:text-xl max-w-3xl mx-auto">
