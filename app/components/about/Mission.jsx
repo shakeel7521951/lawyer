@@ -1,13 +1,26 @@
 "use client";
 import Image from "next/image";
+import { useEffect } from "react";
+import Link from "next/link";
+import AOS from "aos";
+import "aos/dist/aos.css"; // ✅ Correct way to import CSS
 
 const Mission = () => {
+   useEffect(() => {
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+      });
+    }, []);
   return (
     <section className="relative   sm:py-16 sm:px-6 lg:px-12">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
         
         {/* Left: Mission Text */}
-        <div className="flex-1">
+        <div
+        data-aos="fade-right"
+        className="flex-1">
           <h2 className="text-3xl lg:text-4xl font-bold  mb-4">
             Our Mission
           </h2>
@@ -25,10 +38,10 @@ const Mission = () => {
             our clients a strategic advantage in a fast-changing world.
           </p>
           <ul className="space-y-3 text-sm ">
-            <li>✔ Delivering excellence in every legal and corporate service</li>
-            <li>✔ Promoting transparency, trust, and ethical practice</li>
-            <li>✔ Leveraging technology to provide innovative solutions</li>
-            <li>✔ Building long-term relationships with our clients</li>
+            <li> Delivering excellence in every legal and corporate service</li>
+            <li> Promoting transparency, trust, and ethical practice</li>
+            <li> Leveraging technology to provide innovative solutions</li>
+            <li> Building long-term relationships with our clients</li>
           </ul>
         </div>
 

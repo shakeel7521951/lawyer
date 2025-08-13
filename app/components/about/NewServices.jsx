@@ -1,6 +1,9 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; // ✅ Correct way to import CSS
 import {
   FaBuilding,
   FaBalanceScale,
@@ -14,8 +17,21 @@ import {
   FaUsers,
   FaTimes
 } from "react-icons/fa";
+import { FaLaptop } from "react-icons/fa";
+import { CiMobile1 } from "react-icons/ci";
+import { MdOutlineRecordVoiceOver } from "react-icons/md";
+import { FaWhatsapp } from "react-icons/fa";
+import { MdOutlineDashboard } from "react-icons/md";
+import { GoGraph } from "react-icons/go";
 
 const NewServices = () => {
+    useEffect(() => {
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+      });
+    }, []);
   const [selectedService, setSelectedService] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -70,10 +86,11 @@ const NewServices = () => {
     "Sponsor Services"
   ];
 
+
   const NeuroServ = [
     {
       id: 1,
-      icon: "💻",
+      icon: <FaLaptop />,
       name: "Website Development",
       about: `We create modern, responsive websites tailored to your business goals.
 Our designs ensure a seamless user experience across all devices.
@@ -84,7 +101,7 @@ Our goal is to make your brand stand out with a strong web presence.`
     },
     {
       id: 2,
-      icon: "📱",
+      icon: <CiMobile1 />,
       name: "Mobile App Development (iOS/Android)",
       about: `We build intuitive, high-performance mobile apps for iOS and Android.
 Our team ensures smooth navigation and engaging interfaces.
@@ -95,7 +112,7 @@ From concept to launch, we handle the entire development process.`
     },
     {
       id: 3,
-      icon: "🤖",
+      icon: <MdOutlineRecordVoiceOver />,
       name: "Voice AI Systems",
       about: `We design AI-powered voice assistants for smarter customer interaction.
 Our systems understand natural language and respond accurately.
@@ -106,7 +123,7 @@ This technology delivers a futuristic and efficient user experience.`
     },
     {
       id: 4,
-      icon: "📲",
+      icon: <FaWhatsapp />,
       name: "WhatsApp Automation",
       about: `We automate customer engagement through WhatsApp messaging.
 Our systems handle queries, bookings, and follow-ups instantly.
@@ -117,7 +134,7 @@ This is the fastest way to connect with clients effectively.`
     },
     {
       id: 5,
-      icon: "📊",
+      icon: <MdOutlineDashboard />,
       name: "CRM Dashboards",
       about: `We create custom CRM dashboards for real-time business insights.
 Data visualization helps track sales, leads, and performance.
@@ -128,7 +145,7 @@ This boosts efficiency and improves business management.`
     },
     {
       id: 6,
-      icon: "📈",
+      icon: <GoGraph />,
       name: "Performance Reports",
       about: `We deliver detailed performance reports for data-driven growth.
 Reports track KPIs, sales, and marketing effectiveness.
@@ -259,6 +276,7 @@ We turn raw data into actionable business strategies.`
           {audienceServices.map((group) => (
             <div
               key={group.audience}
+              data-aos="fade-up"
               className="bg-gradient-to-r from-[#9f8660] to-[#c0b688] p-6 group rounded-xl shadow-lg flex flex-col justify-between transition-all"
             >
               <div className="overflow-hidden rounded-lg">

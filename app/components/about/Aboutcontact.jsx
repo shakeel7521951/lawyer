@@ -1,7 +1,16 @@
 "use client";
 import Link from "next/link";
-
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; // ✅ Correct way to import CSS
 export default function AboutContact() {
+      useEffect(() => {
+        AOS.init({
+          duration: 1000,
+          once: true,
+          offset: 100,
+        });
+      }, []);
   return (
     <main className=" ">
     
@@ -17,6 +26,7 @@ export default function AboutContact() {
             for digital transformation, Al Khaldi Law Firm is here to help.
           </p>
           <Link
+          data-aos="fade-up"
             href="/contact"
             className="inline-block px-6 py-3 bg-gradient-to-r from-[#9f8660] to-[#c0b688]  font-semibold rounded-lg  transition-all duration-300"
           >

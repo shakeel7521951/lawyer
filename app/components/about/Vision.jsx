@@ -1,7 +1,16 @@
 "use client";
 import Image from "next/image";
-
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; // ✅ Correct way to import CSS
 const Vision = () => {
+    useEffect(() => {
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+      });
+    }, []);
   return (
     <section className="relative   py-16 px-6 lg:px-12">
       <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-10">
@@ -18,7 +27,9 @@ const Vision = () => {
         </div>
 
         {/* Right: Vision Text */}
-        <div className="flex-1">
+        <div className="flex-1"
+        data-aos="fade-left"
+        >
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
             Our Vision
           </h2>
@@ -33,10 +44,10 @@ const Vision = () => {
             our clients are always prepared for tomorrow’s challenges and opportunities.
           </p>
           <ul className="space-y-3 text-sm ">
-            <li>✔ Become the go-to legal & business advisory firm in the GCC</li>
-            <li>✔ Foster a culture of trust, transparency, and client success</li>
-            <li>✔ Integrate technology to redefine client experience</li>
-            <li>✔ Shape a sustainable, forward-thinking business environment</li>
+            <li>Become the go-to legal & business advisory firm in the GCC</li>
+            <li>Foster a culture of trust, transparency, and client success</li>
+            <li>Integrate technology to redefine client experience</li>
+            <li>Shape a sustainable, forward-thinking business environment</li>
           </ul>
         </div>
       </div>

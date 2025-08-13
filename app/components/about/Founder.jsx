@@ -1,6 +1,8 @@
 "use client";
 import { FaLinkedin, FaTwitter, FaUserTie } from "react-icons/fa";
-
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; // ✅ Correct way to import CSS
 const founder = {
   name: "",
   role: "Founder & CEO",
@@ -11,6 +13,14 @@ const founder = {
 };
 
 const Founder = () => {
+
+   useEffect(() => {
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+      });
+    }, []);
   return (
     <section className="py-16 px-6 lg:px-20 bg-[#1C1C1C] text-white">
       <div className="max-w-5xl mx-auto flex flex-col lg:flex-row items-center gap-10">
@@ -38,7 +48,7 @@ const Founder = () => {
           </p>
 
           {/* Social Links */}
-          <div className="flex gap-4">
+          <div className="flex gap-4" data-aos="fade-up">
             <a
               href={founder.linkedin}
               target="_blank"
