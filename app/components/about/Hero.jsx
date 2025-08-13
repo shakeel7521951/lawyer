@@ -5,7 +5,7 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <section
-      className="relative text-white"
+      className="relative text-white pt-20"
       style={{
         backgroundImage: "url('/about/hero.png')", // ✅ Correct path
         backgroundSize: "cover",
@@ -20,12 +20,31 @@ const Hero = () => {
         
         {/* Left: Text Content */}
         <div className="flex-1 animate-fadeIn">
-          <h1 className="text-4xl lg:text-5xl font-bold text-[#D4AF37] mb-4 drop-shadow-lg">
-            Al Khaldi Law Firm
-          </h1>
+              {/* English Name - Elegant Subtitle */}
+              <div className="relative">
+                <p className="text-lg sm:text-2xl md:text-3xl lg:text-4xl text-white font-light tracking-[0.2em] sm:tracking-[0.3em] mb-2 uppercase"
+                   style={{
+                     fontFamily: "'Playfair Display', 'Georgia', serif",
+                     letterSpacing: '0.15em',
+                     textShadow: '0 2px 10px rgba(0,0,0,0.5)'
+                   }}>
+                  Al Khaldi
+                </p>
+
+                {/* Decorative underline */}
+                <div className="flex items-center mb-10 space-x-2 sm:space-x-3 mt-3 sm:mt-4">
+                  <div className="w-6 sm:w-8 h-0.5 bg-gradient-to-r from-transparent to-[#c0b688]"></div>
+                  <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-[#c0b688] rounded-full animate-pulse"></div>
+                  <div className="text-[#c0b688] text-xs sm:text-sm font-light tracking-[0.3em] sm:tracking-[0.4em]" style={{ fontFamily: "'Cinzel', serif" }}>
+                    LAW FIRM
+                  </div>
+                  <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-[#c0b688] rounded-full animate-pulse"></div>
+                  <div className="w-6 sm:w-8 h-0.5 bg-gradient-to-l from-transparent to-[#c0b688]"></div>
+                </div>
+              </div>
           <p className="text-lg mb-6 max-w-2xl leading-relaxed text-gray-200">
             Empowering businesses in{" "}
-            <span className="text-[#D4AF37] font-semibold">Qatar</span> with end-to-end legal, corporate, and digital solutions. 
+            <span className=" font-semibold">Qatar</span> with end-to-end legal, corporate, and digital solutions. 
             From <strong>100% foreign ownership registration</strong> to advanced <strong>AI digital tools</strong> via Nerou Digital Solutions, 
             we help you start, grow, and scale seamlessly.
           </p>
@@ -43,15 +62,15 @@ const Hero = () => {
           {/* CTA */}
           <Link
             href="/contact"
-            className="inline-block bg-[#D4AF37] text-[#0D1B2A] px-6 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-white hover:text-[#0D1B2A] transition-all duration-300"
+            className="inline-block bg-gradient-to-r from-[#9f8660] to-[#c0b688] text-white px-5 py-3 hover:scale-105 rounded-lg font-semibold text-lg shadow-lg hover:bg-white  transition-all duration-300"
           >
             Start in Qatar Now
           </Link>
         </div>
 
         {/* Right: Nerou Digital Solutions */}
-        <div className="bg-[#1B263B]/90 p-6 rounded-2xl shadow-xl max-w-md w-full border border-[#D4AF37]/40 animate-slideInRight">
-          <h2 className="text-2xl font-bold text-[#D4AF37] mb-4">
+        <div className=" p-6 rounded-2xl shadow-xl max-w-md w-full border border-[#D4AF37]/40 animate-slideInRight">
+          <h2 className="text-2xl font-bold mb-4">
             Nerou Digital Solutions
           </h2>
           <p className="text-sm mb-4 text-gray-300">

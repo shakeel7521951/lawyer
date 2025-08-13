@@ -181,27 +181,27 @@ We turn raw data into actionable business strategies.`
   };
 
   return (
-    <section className="py-16 px-6 lg:px-20 bg-[#0D1B2A] text-white relative">
+    <section className="py-16 px-6 lg:px-20  text-white   relative">
       <div className="max-w-7xl mx-auto">
 
         {/* Title */}
         <div className="text-center mb-14">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-[#D4AF37]">
+          <h2 className="text-3xl   text-[#9f8660] lg:text-4xl font-bold mb-4 ">
             Our Services
           </h2>
-          <p className="text-gray-300 max-w-3xl mx-auto">
+          <p className=" max-w-3xl text-black mx-auto">
             Al Khaldi Law Firm is your trusted legal and business advisory authority in Qatar — 
             delivering corporate, governmental, and individual solutions, powered by our exclusive 
-            tech partner <span className="text-[#D4AF37]">Nerou Digital Solutions</span>.
+            tech partner <span className="text-[#9f8660]">Nerou Digital Solutions</span>.
           </p>
         </div>
 
         {/* Nerou Intro */}
-        <div className="bg-[#1B263B] p-8 rounded-2xl shadow-lg mb-14">
-          <h3 className="text-2xl font-bold text-[#D4AF37] mb-3">
+        <div className="bg-gradient-to-r from-[#9f8660] to-[#c0b688] p-8 rounded-2xl shadow-lg mb-14">
+          <h3 className="text-2xl font-bold  mb-3">
             Powered by Nerou Digital Solutions
           </h3>
-          <p className="text-gray-300 mb-4">
+          <p className=" mb-4">
             As our exclusive technology partner, Nerou delivers advanced digital capabilities to modernize and grow your business:
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -212,8 +212,8 @@ We turn raw data into actionable business strategies.`
                 onClick={() => handleServiceClick(item)}
               >
                 <p className="text-2xl">{item.icon}</p>
-                <h3 className="text-lg font-semibold mt-2 mb-3">{item.name}</h3>
-                <button className="px-3 py-1 text-sm font-medium rounded cursor-pointer group-hover:bg-[#D4AF37] group-hover:text-[#0D1B2A] transition">
+                <h3 className="text-lg font-semibold text-black group-hover:text-white mt-2 mb-3">{item.name}</h3>
+                <button className="px-3 py-1 text-sm font-medium rounded cursor-pointer group-hover:bg-gradient-to-r from-[#9f8660] to-[#c0b688]  group-hover:text-[#0D1B2A] transition">
                   Read More
                 </button>
               </div>
@@ -223,8 +223,8 @@ We turn raw data into actionable business strategies.`
 
         {/* Regional Inclusions */}
         <div className="mb-14">
-          <h3 className="text-xl font-bold text-[#D4AF37] mb-4">Qatar Business Advantages</h3>
-          <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm text-gray-300">
+          <h3 className="text-xl text-[#9f8660] font-bold  mb-4">Qatar Business Advantages</h3>
+          <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm  text-black">
             {qatarInclusions.map((item, i) => (
               <li key={i} className="flex items-center gap-2">
                 ✅ {item}
@@ -238,10 +238,10 @@ We turn raw data into actionable business strategies.`
           {coreServices.map((service) => (
             <div
               key={service.title}
-              className="bg-[#1B263B] p-6 group rounded-xl text-center hover:shadow-xl hover:scale-105 transition-all cursor-pointer"
+              className="bg-gradient-to-r from-[#9f8660] to-[#c0b688] p-6 group rounded-xl text-center hover:shadow-xl hover:scale-105 transition-all cursor-pointer"
               onClick={() => handleServiceClick(service)}
             >
-              <div className="flex justify-center mb-3 text-[#D4AF37]">
+              <div className="flex justify-center mb-3 text-black">
                 {service.icon}
               </div>
               <h4 className="text-sm font-semibold">{service.title}</h4>
@@ -259,7 +259,7 @@ We turn raw data into actionable business strategies.`
           {audienceServices.map((group) => (
             <div
               key={group.audience}
-              className="bg-[#1B263B] p-6 group rounded-xl shadow-lg flex flex-col justify-between transition-all"
+              className="bg-gradient-to-r from-[#9f8660] to-[#c0b688] p-6 group rounded-xl shadow-lg flex flex-col justify-between transition-all"
             >
               <div className="overflow-hidden rounded-lg">
                 <img
@@ -268,12 +268,12 @@ We turn raw data into actionable business strategies.`
                   className="w-full h-60 object-cover group-hover:scale-105 transition duration-300"
                 />
               </div>
-              <h4 className="text-lg font-bold text-[#D4AF37] mt-4 mb-2">
+              <h4 className="text-lg font-bold  mt-4 mb-2">
                 {group.audience}
               </h4>
-              <p className="text-gray-300 text-sm mb-4">{group.description}</p>
+              <p className="text-sm mb-4">{group.description}</p>
               <Link href={group.path}>
-                <button className="w-full border border-[#D4AF37] text-white hover:bg-[#D4AF37] hover:text-[#0D1B2A] font-semibold py-2 px-4 rounded-lg transition">
+                <button className="w-full border cursor-pointer border-[#D4AF37] text-white hover:bg-[#D4AF37] hover:text-[#0D1B2A] font-semibold py-2 px-4 rounded-lg transition">
                   More Info
                 </button>
               </Link>
@@ -285,8 +285,8 @@ We turn raw data into actionable business strategies.`
 
       {/* Modal for Service Details */}
       {isModalOpen && selectedService && (
-        <div className="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4">
-          <div className="bg-[#1B263B] rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative">
+        <div className="fixed inset-0 bg-black/60 bg-opacity-70 z-50 flex items-center justify-center p-4">
+          <div className=" bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative">
             <button 
               onClick={closeModal}
               className="absolute top-4 right-4 text-gray-400 hover:text-[#D4AF37] transition-colors"
@@ -307,19 +307,19 @@ We turn raw data into actionable business strategies.`
                     </div>
                   </div>
                 )}
-                <h3 className="text-2xl font-bold text-[#D4AF37]">
+                <h3 className="text-2xl font-bold text-black">
                   {selectedService.title || selectedService.name}
                 </h3>
               </div>
               
-              <div className="prose prose-invert text-gray-300 whitespace-pre-line">
+              <div className="prose prose-invert text-black whitespace-pre-line">
                 {selectedService.about}
               </div>
               
               <div className="mt-8 flex justify-end">
                 <button 
                   onClick={closeModal}
-                  className="px-6 py-2 bg-[#D4AF37] text-[#0D1B2A] font-semibold rounded-lg hover:bg-white transition-colors"
+                  className="px-6 py-2 text-black hover:bg-[#BDB284]  font-semibold rounded-lg  cursor-pointer transition-colors"
                 >
                   Close
                 </button>

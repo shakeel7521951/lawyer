@@ -27,7 +27,7 @@ const Founder = () => {
 
         {/* Right - Text */}
         <div className="flex-1">
-          <h2 className="text-3xl lg:text-4xl font-bold text-[#D4AF37] mb-2">
+          <h2 className="text-3xl lg:text-4xl font-bold  mb-2">
             {founder.name}
           </h2>
           <p className="text-lg text-gray-300 mb-4 font-medium">
@@ -43,7 +43,7 @@ const Founder = () => {
               href={founder.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#D4AF37] hover:-translate-y-2 text-[#1C1C1C] p-3 rounded-full hover:bg-white transition-all"
+              className="bg-gradient-to-r from-[#9f8660] to-[#c0b688] text-white hover:-translate-y-2  p-3 rounded-full  transition-all"
             >
               <FaLinkedin size={20} />
             </a>
@@ -51,7 +51,7 @@ const Founder = () => {
               href={founder.twitter}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#D4AF37] hover:-translate-y-2 text-[#1C1C1C] p-3 rounded-full hover:bg-white transition-all"
+              className="bg-gradient-to-r from-[#9f8660] to-[#c0b688] text-white hover:-translate-y-2  p-3 rounded-full  transition-all"
             >
               <FaTwitter size={20} />
             </a>
