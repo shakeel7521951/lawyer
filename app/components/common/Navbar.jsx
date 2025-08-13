@@ -1,255 +1,174 @@
-'use client';
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
+"use client";
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import { Menu, X, Scale, Phone, Mail } from "lucide-react";
 
-const Navbar = () => {
-  const [open, setOpen] = useState(false);
-  const [serSt, setserSt] = useState(false);
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      const currentScrollPos = window.scrollY;
 
-  useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (open && !e.target.closest('.mobile-menu-container')) {
-        setOpen(false);
+      // Set scrolled state for styling
+      setScrolled(currentScrollPos > 50);
+
+      // Show navbar when at top or scrolling up, hide when scrolling down
+      if (currentScrollPos < 10) {
+        // Always show at top of page
+        setVisible(true);
+      } else if (currentScrollPos < prevScrollPos) {
+        // Scrolling up - show navbar
+        setVisible(true);
+      } else if (currentScrollPos > prevScrollPos && currentScrollPos > 100) {
+        // Scrolling down and past 100px - hide navbar
+        setVisible(false);
       }
+
+      setPrevScrollPos(currentScrollPos);
     };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [open]);
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos]);
+
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/services", label: "Services" },
+    { href: "/corporate", label: "Corporate" },
+    { href: "/IndvidualCustomer", label: "Individual" },
+    { href: "/whyus", label: "Why Us" },
+    { href: "/blog", label: "Blog" },
+    { href: "/contact", label: "Contact" }
+  ];
 
   return (
-    <nav className="bg-[#0D1B2A] text-white sticky top-0 z-50 transition-all duration-300 ">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <Link href="/" className="flex-shrink-0 flex items-center space-x-3 group">
-            <div className="h-10 w-10 bg-[#D4AF37] rounded-full flex items-center justify-center text-[#0D1B2A] font-bold text-lg transition-transform duration-300 group-hover:rotate-12">
-              AK
-            </div>
-            <span className="text-2xl font-bold tracking-tight group-hover:text-[#D4AF37] transition-colors duration-300">
-              Al-Khaldi
-            </span>
-          </Link>
+    <>
+      {/* Elegant Top Bar */}
+      {/*<div className="bg-[#494c52] text-white py-2 hidden md:block">*/}
+      {/*  <div className="max-w-6xl mx-auto px-8 flex justify-between items-center">*/}
+      {/*    <div className="flex items-center space-x-8 text-sm">*/}
+      {/*      <div className="flex items-center space-x-2 opacity-90">*/}
+      {/*        <Phone className="w-3.5 h-3.5" />*/}
+      {/*        <span className="font-light">+1 (555) 123-4567</span>*/}
+      {/*      </div>*/}
+      {/*      <div className="flex items-center space-x-2 opacity-90">*/}
+      {/*        <Mail className="w-3.5 h-3.5" />*/}
+      {/*        <span className="font-light">contact@legalexpert.com</span>*/}
+      {/*      </div>*/}
+      {/*    </div>*/}
+      {/*    <div className="text-[#c0b688] text-sm font-light tracking-wide">*/}
+      {/*      Consultation Available*/}
+      {/*    </div>*/}
+      {/*  </div>*/}
+      {/*</div>*/}
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex flex-1 justify-center">
-            <div className="flex space-x-5">
-              <Link 
-                className="px-4 py-2  text-white hover:text-[#D4AF37] transition-all duration-300 font-semibold text-lg relative group"
-                href="/"
-              >
-                Home
-                <span className="absolute left-4 bottom-0 h-1 bg-[#D4AF37] w-0 group-hover:w-[70%] transition-all duration-300"></span>
+      {/* Main Elegant Navbar */}
+      <nav className={`fixed w-full z-50 transition-all duration-700 ease-in-out transform ${
+        visible ? 'translate-y-0' : '-translate-y-full'
+      }`}>
+        <div className="max-w-6xl mx-auto px-8 py-4">
+          <div className={`transition-all duration-700 rounded-2xl ${
+            scrolled 
+              ? "bg-white/90 backdrop-blur-lg shadow-lg border border-[#c0b688]/10" 
+              : "bg-white/5 backdrop-blur-sm border border-white/10"
+          } px-6 py-3`}>
+            <div className="flex justify-between items-center">
+
+              {/* Refined Logo */}
+              <Link href="/" className="flex items-center space-x-3 group cursor-pointer">
+                <div className="relative">
+                  <img
+                    src="/logo.png"
+                    alt="Al Khaldi Law Firm Logo"
+                    className="w-12 h-12 object-contain transform group-hover:scale-110 transition-all duration-300 drop-shadow-lg"
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <h1 className={`text-lg font-bold tracking-tight transition-colors duration-300 ${
+                    scrolled ? "text-[#494c52]" : "text-white"
+                  }`} style={{ fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}>
+                    الخالـــــدي
+                  </h1>
+                  <p className={`text-sm font-medium tracking-wide transition-colors duration-300 ${
+                    scrolled ? "text-[#9f8660]" : "text-[#c0b688]"
+                  }`} style={{ fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}>
+                    Al Khaldi
+                  </p>
+                </div>
               </Link>
-              <Link 
-                className="px-4 py-2 text-white hover:text-[#D4AF37] transition-all duration-300 font-semibold text-lg relative group"
-                href="/about"
-              >
-                About
-                <span className="absolute left-0 bottom-0 h-1 bg-[#D4AF37] w-0 group-hover:w-full transition-all duration-300"></span>
-              </Link>
-              
-              {/* Services Dropdown */}
-              <div 
-                className="relative group"
-                onMouseEnter={() => setserSt(true)}
-                onMouseLeave={() => setserSt(false)}
-              >
-                <Link 
-                  href="/services"
-                  className="px-4 py-2 text-white hover:text-[#D4AF37] transition-all duration-300 font-semibold text-lg relative flex items-center"
-                >
-                  Services
-                  <span className="absolute left-0 bottom-0 h-1 bg-[#D4AF37] w-0 group-hover:w-full transition-all duration-300"></span>
-                  <FaChevronDown className={`ml-2 transition-transform ${serSt ? 'transform rotate-180' : ''}`} />
-                </Link>
-                
-                {serSt && (
-                  <div 
-                    className="absolute bg-[#0D1B2A] pt-2 pb-4 pl-4 pr-8 top-full left-0 rounded-b-lg shadow-xl animate-fadeIn"
+
+              {/* Elegant Desktop Navigation */}
+              <div className="hidden lg:flex items-center space-x-1">
+                {navLinks.map((link, index) => (
+                  <Link
+                    key={index}
+                    href={link.href}
+                    className={`relative px-4 py-2 rounded-lg text-sm font-medium tracking-wide transition-all duration-300 group ${
+                      scrolled 
+                        ? "text-[#494c52] hover:text-[#9f8660] hover:bg-[#c0b688]/5" 
+                        : "text-white hover:text-[#c0b688] hover:bg-white/5"
+                    }`}
+                    style={{ fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}
                   >
-                    <ul className='flex flex-col gap-3'>
-                      <li>
-                        <Link 
-                          href="/IndvidualCustomer" 
-                          className="whitespace-nowrap hover:text-[#D4AF37] transition-all duration-200 font-semibold text-white flex items-center"
-                        >
-                          <span className="w-2 h-2 bg-[#D4AF37] rounded-full mr-3"></span>
-                          Individual Clients
-                        </Link>
-                      </li>
-                      <li>
-                        <Link 
-                          href="/governorg" 
-                          className="whitespace-nowrap hover:text-[#D4AF37] transition-all duration-200 font-semibold text-white flex items-center"
-                        >
-                          <span className="w-2 h-2 bg-[#D4AF37] rounded-full mr-3"></span>
-                          Government
-                        </Link>
-                      </li>
-                      <li>
-                        <Link 
-                          href="/corporate" 
-                          className="whitespace-nowrap hover:text-[#D4AF37] transition-all duration-200 font-semibold text-white flex items-center"
-                        >
-                          <span className="w-2 h-2 bg-[#D4AF37] rounded-full mr-3"></span>
-                          Corporate
-                        </Link>
-                      </li>
-                      <li>
-                        <Link 
-                          href="/legalsupport" 
-                          className="whitespace-nowrap hover:text-[#D4AF37] transition-all duration-200 font-semibold text-white flex items-center"
-                        >
-                          <span className="w-2 h-2 bg-[#D4AF37] rounded-full mr-3"></span>
-                          Legal Support
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                )}
+                    {link.label}
+                    <div className="absolute inset-x-2 bottom-0 h-0.5 bg-gradient-to-r from-[#9f8660] to-[#c0b688] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-full"></div>
+                  </Link>
+                ))}
               </div>
 
-              <Link 
-                className="px-4 py-2 text-white hover:text-[#D4AF37] transition-all duration-300 font-semibold text-lg relative group"
-                href="/blog"
-              >
-                Blog
-                <span className="absolute left-0 bottom-0 h-1 bg-[#D4AF37] w-0 group-hover:w-full transition-all duration-300"></span>
-              </Link>
-              <Link 
-                className="px-4 py-2 text-white hover:text-[#D4AF37] transition-all duration-300 font-semibold text-lg relative group"
-                href="/whyus"
-              >
-                Why Us
-                <span className="absolute left-0 bottom-0 h-1 bg-[#D4AF37] w-0 group-hover:w-full transition-all duration-300"></span>
+              {/* Refined CTA & Mobile Menu */}
+              <div className="flex items-center space-x-3">
+                <Link href="/contact" className="hidden md:flex items-center space-x-2 bg-gradient-to-r from-[#9f8660] to-[#c0b688] text-white px-5 py-2.5 rounded-xl text-sm font-medium transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl" style={{ fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}>
+                  <Phone className="w-4 h-4" />
+                  <span>Contact</span>
+                </Link>
+
+                {/* Elegant Mobile Menu Button */}
+                <button
+                  onClick={() => setIsOpen(!isOpen)}
+                  className={`lg:hidden p-2 rounded-xl transition-all duration-300 ${
+                    scrolled 
+                      ? "text-[#494c52] hover:bg-[#c0b688]/10" 
+                      : "text-white hover:bg-white/10"
+                  }`}
+                >
+                  {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Refined Mobile Menu */}
+        <div className={`lg:hidden transition-all duration-500 overflow-hidden ${
+          isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+        }`}>
+          <div className="bg-white/95 backdrop-blur-xl border-t border-[#c0b688]/20 mx-8 mt-2 rounded-2xl shadow-xl">
+            <div className="p-6 space-y-1">
+              {navLinks.map((link, index) => (
+                <Link
+                  key={index}
+                  href={link.href}
+                  className="block px-4 py-3 text-[#494c52] hover:text-[#9f8660] hover:bg-[#c0b688]/5 rounded-xl text-sm font-medium transition-all duration-300 tracking-wide"
+                  onClick={() => setIsOpen(false)}
+                  style={{ fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <Link href="/contact" className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-[#9f8660] to-[#c0b688] text-white px-5 py-3 rounded-xl text-sm font-medium mt-4 shadow-lg" style={{ fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}>
+                <Phone className="w-4 h-4" />
+                <span>Contact</span>
               </Link>
             </div>
           </div>
-
-          {/* Contact Button */}
-          <div className="hidden lg:flex items-center">
-            <Link href="/contact">
-              <button className="px-10 py-3 cursor-pointer text-white bg-[#D4AF37] font-semibold rounded-sm hover:bg-amber-500 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-                Contact Us
-              </button>
-            </Link>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="lg:hidden flex items-center">
-            <button
-              onClick={() => setOpen(!open)}
-              className="inline-flex items-centermr-10 md:mr-0 justify-center p-3 rounded-md text-white hover:text-[#D4AF37] focus:outline-none transition-all duration-200"
-              aria-label="Main menu"
-            >
-              {open ? (
-                <FaTimes className="h-7 w-7" />
-              ) : (
-                <FaBars className="h-7 w-7" />
-              )}
-            </button>
-          </div>
         </div>
-      </div>
-
-      {/* Mobile Menu */}
-      <div className={`lg:hidden mobile-menu-container overflow-y-scroll bg-[#0D1B2A] shadow-xl transition-all duration-300 ease-in-out overflow-hidden ${open ? 'max-h-screen' : 'max-h-0'}`}>
-        <div className="px-4 pt-4 pb-6 space-y-3">
-          <Link 
-            className="block px-4 py-4 text-xl font-bold text-white hover:text-[#D4AF37] hover:bg-[#1B263B] rounded-lg transition-all duration-200"
-            href="/"
-            onClick={() => setOpen(false)}
-          >
-            Home
-          </Link>
-          <Link 
-            className="block px-4 py-4 text-xl font-bold text-white hover:text-[#D4AF37] hover:bg-[#1B263B] rounded-lg transition-all duration-200"
-            href="/about"
-            onClick={() => setOpen(false)}
-          >
-            About
-          </Link>
-          
-          <div>
-            <Link 
-              className="w-full flex justify-between items-center px-4 py-4 text-xl font-bold text-white hover:text-[#D4AF37] hover:bg-[#1B263B] rounded-lg transition-all duration-200"
-              onClick={() => setserSt(!serSt)}
-              href="/services"
-            >
-              Services
-              <FaChevronDown className={`transition-transform ${serSt ? 'transform rotate-180' : ''}`} />
-            </Link>
-            
-            {serSt && (
-              <div className="pl-6 pr-4 py-2 space-y-3 bg-[#1B263B] rounded-lg mt-1">
-                <Link 
-                  href="/IndvidualCustomer"
-                  className="block px-4 py-3 text-lg font-bold text-white hover:text-[#D4AF37] rounded-lg transition-all duration-200"
-                  onClick={() => setOpen(false)}
-                >
-                  Individual Clients
-                </Link>
-                <Link 
-                  href="/governorg"
-                  className="block px-4 py-3 text-lg font-bold text-white hover:text-[#D4AF37] rounded-lg transition-all duration-200"
-                  onClick={() => setOpen(false)}
-                >
-                  Government
-                </Link>
-                <Link 
-                  href="/corporate"
-                  className="block px-4 py-3 text-lg font-bold text-white hover:text-[#D4AF37] rounded-lg transition-all duration-200"
-                  onClick={() => setOpen(false)}
-                >
-                  Corporate
-                </Link>
-                <Link 
-                  href="/legalsupport"
-                  className="block px-4 py-3 text-lg font-bold text-white hover:text-[#D4AF37] rounded-lg transition-all duration-200"
-                  onClick={() => setOpen(false)}
-                >
-                  Legal Support
-                </Link>
-              </div>
-            )}
-          </div>
-
-          <Link 
-            className="block px-4 py-4 text-xl font-bold text-white hover:text-[#D4AF37] hover:bg-[#1B263B] rounded-lg transition-all duration-200"
-            href="/blog"
-            onClick={() => setOpen(false)}
-          >
-            Blog
-          </Link>
-          <Link 
-            className="block px-4 py-4 text-xl font-bold text-white hover:text-[#D4AF37] hover:bg-[#1B263B] rounded-lg transition-all duration-200"
-            href="/whyus"
-            onClick={() => setOpen(false)}
-          >
-            Why Us
-          </Link>
-
-          <Link
-            className="block mt-4 px-4 py-4 text-xl font-bold text-center bg-[#D4AF37] text-[#0D1B2A] hover:bg-[#E8C252] rounded-lg shadow transition-all duration-200"
-            href="/contact"
-            onClick={() => setOpen(false)}
-          >
-            Contact Us
-          </Link>
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
-};
-
-export default Navbar;
+}
