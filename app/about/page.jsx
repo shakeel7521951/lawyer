@@ -1,20 +1,26 @@
 import React from 'react'
 import Hero from '../components/about/Hero'
 import Mission from '../components/about/Mission'
-import Team from '../components/about/Team'
-import GccPresence from '../components/about/GccPresence'
-import Partners from '../components/about/Partners'
-import CtaSection from '../components/about/CtaSection'
+
+
+
+
+import NewServices from '../components/about/NewServices'
+import Founder from '../components/about/Founder'
+import Vision from '../components/about/Vision'
+import OurTeam from '../components/about/OurTeam'
+import AboutContact from '../components/about/Aboutcontact'
 
 const page = () => {
   return (
     <div>
       <Hero/>
       <Mission/>
-      <Team/>
-      <GccPresence/>
-      <Partners/>
-      <CtaSection/>
+     <Founder/>
+      <Vision/>
+      <NewServices/>
+        <OurTeam/>
+        <AboutContact/>
     </div>
   )
 }

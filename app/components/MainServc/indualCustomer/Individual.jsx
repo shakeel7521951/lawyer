@@ -66,11 +66,13 @@ const Individual = () => {
 
       {/* Image and Info */}
       <div className="flex flex-col md:flex-row items-center gap-10 p-6 md:p-12">
-        <img
-          src="/about/mt.avif"
+      <div className="w-1/2 h-100 ">
+          <img
+          src="/about/individual.jpeg"
           alt="Individual Banking"
-          className="w-full md:w-1/2 rounded-lg shadow-lg"
+          className="w-full  h-full object-cover bg-center rounded-lg shadow-lg"
         />
+      </div>
         <div className="md:w-1/2 space-y-4">
           <h2 className="text-2xl font-semibold text-yellow-700">
             Tailored Banking Solutions
