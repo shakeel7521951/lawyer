@@ -10,16 +10,16 @@ const MapSection = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="max-w-6xl mx-auto py-12 px-6"
+      className="max-w-7xl mx-auto py-12 px-6"
     >
       <motion.div
         whileHover={{ scale: 1.01 }}
-        className="rounded-xl border border-yellow-400 overflow-hidden relative"
+        className="rounded-xl border border-[#9f8660] overflow-hidden relative"
       >
         <motion.div
           animate={{ opacity: [0.6, 1, 0.6] }}
           transition={{ duration: 3, repeat: Infinity }}
-          className="absolute inset-0 border-2 border-yellow-500 rounded-xl pointer-events-none"
+          className="absolute inset-0 border-2 border-[#9f8660] rounded-xl pointer-events-none"
         />
         <motion.div
           initial={{ opacity: 0 }}
