@@ -1,65 +1,47 @@
-import React from 'react';
+"use client";
+import Image from "next/image";
 
 const Mission = () => {
   return (
-    <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-16 bg-[#F9F9F9] text-dark">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-10 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Our Core Principles</h2>
-          <div className="w-24 h-1.5 bg-[#D4AF37] mx-auto rounded-full"></div>
-        </div>
+    <section className="relative bg-[#0D1B2A] text-white sm:py-16 sm:px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          {/* Mission Card */}
-          <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-[#D4AF37] overflow-hidden group">
-            <div className="relative h-40 mb-6 rounded-lg overflow-hidden">
-              <img
-                src="./about/mo.avif"
-                alt="Mission"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-[#0D1B2A]/20"></div>
-            </div>
-            <h3 className="text-xl md:text-2xl font-bold mb-4 text-[#0D1B2A]">Mission</h3>
-            <p className="text-dark/90 text-sm md:text-base">
-              To simplify business establishment in the GCC through integrated legal, advisory, and digital solutions, enabling entrepreneurs to focus on growth.
-            </p>
-          </div>
-          
-          {/* Vision Card */}
-          <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-[#D4AF37] overflow-hidden group">
-            <div className="relative h-40 mb-6 rounded-lg overflow-hidden">
-              <img
-                src="./about/mt.avif"
-                alt="Vision"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-[#0D1B2A]/20"></div>
-            </div>
-            <h3 className="text-xl md:text-2xl font-bold mb-4 text-[#0D1B2A]">Vision</h3>
-            <p className="text-dark/90 text-sm md:text-base">
-              Become the most trusted partner for foreign investors seeking seamless market entry and sustainable growth in the Middle East.
-            </p>
-          </div>
-          
-          {/* Values Card */}
-          <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-[#D4AF37] overflow-hidden group">
-            <div className="relative h-40 mb-6 rounded-lg overflow-hidden">
-              <img
-                src="./about/mh.avif"
-                alt="Values"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-[#0D1B2A]/20"></div>
-            </div>
-            <h3 className="text-xl md:text-2xl font-bold mb-4 text-[#0D1B2A]">Values</h3>
-            <ul className="list-disc pl-5 text-dark/90 space-y-2 text-sm md:text-base">
-              <li>Integrity in all dealings</li>
-              <li>Client-centric innovation</li>
-              <li>Regional expertise</li>
-              <li>Technology-driven solutions</li>
-            </ul>
-          </div>
+        {/* Left: Mission Text */}
+        <div className="flex-1">
+          <h2 className="text-3xl lg:text-4xl font-bold text-[#D4AF37] mb-4">
+            Our Mission
+          </h2>
+          <p className="text-lg text-gray-300 leading-relaxed mb-6">
+            At <span className="text-[#D4AF37] font-semibold">Al Khaldi Law Firm</span>, 
+            our mission is to empower businesses and individuals in{" "}
+            <strong>Qatar</strong> with comprehensive, reliable, and future-ready 
+            legal and corporate solutions.
+          </p>
+          <p className="text-gray-300 leading-relaxed mb-6">
+            We are committed to simplifying complex procedures, ensuring compliance,
+            and enabling our clients to operate with confidence. Through our exclusive 
+            partnership with <strong>Nerou Digital Solutions</strong>, we bridge the gap 
+            between traditional legal services and modern digital transformation — giving 
+            our clients a strategic advantage in a fast-changing world.
+          </p>
+          <ul className="space-y-3 text-sm text-gray-300">
+            <li>✔ Delivering excellence in every legal and corporate service</li>
+            <li>✔ Promoting transparency, trust, and ethical practice</li>
+            <li>✔ Leveraging technology to provide innovative solutions</li>
+            <li>✔ Building long-term relationships with our clients</li>
+          </ul>
+        </div>
+
+        {/* Right: Image */}
+        <div className="sm:flex-1 w-full h-140">
+          <Image
+            src="/about/ab.jpeg"
+            alt="Al Khaldi Law Firm team working"
+            width={600}
+            height={400}
+            className="w-full h-full object-cover bg-center rounded-lg"
+            priority
+          />
         </div>
       </div>
     </section>
