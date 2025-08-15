@@ -3,7 +3,7 @@ import React from "react";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full min-h-screen overflow-hidden pt-15">
+    <section className="relative w-full min-h-screen overflow-hidden pt-25">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -100,8 +100,44 @@ export default function HeroSection() {
             {/* Introduction Text */}
             <div className="mt-6 sm:mt-8">
               <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-white font-light text-center max-w-2xl sm:max-w-3xl mx-auto px-2" style={{ fontFamily: "'Inter', 'Helvetica Neue', sans-serif", lineHeight: '1.6' }}>
-                We spare no efforts to provide the best legal services to achieve optimal outcomes with institutions and individuals, which contributes to building a strong and long-term relationship based on mutual trust. Our guarantee to protect your legal rights and interests.
+                We at our office are proud to provide the highest quality legal services to companies, governmental institutions, and individuals, which contributes to building a strong and long-term relationship based on mutual trust. We spare no efforts to provide the best legal services to achieve optimal outcomes, with our guarantee to protect your legal rights and interests.
               </p>
+            </div>
+
+            {/* Contact Information */}
+            <div className="mt-8 sm:mt-10 text-center">
+              <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-8 text-white/90 text-sm">
+                <div className="flex items-center space-x-2">
+                  <div className="w-1.5 h-1.5 bg-[#c0b688] rounded-full"></div>
+                  <span style={{ fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}>+974 6616 4000</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-1.5 h-1.5 bg-[#c0b688] rounded-full"></div>
+                  <span style={{ fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}>+974 4009 8889</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-1.5 h-1.5 bg-[#c0b688] rounded-full"></div>
+                  <span style={{ fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}>www.alkhaldilaw firm.net</span>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+              <a
+                href="/services"
+                className="bg-gradient-to-r from-[#9f8660] to-[#c0b688] text-white px-8 py-3 rounded-xl text-sm font-medium transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                style={{ fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}
+              >
+                Our Services
+              </a>
+              <a
+                href="/contact"
+                className="border-2 border-white/30 text-white px-8 py-3 rounded-xl text-sm font-medium hover:bg-white/10 transition-all duration-300"
+                style={{ fontFamily: "'Inter', 'Helvetica Neue', sans-serif" }}
+              >
+                Free Consultation
+              </a>
             </div>
 
             {/* Decorative Elements */}

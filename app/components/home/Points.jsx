@@ -34,54 +34,54 @@ const Points = () => {
 
   const services = [
     {
-      icon: Building2,
-      title: "Government & Public Sector",
-      subtitle: "Strategic Public Advisory",
-      desc: "Specialized legal counsel for ministries and public institutions including legislative drafting, regulatory compliance, and policy development across the GCC region.",
+      icon: Scale,
+      title: "Comprehensive Legal Coverage",
+      subtitle: "All Legal Aspects Covered",
+      desc: "Our expertise covers all aspects of legal matters including commercial, criminal, civil, corporate, investment, and family law. Our lawyers specialize in litigation before all levels of courts from First Instance to the Supreme Court.",
       highlights: [
-        "Legislative Drafting & Review",
-        "Regulatory Compliance Framework",
-        "International Legal Disputes",
-        "Public Policy Development"
+        "Commercial & Criminal Law",
+        "Civil & Corporate Matters",
+        "Investment & Family Law",
+        "All Court Levels Representation"
       ],
       color: "from-[#494c52] to-[#9f8660]"
     },
     {
-      icon: Scale,
-      title: "Corporate Business Solutions",
-      subtitle: "Comprehensive Business Legal",
-      desc: "End-to-end legal services for corporations from formation to cross-border transactions, mergers, and strategic business partnerships throughout the region.",
+      icon: Building2,
+      title: "Professional Associations Membership",
+      subtitle: "Regional & International Recognition",
+      desc: "Our lawyers are members of relevant professional associations locally, regionally, and internationally. We maintain professional ethics standards and confidentiality of information in dealing with our clients.",
       highlights: [
-        "Company Formation & Setup",
-        "Mergers & Acquisitions",
-        "Commercial Contract Drafting",
-        "Intellectual Property Protection"
+        "Local Professional Associations",
+        "Regional Legal Networks",
+        "International Recognition",
+        "Ethics & Confidentiality Standards"
       ],
       color: "from-[#9f8660] to-[#c0b688]"
     },
     {
       icon: Users,
-      title: "Individual Client Services",
-      subtitle: "Personal Legal Excellence",
-      desc: "Dedicated personal legal services covering family law, real estate transactions, immigration, and comprehensive individual legal protection with personalized attention.",
+      title: "Specialized Dispute Resolution",
+      subtitle: "Expert Arbitration & Mediation",
+      desc: "We possess expertise in resolving disputes at Administrative, Labor, and Tenancy Dispute Settlement Committees as well as the Arbitration Committee. Our commitment is maintaining professional standards and client value.",
       highlights: [
-        "Family Law & Mediation",
-        "Real Estate Transactions",
-        "Immigration & Visa Services",
-        "Personal Legal Protection"
+        "Administrative Disputes",
+        "Labor & Tenancy Matters",
+        "Arbitration Services",
+        "Professional Standards Commitment"
       ],
       color: "from-[#c0b688] to-[#9f8660]"
     },
     {
       icon: Shield,
-      title: "Legal Support & Advisory",
-      subtitle: "Specialized Legal Framework",
-      desc: "Comprehensive legal support including litigation management, arbitration services, legal research, and ongoing strategic advisory for complex legal challenges.",
+      title: "Client Information Protection",
+      subtitle: "Confidentiality & Professional Ethics",
+      desc: "Our commitment is to maintain professional ethics standards and confidentiality of information when dealing with our clients. We ensure the highest level of trust and security in all our legal services.",
       highlights: [
-        "Litigation Management",
-        "Arbitration & Mediation Services",
-        "Legal Research & Analysis",
-        "Strategic Legal Advisory"
+        "Information Confidentiality",
+        "Professional Ethics",
+        "Client Trust & Security",
+        "Highest Service Standards"
       ],
       color: "from-[#9f8660] to-[#494c52]"
     }
@@ -133,15 +133,15 @@ const Points = () => {
             <div className="inline-flex items-center space-x-2 bg-[#c0b688]/10 rounded-full px-6 py-2 border border-[#c0b688]/20 mb-6">
               <Scale className="w-4 h-4 text-[#9f8660]" />
               <span className="text-[#494c52] font-semibold text-sm tracking-wider" style={{ fontFamily: "'Inter', sans-serif" }}>
-                COMPREHENSIVE SOLUTIONS
+                WHY CHOOSE US
               </span>
             </div>
 
             {/* Main Title */}
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-[#494c52] leading-tight" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-              Four Pillars of{' '}
+              Four Reasons to{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c0b688] to-[#9f8660]">
-                Legal Excellence
+                Trust Al-Khaldi
               </span>
             </h2>
 
@@ -154,7 +154,7 @@ const Points = () => {
 
             {/* Description */}
             <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: "'Crimson Text', serif" }}>
-              Al-Khaldi delivers specialized legal expertise across four core practice areas, ensuring comprehensive coverage for government, corporate, and individual clients throughout the GCC region.
+              Our expertise covers all aspects of legal matters with professional associations membership, specialized dispute resolution capabilities, and unwavering commitment to client confidentiality and professional ethics.
             </p>
           </div>
 

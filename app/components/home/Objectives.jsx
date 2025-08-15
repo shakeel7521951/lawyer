@@ -5,41 +5,41 @@ import { Scale, Target, Users, Shield, Award, ChevronRight, CheckCircle } from "
 const objectives = [
 	{
 		id: 1,
-		title: "Deliver Exceptional Legal Services",
+		title: "Establish Sound Legal Practice",
 		description:
-			"Provide comprehensive, high-quality legal solutions that exceed client expectations and establish long-term partnerships built on trust and results.",
+			"We strive to etch our name in the legal arena by meticulously establishing an entity rooted in sound legal practice, respecting laws and institutions, and executing the vision of His Highness the Amir of the State.",
 		icon: Scale,
 		color: "from-[#c0b688] to-[#9f8660]",
 	},
 	{
 		id: 2,
-		title: "Ensure Client Success",
+		title: "Complete Professional Competence",
 		description:
-			"Focus on achieving optimal outcomes for every client through strategic planning, meticulous execution, and unwavering dedication to their legal needs.",
+			"Our professionalism in client services is achieved through complete competence, experience, and unwavering credibility in all legal matters while expediting legal and judicial procedures without compromising service quality.",
 		icon: Target,
 		color: "from-[#9f8660] to-[#494c52]",
 	},
 	{
 		id: 3,
-		title: "Build Lasting Relationships",
+		title: "Engage with Local Community",
 		description:
-			"Foster strong, enduring partnerships with clients, stakeholders, and the community through transparency, integrity, and consistent excellence.",
+			"We engage with our local environment by understanding community needs and providing legal assistance to those in need, promoting legal awareness for all members of society.",
 		icon: Users,
 		color: "from-[#494c52] to-[#c0b688]",
 	},
 	{
 		id: 4,
-		title: "Maintain Ethical Standards",
+		title: "Expand International Practice",
 		description:
-			"Uphold the highest ethical and professional standards while delivering legal services that protect our clients' interests and maintain public trust.",
+			"On an international scale, we broaden our client base and expand our practice to a wider geographic scope, enhancing our position as a legal institution within the Qatari and international community.",
 		icon: Shield,
 		color: "from-[#c0b688] to-[#9f8660]",
 	},
 	{
 		id: 5,
-		title: "Promote Justice and Fairness",
+		title: "Innovation in Legal Services",
 		description:
-			"Champion justice, fairness, and equality in every case while contributing positively to the legal profession and society at large.",
+			"We embrace new methods in our tasks to suit the current scientific and societal progress, breaking away from traditional legal practices with innovative approaches that align with technological advancements.",
 		icon: Award,
 		color: "from-[#9f8660] to-[#494c52]",
 	},
