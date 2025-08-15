@@ -1,32 +1,25 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const MapSection = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation speed
+      once: true,     // sirf ek baar chale
+    });
+  }, []);
+
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 1 }}
-      className="max-w-7xl mx-auto py-12 px-6"
-    >
-      <motion.div
-        whileHover={{ scale: 1.01 }}
+    <section className="max-w-7xl mx-auto py-12 px-6">
+      <div
         className="rounded-xl border border-[#9f8660] overflow-hidden relative"
+        data-aos="flip-down"
       >
-        <motion.div
-          animate={{ opacity: [0.6, 1, 0.6] }}
-          transition={{ duration: 3, repeat: Infinity }}
-          className="absolute inset-0 border-2 border-[#9f8660] rounded-xl pointer-events-none"
-        />
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.5 }}
-        >
+        <div className="absolute inset-0 border-2 border-[#9f8660] rounded-xl pointer-events-none" />
+        <div>
           <iframe
             src="https://www.google.com/maps?q=25.2854,51.531&z=14&output=embed"
             width="100%"
@@ -35,9 +28,9 @@ const MapSection = () => {
             allowFullScreen
             loading="lazy"
           ></iframe>
-        </motion.div>
-      </motion.div>
-    </motion.section>
+        </div>
+      </div>
+    </section>
   );
 };
 
