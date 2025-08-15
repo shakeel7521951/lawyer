@@ -1,6 +1,18 @@
 "use client";
 import React, { useState, useRef } from "react";
-import { Phone, Mail, MapPin, User, MessageSquare, Building, Clock, Send, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  User,
+  MessageSquare,
+  Building,
+  Clock,
+  Send,
+  CheckCircle,
+  AlertCircle,
+  Loader2,
+} from "lucide-react";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -9,7 +21,7 @@ export default function ContactForm() {
     phone: "",
     serviceType: "",
     message: "",
-    honeypot: "" // Hidden field for spam protection
+    honeypot: "", // Hidden field for spam protection
   });
 
   const [errors, setErrors] = useState({});
@@ -19,11 +31,12 @@ export default function ContactForm() {
 
   // AL KHALDI Law Firm contact information
   const firmInfo = {
-    address: "Street 150, Al Rayyan, Building No. 143, Area 22, Fereej Bin Mahmoud, 3rd Floor",
+    address:
+      "Street 150, Al Rayyan, Building No. 143, Area 22, Fereej Bin Mahmoud, 3rd Floor",
     phones: ["+974 6616 4000", "+974 4009 8889"],
     email: "info@alkhaldilaw firm.net",
     website: "www.alkhaldilaw firm.net",
-    whatsapp: "+97466164000"
+    whatsapp: "+97466164000",
   };
 
   const serviceTypes = [
@@ -34,7 +47,7 @@ export default function ContactForm() {
     "Arbitration",
     "Risk Management",
     "Regulatory Compliance",
-    "Other"
+    "Other",
   ];
 
   // Form validation
@@ -87,7 +100,7 @@ export default function ContactForm() {
 
     try {
       // Simulate API call - replace with actual endpoint
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise((resolve) => setTimeout(resolve, 2000));
 
       setSubmitStatus("success");
       setFormData({
@@ -96,12 +109,11 @@ export default function ContactForm() {
         phone: "",
         serviceType: "",
         message: "",
-        honeypot: ""
+        honeypot: "",
       });
 
       // Auto-hide success message after 5 seconds
       setTimeout(() => setSubmitStatus(null), 5000);
-
     } catch (error) {
       setSubmitStatus("error");
     } finally {
@@ -111,41 +123,57 @@ export default function ContactForm() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
 
     // Clear error when user starts typing
     if (errors[name]) {
-      setErrors(prev => ({ ...prev, [name]: "" }));
+      setErrors((prev) => ({ ...prev, [name]: "" }));
     }
   };
 
   const openWhatsApp = () => {
-    const message = `Hello AL KHALDI Law Firm,\n\nI would like to inquire about legal services.\n\nName: ${formData.fullName || '[Your Name]'}\nService: ${formData.serviceType || '[Service Type]'}\nMessage: ${formData.message || '[Your Message]'}\n\nThank you.`;
-    const whatsappUrl = `https://wa.me/${firmInfo.whatsapp.replace(/[^\d]/g, '')}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
+    const message = `Hello AL KHALDI Law Firm,\n\nI would like to inquire about legal services.\n\nName: ${
+      formData.fullName || "[Your Name]"
+    }\nService: ${formData.serviceType || "[Service Type]"}\nMessage: ${
+      formData.message || "[Your Message]"
+    }\n\nThank you.`;
+    const whatsappUrl = `https://wa.me/${firmInfo.whatsapp.replace(
+      /[^\d]/g,
+      ""
+    )}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank");
   };
 
   return (
     <>
       {/* Google Fonts */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+      <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossOrigin="true"
+      />
       <link
         href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
         rel="stylesheet"
       />
 
-      <section id="contact-form" className="bg-gradient-to-br from-gray-50 to-white py-16 lg:py-24 relative overflow-hidden">
+      <section
+        id="contact-form"
+        className="bg-gradient-to-br from-gray-50 to-white py-16 lg:py-24 relative overflow-hidden"
+      >
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0 bg-repeat opacity-20" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23494c52' fill-opacity='0.1'%3E%3Cpath d='M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0 11.046 8.954 20 20 20s20-8.954 20-20-8.954-20-20-20-20 8.954-20 20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-          }}></div>
+          <div
+            className="absolute inset-0 bg-repeat opacity-20"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23494c52' fill-opacity='0.1'%3E%3Cpath d='M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0 11.046 8.954 20 20 20s20-8.954 20-20-8.954-20-20-20-20 8.954-20 20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            }}
+          ></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
-
             {/* Contact Form */}
             <div className="lg:col-span-2">
               <div className="bg-white rounded-2xl shadow-2xl p-8 lg:p-12 border border-gray-100 relative overflow-hidden">
@@ -158,54 +186,73 @@ export default function ContactForm() {
                   <div className="mb-8">
                     <div className="inline-flex items-center space-x-2 bg-[#c0b688]/10 rounded-full px-4 py-2 border border-[#c0b688]/20 mb-4">
                       <MessageSquare className="w-4 h-4 text-[#9f8660]" />
-                      <span className="text-[#494c52] font-medium text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
+                      <span
+                        className="text-[#494c52] font-medium text-sm"
+                        style={{ fontFamily: "'Inter', sans-serif" }}
+                      >
                         CONTACT FORM
                       </span>
                     </div>
 
-                    <h2 className="text-3xl lg:text-4xl font-bold text-[#494c52] mb-4 leading-tight" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                      Send Us a{' '}
+                    <h2
+                      className="text-3xl lg:text-4xl font-bold text-[#494c52] mb-4 leading-tight"
+                      style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                    >
+                      Send Us a{" "}
                       <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9f8660] to-[#c0b688]">
                         Message
                       </span>
                     </h2>
 
-                    <p className="text-lg text-gray-600 leading-relaxed" style={{ fontFamily: "'Crimson Text', serif" }}>
-                      Get in touch with our legal experts. We'll respond within 24 hours to discuss your legal needs.
+                    <p
+                      className="text-lg text-gray-600 leading-relaxed"
+                      style={{ fontFamily: "'Crimson Text', serif" }}
+                    >
+                      Get in touch with our legal experts. We'll respond within
+                      24 hours to discuss your legal needs.
                     </p>
                   </div>
 
                   {/* Success/Error Messages */}
                   {submitStatus && (
-                    <div className={`mb-6 p-4 rounded-xl border ${
-                      submitStatus === 'success' 
-                        ? 'bg-green-50 border-green-200 text-green-800' 
-                        : 'bg-red-50 border-red-200 text-red-800'
-                    }`}>
+                    <div
+                      className={`mb-6 p-4 rounded-xl border ${
+                        submitStatus === "success"
+                          ? "bg-green-50 border-green-200 text-green-800"
+                          : "bg-red-50 border-red-200 text-red-800"
+                      }`}
+                    >
                       <div className="flex items-center space-x-2">
-                        {submitStatus === 'success' ? (
+                        {submitStatus === "success" ? (
                           <CheckCircle className="w-5 h-5" />
                         ) : (
                           <AlertCircle className="w-5 h-5" />
                         )}
-                        <span className="font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
-                          {submitStatus === 'success'
-                            ? 'Message sent successfully! We\'ll get back to you soon.'
-                            : 'Error sending message. Please try again or contact us directly.'}
+                        <span
+                          className="font-medium"
+                          style={{ fontFamily: "'Inter', sans-serif" }}
+                        >
+                          {submitStatus === "success"
+                            ? "Message sent successfully! We'll get back to you soon."
+                            : "Error sending message. Please try again or contact us directly."}
                         </span>
                       </div>
                     </div>
                   )}
 
                   {/* Form */}
-                  <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+                  <form
+                    ref={formRef}
+                    onSubmit={handleSubmit}
+                    className="space-y-6"
+                  >
                     {/* Honeypot for spam protection */}
                     <input
                       type="text"
                       name="honeypot"
                       value={formData.honeypot}
                       onChange={handleChange}
-                      style={{ display: 'none' }}
+                      style={{ display: "none" }}
                       tabIndex="-1"
                       autoComplete="off"
                     />
@@ -213,7 +260,10 @@ export default function ContactForm() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       {/* Full Name */}
                       <div>
-                        <label className="block text-sm font-medium text-[#494c52] mb-2" style={{ fontFamily: "'Inter', sans-serif" }}>
+                        <label
+                          className="block text-sm font-medium text-[#494c52] mb-2"
+                          style={{ fontFamily: "'Inter', sans-serif" }}
+                        >
                           Full Name *
                         </label>
                         <div className="relative">
@@ -224,7 +274,9 @@ export default function ContactForm() {
                             value={formData.fullName}
                             onChange={handleChange}
                             className={`w-full pl-11 pr-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#c0b688]/50 focus:border-[#c0b688] transition-all duration-300 ${
-                              errors.fullName ? 'border-red-300 bg-red-50' : 'border-gray-200 hover:border-[#c0b688]/50'
+                              errors.fullName
+                                ? "border-red-300 bg-red-50"
+                                : "border-gray-200 hover:border-[#c0b688]/50"
                             }`}
                             placeholder="Enter your full name"
                             style={{ fontFamily: "'Inter', sans-serif" }}
@@ -240,7 +292,10 @@ export default function ContactForm() {
 
                       {/* Email */}
                       <div>
-                        <label className="block text-sm font-medium text-[#494c52] mb-2" style={{ fontFamily: "'Inter', sans-serif" }}>
+                        <label
+                          className="block text-sm font-medium text-[#494c52] mb-2"
+                          style={{ fontFamily: "'Inter', sans-serif" }}
+                        >
                           Email Address *
                         </label>
                         <div className="relative">
@@ -251,7 +306,9 @@ export default function ContactForm() {
                             value={formData.email}
                             onChange={handleChange}
                             className={`w-full pl-11 pr-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#c0b688]/50 focus:border-[#c0b688] transition-all duration-300 ${
-                              errors.email ? 'border-red-300 bg-red-50' : 'border-gray-200 hover:border-[#c0b688]/50'
+                              errors.email
+                                ? "border-red-300 bg-red-50"
+                                : "border-gray-200 hover:border-[#c0b688]/50"
                             }`}
                             placeholder="Enter your email address"
                             style={{ fontFamily: "'Inter', sans-serif" }}
@@ -269,7 +326,10 @@ export default function ContactForm() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       {/* Phone */}
                       <div>
-                        <label className="block text-sm font-medium text-[#494c52] mb-2" style={{ fontFamily: "'Inter', sans-serif" }}>
+                        <label
+                          className="block text-sm font-medium text-[#494c52] mb-2"
+                          style={{ fontFamily: "'Inter', sans-serif" }}
+                        >
                           Phone Number *
                         </label>
                         <div className="relative">
@@ -280,7 +340,9 @@ export default function ContactForm() {
                             value={formData.phone}
                             onChange={handleChange}
                             className={`w-full pl-11 pr-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#c0b688]/50 focus:border-[#c0b688] transition-all duration-300 ${
-                              errors.phone ? 'border-red-300 bg-red-50' : 'border-gray-200 hover:border-[#c0b688]/50'
+                              errors.phone
+                                ? "border-red-300 bg-red-50"
+                                : "border-gray-200 hover:border-[#c0b688]/50"
                             }`}
                             placeholder="+974 XXXX XXXX"
                             style={{ fontFamily: "'Inter', sans-serif" }}
@@ -296,7 +358,10 @@ export default function ContactForm() {
 
                       {/* Service Type */}
                       <div>
-                        <label className="block text-sm font-medium text-[#494c52] mb-2" style={{ fontFamily: "'Inter', sans-serif" }}>
+                        <label
+                          className="block text-sm font-medium text-[#494c52] mb-2"
+                          style={{ fontFamily: "'Inter', sans-serif" }}
+                        >
                           Service Type *
                         </label>
                         <div className="relative">
@@ -306,7 +371,9 @@ export default function ContactForm() {
                             value={formData.serviceType}
                             onChange={handleChange}
                             className={`w-full pl-11 pr-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#c0b688]/50 focus:border-[#c0b688] transition-all duration-300 appearance-none ${
-                              errors.serviceType ? 'border-red-300 bg-red-50' : 'border-gray-200 hover:border-[#c0b688]/50'
+                              errors.serviceType
+                                ? "border-red-300 bg-red-50"
+                                : "border-gray-200 hover:border-[#c0b688]/50"
                             }`}
                             style={{ fontFamily: "'Inter', sans-serif" }}
                           >
@@ -329,7 +396,10 @@ export default function ContactForm() {
 
                     {/* Message */}
                     <div>
-                      <label className="block text-sm font-medium text-[#494c52] mb-2" style={{ fontFamily: "'Inter', sans-serif" }}>
+                      <label
+                        className="block text-sm font-medium text-[#494c52] mb-2"
+                        style={{ fontFamily: "'Inter', sans-serif" }}
+                      >
                         Message *
                       </label>
                       <textarea
@@ -338,7 +408,9 @@ export default function ContactForm() {
                         onChange={handleChange}
                         rows="5"
                         className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#c0b688]/50 focus:border-[#c0b688] transition-all duration-300 resize-none ${
-                          errors.message ? 'border-red-300 bg-red-50' : 'border-gray-200 hover:border-[#c0b688]/50'
+                          errors.message
+                            ? "border-red-300 bg-red-50"
+                            : "border-gray-200 hover:border-[#c0b688]/50"
                         }`}
                         placeholder="Please describe your legal needs in detail..."
                         style={{ fontFamily: "'Inter', sans-serif" }}
@@ -364,7 +436,9 @@ export default function ContactForm() {
                         ) : (
                           <Send className="w-5 h-5" />
                         )}
-                        <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+                        <span>
+                          {isSubmitting ? "Sending..." : "Send Message"}
+                        </span>
                       </button>
 
                       <button
@@ -373,8 +447,12 @@ export default function ContactForm() {
                         className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-xl font-medium transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
                         style={{ fontFamily: "'Inter', sans-serif" }}
                       >
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.513"/>
+                        <svg
+                          className="w-5 h-5"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.513" />
                         </svg>
                         <span>WhatsApp</span>
                       </button>
@@ -394,10 +472,16 @@ export default function ContactForm() {
 
                 <div className="relative z-10">
                   <div className="mb-6">
-                    <h3 className="text-2xl font-bold mb-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                    <h3
+                      className="text-2xl font-bold mb-2"
+                      style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                    >
                       الخالدي AL KHALDI
                     </h3>
-                    <p className="text-[#c0b688] font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    <p
+                      className="text-[#c0b688] font-medium"
+                      style={{ fontFamily: "'Inter', sans-serif" }}
+                    >
                       Law Firm and Legal Consultations
                     </p>
                   </div>
@@ -409,8 +493,16 @@ export default function ContactForm() {
                         <MapPin className="w-6 h-6" />
                       </div>
                       <div>
-                        <h4 className="font-semibold mb-1" style={{ fontFamily: "'Inter', sans-serif" }}>Office Address</h4>
-                        <p className="text-white/90 text-sm leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+                        <h4
+                          className="font-semibold mb-1"
+                          style={{ fontFamily: "'Inter', sans-serif" }}
+                        >
+                          Office Address
+                        </h4>
+                        <p
+                          className="text-white/90 text-sm leading-relaxed"
+                          style={{ fontFamily: "'Inter', sans-serif" }}
+                        >
                           {firmInfo.address}
                         </p>
                       </div>
@@ -422,7 +514,12 @@ export default function ContactForm() {
                         <Phone className="w-6 h-6" />
                       </div>
                       <div>
-                        <h4 className="font-semibold mb-2" style={{ fontFamily: "'Inter', sans-serif" }}>Phone Numbers</h4>
+                        <h4
+                          className="font-semibold mb-2"
+                          style={{ fontFamily: "'Inter', sans-serif" }}
+                        >
+                          Phone Numbers
+                        </h4>
                         {firmInfo.phones.map((phone, index) => (
                           <a
                             key={index}
@@ -442,7 +539,12 @@ export default function ContactForm() {
                         <Mail className="w-6 h-6" />
                       </div>
                       <div>
-                        <h4 className="font-semibold mb-1" style={{ fontFamily: "'Inter', sans-serif" }}>Email</h4>
+                        <h4
+                          className="font-semibold mb-1"
+                          style={{ fontFamily: "'Inter', sans-serif" }}
+                        >
+                          Email
+                        </h4>
                         <a
                           href={`mailto:${firmInfo.email}`}
                           className="text-[#c0b688] hover:text-white transition-colors duration-200 text-sm"
@@ -459,15 +561,27 @@ export default function ContactForm() {
                         <Clock className="w-6 h-6" />
                       </div>
                       <div>
-                        <h4 className="font-semibold mb-2" style={{ fontFamily: "'Inter', sans-serif" }}>Business Hours</h4>
-                        <div className="space-y-1 text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
+                        <h4
+                          className="font-semibold mb-2"
+                          style={{ fontFamily: "'Inter', sans-serif" }}
+                        >
+                          Business Hours
+                        </h4>
+                        <div
+                          className="space-y-1 text-sm"
+                          style={{ fontFamily: "'Inter', sans-serif" }}
+                        >
                           <div className="flex justify-between text-white/90">
                             <span>Sun - Thu:</span>
-                            <span className="text-[#c0b688]">8:00 AM - 6:00 PM</span>
+                            <span className="text-[#c0b688]">
+                              8:00 AM - 6:00 PM
+                            </span>
                           </div>
                           <div className="flex justify-between text-white/90">
                             <span>Friday:</span>
-                            <span className="text-[#c0b688]">2:00 PM - 6:00 PM</span>
+                            <span className="text-[#c0b688]">
+                              2:00 PM - 6:00 PM
+                            </span>
                           </div>
                           <div className="flex justify-between text-white/90">
                             <span>Saturday:</span>
@@ -482,7 +596,10 @@ export default function ContactForm() {
 
               {/* Quick Contact Options */}
               <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-                <h3 className="text-xl font-bold text-[#494c52] mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                <h3
+                  className="text-xl font-bold text-[#494c52] mb-4"
+                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                >
                   Quick Contact
                 </h3>
 
@@ -492,7 +609,10 @@ export default function ContactForm() {
                     className="flex items-center space-x-3 p-3 bg-[#c0b688]/10 rounded-xl hover:bg-[#c0b688]/20 transition-colors duration-200 group"
                   >
                     <Phone className="w-5 h-5 text-[#9f8660] group-hover:scale-110 transition-transform duration-200" />
-                    <span className="font-medium text-[#494c52]" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    <span
+                      className="font-medium text-[#494c52]"
+                      style={{ fontFamily: "'Inter', sans-serif" }}
+                    >
                       Call Now
                     </span>
                   </a>
@@ -502,7 +622,10 @@ export default function ContactForm() {
                     className="flex items-center space-x-3 p-3 bg-[#c0b688]/10 rounded-xl hover:bg-[#c0b688]/20 transition-colors duration-200 group"
                   >
                     <Mail className="w-5 h-5 text-[#9f8660] group-hover:scale-110 transition-transform duration-200" />
-                    <span className="font-medium text-[#494c52]" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    <span
+                      className="font-medium text-[#494c52]"
+                      style={{ fontFamily: "'Inter', sans-serif" }}
+                    >
                       Send Email
                     </span>
                   </a>
@@ -511,10 +634,17 @@ export default function ContactForm() {
                     onClick={openWhatsApp}
                     className="w-full flex items-center space-x-3 p-3 bg-green-50 rounded-xl hover:bg-green-100 transition-colors duration-200 group"
                   >
-                    <svg className="w-5 h-5 text-green-600 group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.513"/>
+                    <svg
+                      className="w-5 h-5 text-green-600 group-hover:scale-110 transition-transform duration-200"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.513" />
                     </svg>
-                    <span className="font-medium text-green-700" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    <span
+                      className="font-medium text-green-700"
+                      style={{ fontFamily: "'Inter', sans-serif" }}
+                    >
                       WhatsApp Chat
                     </span>
                   </button>

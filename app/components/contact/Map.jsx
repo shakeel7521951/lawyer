@@ -53,7 +53,11 @@ const MapSection = () => {
     <>
       {/* Google Fonts */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+      <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossOrigin="true"
+      />
       <link
         href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
         rel="stylesheet"
@@ -193,9 +197,12 @@ const MapSection = () => {
                           Get Directions
                         </h3>
 
-                        <p className="text-gray-600 mb-8 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
-                          Click the button below to get turn-by-turn directions to
-                          our office using Google Maps.
+                        <p
+                          className="text-gray-600 mb-8 leading-relaxed"
+                          style={{ fontFamily: "'Inter', sans-serif" }}
+                        >
+                          Click the button below to get turn-by-turn directions
+                          to our office using Google Maps.
                         </p>
 
                         <div className="space-y-4">
@@ -209,7 +216,10 @@ const MapSection = () => {
                           </button>
 
                           <div className="text-center">
-                            <p className="text-sm text-gray-500 mb-2" style={{ fontFamily: "'Inter', sans-serif" }}>
+                            <p
+                              className="text-sm text-gray-500 mb-2"
+                              style={{ fontFamily: "'Inter', sans-serif" }}
+                            >
                               Or copy our coordinates:
                             </p>
                             <div className="bg-gray-50 rounded-lg px-4 py-2 inline-block">
