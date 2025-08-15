@@ -1,8 +1,8 @@
 "use client";
-import Link from "next/link";
 import { useEffect } from "react";
 import AOS from "aos";
-import "aos/dist/aos.css"; // ✅ Correct way to import CSS
+import "aos/dist/aos.css";
+import { FaPhoneAlt, FaGlobe, FaMapMarkerAlt } from "react-icons/fa";
 
 const Hero = () => {
   useEffect(() => {
@@ -23,89 +23,56 @@ const Hero = () => {
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="absolute inset-0 bg-black/70"></div>
 
       {/* Content */}
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-12 py-20 flex flex-col lg:flex-row items-center lg:items-start gap-10">
-        
-        {/* Left: Text Content */}
-        <div
-          className="flex-1"
-          data-aos="fade-right" // ✅ Smooth fade-in from left
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-12 py-24">
+        {/* Title */}
+        <h1
+          data-aos="fade-up"
+          className="text-4xl md:text-5xl font-extrabold tracking-wide mb-10 text-center lg:text-left"
         >
-          {/* English Name - Elegant Subtitle */}
-          <div className="relative">
-            <p
-              className="text-lg sm:text-2xl md:text-3xl lg:text-4xl text-white font-light tracking-[0.2em] sm:tracking-[0.3em] mb-2 uppercase"
-              style={{
-                fontFamily: "'Playfair Display', 'Georgia', serif",
-                letterSpacing: "0.15em",
-                textShadow: "0 2px 10px rgba(0,0,0,0.5)",
-              }}
-            >
-              Al Khaldi
-            </p>
+          AL KHALDI Law Firm & Legal Consultations
+        </h1>
 
-            {/* Decorative underline */}
-            <div className="flex items-center mb-10 space-x-2 sm:space-x-3 mt-3 sm:mt-4">
-              <div className="w-6 sm:w-8 h-0.5 bg-gradient-to-r from-transparent to-[#c0b688]"></div>
-              <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-[#c0b688] rounded-full animate-pulse"></div>
-              <div
-                className="text-[#c0b688] text-xs sm:text-sm font-light tracking-[0.3em] sm:tracking-[0.4em]"
-                style={{ fontFamily: "'Cinzel', serif" }}
-              >
-                LAW FIRM
-              </div>
-              <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-[#c0b688] rounded-full animate-pulse"></div>
-              <div className="w-6 sm:w-8 h-0.5 bg-gradient-to-l from-transparent to-[#c0b688]"></div>
-            </div>
+        {/* Contact Cards */}
+        <div
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          {/* Address */}
+          <div className="bg-white/10 backdrop-blur-lg p-6 rounded-2xl shadow-lg flex gap-4 items-start">
+            <FaMapMarkerAlt className="text-blue-400 text-2xl mt-1" />
+            <p className="leading-relaxed">
+              Street 150, Al Rayyan <br />
+              Building No. 143, Area 22 <br />
+              Fereej Bin Mahmoud <br />
+              3rd Floor
+            </p>
           </div>
 
-          <p className="text-lg mb-6 max-w-2xl leading-relaxed text-gray-200">
-            Empowering businesses in{" "}
-            <span className="font-semibold">Qatar</span> with end-to-end legal,
-            corporate, and digital solutions. From{" "}
-            <strong>100% foreign ownership registration</strong> to advanced{" "}
-            <strong>AI digital tools</strong> via Nerou Digital Solutions, we
-            help you start, grow, and scale seamlessly.
-          </p>
+          {/* Website */}
+          <div className="bg-white/10 backdrop-blur-lg p-6 rounded-2xl shadow-lg flex gap-4 items-center">
+            <FaGlobe className="text-blue-400 text-2xl" />
+            <a
+              href="http://www.alkhaldi.com"
+              className="hover:underline break-all"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              www.alkhaldi.com
+            </a>
+          </div>
 
-          {/* Services Highlights */}
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-300 mb-8">
-            <li>✔ 100% Ownership</li>
-            <li>✔ Municipality Licensing</li>
-            <li>✔ Bank Account Setup</li>
-            <li>✔ PRO / Ministry Works</li>
-            <li>✔ Sponsor Services</li>
-            <li>✔ Legal Translation</li>
-          </ul>
-
-          {/* CTA */}
-          <Link
-            href="/contact"
-            className="inline-block bg-gradient-to-r from-[#9f8660] to-[#c0b688] text-white px-5 py-3 hover:scale-105 rounded-lg font-semibold text-lg shadow-lg hover:bg-white transition-all duration-300"
-          >
-            Start in Qatar Now
-          </Link>
-        </div>
-
-        {/* Right: Nerou Digital Solutions */}
-        <div
-          data-aos="fade-left" // ✅ Smooth fade from bottom-left
-          className="p-6 rounded-2xl shadow-xl max-w-md w-full border border-[#D4AF37]/40"
-        >
-          <h2 className="text-2xl font-bold mb-4">Nerou Digital Solutions</h2>
-          <p className="text-sm mb-4 text-gray-300">
-            Exclusive tech partner for Al Khaldi Law Firm — providing
-            cutting-edge digital transformation services:
-          </p>
-          <ul className="space-y-2 text-sm text-gray-200">
-            <li> Website & App Development</li>
-            <li> Voice AI Systems</li>
-            <li> WhatsApp Automation</li>
-            <li> CRM Dashboards</li>
-            <li> Marketing & Performance Reports</li>
-          </ul>
+          {/* Phone */}
+          <div className="bg-white/10 backdrop-blur-lg p-6 rounded-2xl shadow-lg flex gap-4 items-start">
+            <FaPhoneAlt className="text-blue-400 text-2xl mt-1" />
+            <div>
+              <p>+974 6616 4000</p>
+              <p>+974 4009 8889</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

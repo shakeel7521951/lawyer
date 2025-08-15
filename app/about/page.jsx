@@ -1,28 +1,30 @@
-import React from 'react'
-import Hero from '../components/about/Hero'
-import Mission from '../components/about/Mission'
+import React from 'react';
+import Hero from '../components/about/Hero';
+import FounderProfile from '../components/about/FounderProfile';
+import KeyPerson from '../components/about/KeyPerson';
+import IntroVision from '../components/about/IntroVision';
+import MissionObjectives from '../components/about/MissionObjectives';
+import WhyChoose from '../components/about/WhyChoose';
+import ServicesSection from '../components/about/ServicesSection';
+import Arbitration from '../components/about/Arbitration';
+import SpecializedConsulting from '../components/about/SpecializedConsulting.jsx';
+import ClosingStatement from '../components/about/ClosingStatement';
 
-
-
-
-import NewServices from '../components/about/NewServices'
-import Founder from '../components/about/Founder'
-import Vision from '../components/about/Vision'
-import OurTeam from '../components/about/OurTeam'
-import AboutContact from '../components/about/Aboutcontact'
-
-const page = () => {
+const Page = () => {
   return (
     <div>
-      <Hero/>
-      <Mission/>
-     <Founder/>
-      <Vision/>
-      <NewServices/>
-        <OurTeam/>
-        <AboutContact/>
+      <Hero />
+      <FounderProfile />
+      <KeyPerson />
+      <IntroVision />
+      <MissionObjectives />
+      <WhyChoose />
+      <ServicesSection />
+      <Arbitration />
+      <SpecializedConsulting />
+      <ClosingStatement />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default Page;
