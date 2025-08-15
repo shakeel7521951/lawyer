@@ -5,27 +5,27 @@ import { Scale, Building2, Users, Shield, ChevronRight, Globe, Award, CheckCircl
 const services = [
 	{
 		id: 1,
-		title: "Corporate Law",
+		title: "Corporate Services",
 		subtitle: "Business Solutions",
 		description:
-			"Strategic corporate legal services including mergers, acquisitions, and compliance for multinational corporations.",
-		image: "/about/ab.jpeg",
-		features: ["M&A Advisory", "Corporate Governance", "Compliance", "Contracts"],
+			"Providing legal consultations for company incorporation, intellectual property protection, foreign investments, governance consultations, tax law advice, commercial contracts, and legal representation in commercial disputes.",
+		image: "/about/corporate.jpeg",
+		features: ["Company Incorporation", "IP Protection", "Commercial Contracts", "Tax Law Consultations"],
 		icon: Building2,
 		color: "from-[#9f8660]/80 to-[#c0b688]/80",
 	},
 	{
 		id: 2,
-		title: "Government Relations",
+		title: "Government & Semi-Government",
 		subtitle: "Public Sector",
 		description:
-			"Specialized legal counsel for government entities and regulatory compliance across the GCC region.",
+			"Specialized legal counsel for government institutions including legislative consultations, governance practices, regulatory compliance, tendering procedures, and institutional dispute resolution.",
 		image: "/home/government.jpg",
 		features: [
-			"Regulatory Affairs",
-			"Public Procurement",
-			"Policy Development",
-			"Administrative Law",
+			"Legislative Consultations",
+			"Governance & Transparency",
+			"Regulatory Compliance",
+			"Government Tendering",
 		],
 		icon: Shield,
 		color: "from-[#c0b688]/80 to-[#9f8660]/80",
@@ -35,30 +35,30 @@ const services = [
 		title: "Individual Services",
 		subtitle: "Personal Legal",
 		description:
-			"Comprehensive personal legal services covering family law, real estate, and immigration matters.",
-		image: "/about/ab3.jpeg",
-		features: ["Family Law", "Real Estate", "Immigration", "Personal Injury"],
+			"Comprehensive personal legal services covering civil, criminal, and family cases, sole proprietorship management, bankruptcy assistance, labor disputes, visa consultations, and debt collection.",
+		image: "/about/individual.jpeg",
+		features: ["Family & Criminal Law", "Sole Proprietorship", "Labor Disputes", "Debt Collection"],
 		icon: Users,
 		color: "from-[#494c52]/80 to-[#9f8660]/80",
 	},
 	{
 		id: 4,
-		title: "Legal Support",
-		subtitle: "Advisory Services",
+		title: "Specialized Services",
+		subtitle: "Expert Advisory",
 		description:
-			"Full-spectrum legal support including litigation, arbitration, and ongoing advisory services.",
-		image: "/about/ab4.jpeg",
-		features: ["Litigation", "Arbitration", "Legal Research", "Advisory"],
+			"Banking legal services, arbitration, risk management consultations, anti-money laundering compliance, governance consultations, fraud investigation, and regulatory compliance services.",
+		image: "/about/legalsprt.jpeg",
+		features: ["Banking Legal Services", "Arbitration", "Risk Management", "Regulatory Compliance"],
 		icon: Scale,
 		color: "from-[#9f8660]/80 to-[#494c52]/80",
 	},
 ];
 
 const stats = [
-	{ number: "25+", label: "Years Experience", icon: Award },
-	{ number: "500+", label: "Cases Won", icon: CheckCircle },
+	{ number: "19+", label: "Years Experience", icon: Award },
+	{ number: "22", label: "Legislative Committees", icon: CheckCircle },
 	{ number: "1000+", label: "Clients Served", icon: Users },
-	{ number: "6", label: "GCC Countries", icon: Globe },
+	{ number: "4", label: "Service Categories", icon: Globe },
 ];
 
 const Information = () => {

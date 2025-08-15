@@ -62,17 +62,17 @@ const Paragraph = () => {
               <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 border border-[#c0b688]/30 mb-6">
                 <Scale className="w-4 h-4 text-[#c0b688]" />
                 <span className="text-[#c0b688] font-semibold text-sm tracking-wider" style={{ fontFamily: "'Inter', sans-serif" }}>
-                  OUR PHILOSOPHY
+                  OUR MISSION
                 </span>
               </div>
 
               {/* Main Heading */}
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                Redefining{' '}
+                Legal{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c0b688] to-[#9f8660]">
-                  Legal Excellence
+                  Excellence
                 </span>
-                <br />in the GCC
+                <br />& Professional Commitment
               </h2>
 
               {/* Decorative Line */}
@@ -84,26 +84,26 @@ const Paragraph = () => {
               {/* Content Paragraphs */}
               <div className="space-y-6">
                 <p className="text-lg text-white/90 leading-relaxed" style={{ fontFamily: "'Crimson Text', serif" }}>
-                  <span className="font-semibold text-[#c0b688]">الخالدي</span> isn't just a law firm - we're strategic partners in your GCC success. Our integrated approach combines legal expertise with business acumen, helping government entities, corporations, and entrepreneurs navigate complex regulations while seizing growth opportunities.
+                  Our office is committed to providing legal services based on sufficient professional expertise and high academic competence. From the office founder to the latest employee, we ensure a team of legal scholars specializing in various fields, including civil and commercial transactions, criminal disputes, family matters, banking and electronic transactions, international cases, and more.
                 </p>
 
                 <p className="text-lg text-white/85 leading-relaxed" style={{ fontFamily: "'Crimson Text', serif" }}>
-                  With offices across the GCC region, we've guided <span className="font-semibold text-[#c0b688]">500+ businesses</span> through seamless setup, compliance, and expansion. Our unique ecosystem connects comprehensive legal services with cutting-edge solutions for complete market readiness.
+                  Our goal is to offer legal consultations and solutions grounded in scientific knowledge and prior professional accumulations, fulfilling the client's objectives for the required legal service. Additionally, we embrace new methods in our tasks to suit the current scientific and societal progress, while adhering to applicable laws and regulations.
                 </p>
 
                 {/* Key Stats */}
                 <div className="grid grid-cols-3 gap-4 pt-6 mt-8 border-t border-white/20">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-[#c0b688] mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>25+</div>
-                    <div className="text-sm text-white/70" style={{ fontFamily: "'Inter', sans-serif" }}>Years</div>
+                    <div className="text-2xl font-bold text-[#c0b688] mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>19+</div>
+                    <div className="text-sm text-white/70" style={{ fontFamily: "'Inter', sans-serif" }}>Years Experience</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-[#c0b688] mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>500+</div>
-                    <div className="text-sm text-white/70" style={{ fontFamily: "'Inter', sans-serif" }}>Clients</div>
+                    <div className="text-2xl font-bold text-[#c0b688] mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>22</div>
+                    <div className="text-sm text-white/70" style={{ fontFamily: "'Inter', sans-serif" }}>Legislative Committees</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-[#c0b688] mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>6</div>
-                    <div className="text-sm text-white/70" style={{ fontFamily: "'Inter', sans-serif" }}>Countries</div>
+                    <div className="text-2xl font-bold text-[#c0b688] mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>All</div>
+                    <div className="text-sm text-white/70" style={{ fontFamily: "'Inter', sans-serif" }}>Court Levels</div>
                   </div>
                 </div>
               </div>

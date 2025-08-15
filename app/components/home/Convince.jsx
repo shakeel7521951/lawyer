@@ -27,26 +27,26 @@ const Convince = () => {
   const features = [
     {
       icon: FaBalanceScale,
-      title: "Expert Legal Advice",
-      description: "Decades of combined legal experience in GCC judicial systems with deep understanding of local laws.",
+      title: "Comprehensive Legal Coverage",
+      description: "Our expertise covers all aspects of legal matters including commercial, criminal, civil, corporate, investment, and family law across all court levels.",
       color: "from-[#9f8660] to-[#c0b688]"
     },
     {
       icon: FaHandshake,
-      title: "Client-Centered Approach",
-      description: "We listen, understand, and work closely with you to achieve personalized solutions for your unique needs.",
+      title: "Professional Ethics & Standards",
+      description: "We maintain the highest professional ethics standards and confidentiality of information when dealing with our clients, ensuring complete trust.",
       color: "from-[#c0b688] to-[#9f8660]"
     },
     {
       icon: FaUserShield,
-      title: "Strong Representation",
-      description: "Aggressive advocacy and strategic legal defense to protect your rights and interests at every level.",
+      title: "Client Information Protection",
+      description: "Our commitment to maintaining professional standards and confidentiality guarantees the security and protection of all client information.",
       color: "from-[#494c52] to-[#9f8660]"
     },
     {
       icon: FaClock,
-      title: "Efficient & Timely",
-      description: "Fast response times and swift resolution without compromising on quality or attention to detail.",
+      title: "Professional Associations Network",
+      description: "Our lawyers are members of relevant professional associations locally, regionally, and internationally, ensuring global standards.",
       color: "from-[#9f8660] to-[#494c52]"
     }
   ];
@@ -88,7 +88,7 @@ const Convince = () => {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
+          
           {/* Header Section */}
           <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             {/* Badge */}
@@ -111,8 +111,8 @@ const Convince = () => {
 
             {/* Description */}
             <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed" style={{ fontFamily: "'Crimson Text', serif" }}>
-              Selecting the right legal partner is a decision that can greatly influence the outcome of your case.
-              At <strong className="text-[#9f8660]">Al Khaldi Law Firm</strong>, we combine legal expertise, a client-first approach,
+              Selecting the right legal partner is a decision that can greatly influence the outcome of your case. 
+              At <strong className="text-[#9f8660]">Al Khaldi Law Firm</strong>, we combine legal expertise, a client-first approach, 
               and a strong reputation to deliver results that matter.
             </p>
           </div>
@@ -120,7 +120,7 @@ const Convince = () => {
           {/* Hero Image & Content Section */}
           <div className={`mb-20 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-
+              
               {/* Image Side */}
               <div className="relative">
                 {/* Main Image */}
@@ -132,7 +132,7 @@ const Convince = () => {
                   />
                   {/* Overlay Gradient */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#494c52]/20 via-transparent to-transparent"></div>
-
+                  
                   {/* Floating Badge */}
                   <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-sm rounded-2xl px-4 py-2 shadow-lg border border-[#c0b688]/20">
                     <div className="flex items-center space-x-2">
@@ -158,14 +158,14 @@ const Convince = () => {
                       Excellence
                     </span>
                   </h2>
-
+                  
                   <div className="space-y-4">
                     <p className="text-gray-700 leading-relaxed" style={{ fontFamily: "'Crimson Text', serif" }}>
-                      We understand that legal issues can be stressful and complex. That's why our team works tirelessly
+                      We understand that legal issues can be stressful and complex. That's why our team works tirelessly 
                       to ensure your rights are protected, your voice is heard, and your case is handled with utmost professionalism.
                     </p>
                     <p className="text-gray-700 leading-relaxed" style={{ fontFamily: "'Crimson Text', serif" }}>
-                      Our dedication goes beyond legal representation — we aim to be a trusted advisor, a strong advocate,
+                      Our dedication goes beyond legal representation — we aim to be a trusted advisor, a strong advocate, 
                       and a reliable partner in every step of your legal journey.
                     </p>
                   </div>
@@ -201,7 +201,7 @@ const Convince = () => {
                 >
                   {/* Background Gradient on Hover */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-500`}></div>
-
+                  
                   {/* Icon */}
                   <div className="relative z-10 mb-4">
                     <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300`}>
@@ -240,14 +240,14 @@ const Convince = () => {
                 <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
                   <FaGavel className="w-8 h-8 text-white" />
                 </div>
-
+                
                 <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6 leading-tight" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Your Trusted Legal Partner in the GCC
                 </h3>
-
+                
                 <p className="text-lg text-white/90 leading-relaxed mb-8" style={{ fontFamily: "'Crimson Text', serif" }}>
-                  Choosing <strong className="text-[#c0b688]">Al Khaldi Law Firm</strong> means choosing trust, transparency, and results.
-                  Whether you are an individual, a corporate client, or a government entity, our mission is to deliver
+                  Choosing <strong className="text-[#c0b688]">Al Khaldi Law Firm</strong> means choosing trust, transparency, and results. 
+                  Whether you are an individual, a corporate client, or a government entity, our mission is to deliver 
                   unmatched legal solutions tailored to your needs. Let us be the partner you can rely on for every legal challenge you face.
                 </p>
 
