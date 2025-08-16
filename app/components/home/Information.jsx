@@ -155,68 +155,76 @@ const Information = () => {
 						{services.map((service, index) => (
 							<div
 								key={service.id}
-								className={`group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 ${
+								className={`group relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 border border-[#c0b688]/20 bg-white ${
 									isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
 								}`}
 								style={{ transitionDelay: `${index * 150}ms` }}
 							>
 								{/* Card Container */}
-								<div className="relative h-80 overflow-hidden">
-									{/* Background Image */}
-									<img
-										src={service.image}
-										alt={service.title}
-										className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-									/>
+								<div className="relative">
+									{/* Header Section with Image */}
+									<div className="relative h-48 overflow-hidden">
+										<img
+											src={service.image}
+											alt={service.title}
+											className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+										/>
+										{/* Subtle overlay for better icon visibility */}
+										<div className="absolute inset-0 bg-gradient-to-br from-[#494c52]/20 via-transparent to-[#9f8660]/30"></div>
 
-									{/* Smooth gradient overlay - stronger at bottom for text visibility */}
-									<div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 via-black/10 to-transparent"></div>
-
-									{/* Content */}
-									<div className="absolute inset-0 p-6 flex flex-col justify-between">
-										{/* Top Section */}
-										<div className="flex justify-between items-start">
-											<div className="w-12 h-12 bg-black/30 backdrop-blur-sm rounded-lg flex items-center justify-center border border-white/30">
-												<service.icon className="w-6 h-6 text-white" />
+										{/* Icon in top-right corner */}
+										<div className="absolute top-4 right-4">
+											<div className="w-14 h-14 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-[#c0b688]/30 shadow-lg group-hover:scale-110 transition-all duration-300">
+												<service.icon className="w-7 h-7 text-[#9f8660]" />
 											</div>
 										</div>
 
-										{/* Bottom Section */}
-										<div className="space-y-4">
-											<div>
-												<p className="text-[#c0b688] text-sm font-medium uppercase tracking-wider mb-2" style={{ fontFamily: "'Inter', sans-serif" }}>
-													{service.subtitle}
-												</p>
-												<h3
-													className="text-2xl font-bold text-white mb-3 leading-tight"
-													style={{ fontFamily: "'Cormorant Garamond', serif" }}
-												>
-													{service.title}
-												</h3>
-												<p className="text-white/95 text-sm leading-relaxed mb-4" style={{ fontFamily: "'Crimson Text', serif" }}>
-													{service.description}
-												</p>
-											</div>
+										{/* Category badge */}
+										<div className="absolute bottom-4 left-4">
+											<span className="bg-[#c0b688] text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider" style={{ fontFamily: "'Inter', sans-serif" }}>
+												{service.subtitle}
+											</span>
+										</div>
+									</div>
 
-											{/* Features */}
-											<div className="grid grid-cols-2 gap-2 mb-4">
-												{service.features.map((feature, idx) => (
-													<div key={idx} className="flex items-center space-x-2">
-														<CheckCircle className="w-3 h-3 text-[#c0b688]" />
-														<span className="text-white/90 text-xs" style={{ fontFamily: "'Inter', sans-serif" }}>
-															{feature}
-														</span>
-													</div>
-												))}
-											</div>
+									{/* Content Section */}
+									<div className="p-8">
+										{/* Title */}
+										<h3
+											className="text-2xl font-bold text-[#494c52] mb-3 leading-tight group-hover:text-[#9f8660] transition-colors duration-300"
+											style={{ fontFamily: "'Playfair Display', serif" }}
+										>
+											{service.title}
+										</h3>
 
-											{/* CTA */}
-											<button className="flex items-center space-x-2 text-white hover:text-[#c0b688] transition-colors duration-300 group/btn">
-												<span className="text-sm font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>Learn More</span>
+										{/* Description */}
+										<p className="text-[#494c52]/80 leading-relaxed mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+											{service.description}
+										</p>
+
+										{/* Features */}
+										<div className="space-y-3 mb-6">
+											{service.features.map((feature, idx) => (
+												<div key={idx} className="flex items-center space-x-3">
+													<div className="w-2 h-2 bg-gradient-to-r from-[#c0b688] to-[#9f8660] rounded-full flex-shrink-0"></div>
+													<span className="text-[#494c52]/70 text-sm font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
+														{feature}
+													</span>
+												</div>
+											))}
+										</div>
+
+										{/* CTA Button */}
+										<div className="pt-4 border-t border-[#c0b688]/20" onClick={()=>window.location.replace("/services")}>
+											<button className="group/btn flex items-center space-x-2 text-[#9f8660] hover:text-[#494c52] transition-colors duration-300 font-semibold">
+												<span style={{ fontFamily: "'Cinzel', serif" }}>Learn More</span>
 												<ChevronRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
 											</button>
 										</div>
 									</div>
+
+									{/* Decorative element */}
+									<div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#c0b688] via-[#9f8660] to-[#c0b688]"></div>
 								</div>
 							</div>
 						))}

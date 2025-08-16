@@ -21,9 +21,11 @@ const Footer = () => {
   ];
 
   const contactInfo = [
-    { icon: Phone, label: "+1 (555) 123-4567", href: "tel:+15551234567" },
-    { icon: Mail, label: "contact@alkhaldi.com", href: "mailto:contact@alkhaldi.com" },
-    { icon: MapPin, label: "Doha, Qatar & GCC Region", href: "#" }
+    { icon: Phone, label: "+974 6616 4000", href: "tel:+97466164000" },
+    { icon: Phone, label: "+974 4009 8889", href: "tel:+97440098889" },
+    { icon: Mail, label: "info@alkhaldi.com", href: "mailto:info@alkhaldi.com" },
+    { icon: Globe, label: "www.alkhaldi.com", href: "http://www.alkhaldi.com" },
+    { icon: MapPin, label: "Street 150, Al Rayyan, Building No. 143, Area 22, Fereej Bin Mahmoud, 3rd Floor", href: "#" }
   ];
 
   const socialLinks = [

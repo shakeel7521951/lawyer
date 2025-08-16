@@ -15,13 +15,13 @@ const Page = () => {
     <div>
       <Hero />
       <FounderProfile />
-      <KeyPerson />
+      {/*<KeyPerson />*/}
       <IntroVision />
       <MissionObjectives />
       <WhyChoose />
-      <ServicesSection />
-      <Arbitration />
-      <SpecializedConsulting />
+      {/*<ServicesSection />*/}
+      {/*<Arbitration />*/}
+      {/*<SpecializedConsulting />*/}
       <ClosingStatement />
     </div>
   );
