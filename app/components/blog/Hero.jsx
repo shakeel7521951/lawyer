@@ -62,7 +62,7 @@ const Hero = () => {
 
           {/* Main Heading */}
           <h2
-            className="text-3xl sm:text-4xl font-bold text-white mb-6 leading-tight max-w-4xl mx-auto"
+            className="text-3xl sm:text-4xl font-bold text-white mb-6 leading-tight max-w-3xl mx-auto"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
             Acquittal of a Public Employee and 10 Others from{" "}
@@ -99,7 +99,7 @@ const Hero = () => {
         </div>
 
         {/* Bottom Gradient Fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+        {/* <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white via-transparent to-transparent"></div> */}
       </section>
     </>
   );
