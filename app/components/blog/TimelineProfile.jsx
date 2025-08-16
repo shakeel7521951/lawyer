@@ -1,18 +1,30 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { LuAlignStartVertical } from "react-icons/lu";
-import AOS from 'aos';
-import "aos/dist/aos.css"
+import { Calendar, User, MapPin, Scale, Award, Clock, CheckCircle, Users, Gavel } from "lucide-react";
+import Image from "next/image";
 
 const TimelineProfile = () => {
-  useEffect(()=>{
-    AOS.init({
-      duration:1000,
-      once:true,
-      offset:100,
-    })
-  })
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       {/* Google Fonts */}
@@ -23,159 +35,243 @@ const TimelineProfile = () => {
         rel="stylesheet"
       />
 
-      <section className="relative mt-1 w-full min-h-screen overflow-hidden flex flex-col items-center justify-center px-4 sm:px-6 text-center">
-        {/* Background Layers */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#2c2e32]/90 via-[#3a3d42]/80 to-[#9f8660]/70"></div>
-          <div className="absolute inset-0 bg-black/30"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-[#2c2e32]/70 via-transparent to-[#3a3d42]/50"></div>
+      <section
+        ref={sectionRef}
+        className="relative w-full bg-gradient-to-br from-gray-50 via-white to-gray-100 py-16 sm:py-20 overflow-hidden"
+      >
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div
+            className="absolute inset-0 bg-repeat opacity-30"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.4'/%3E%3C/svg%3E")`
+            }}
+          ></div>
         </div>
 
-        {/* Decorative Line + Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="relative z-10 mt-10 w-full"
-        >
-          <div className="flex items-center justify-center space-x-3 mb-8">
-            <div className="w-20 h-0.5 bg-gradient-to-r from-transparent to-[#c0b688]"></div>
-            <div className="w-2 h-2 bg-[#c0b688] rounded-full animate-pulse"></div>
-            <div
-              className="text-[#9f8660] text-xs sm:text-sm tracking-[0.3em] font-medium"
-              style={{ fontFamily: "'Cinzel', serif" }}
-            >
-              LEGAL TIMELINE
-            </div>
-            <div className="w-2 h-2 bg-[#c0b688] rounded-full animate-pulse"></div>
-            <div className="w-20 h-0.5 bg-gradient-to-l from-transparent to-[#c0b688]"></div>
-          </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Main Article */}
+          <div className={`transition-all duration-1000 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}>
+            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-[#c0b688]/20">
 
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl sm:text-5xl font-bold text-white mb-8 leading-tight max-w-4xl mx-auto px-4"
-            style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              textShadow: "0 2px 10px rgba(0,0,0,0.3)",
-            }}
-          >
-            The Judicial Journey of{" "}
-            <span className="text-[#9f8660]">
-              The Bribery & Money Laundering Case
-            </span>
-          </motion.h2>
-
-          {/* Timeline Content */}
-          <div className="space-y-12 mb-10 w-full mx-auto mt-12 relative z-10 px-4">
-            {/* First Court Ruling */}
-            <motion.section
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-white/10 backdrop-blur-lg flex w-full rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 max-w-3xl mx-auto"
-            >
-              <div className="flex items-start">
-             
-                <div className=" p-6 rounded-2xl ">
-  <h3
-    className="text-2xl font-semibold mb-5 text-white text-center"
-    style={{ fontFamily: "'Cormorant Garamond', serif" }}
-  >
-    First Instance Court Ruling
-  </h3>
-
-  <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
-    <div data-aos="fade-down" className="p-4 border border-gray-600 rounded-lg bg-[#222] hover:shadow-xl transition">
-      <p className="font-light text-white leading-relaxed">
-        <span className="text-[#9f8660] font-medium">First defendant</span> 
-        sentenced to{" "}
-        <span className="font-medium text-[#9f8660]">
-          6 years in prison and a fine
-        </span>.
-      </p>
-    </div>
-
-    <div data-aos="fade-down" className="p-4 border border-gray-600 rounded-lg bg-[#222] hover:shadow-xl transition">
-      <p className="font-light text-white leading-relaxed">
-        Other defendants sentenced up to{" "}
-        <span className="font-medium text-[#9f8660]">
-          3 years in prison and fines
-        </span>.
-      </p>
-    </div>
-
-    <div data-aos="fade-up" className="p-4 border border-gray-600 rounded-lg bg-[#222] hover:shadow-xl transition">
-      <p className="font-light text-white leading-relaxed">
-        Several were deported after completing their sentences.
-      </p>
-    </div>
-
-    <div data-aos="fade-up" className="p-4 border border-gray-600 rounded-lg bg-[#222] hover:shadow-xl transition">
-      <p className="font-light text-white leading-relaxed">
-        <span className="font-medium text-[#9f8660]">4 defendants</span> were
-        acquitted at that stage.
-      </p>
-    </div>
-  </div>
-</div>
-
+              {/* Article Header */}
+              <div className="bg-gradient-to-r from-[#494c52] via-[#494c52] to-[#9f8660] px-8 py-12 text-white relative">
+                <div className="absolute inset-0 bg-black/10"></div>
+                <div className="relative">
+                  <div className="flex items-center justify-center mb-6">
+                    <div className="bg-[#c0b688]/30 backdrop-blur-sm p-4 rounded-2xl">
+                      <Scale className="w-8 h-8 text-[#c0b688]" />
+                    </div>
+                  </div>
+                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6 leading-tight"
+                      style={{ fontFamily: "'Playfair Display', serif" }}>
+                    Legal Victory: Acquittal in Major Bribery Case
+                  </h1>
+                  <p className="text-xl text-center text-blue-200 max-w-4xl mx-auto leading-relaxed"
+                     style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                    Court of Appeal acquits 11 defendants including public employee in complex bribery and money laundering case
+                  </p>
+                </div>
               </div>
-            </motion.section>
 
-            {/* Defense Lawyer - FULL WIDTH */}
-            <motion.section
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="bg-white/10 backdrop-blur-lg flex flex-col md:flex-row items-center justify-between w-full rounded-xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300"
-            >
-              {/* Text Content */}
-              <div className="text-left md:w-2/3 w-full md:pr-8">
-                <h3
-                  className="text-2xl font-semibold text-white mb-3"
-                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
-                >
-                  Defense Counsel:{" "}
-                  <span className="text-[#9f8660]">Saleh Ali Al-Khaldi</span>
-                </h3>
-                <p className="text-white mt-2 leading-relaxed">
-                  After the initial ruling, lawyer Saleh Ali Al-Khaldi filed an
-                  appeal before the Court of Appeal, challenging the verdict on
-                  substantive legal grounds.
-                </p>
-                <ul className="list-disc ml-6 mt-3 space-y-2 text-white">
-                  <li className="font-light leading-relaxed">
-                    Sought complete nullification of the First Instance Court's
-                    ruling
-                  </li>
-                  <li className="font-light leading-relaxed">
-                    Argued for acquittal based on{" "}
-                    <span className="font-medium text-[#9f8660]">
-                      fundamental errors in legal application
+              {/* Article Content */}
+              <div className="p-8 md:p-12">
+
+                {/* Article Meta */}
+                <div className="flex flex-wrap items-center justify-center gap-8 mb-12 pb-8 border-b border-[#c0b688]/20">
+                  <div className="flex items-center space-x-3">
+                    <Calendar className="w-5 h-5 text-[#9f8660]" />
+                    <span className="text-[#494c52] font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
+                      February 16, 2025
                     </span>
-                  </li>
-                  <li className="font-light leading-relaxed">
-                    Presented new evidentiary considerations
-                  </li>
-                </ul>
-              </div>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <User className="w-5 h-5 text-[#9f8660]" />
+                    <span className="text-[#494c52] font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
+                      Lawyer Saleh Ali Al-Khaldi
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <MapPin className="w-5 h-5 text-[#9f8660]" />
+                    <span className="text-[#494c52] font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
+                      Al Sharq News
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Clock className="w-5 h-5 text-[#9f8660]" />
+                    <span className="text-[#494c52] font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
+                      11 months proceedings
+                    </span>
+                  </div>
+                </div>
 
-              {/* Lawyer Image */}
-              <div data-aos="fade-left" className="md:w-1/3 w-full flex justify-center mt-6 md:mt-0">
-                <img
-                  src="./about/ab4.jpeg"
-                  alt="Defense Lawyer Saleh Ali Al-Khaldi"
-                  className="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-white shadow-xl object-cover"
-                />
+                {/* Lawyer Profile Section */}
+                <div className="mb-12">
+                  <div className="bg-gradient-to-br from-[#c0b688]/10 to-[#9f8660]/10 rounded-2xl p-8 border border-[#c0b688]/20">
+                    <div className="grid lg:grid-cols-3 gap-8 items-center">
+
+                      {/* Lawyer Photo Placeholder */}
+                      <div className="lg:col-span-1">
+                        <div className="relative">
+                          <div className="w-full aspect-square bg-gradient-to-br from-[#494c52] to-[#9f8660] rounded-2xl flex items-center justify-center shadow-2xl">
+                            <div className="text-center text-white">
+                              {/*<User className="w-16 h-16 mx-auto mb-4 opacity-80" />*/}
+                              {/*<p className="text-lg font-semibold mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>*/}
+                              {/*  Lawyer Photo*/}
+                              {/*</p>*/}
+                              {/*<p className="text-sm opacity-80" style={{ fontFamily: "'Inter', sans-serif" }}>*/}
+                              {/*  To be added*/}
+                              {/*</p>*/}
+                              <Image src="/lawyer.jpg" alt="Lawyer Photo" width={300} height={300}  className="rounded-xl"  />                            </div>
+                          </div>
+                          <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-[#c0b688] rounded-full flex items-center justify-center shadow-xl">
+                            <Award className="w-8 h-8 text-white" />
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Lawyer Info */}
+                      <div className="lg:col-span-2">
+                        <h3 className="text-2xl md:text-3xl font-bold text-[#494c52] mb-4"
+                            style={{ fontFamily: "'Playfair Display', serif" }}>
+                          Lawyer Saleh Ali Al-Khaldi
+                        </h3>
+                        <p className="text-lg text-[#9f8660] font-semibold mb-4"
+                           style={{ fontFamily: "'Cinzel', serif" }}>
+                          Founder & CEO - AL KHALDI Law Firm
+                        </p>
+                        <p className="text-[#494c52]/80 leading-relaxed mb-6"
+                           style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                          Successfully defended the innocence of 11 defendants in a complex bribery and money laundering case,
+                          demonstrating exceptional legal expertise and commitment to justice through 11 months of rigorous legal proceedings.
+                        </p>
+
+                        {/* Achievement Stats */}
+                        <div className="grid grid-cols-3 gap-4">
+                          <div className="text-center p-4 bg-white rounded-xl border border-[#c0b688]/20">
+                            <div className="text-2xl font-bold text-[#c0b688]" style={{ fontFamily: "'Playfair Display', serif" }}>11</div>
+                            <div className="text-sm text-[#494c52]/70" style={{ fontFamily: "'Inter', sans-serif" }}>Defendants</div>
+                          </div>
+                          <div className="text-center p-4 bg-white rounded-xl border border-[#c0b688]/20">
+                            <div className="text-2xl font-bold text-[#c0b688]" style={{ fontFamily: "'Playfair Display', serif" }}>100%</div>
+                            <div className="text-sm text-[#494c52]/70" style={{ fontFamily: "'Inter', sans-serif" }}>Acquittal</div>
+                          </div>
+                          <div className="text-center p-4 bg-white rounded-xl border border-[#c0b688]/20">
+                            <div className="text-2xl font-bold text-[#c0b688]" style={{ fontFamily: "'Playfair Display', serif" }}>11</div>
+                            <div className="text-sm text-[#494c52]/70" style={{ fontFamily: "'Inter', sans-serif" }}>Months</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Article Content */}
+                <div className="prose prose-lg max-w-none">
+
+                  {/* Case Overview */}
+                  <div className="mb-8">
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#494c52] mb-6 flex items-center"
+                        style={{ fontFamily: "'Playfair Display', serif" }}>
+                      <Gavel className="w-8 h-8 text-[#9f8660] mr-3" />
+                      Case Overview
+                    </h2>
+                    <p className="text-lg text-[#494c52]/80 leading-relaxed mb-6"
+                       style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                      The Court of Appeal acquitted 11 defendants, including a public employee, of charges related to bribery and money laundering,
+                      as well as intentionally acquiring and possessing funds derived from those crimes.
+                    </p>
+                  </div>
+
+                  {/* Case Background */}
+                  <div className="mb-8">
+                    <h3 className="text-xl font-bold text-[#494c52] mb-4"
+                        style={{ fontFamily: "'Playfair Display', serif" }}>
+                      Case Background
+                    </h3>
+                    <div className="bg-gradient-to-br from-[#c0b688]/5 to-[#9f8660]/5 p-6 rounded-2xl border border-[#c0b688]/20 mb-6">
+                      <p className="text-[#494c52]/80 leading-relaxed"
+                         style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                        The case revolved around allegations that the defendants sought to obtain official licenses in exchange for bribes.
+                      </p>
+                    </div>
+
+                    <div className="space-y-4">
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="w-5 h-5 text-[#c0b688] mt-1 flex-shrink-0" />
+                        <p className="text-[#494c52]/80 leading-relaxed" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                          The Court of First Instance had previously sentenced the first defendant to <strong>6 years in prison and a fine</strong>,
+                          while others were also convicted with varying penalties.
+                        </p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="w-5 h-5 text-[#c0b688] mt-1 flex-shrink-0" />
+                        <p className="text-[#494c52]/80 leading-relaxed" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                          Some defendants were ordered to be deported after serving their sentences, while <strong>4 defendants were acquitted</strong> of all charges.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Defense Efforts */}
+                  <div className="mb-8">
+                    <h3 className="text-xl font-bold text-[#494c52] mb-4"
+                        style={{ fontFamily: "'Playfair Display', serif" }}>
+                      Defense Strategy
+                    </h3>
+                    <div className="bg-gradient-to-br from-[#9f8660]/5 to-[#494c52]/5 p-6 rounded-2xl border border-[#9f8660]/20 mb-6">
+                      <p className="text-[#494c52]/80 leading-relaxed"
+                         style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                        <strong>Lawyer Saleh Ali Al-Khaldi</strong> appealed the initial ruling before the Court of Appeal,
+                        arguing that the first judgment should be overturned and the defendants acquitted, citing errors in the application of law and lack of sufficient evidence.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Court Ruling */}
+                  <div className="mb-8">
+                    <h3 className="text-xl font-bold text-[#494c52] mb-4"
+                        style={{ fontFamily: "'Playfair Display', serif" }}>
+                      Court of Appeal Ruling
+                    </h3>
+                    <div className="space-y-4">
+                      <div className="flex items-start space-x-3">
+                        <Award className="w-5 h-5 text-[#c0b688] mt-1 flex-shrink-0" />
+                        <p className="text-[#494c52]/80 leading-relaxed" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                          The Appeal Court <strong>accepted the defense arguments</strong>, acquitting the defendants and <strong>upholding their innocence</strong> as established in the ruling of the Court of First Instance.
+                        </p>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <Clock className="w-5 h-5 text-[#c0b688] mt-1 flex-shrink-0" />
+                        <p className="text-[#494c52]/80 leading-relaxed" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                          The proceedings lasted <strong>11 months</strong> before the final judgment was issued.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Reasoning */}
+                  <div className="mb-8">
+                    <h3 className="text-xl font-bold text-[#494c52] mb-4"
+                        style={{ fontFamily: "'Playfair Display', serif" }}>
+                      Court's Reasoning
+                    </h3>
+                    <div className="bg-gradient-to-br from-[#c0b688]/10 to-[#9f8660]/10 p-8 rounded-2xl border border-[#c0b688]/20">
+                      <blockquote className="text-lg text-[#494c52] leading-relaxed italic border-l-4 border-[#c0b688] pl-6"
+                                  style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                        "The case was surrounded by doubts, assumptions, and lack of clear evidence.
+                        The documents and testimonies failed to establish conclusive proof of the defendants' involvement in bribery or money laundering."
+                      </blockquote>
+                    </div>
+                  </div>
+
+                </div>
               </div>
-            </motion.section>
+            </div>
           </div>
-        </motion.div>
-
-        {/* Scroll Indicator */}
-     
+        </div>
 
         {/* Bottom Gradient */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
