@@ -1,7 +1,15 @@
 "use client";
-import React from "react";
-
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"
 const AppealJudgment = () => {
+  useEffect(()=>{
+    AOS.init({
+      duration:1000,
+      once:true,
+      offset:100,
+    })
+  })
   return (
     <section className="relative w-full text-white min-h-screen flex flex-col items-center justify-center px-6 py-16">
       {/* Background */}
@@ -23,7 +31,7 @@ const AppealJudgment = () => {
       {/* Content Grid */}
       <div className="relative z-10 w-full grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl">
         {/* Prosecution Appeal */}
-        <section className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300 text-left shadow-lg">
+        <section data-aos="fade-right" className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300 text-left shadow-lg">
           <h3
             className="text-2xl font-semibold text-white mb-3"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
@@ -37,7 +45,7 @@ const AppealJudgment = () => {
         </section>
 
         {/* Final Decision */}
-        <section className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300 text-left shadow-lg">
+        <section data-aos="fade-up" className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300 text-left shadow-lg">
           <h3
             className="text-2xl font-semibold text-[#9f8660] mb-4"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
@@ -58,7 +66,7 @@ const AppealJudgment = () => {
         </section>
 
         {/* Court Reasoning */}
-        <section className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300 text-left shadow-lg">
+        <section data-aos="fade-left" className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300 text-left shadow-lg">
           <h3
             className="text-2xl font-semibold text-white mb-4"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}

@@ -1,9 +1,18 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { LuAlignStartVertical } from "react-icons/lu";
+import AOS from 'aos';
+import "aos/dist/aos.css"
 
 const TimelineProfile = () => {
+  useEffect(()=>{
+    AOS.init({
+      duration:1000,
+      once:true,
+      offset:100,
+    })
+  })
   return (
     <>
       {/* Google Fonts */}
@@ -78,7 +87,7 @@ const TimelineProfile = () => {
   </h3>
 
   <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
-    <div className="p-4 border border-gray-600 rounded-lg bg-[#222] hover:shadow-xl transition">
+    <div data-aos="fade-down" className="p-4 border border-gray-600 rounded-lg bg-[#222] hover:shadow-xl transition">
       <p className="font-light text-white leading-relaxed">
         <span className="text-[#9f8660] font-medium">First defendant</span> 
         sentenced to{" "}
@@ -88,7 +97,7 @@ const TimelineProfile = () => {
       </p>
     </div>
 
-    <div className="p-4 border border-gray-600 rounded-lg bg-[#222] hover:shadow-xl transition">
+    <div data-aos="fade-down" className="p-4 border border-gray-600 rounded-lg bg-[#222] hover:shadow-xl transition">
       <p className="font-light text-white leading-relaxed">
         Other defendants sentenced up to{" "}
         <span className="font-medium text-[#9f8660]">
@@ -97,13 +106,13 @@ const TimelineProfile = () => {
       </p>
     </div>
 
-    <div className="p-4 border border-gray-600 rounded-lg bg-[#222] hover:shadow-xl transition">
+    <div data-aos="fade-up" className="p-4 border border-gray-600 rounded-lg bg-[#222] hover:shadow-xl transition">
       <p className="font-light text-white leading-relaxed">
         Several were deported after completing their sentences.
       </p>
     </div>
 
-    <div className="p-4 border border-gray-600 rounded-lg bg-[#222] hover:shadow-xl transition">
+    <div data-aos="fade-up" className="p-4 border border-gray-600 rounded-lg bg-[#222] hover:shadow-xl transition">
       <p className="font-light text-white leading-relaxed">
         <span className="font-medium text-[#9f8660]">4 defendants</span> were
         acquitted at that stage.
@@ -154,7 +163,7 @@ const TimelineProfile = () => {
               </div>
 
               {/* Lawyer Image */}
-              <div className="md:w-1/3 w-full flex justify-center mt-6 md:mt-0">
+              <div data-aos="fade-left" className="md:w-1/3 w-full flex justify-center mt-6 md:mt-0">
                 <img
                   src="./about/ab4.jpeg"
                   alt="Defense Lawyer Saleh Ali Al-Khaldi"

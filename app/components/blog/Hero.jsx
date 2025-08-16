@@ -1,8 +1,16 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Hero = () => {
+  useEffect(()=>{
+    AOS.init({
+      duration:1000,
+      once:true,
+      offset:100,
+    })
+  },[])
   return (
     <>
       {/* Google Fonts */}
@@ -81,7 +89,7 @@ const Hero = () => {
           </p>
 
           {/* Highlight Box */}
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 max-w-lg mx-auto">
+          <div data-aos="fade-up" className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 max-w-lg mx-auto">
             {/* <Mail className="w-8 h-8 text-[#c0b688] mx-auto mb-3" /> */}
             <p
               className="text-white text-sm font-medium mb-1"
