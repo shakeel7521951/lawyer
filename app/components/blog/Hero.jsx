@@ -1,8 +1,16 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Hero = () => {
+  useEffect(()=>{
+    AOS.init({
+      duration:1000,
+      once:true,
+      offset:100,
+    })
+  },[])
   return (
     <>
       {/* Google Fonts */}
@@ -62,7 +70,7 @@ const Hero = () => {
 
           {/* Main Heading */}
           <h2
-            className="text-3xl sm:text-4xl font-bold text-white mb-6 leading-tight max-w-4xl mx-auto"
+            className="text-3xl sm:text-4xl font-bold text-white mb-6 leading-tight max-w-3xl mx-auto"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
             Acquittal of a Public Employee and 10 Others from{" "}
@@ -81,7 +89,7 @@ const Hero = () => {
           </p>
 
           {/* Highlight Box */}
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 max-w-lg mx-auto">
+          <div data-aos="fade-up" className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 max-w-lg mx-auto">
             {/* <Mail className="w-8 h-8 text-[#c0b688] mx-auto mb-3" /> */}
             <p
               className="text-white text-sm font-medium mb-1"
@@ -99,7 +107,7 @@ const Hero = () => {
         </div>
 
         {/* Bottom Gradient Fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+        {/* <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white via-transparent to-transparent"></div> */}
       </section>
     </>
   );
