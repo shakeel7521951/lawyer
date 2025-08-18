@@ -353,44 +353,7 @@ const CompService = () => {
               </div>
             </div>
           </div>
-
-          {/* Bottom CTA Section */}
-          <div className={`mt-12 transition-all duration-700 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <div className="bg-gradient-to-r from-[#494c52] to-[#9f8660] rounded-2xl p-6 sm:p-8 text-white relative overflow-hidden">
-
-              {/* Background Pattern */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute inset-0 bg-repeat opacity-30" style={{
-                  backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.6'/%3E%3C/svg%3E")`
-                }}></div>
-              </div>
-
-              <div className="relative z-10 text-center">
-                <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <Award className="w-6 h-6 text-white" />
-                </div>
-
-                <h3 className="text-xl sm:text-2xl font-bold mb-3 leading-tight" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                  Ready for Expert Legal Consultation?
-                </h3>
-
-                <p className="text-base text-white/90 leading-relaxed mb-6 max-w-2xl mx-auto" style={{ fontFamily: "'Crimson Text', serif" }}>
-                  Contact Al-Khaldi Law Firm today for comprehensive legal solutions tailored to your specific needs.
-                </p>
-
-                <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                  <button className="bg-white text-[#494c52] px-6 py-2 rounded-lg font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-2 justify-center text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
-                    <span>Schedule Consultation</span>
-                    <ChevronRight className="w-4 h-4" />
-                  </button>
-                  <button className="border border-white/30 text-white px-6 py-2 rounded-lg font-semibold hover:bg-white hover:text-[#494c52] transition-all duration-300 text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
-                    Download Brochure
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+     </div>
       </section>
     </>
   );
