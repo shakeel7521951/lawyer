@@ -17,7 +17,7 @@ const Page = () => {
       <FounderProfile />
       {/*<KeyPerson />*/}
       <IntroVision />
-      <MissionObjectives />
+      {/*<MissionObjectives />*/}
       <WhyChoose />
       {/*<ServicesSection />*/}
       {/*<Arbitration />*/}

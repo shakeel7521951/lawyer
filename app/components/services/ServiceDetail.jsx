@@ -102,7 +102,7 @@ const ServiceDetail = ({ serviceData }) => {
                 </div>
 
                 {/* Title */}
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight" >
                   {serviceData.title}
                 </h1>
 
@@ -112,7 +112,7 @@ const ServiceDetail = ({ serviceData }) => {
                 </p>
 
                 {/* Description */}
-                <p className="text-lg text-white/90 leading-relaxed" style={{ fontFamily: "'Crimson Text', serif" }}>
+                <p className="text-lg text-white/90 leading-relaxed" >
                   {serviceData.description}
                 </p>
 
@@ -144,15 +144,15 @@ const ServiceDetail = ({ serviceData }) => {
                     <div className="bg-white/15 backdrop-blur-lg rounded-xl p-4 border border-white/20 shadow-lg">
                       <div className="grid grid-cols-3 gap-4 text-center">
                         <div>
-                          <div className="text-2xl font-bold text-white" style={{ fontFamily: "'Cormorant Garamond', serif" }}>25+</div>
+                          <div className="text-2xl font-bold text-white" >25+</div>
                           <div className="text-xs text-white/90" style={{ fontFamily: "'Inter', sans-serif" }}>Years</div>
                         </div>
                         <div>
-                          <div className="text-2xl font-bold text-white" style={{ fontFamily: "'Cormorant Garamond', serif" }}>500+</div>
+                          <div className="text-2xl font-bold text-white" >500+</div>
                           <div className="text-xs text-white/90" style={{ fontFamily: "'Inter', sans-serif" }}>Cases</div>
                         </div>
                         <div>
-                          <div className="text-2xl font-bold text-white" style={{ fontFamily: "'Cormorant Garamond', serif" }}>98%</div>
+                          <div className="text-2xl font-bold text-white" >98%</div>
                           <div className="text-xs text-white/90" style={{ fontFamily: "'Inter', sans-serif" }}>Success</div>
                         </div>
                       </div>
@@ -203,10 +203,10 @@ const ServiceDetail = ({ serviceData }) => {
               {activeTab === "overview" && (
                 <div className="space-y-8">
                   <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 border border-gray-100">
-                    <h3 className="text-2xl font-bold text-[#494c52] mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                    <h3 className="text-2xl font-bold text-[#494c52] mb-6" >
                       Service Overview
                     </h3>
-                    <p className="text-gray-700 leading-relaxed text-lg" style={{ fontFamily: "'Crimson Text', serif" }}>
+                    <p className="text-gray-700 leading-relaxed text-lg" >
                       {serviceData.overview}
                     </p>
                   </div>
@@ -217,7 +217,7 @@ const ServiceDetail = ({ serviceData }) => {
                       <div className="w-12 h-12 bg-gradient-to-br from-[#c0b688] to-[#9f8660] rounded-xl flex items-center justify-center mx-auto mb-4">
                         <ServiceIcon className="w-6 h-6 text-white" />
                       </div>
-                      <div className="text-2xl font-bold text-[#494c52] mb-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                      <div className="text-2xl font-bold text-[#494c52] mb-2" >
                         {serviceData.services.length}+
                       </div>
                       <div className="text-sm text-gray-600 font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
@@ -228,7 +228,7 @@ const ServiceDetail = ({ serviceData }) => {
                       <div className="w-12 h-12 bg-gradient-to-br from-[#9f8660] to-[#494c52] rounded-xl flex items-center justify-center mx-auto mb-4">
                         <Clock className="w-6 h-6 text-white" />
                       </div>
-                      <div className="text-2xl font-bold text-[#494c52] mb-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                      <div className="text-2xl font-bold text-[#494c52] mb-2" >
                         24/7
                       </div>
                       <div className="text-sm text-gray-600 font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
@@ -239,7 +239,7 @@ const ServiceDetail = ({ serviceData }) => {
                       <div className="w-12 h-12 bg-gradient-to-br from-[#494c52] to-[#c0b688] rounded-xl flex items-center justify-center mx-auto mb-4">
                         <Award className="w-6 h-6 text-white" />
                       </div>
-                      <div className="text-2xl font-bold text-[#494c52] mb-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                      <div className="text-2xl font-bold text-[#494c52] mb-2" >
                         25+
                       </div>
                       <div className="text-sm text-gray-600 font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
@@ -253,7 +253,7 @@ const ServiceDetail = ({ serviceData }) => {
               {/* Services Tab */}
               {activeTab === "services" && (
                 <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-[#494c52] mb-8 text-center" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                  <h3 className="text-2xl font-bold text-[#494c52] mb-8 text-center" >
                     Our {serviceData.title} Portfolio
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -268,7 +268,7 @@ const ServiceDetail = ({ serviceData }) => {
                         <h4 className="text-lg font-bold text-[#494c52] mb-3 group-hover:text-[#9f8660] transition-colors duration-300" style={{ fontFamily: "'Inter', sans-serif" }}>
                           {service.title}
                         </h4>
-                        <p className="text-gray-600 text-sm leading-relaxed mb-4" style={{ fontFamily: "'Crimson Text', serif" }}>
+                        <p className="text-gray-600 text-sm leading-relaxed mb-4" >
                           {service.description}
                         </p>
                         <div className="space-y-2">
@@ -295,7 +295,7 @@ const ServiceDetail = ({ serviceData }) => {
               {/* Process Tab */}
               {activeTab === "process" && (
                 <div className="space-y-8">
-                  <h3 className="text-2xl font-bold text-[#494c52] mb-8 text-center" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                  <h3 className="text-2xl font-bold text-[#494c52] mb-8 text-center" >
                     Our Service Process
                   </h3>
                   <div className="relative">
@@ -308,7 +308,7 @@ const ServiceDetail = ({ serviceData }) => {
                       {serviceData.process.map((step, index) => (
                         <div key={index} className="relative flex items-start space-x-6">
                           <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-[#c0b688] to-[#9f8660] rounded-2xl flex items-center justify-center shadow-lg">
-                            <span className="text-2xl font-bold text-white" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                            <span className="text-2xl font-bold text-white" >
                               {step.step}
                             </span>
                           </div>
@@ -316,7 +316,7 @@ const ServiceDetail = ({ serviceData }) => {
                             <h4 className="text-xl font-bold text-[#494c52] mb-3" style={{ fontFamily: "'Inter', sans-serif" }}>
                               {step.title}
                             </h4>
-                            <p className="text-gray-600 leading-relaxed" style={{ fontFamily: "'Crimson Text', serif" }}>
+                            <p className="text-gray-600 leading-relaxed" >
                               {step.description}
                             </p>
                           </div>
@@ -330,7 +330,7 @@ const ServiceDetail = ({ serviceData }) => {
               {/* Benefits Tab */}
               {activeTab === "benefits" && (
                 <div className="space-y-8">
-                  <h3 className="text-2xl font-bold text-[#494c52] mb-8 text-center" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                  <h3 className="text-2xl font-bold text-[#494c52] mb-8 text-center" >
                     Why Choose Our {serviceData.title}?
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -357,10 +357,10 @@ const ServiceDetail = ({ serviceData }) => {
             <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
               <Phone className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4" >
               Ready to Get Started?
             </h3>
-            <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: "'Crimson Text', serif" }}>
+            <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto" >
               Contact Al-Khaldi Law Firm today to discuss your {serviceData.title.toLowerCase()} needs. Our expert team is ready to provide you with comprehensive legal solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
