@@ -96,21 +96,23 @@ const Hero = () => {
               </p>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <button
-                  className="bg-gradient-to-r from-[#c0b688] to-[#9f8660] text-white px-8 py-3 rounded-xl font-semibold flex items-center space-x-2"
-                  data-aos="zoom-in-right"
-                >
-                  <span>Explore Our Services</span>
-                  <ChevronRight className="w-5 h-5" />
-                </button>
-                <button
-                  className="border-2 border-white/30 text-white px-8 py-3 rounded-xl font-semibold"
-                  data-aos="zoom-in-left"
-                >
-                  Contact Us Today
-                </button>
-              </div>
+             <div className="flex flex-col sm:flex-row gap-4 mb-8 w-full sm:w-auto">
+  <button
+    className="bg-gradient-to-r from-[#c0b688] to-[#9f8660] text-white px-6 sm:px-8 py-3 rounded-xl font-semibold flex items-center justify-center space-x-2 text-center w-full sm:w-auto"
+    data-aos="zoom-in-right"
+  >
+    <span>Explore Our Services</span>
+    <ChevronRight className="w-5 h-5" />
+  </button>
+
+  <button
+    className="border-2 border-white/30 text-white px-6 sm:px-8 py-3 rounded-xl font-semibold w-full sm:w-auto"
+    data-aos="zoom-in-left"
+  >
+    Contact Us Today
+  </button>
+</div>
+
 
               {/* Stats Mini Grid */}
               <div className="grid grid-cols-2 gap-4">
