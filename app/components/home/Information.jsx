@@ -7,50 +7,37 @@ const services = [
 		id: 1,
 		title: "Corporate Services",
 		subtitle: "Business Solutions",
-		description:
-			"Providing legal consultations for company incorporation, intellectual property protection, foreign investments, governance consultations, tax law advice, commercial contracts, and legal representation in commercial disputes.",
+		description: "Legal consultations for company incorporation, intellectual property protection, foreign investments, and commercial contracts.",
 		image: "/about/corporate.jpeg",
 		features: ["Company Incorporation", "IP Protection", "Commercial Contracts", "Tax Law Consultations"],
 		icon: Building2,
-		color: "from-[#9f8660]/80 to-[#c0b688]/80",
 	},
 	{
 		id: 2,
 		title: "Government & Semi-Government",
 		subtitle: "Public Sector",
-		description:
-			"Specialized legal counsel for government institutions including legislative consultations, governance practices, regulatory compliance, tendering procedures, and institutional dispute resolution.",
+		description: "Specialized legal counsel for government institutions including legislative consultations, governance practices, and regulatory compliance.",
 		image: "/home/government.jpg",
-		features: [
-			"Legislative Consultations",
-			"Governance & Transparency",
-			"Regulatory Compliance",
-			"Government Tendering",
-		],
+		features: ["Legislative Consultations", "Governance & Transparency", "Regulatory Compliance", "Government Tendering"],
 		icon: Shield,
-		color: "from-[#c0b688]/80 to-[#9f8660]/80",
 	},
 	{
 		id: 3,
 		title: "Individual Services",
 		subtitle: "Personal Legal",
-		description:
-			"Comprehensive personal legal services covering civil, criminal, and family cases, sole proprietorship management, bankruptcy assistance, labor disputes, visa consultations, and debt collection.",
+		description: "Personal legal services covering civil, criminal, family cases, sole proprietorship management, and labor disputes.",
 		image: "/about/individual.jpeg",
 		features: ["Family & Criminal Law", "Sole Proprietorship", "Labor Disputes", "Debt Collection"],
 		icon: Users,
-		color: "from-[#494c52]/80 to-[#9f8660]/80",
 	},
 	{
 		id: 4,
 		title: "Specialized Services",
 		subtitle: "Expert Advisory",
-		description:
-			"Banking legal services, arbitration, risk management consultations, anti-money laundering compliance, governance consultations, fraud investigation, and regulatory compliance services.",
+		description: "Banking legal services, arbitration, risk management consultations, and regulatory compliance services.",
 		image: "/about/legalsprt.jpeg",
 		features: ["Banking Legal Services", "Arbitration", "Risk Management", "Regulatory Compliance"],
 		icon: Scale,
-		color: "from-[#9f8660]/80 to-[#494c52]/80",
 	},
 ];
 
@@ -72,7 +59,7 @@ const Information = () => {
 					setIsVisible(true);
 				}
 			},
-			{ threshold: 0.2 }
+			{ threshold: 0.1 }
 		);
 
 		if (sectionRef.current) {
@@ -84,65 +71,58 @@ const Information = () => {
 
 	return (
 		<>
-			{/* Google Fonts */}
+			{/* Simple Google Fonts */}
 			<link rel="preconnect" href="https://fonts.googleapis.com" />
 			<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
 			<link
-				href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
+				href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
 				rel="stylesheet"
 			/>
 
 			<section
 				ref={sectionRef}
-				className="relative w-full bg-gradient-to-b from-white to-gray-50 py-16 overflow-hidden"
+				className="w-full bg-white py-12 sm:py-16 lg:py-20"
 			>
-				<div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					{/* Header Section */}
-					<div
-						className={`text-center mb-16 transition-all duration-700 ${
-							isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-						}`}
-					>
+					<div className="text-center mb-12 sm:mb-16">
 						{/* Badge */}
-						<div className="inline-flex items-center space-x-2 bg-[#c0b688]/10 rounded-full px-6 py-2 border border-[#c0b688]/20 mb-6">
+						<div className="inline-flex items-center space-x-2 bg-[#c0b688]/10 rounded-full px-4 py-2 border border-[#c0b688]/20 mb-4 sm:mb-6">
 							<Scale className="w-4 h-4 text-[#9f8660]" />
-							<span className="text-[#494c52] font-semibold text-sm tracking-wider" style={{ fontFamily: "'Inter', sans-serif" }}>
+							<span className="text-[#494c52] font-medium text-sm tracking-wide" style={{ fontFamily: "'Inter', sans-serif" }}>
 								LEGAL EXPERTISE
 							</span>
 						</div>
 
 						{/* Title */}
-						<h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-[#494c52] leading-tight" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-							Strategic Legal Excellence
+						<h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-[#494c52]" style={{ fontFamily: "'Playfair Display', serif" }}>
+							Our Legal Services
 						</h2>
 
 						{/* Subtitle */}
-						<p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: "'Crimson Text', serif" }}>
-							Al-Khaldi provides comprehensive legal services combining traditional
-							expertise with modern solutions across the GCC region.
+						<p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto" style={{ fontFamily: "'Inter', sans-serif" }}>
+							Al-Khaldi provides comprehensive legal services with expertise across multiple sectors.
 						</p>
 					</div>
 
-					{/* Stats Section */}
-					<div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+					{/* Stats Section - Mobile Optimized */}
+					<div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 mb-12 sm:mb-16">
 						{stats.map((stat, index) => (
 							<div
 								key={index}
-								className={`text-center transition-all duration-500 delay-${index * 100} ${
+								className={`text-center transition-all duration-500 ${
 									isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
 								}`}
+								style={{ transitionDelay: `${index * 100}ms` }}
 							>
-								<div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-									<div className="w-12 h-12 bg-gradient-to-r from-[#c0b688] to-[#9f8660] rounded-lg flex items-center justify-center mx-auto mb-4">
-										<stat.icon className="w-6 h-6 text-white" />
+								<div className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-4 sm:p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
+									<div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-[#c0b688] to-[#9f8660] rounded-lg flex items-center justify-center mx-auto mb-3 sm:mb-4">
+										<stat.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
 									</div>
-									<div
-										className="text-2xl font-bold text-[#494c52] mb-1"
-										style={{ fontFamily: "'Cormorant Garamond', serif" }}
-									>
+									<div className="text-xl sm:text-2xl font-bold text-[#494c52] mb-1" style={{ fontFamily: "'Inter', sans-serif" }}>
 										{stat.number}
 									</div>
-									<div className="text-sm text-gray-600 font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
+									<div className="text-xs sm:text-sm text-gray-600 font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
 										{stat.label}
 									</div>
 								</div>
@@ -150,111 +130,85 @@ const Information = () => {
 						))}
 					</div>
 
-					{/* Services Grid */}
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+					{/* Services Grid - Mobile First Design */}
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
 						{services.map((service, index) => (
 							<div
 								key={service.id}
-								className={`group relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 border border-[#c0b688]/20 bg-white ${
+								className={`group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden ${
 									isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
 								}`}
 								style={{ transitionDelay: `${index * 150}ms` }}
 							>
-								{/* Card Container */}
-								<div className="relative">
-									{/* Header Section with Image */}
-									<div className="relative h-48 overflow-hidden">
-										<img
-											src={service.image}
-											alt={service.title}
-											className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-										/>
-										{/* Subtle overlay for better icon visibility */}
-										<div className="absolute inset-0 bg-gradient-to-br from-[#494c52]/20 via-transparent to-[#9f8660]/30"></div>
+								{/* Image Section */}
+								<div className="relative h-48 sm:h-52 overflow-hidden">
+									<img
+										src={service.image}
+										alt={service.title}
+										className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+									/>
+									<div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
 
-										{/* Icon in top-right corner */}
-										<div className="absolute top-4 right-4">
-											<div className="w-14 h-14 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-[#c0b688]/30 shadow-lg group-hover:scale-110 transition-all duration-300">
-												<service.icon className="w-7 h-7 text-[#9f8660]" />
+									{/* Icon */}
+									<div className="absolute top-4 right-4">
+										<div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center shadow-lg">
+											<service.icon className="w-5 h-5 sm:w-6 sm:h-6 text-[#9f8660]" />
+										</div>
+									</div>
+
+									{/* Category Badge */}
+									<div className="absolute bottom-4 left-4">
+										<span className="bg-[#c0b688] text-white px-3 py-1 rounded-full text-xs font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
+											{service.subtitle}
+										</span>
+									</div>
+								</div>
+
+								{/* Content Section */}
+								<div className="p-6">
+									{/* Title */}
+									<h3 className="text-xl sm:text-2xl font-semibold text-[#494c52] mb-3 group-hover:text-[#9f8660] transition-colors duration-300" style={{ fontFamily: "'Playfair Display', serif" }}>
+										{service.title}
+									</h3>
+
+									{/* Description */}
+									<p className="text-gray-600 text-sm sm:text-base mb-4 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+										{service.description}
+									</p>
+
+									{/* Features */}
+									<div className="space-y-2 mb-4">
+										{service.features.slice(0, 3).map((feature, idx) => (
+											<div key={idx} className="flex items-center text-sm text-gray-600">
+												<ChevronRight className="w-4 h-4 text-[#c0b688] mr-2 flex-shrink-0" />
+												<span style={{ fontFamily: "'Inter', sans-serif" }}>{feature}</span>
 											</div>
-										</div>
-
-										{/* Category badge */}
-										<div className="absolute bottom-4 left-4">
-											<span className="bg-[#c0b688] text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider" style={{ fontFamily: "'Inter', sans-serif" }}>
-												{service.subtitle}
-											</span>
-										</div>
+										))}
 									</div>
 
-									{/* Content Section */}
-									<div className="p-8">
-										{/* Title */}
-										<h3
-											className="text-2xl font-bold text-[#494c52] mb-3 leading-tight group-hover:text-[#9f8660] transition-colors duration-300"
-											style={{ fontFamily: "'Playfair Display', serif" }}
-										>
-											{service.title}
-										</h3>
-
-										{/* Description */}
-										<p className="text-[#494c52]/80 leading-relaxed mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-											{service.description}
-										</p>
-
-										{/* Features */}
-										<div className="space-y-3 mb-6">
-											{service.features.map((feature, idx) => (
-												<div key={idx} className="flex items-center space-x-3">
-													<div className="w-2 h-2 bg-gradient-to-r from-[#c0b688] to-[#9f8660] rounded-full flex-shrink-0"></div>
-													<span className="text-[#494c52]/70 text-sm font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
-														{feature}
-													</span>
-												</div>
-											))}
-										</div>
-
-										{/* CTA Button */}
-										<div className="pt-4 border-t border-[#c0b688]/20" onClick={()=>window.location.replace("/services")}>
-											<button className="group/btn flex items-center space-x-2 text-[#9f8660] hover:text-[#494c52] transition-colors duration-300 font-semibold">
-												<span style={{ fontFamily: "'Cinzel', serif" }}>Learn More</span>
-												<ChevronRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
-											</button>
-										</div>
-									</div>
-
-									{/* Decorative element */}
-									<div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#c0b688] via-[#9f8660] to-[#c0b688]"></div>
+									{/* Learn More Button */}
+									<button className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 bg-[#c0b688] text-white rounded-lg hover:bg-[#9f8660] transition-colors duration-300 text-sm font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
+										Learn More
+										<ChevronRight className="w-4 h-4 ml-1" />
+									</button>
 								</div>
 							</div>
 						))}
 					</div>
 
-					{/* CTA Section */}
-					<div
-						className={`mt-16 text-center transition-all duration-700 delay-600 ${
-							isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-						}`}
-					>
-						<div className="bg-gradient-to-r from-[#494c52] to-[#9f8660] rounded-2xl p-12 text-white">
-							<h3
-								className="text-2xl sm:text-3xl font-bold mb-4 leading-tight"
-								style={{ fontFamily: "'Cormorant Garamond', serif" }}
-							>
-								Ready for Legal Excellence?
+					{/* Call to Action */}
+					<div className="text-center mt-12 sm:mt-16">
+						<div className="bg-gradient-to-r from-[#494c52] to-[#9f8660] rounded-2xl p-6 sm:p-8 text-white">
+							<h3 className="text-xl sm:text-2xl font-semibold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+								Need Legal Assistance?
 							</h3>
-							<p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed" style={{ fontFamily: "'Crimson Text', serif" }}>
-								Trust Al-Khaldi for your legal matters across the GCC region
+							<p className="text-gray-100 mb-6" style={{ fontFamily: "'Inter', sans-serif" }}>
+								Get professional legal consultation tailored to your specific needs.
 							</p>
-
-							<div className="flex flex-col sm:flex-row gap-4 justify-center">
-								<button className="bg-white text-[#494c52] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300" style={{ fontFamily: "'Inter', sans-serif" }}>
-									Schedule Consultation
-								</button>
-								<button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-300" style={{ fontFamily: "'Inter', sans-serif" }}>
-									View Services
-								</button>
-							</div>
+							<button className="inline-flex items-center px-6 py-3 bg-white text-[#494c52] rounded-lg hover:bg-gray-50 transition-colors duration-300 font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
+								Contact Us Today
+								<ChevronRight className="w-5 h-5 ml-2" />
+							</button>
 						</div>
 					</div>
 				</div>
