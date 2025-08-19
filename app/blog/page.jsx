@@ -8,10 +8,10 @@ import AppealJudgment from "../components/blog/AppealJudgment";
 const Page = () => {
   return (
     <div>
-    <Hero />
-        <TimelineProfile />
-        <AppealJudgment />
-</div>
+      <Hero />
+      <TimelineProfile />
+      <AppealJudgment />
+    </div>
   );
 };
 
