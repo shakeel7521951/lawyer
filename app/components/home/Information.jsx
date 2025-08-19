@@ -141,7 +141,7 @@ const Information = () => {
 								style={{ transitionDelay: `${index * 150}ms` }}
 							>
 								{/* Image Section */}
-								<div className="relative h-48 sm:h-52 overflow-hidden">
+								<div className="relative h-48 sm:h-100 overflow-hidden">
 									<img
 										src={service.image}
 										alt={service.title}

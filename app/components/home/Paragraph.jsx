@@ -108,7 +108,7 @@ const Paragraph = () => {
                 {/* Main Image - Mobile Optimized */}
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <img
-                    src="/about/ab.jpeg"
+                    src="/home/new-law-firm.jpg"
                     alt="Al-Khaldi Legal Excellence"
                     className="w-full h-64 sm:h-80 lg:h-96 object-cover"
                   />
