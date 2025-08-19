@@ -241,24 +241,25 @@ const HeroChoose = () => {
 
 
             {/* CTA */}
-            <div
-              data-aos="fade-up"
-              data-aos-delay="700"
-              className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-3"
-            >
-              <a
-                href="/services"
-                className="bg-gradient-to-r from-[#9f8660] to-[#c0b688] text-white px-8 py-3 rounded-xl text-sm font-medium transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                Our Services
-              </a>
-              <a
-                href="/contact"
-                className="border-2 border-white/30 text-white px-8 py-3 rounded-xl text-sm font-medium hover:bg-white/10 transition-all duration-300"
-              >
-                Consult with Us
-              </a>
-            </div>
+           <div
+  data-aos="fade-up"
+  data-aos-delay="700"
+  className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-3"
+>
+  <a
+    href="/services"
+    className="bg-gradient-to-r from-[#9f8660] to-[#c0b688] text-white px-8 py-3 rounded-xl text-sm sm:text-base font-medium transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto text-center"
+  >
+    Our Services
+  </a>
+  <a
+    href="/contact"
+    className="border-2 border-white/30 text-white px-6 py-3 rounded-xl text-sm sm:text-base font-medium hover:bg-white/10 transition-all duration-300 w-full sm:w-auto text-center"
+  >
+    Consult with Us
+  </a>
+</div>
+
           </div>
         </div>
       </section>
@@ -345,29 +346,30 @@ const HeroChoose = () => {
               <div className="absolute -top-8 -right-8 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
               <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-[#c0b688]/30 rounded-full blur-lg"></div>
 
-              <div className="relative z-10">
-                <h3 className="text-2xl sm:text-3xl font-bold mb-4 leading-tight">
-                  Ready to Experience Legal Excellence?
-                </h3>
-                <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-                  Trust AL KHALDI for your legal matters. Our expert team is ready to provide you with comprehensive legal solutions.
-                </p>
+              <div className="relative z-10 px-4 sm:px-6 lg:px-0 text-center">
+  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 leading-tight">
+    Ready to Experience Legal Excellence?
+  </h3>
+  <p className="text-sm sm:text-base md:text-lg text-white/90 mb-8 max-w-xl sm:max-w-2xl mx-auto leading-relaxed">
+    Trust AL KHALDI for your legal matters. Our expert team is ready to provide you with comprehensive legal solutions.
+  </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
-                    href="/contact"
-                    className="bg-white text-[#494c52] px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300 transform hover:scale-105"
-                  >
-                    Schedule Consultation
-                  </a>
-                  <a
-                    href="/services"
-                    className="border border-white/30 text-white px-8 py-3 rounded-xl font-semibold hover:bg-white/10 transition-colors duration-300 transform hover:scale-105"
-                  >
-                    View Our Services
-                  </a>
-                </div>
-              </div>
+  <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+    <a
+      href="/contact"
+      className="bg-white text-[#494c52] px-6 sm:px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto text-center"
+    >
+      Schedule Consultation
+    </a>
+    <a
+      href="/services"
+      className="border border-white/30 text-white px-6 sm:px-8 py-3 rounded-xl font-semibold hover:bg-white/10 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto text-center"
+    >
+      View Our Services
+    </a>
+  </div>
+</div>
+
             </div>
           </div>
         </div>

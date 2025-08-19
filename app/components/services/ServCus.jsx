@@ -171,7 +171,7 @@ const ServCus = () => {
                       </p>
                     </div>
 
-                    <div className={`transition-all duration-500 ${hoveredCard === service.id ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`} data-aos="fade-up">
+                    <div className={`transition-all duration-500 ${hoveredCard === service.id ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`} data-aos="">
                       <div className="grid grid-cols-2 gap-2 mb-4">
                         {service.features.map((feature, idx) => (
                           <div key={idx} className="flex items-center space-x-1">

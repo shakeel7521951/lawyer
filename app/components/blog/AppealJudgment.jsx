@@ -590,7 +590,7 @@ const AppealJudgment = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a                 href="tel:+97466164000"
                  data-aos="fade-right"
-                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#c0b688] to-[#9f8660] text-white font-semibold rounded-full shadow-xl hover:from-[#9f8660] hover:to-[#494c52] hover:scale-110 transition-all duration-500 group"
+                 className="inline-flex items-center p-4 sm:px-8 py-4 bg-gradient-to-r from-[#c0b688] to-[#9f8660] text-white font-semibold rounded-full shadow-xl hover:from-[#9f8660] hover:to-[#494c52] hover:scale-110 transition-all duration-500 group"
                >
                  <Phone className="w-5 h-5 mr-3" />
                  Call +974 6616 4000
@@ -599,7 +599,7 @@ const AppealJudgment = () => {
                <a
                  href="mailto:info@alkhaldi.com"
                  data-aos="zoom-in"
-                 className="inline-flex items-center px-8 py-4 bg-white border-2 border-[#c0b688] text-[#494c52] font-semibold rounded-full hover:bg-[#c0b688] hover:text-white hover:scale-110 transition-all duration-500 group"
+                 className="inline-flex items-center p-4 sm:px-8 py-4 bg-white border-2 border-[#c0b688] text-[#494c52] font-semibold rounded-full hover:bg-[#c0b688] hover:text-white hover:scale-110 transition-all duration-500 group"
                >
                  <Mail className="w-5 h-5 mr-3" />
                  Email Consultation
@@ -608,7 +608,7 @@ const AppealJudgment = () => {
               <a
                 href="/contact"
                 data-aos="fade-left"
-                className="inline-flex items-center px-8 py-4 bg-[#494c52] text-white font-semibold rounded-full hover:bg-[#9f8660] hover:scale-110 transition-all duration-500 group"
+                className="inline-flex items-center p-4 sm:px-8 py-4 bg-[#494c52] text-white font-semibold rounded-full hover:bg-[#9f8660] hover:scale-110 transition-all duration-500 group"
               >
                 <Calendar className="w-5 h-5 mr-3" />
                 Schedule Meeting
@@ -616,7 +616,8 @@ const AppealJudgment = () => {
               </a>
             
           </div>
-          {/* Trust Indicators */}              <div className="mt-8 pt-8 border-t border-[#c0b688]/20">
+          {/* Trust Indicators */}              
+          <div className="mt-8 pt-8 border-t border-[#c0b688]/20">
                 <div className="grid grid-cols-3 gap-8 text-center">
                   <div>
                     <div className="text-2xl font-bold text-[#c0b688]" style={{ fontFamily: "'Playfair Display', serif" }}>19+</div>

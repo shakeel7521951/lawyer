@@ -40,7 +40,7 @@ const TimelineProfile = () => {
             {/* Article Header */}
             <div
               data-aos="fade-up"
-              className="bg-gradient-to-r from-[#494c52] via-[#494c52] to-[#9f8660] px-8 py-12 text-white relative"
+              className="bg-gradient-to-r from-[#494c52] via-[#494c52] to-[#9f8660] px-3 sm:px-8 py-12 text-white relative"
             >
               <div className="absolute inset-0 bg-black/10"></div>
               <div className="relative text-center">
@@ -52,10 +52,10 @@ const TimelineProfile = () => {
                     <Scale className="w-8 h-8 text-[#c0b688]" />
                   </div>
                 </div>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                <h1 className="text-2xl md:text-4xl  font-bold mb-6 leading-tight">
                   Legal Victory: Acquittal in Major Bribery Case
                 </h1>
-                <p className="text-xl text-blue-200 max-w-4xl mx-auto leading-relaxed">
+                <p className="text-sx sm:text-lg text-blue-200 max-w-3xl mx-auto leading-relaxed">
                   Court of Appeal acquits 11 defendants including public
                   employee in complex bribery and money laundering case
                 </p>
@@ -63,11 +63,11 @@ const TimelineProfile = () => {
             </div>
 
             {/* Article Content */}
-            <div className="p-8 md:p-12">
+            <div className="p-3 md:p-12">
               {/* Article Meta */}
               <div
                 data-aos="fade-up"
-                className="flex flex-wrap items-center justify-center gap-8 mb-12 pb-8 border-b border-[#c0b688]/20"
+                className="flex flex-wrap items-center justify-center gap-8 mb-12 pb-8 mt-2 sm:mt-0 border-b border-[#c0b688]/20"
               >
                 {[
                   { Icon: Calendar, text: "February 16, 2025" },
@@ -90,7 +90,7 @@ const TimelineProfile = () => {
               {/* Lawyer Profile Section */}
               <div
                 data-aos="fade-up"
-                className="mb-12 bg-gradient-to-br from-[#c0b688]/10 to-[#9f8660]/10 rounded-2xl p-8 border border-[#c0b688]/20"
+                className="mb-12 bg-gradient-to-br from-[#c0b688]/10 to-[#9f8660]/10 rounded-2xl p-4 sm:p-8 border border-[#c0b688]/20"
               >
                 <div className="grid lg:grid-cols-3 gap-8 items-center">
                   {/* Lawyer Photo */}
@@ -126,33 +126,34 @@ const TimelineProfile = () => {
                     </p>
 
                     {/* Stats */}
-                    <div className="grid grid-cols-3 gap-4">
-                      {[
-                        { value: "11", label: "Defendants" },
-                        { value: "100%", label: "Acquittal" },
-                        { value: "11", label: "Months" },
-                      ].map((stat, i) => (
-                        <div
-                          key={i}
-                          data-aos="fade-up"
-                          data-aos-delay={i * 100}
-                          className="text-center p-4 bg-white rounded-xl border border-[#c0b688]/20"
-                        >
-                          <div className="text-2xl font-bold text-[#c0b688]">
-                            {stat.value}
-                          </div>
-                          <div className="text-sm text-[#494c52]/70">
-                            {stat.label}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+  {[
+    { value: "11", label: "Defendants" },
+    { value: "100%", label: "Acquittal" },
+    { value: "11", label: "Months" },
+  ].map((stat, i) => (
+    <div
+      key={i}
+      data-aos="fade-up"
+      data-aos-delay={i * 100}
+      className="text-center p-4 bg-white rounded-xl border border-[#c0b688]/20"
+    >
+      <div className="text-xl sm:text-2xl font-bold text-[#c0b688]">
+        {stat.value}
+      </div>
+      <div className="text-sm text-[#494c52]/70">
+        {stat.label}
+      </div>
+    </div>
+  ))}
+</div>
+
                   </div>
                 </div>
               </div>
 
               {/* Article Details */}
-              <div className="prose prose-lg max-w-none">
+              <div className="prose prose-lg max-w-none p-3 sm:p-0">
                 {/* Case Overview */}
                 <div data-aos="fade-up" className="mb-8">
                   <h2 className="text-2xl md:text-3xl font-bold text-[#494c52] mb-6 flex items-center">

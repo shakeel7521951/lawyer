@@ -156,44 +156,45 @@ const CatTrust = () => {
               Our Key Achievements
             </h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {achievements.map((achievement, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl border border-gray-100 group"
-                  data-aos="zoom-in"
-                  data-aos-delay={index * 200}
-                >
-                  <div className="flex items-start space-x-4">
-                    {/* Icon */}
-                    <div
-                      className="w-12 h-12 bg-gradient-to-br from-[#9f8660] to-[#c0b688] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
-                      data-aos="flip-right"
-                    >
-                      <achievement.icon className="w-6 h-6 text-white" />
-                    </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8">
+  {achievements.map((achievement, index) => (
+    <div
+      key={index}
+      className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl border border-gray-100 group transition-all duration-300"
+      data-aos="zoom-in"
+      data-aos-delay={index * 200}
+    >
+      <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
+        {/* Icon */}
+        <div
+          className="w-12 h-12 bg-gradient-to-br from-[#9f8660] to-[#c0b688] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+          data-aos="flip-right"
+        >
+          <achievement.icon className="w-6 h-6 text-white" />
+        </div>
 
-                    <div>
-                      {/* Title */}
-                      <h4
-                        className="text-lg font-semibold text-[#494c52] mb-2 group-hover:text-[#9f8660]"
-                        data-aos="fade-up"
-                      >
-                        {achievement.title}
-                      </h4>
-                      {/* Description */}
-                      <p
-                        className="text-gray-600 leading-relaxed"
-                        data-aos="fade-left"
-                        data-aos-delay="300"
-                      >
-                        {achievement.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+        <div className="text-center sm:text-left">
+          {/* Title */}
+          <h4
+            className="text-lg font-semibold text-[#494c52] mb-2 group-hover:text-[#9f8660]"
+            data-aos="fade-up"
+          >
+            {achievement.title}
+          </h4>
+          {/* Description */}
+          <p
+            className="text-gray-600 leading-relaxed text-sm sm:text-base"
+            data-aos="fade-left"
+            data-aos-delay="300"
+          >
+            {achievement.description}
+          </p>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
           </div>
 
           {/* CTA Section */}
