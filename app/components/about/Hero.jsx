@@ -27,7 +27,7 @@ const Hero = () => {
           {/* Background Image */}
           <div className="absolute inset-0">
             <img
-                src="/about/hero.png"
+                src="/about/header.jpeg"
                 alt="About Al Khaldi Law Firm"
                 className="w-full h-full object-cover"
             />

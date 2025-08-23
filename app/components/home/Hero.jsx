@@ -79,7 +79,7 @@ export default function HeroSection() {
                 <div className="relative flex justify-center mt-6 lg:mt-0">
                   <div className="relative w-64 sm:w-72 md:w-80 lg:w-96 h-64 sm:h-72 md:h-80 lg:h-[460px] rounded-2xl overflow-hidden shadow-2xl">
                     <img
-                        src="/home/hero.jpg"
+                        src="/logo.png"
                         alt="Legal Consultation"
                         className="w-full h-full object-cover"
                     />
