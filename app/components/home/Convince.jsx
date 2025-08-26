@@ -10,11 +10,8 @@ import {
   FaUsers,
   FaGavel,
 } from "react-icons/fa";
-<<<<<<< HEAD
 import { useTranslation } from "react-i18next";
-=======
 import ConsultationForm from "../common/ConsultationForm";
->>>>>>> 772407d18fe9a8477e77917c3560cf729035fc8f
 
 const Convince = () => {
   const [isVisible, setIsVisible] = useState(false);
