@@ -3,8 +3,9 @@ import React, { useState, useEffect } from "react";
 import { MapPin, Navigation, Phone, Clock, Globe } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import { useTranslation } from "react-i18next";
 const MapSection = () => {
+  const {t}= useTranslation("contact/map")
   const [activeTab, setActiveTab] = useState("map");
 
   useEffect(() => {
@@ -17,8 +18,7 @@ const MapSection = () => {
 
   // AL KHALDI Law Firm location details
   const firmLocation = {
-    address:
-      "Street 150, Al Rayyan, Building No. 143, Area 22, Fereej Bin Mahmoud, 3rd Floor",
+    address:t("map.address"),
     city: "Al Rayyan, Qatar",
     coordinates: "25.2854, 51.531",
     mapEmbedUrl:
@@ -69,7 +69,7 @@ const MapSection = () => {
                 className="text-[#494c52] font-medium text-sm"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
-                FIND US
+              {t("map.find")}
               </span>
             </div>
 
@@ -77,9 +77,9 @@ const MapSection = () => {
               className="text-3xl lg:text-4xl font-bold text-[#494c52] mb-4 leading-tight"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
-              Visit Our{" "}
+             {t("map.title1")}{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9f8660] to-[#c0b688]">
-                Office
+                {t("map.title2")}
               </span>
             </h2>
 
@@ -87,8 +87,7 @@ const MapSection = () => {
               className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed"
               style={{ fontFamily: "'Crimson Text', serif" }}
             >
-              Located in the heart of Al Rayyan, our office is easily accessible
-              and equipped with modern facilities to serve our clients.
+              {t("map.desc")}
             </p>
           </div>
 
@@ -108,7 +107,7 @@ const MapSection = () => {
                   >
                     <div className="flex items-center justify-center space-x-2">
                       <MapPin className="w-4 h-4" />
-                      <span>Map View</span>
+                      <span>{t("map.mapview")}</span>
                     </div>
                   </button>
 
@@ -122,7 +121,7 @@ const MapSection = () => {
                   >
                     <div className="flex items-center justify-center space-x-2">
                       <Navigation className="w-4 h-4" />
-                      <span>Directions</span>
+                      <span>{t("map.direct")}</span>
                     </div>
                   </button>
                 </div>
@@ -153,7 +152,7 @@ const MapSection = () => {
                           </div>
                           <div>
                             <h4 className="font-semibold text-[#494c52] text-sm mb-1">
-                              AL KHALDI Law Firm
+                              {t("map.firm")}
                             </h4>
                             <p className="text-gray-600 text-xs leading-relaxed">
                               {firmLocation.city}
@@ -175,12 +174,11 @@ const MapSection = () => {
                         </div>
 
                         <h3 className="text-2xl font-bold text-[#494c52] mb-4">
-                          Get Directions
+                          {t("map.direct")}
                         </h3>
 
                         <p className="text-gray-600 mb-8 leading-relaxed">
-                          Click the button below to get turn-by-turn directions
-                          to our office using Google Maps.
+                         {t("map.click")}
                         </p>
 
                         <div className="space-y-4">
@@ -215,7 +213,7 @@ const MapSection = () => {
               {/* Office Details */}
               <div className="bg-gradient-to-br from-[#494c52] to-[#9f8660] rounded-2xl p-6 text-white relative overflow-hidden">
                 <div className="relative z-10">
-                  <h3 className="text-xl font-bold mb-4">Office Information</h3>
+                  <h3 className="text-xl font-bold mb-4">{t("map.info")}</h3>
                   <div className="space-y-4">
                     <div className="flex items-start space-x-3">
                       <MapPin className="w-5 h-5 text-[#c0b688] mt-0.5 flex-shrink-0" />
@@ -241,7 +239,7 @@ const MapSection = () => {
               {/* Quick Actions */}
               <div className="space-y-3" data-aos="zoom-in">
                 <h3 className="text-lg font-semibold text-[#494c52] mb-4">
-                  Quick Actions
+                 {t("map.quickAction")}
                 </h3>
 
                 {/* Call Button */}
@@ -253,9 +251,9 @@ const MapSection = () => {
                     <Phone className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-sm">Call Us</h4>
+                    <h4 className="font-semibold text-sm">{t("map.call")}</h4>
                     <p className="text-white/80 text-xs">
-                      Speak directly with our team
+                    {t("map.calDesc")}
                     </p>
                   </div>
                 </a>
@@ -269,9 +267,9 @@ const MapSection = () => {
                     <Navigation className="w-6 h-6" />
                   </div>
                   <div className="text-left">
-                    <h4 className="font-semibold text-sm">Get Directions</h4>
+                    <h4 className="font-semibold text-sm">{t("map.direction")}</h4>
                     <p className="text-white/80 text-xs">
-                      Navigate to our office
+                   {t("map.getDesc")}
                     </p>
                   </div>
                 </button>
@@ -285,8 +283,8 @@ const MapSection = () => {
                     <Globe className="w-6 h-6" />
                   </div>
                   <div className="text-left">
-                    <h4 className="font-semibold text-sm">WhatsApp</h4>
-                    <p className="text-white/80 text-xs">Quick chat support</p>
+                    <h4 className="font-semibold text-sm">{t("map.wtsp")}</h4>
+                    <p className="text-white/80 text-xs">{t("map.wtspPsg")}</p>
                   </div>
                 </button>
               </div>
@@ -297,24 +295,24 @@ const MapSection = () => {
                 data-aos="fade-up"
               >
                 <h4 className="font-semibold text-[#494c52] mb-3">
-                  Parking & Accessibility
+               {t("map.park")}
                 </h4>
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li className="flex items-center space-x-2">
                     <div className="w-1.5 h-1.5 bg-[#9f8660] rounded-full"></div>
-                    <span>Free parking available</span>
+                    <span>  {t("map.line1")}</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <div className="w-1.5 h-1.5 bg-[#9f8660] rounded-full"></div>
-                    <span>Wheelchair accessible</span>
+                    <span>{t("map.line2")}</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <div className="w-1.5 h-1.5 bg-[#9f8660] rounded-full"></div>
-                    <span>3rd floor - elevator available</span>
+                    <span>{t("map.line3")}</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <div className="w-1.5 h-1.5 bg-[#9f8660] rounded-full"></div>
-                    <span>Conference rooms available</span>
+                    <span>{t("map.line4")}</span>
                   </li>
                 </ul>
               </div>
