@@ -1,8 +1,9 @@
 // components/ClosingStatement.jsx
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-
+import { useTranslation } from "react-i18next";
 export default function ClosingStatement() {
+  const { t }= useTranslation("about/closingStatement");
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
@@ -37,14 +38,14 @@ export default function ClosingStatement() {
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
           >
-            Ready to Partner with AL KHALDI Law Firm?
+           {t("about.closingStatement.heading")}
           </h2>
           <p
               className={`text-lg text-[#494c52]/80 mb-10 transition-all duration-1000 ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
           >
-            Contact us today to discuss your legal needs and discover how our expertise can serve you.
+            {t("about.closingStatement.description")}
           </p>
 
           {/* CTA Buttons */}
@@ -55,13 +56,14 @@ export default function ClosingStatement() {
                 href="tel:+97466164000"
                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#c0b688] to-[#9f8660] text-white font-semibold rounded-full shadow-xl hover:from-[#9f8660] hover:to-[#494c52] transition-all duration-300 hover:scale-105"
             >
-              Call Us Now
+               {t("about.closingStatement.buttons.call")}
             </a>
             <a
                 href="mailto:info@alkhaldi.com"
                 className="inline-flex items-center justify-center px-8 py-4 bg-white border-2 border-[#c0b688] text-[#494c52] font-semibold rounded-full hover:bg-gradient-to-r hover:from-[#c0b688] hover:to-[#9f8660] hover:text-white transition-all duration-300 hover:scale-105"
             >
-              Send Email
+                            {t("about.closingStatement.buttons.email")}
+
             </a>
           </div>
         </div>
