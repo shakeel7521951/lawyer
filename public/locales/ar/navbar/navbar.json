@@ -1,0 +1,28 @@
+{
+  "labels": {
+    "home": "الرئيسية",
+    "about": "من نحن",
+    "services": "الخدمات",
+    "whyus": "لماذا نحن",
+    "blog": "المدونة",
+    "language": "اللغة",
+    "contact": "اتصل بنا"
+  },
+  "serviceCategories": [
+    {
+      "title": "الشركات",
+      "description": "الخدمات القانونية للأعمال والشركات"
+    },
+    {
+      "title": "الحكومة / شبه الحكومية",
+      "description": "الدعم القانوني للجهات الحكومية"
+    },
+    {
+      "title": "الأفراد",
+      "description": "الخدمات القانونية الشخصية للأفراد"
+    }
+  ],
+  "ourServices": "خدماتنا",
+  "comprehensiveLegalSolutions": "حلول قانونية شاملة",
+  "allServices": "عرض جميع الخدمات"
+}
