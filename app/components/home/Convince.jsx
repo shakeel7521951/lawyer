@@ -39,56 +39,31 @@ const Convince = () => {
   const features = [
     {
       icon: FaBalanceScale,
-<<<<<<< HEAD
       title: t("features.1.title"),
       description: t("features.1.description"),
-=======
-      title: "Comprehensive Legal Coverage",
-      description:
-        "Our expertise covers all aspects of legal matters including commercial, criminal, civil, corporate, investment, and family law across all court levels.",
->>>>>>> 772407d18fe9a8477e77917c3560cf729035fc8f
       color: "from-[#9f8660] to-[#c0b688]",
     },
     {
       icon: FaHandshake,
-<<<<<<< HEAD
       title: t("features.2.title"),
       description: t("features.2.description"),
-=======
-      title: "Professional Ethics & Standards",
-      description:
-        "We maintain the highest professional ethics standards and confidentiality of information when dealing with our clients, ensuring complete trust.",
->>>>>>> 772407d18fe9a8477e77917c3560cf729035fc8f
       color: "from-[#c0b688] to-[#9f8660]",
     },
     {
       icon: FaUserShield,
-<<<<<<< HEAD
       title: t("features.3.title"),
       description: t("features.3.description"),
-=======
-      title: "Client Information Protection",
-      description:
-        "Our commitment to maintaining professional standards and confidentiality guarantees the security and protection of all client information.",
->>>>>>> 772407d18fe9a8477e77917c3560cf729035fc8f
       color: "from-[#494c52] to-[#9f8660]",
     },
     {
       icon: FaClock,
-<<<<<<< HEAD
       title: t("features.4.title"),
       description: t("features.4.description"),
-=======
-      title: "Professional Associations Network",
-      description:
-        "Our lawyers are members of relevant professional associations locally, regionally, and internationally, ensuring global standards.",
->>>>>>> 772407d18fe9a8477e77917c3560cf729035fc8f
       color: "from-[#9f8660] to-[#494c52]",
     },
   ];
 
   const stats = [
-<<<<<<< HEAD
     { icon: FaAward, number: t("stats.1.number"), label: t("stats.1.label") },
     { icon: FaUsers, number: t("stats.2.number"), label: t("stats.2.label") },
     { icon: FaGavel, number: t("stats.3.number"), label: t("stats.3.label") },
@@ -97,12 +72,6 @@ const Convince = () => {
       number: t("stats.4.number"),
       label: t("stats.4.label"),
     },
-=======
-    { icon: FaAward, number: "25+", label: "Years Experience" },
-    { icon: FaUsers, number: "500+", label: "Satisfied Clients" },
-    { icon: FaGavel, number: "98%", label: "Success Rate" },
-    { icon: FaCheckCircle, number: "6", label: "GCC Countries" },
->>>>>>> 772407d18fe9a8477e77917c3560cf729035fc8f
   ];
 
   return (
@@ -141,24 +110,13 @@ const Convince = () => {
 
           {/* Simple, Clean Title */}
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-[#494c52] leading-tight">
-<<<<<<< HEAD
             {t("title.part1")}
             <span className="text-[#c0b688]">{t("title.highlight")}</span>
-=======
-            Why Choose{" "}
-            <span className="text-[#c0b688]">Al Khaldi Law Firm</span>
->>>>>>> 772407d18fe9a8477e77917c3560cf729035fc8f
           </h1>
 
           {/* Simple Description */}
           <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-<<<<<<< HEAD
             {t("description")}
-=======
-            Selecting the right legal partner is crucial. We combine legal
-            expertise, client-first approach, and proven results to deliver
-            excellence.
->>>>>>> 772407d18fe9a8477e77917c3560cf729035fc8f
           </p>
         </div>
 
@@ -173,35 +131,18 @@ const Convince = () => {
             <div className="space-y-6 md:space-y-8 order-2 lg:order-1">
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold text-[#494c52] mb-4 leading-tight">
-<<<<<<< HEAD
                   {t("commitment.title.part1")}
                   <span className="text-[#c0b688]">
                     {t("commitment.title.highlight")}
                   </span>
-=======
-                  Our Commitment to{" "}
-                  <span className="text-[#c0b688]">Excellence</span>
->>>>>>> 772407d18fe9a8477e77917c3560cf729035fc8f
                 </h2>
 
                 <div className="space-y-4">
                   <p className="text-gray-700 leading-relaxed">
-<<<<<<< HEAD
                     {t("commitment.paragraph1")}
                   </p>
                   <p className="text-gray-700 leading-relaxed">
                     {t("commitment.paragraph2")}
-=======
-                    We understand that legal issues can be stressful and
-                    complex. Our team works tirelessly to ensure your rights are
-                    protected and your case is handled with utmost
-                    professionalism.
-                  </p>
-                  <p className="text-gray-700 leading-relaxed">
-                    Our dedication goes beyond legal representation — we aim to
-                    be a trusted advisor, strong advocate, and reliable partner
-                    in every step of your legal journey.
->>>>>>> 772407d18fe9a8477e77917c3560cf729035fc8f
                   </p>
                 </div>
               </div>
@@ -312,8 +253,6 @@ const Convince = () => {
               <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4 md:mb-6 leading-tight">
                 {t("closing.title")}
               </h3>
-
-<<<<<<< HEAD
               <p
                 className="text-base md:text-lg text-white/90 leading-relaxed mb-6 md:mb-8"
                 dangerouslySetInnerHTML={{ __html: t("closing.description") }}
@@ -322,23 +261,6 @@ const Convince = () => {
               <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
                 <button className="bg-white text-[#494c52] px-6 md:px-8 py-3 rounded-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
                   {t("closing.buttons.consultation")}
-=======
-              <p className="text-base md:text-lg text-white/90 leading-relaxed mb-6 md:mb-8">
-                Choosing{" "}
-                <strong className="text-[#c0b688]">Al Khaldi Law Firm</strong>{" "}
-                means choosing trust, transparency, and results. Whether you are
-                an individual, a corporate client, or a government entity, our
-                mission is to deliver unmatched legal solutions tailored to your
-                needs.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-                <button
-                  onClick={() => setShowConsultationModal(true)}
-                  className="bg-white text-[#494c52] px-6 md:px-8 py-3 rounded-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
-                >
-                  Get Consultation
->>>>>>> 772407d18fe9a8477e77917c3560cf729035fc8f
                 </button>
                 <button className="border-2 border-white text-white px-6 md:px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-[#494c52] transition-all duration-300">
                   {t("closing.buttons.learnMore")}
