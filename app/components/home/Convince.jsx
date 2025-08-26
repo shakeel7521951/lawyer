@@ -10,12 +10,14 @@ import {
   FaUsers,
   FaGavel,
 } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 import ConsultationForm from "../common/ConsultationForm";
 
 const Convince = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [showConsultationModal, setShowConsultationModal] = useState(false);
   const sectionRef = useRef(null);
+  const { t } = useTranslation("home/convince");
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -37,39 +39,39 @@ const Convince = () => {
   const features = [
     {
       icon: FaBalanceScale,
-      title: "Comprehensive Legal Coverage",
-      description:
-        "Our expertise covers all aspects of legal matters including commercial, criminal, civil, corporate, investment, and family law across all court levels.",
+      title: t("features.1.title"),
+      description: t("features.1.description"),
       color: "from-[#9f8660] to-[#c0b688]",
     },
     {
       icon: FaHandshake,
-      title: "Professional Ethics & Standards",
-      description:
-        "We maintain the highest professional ethics standards and confidentiality of information when dealing with our clients, ensuring complete trust.",
+      title: t("features.2.title"),
+      description: t("features.2.description"),
       color: "from-[#c0b688] to-[#9f8660]",
     },
     {
       icon: FaUserShield,
-      title: "Client Information Protection",
-      description:
-        "Our commitment to maintaining professional standards and confidentiality guarantees the security and protection of all client information.",
+      title: t("features.3.title"),
+      description: t("features.3.description"),
       color: "from-[#494c52] to-[#9f8660]",
     },
     {
       icon: FaClock,
-      title: "Professional Associations Network",
-      description:
-        "Our lawyers are members of relevant professional associations locally, regionally, and internationally, ensuring global standards.",
+      title: t("features.4.title"),
+      description: t("features.4.description"),
       color: "from-[#9f8660] to-[#494c52]",
     },
   ];
 
   const stats = [
-    { icon: FaAward, number: "25+", label: "Years Experience" },
-    { icon: FaUsers, number: "500+", label: "Satisfied Clients" },
-    { icon: FaGavel, number: "98%", label: "Success Rate" },
-    { icon: FaCheckCircle, number: "6", label: "GCC Countries" },
+    { icon: FaAward, number: t("stats.1.number"), label: t("stats.1.label") },
+    { icon: FaUsers, number: t("stats.2.number"), label: t("stats.2.label") },
+    { icon: FaGavel, number: t("stats.3.number"), label: t("stats.3.label") },
+    {
+      icon: FaCheckCircle,
+      number: t("stats.4.number"),
+      label: t("stats.4.label"),
+    },
   ];
 
   return (
@@ -102,21 +104,19 @@ const Convince = () => {
           <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 border border-[#c0b688]/20 mb-6 shadow-sm">
             <FaAward className="w-4 h-4 text-[#9f8660]" />
             <span className="text-[#494c52] font-medium text-sm">
-              WHY CHOOSE US
+              {t("badge")}
             </span>
           </div>
 
           {/* Simple, Clean Title */}
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-[#494c52] leading-tight">
-            Why Choose{" "}
-            <span className="text-[#c0b688]">Al Khaldi Law Firm</span>
+            {t("title.part1")}
+            <span className="text-[#c0b688]">{t("title.highlight")}</span>
           </h1>
 
           {/* Simple Description */}
           <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Selecting the right legal partner is crucial. We combine legal
-            expertise, client-first approach, and proven results to deliver
-            excellence.
+            {t("description")}
           </p>
         </div>
 
@@ -131,21 +131,18 @@ const Convince = () => {
             <div className="space-y-6 md:space-y-8 order-2 lg:order-1">
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold text-[#494c52] mb-4 leading-tight">
-                  Our Commitment to{" "}
-                  <span className="text-[#c0b688]">Excellence</span>
+                  {t("commitment.title.part1")}
+                  <span className="text-[#c0b688]">
+                    {t("commitment.title.highlight")}
+                  </span>
                 </h2>
 
                 <div className="space-y-4">
                   <p className="text-gray-700 leading-relaxed">
-                    We understand that legal issues can be stressful and
-                    complex. Our team works tirelessly to ensure your rights are
-                    protected and your case is handled with utmost
-                    professionalism.
+                    {t("commitment.paragraph1")}
                   </p>
                   <p className="text-gray-700 leading-relaxed">
-                    Our dedication goes beyond legal representation — we aim to
-                    be a trusted advisor, strong advocate, and reliable partner
-                    in every step of your legal journey.
+                    {t("commitment.paragraph2")}
                   </p>
                 </div>
               </div>
@@ -175,7 +172,7 @@ const Convince = () => {
                 <div className="w-full h-64 md:h-80 lg:h-96">
                   <img
                     src="/home/whychoseus.jpg"
-                    alt="Al Khaldi Law Firm - Why Choose Us"
+                    alt={t("title.highlight")}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -187,7 +184,7 @@ const Convince = () => {
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                     <span className="text-[#494c52] font-semibold text-sm">
-                      Trusted Partner
+                      {t("imageBadge")}
                     </span>
                   </div>
                 </div>
@@ -254,27 +251,19 @@ const Convince = () => {
               </div>
 
               <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4 md:mb-6 leading-tight">
-                Your Trusted Legal Partner in the GCC
+                {t("closing.title")}
               </h3>
-
-              <p className="text-base md:text-lg text-white/90 leading-relaxed mb-6 md:mb-8">
-                Choosing{" "}
-                <strong className="text-[#c0b688]">Al Khaldi Law Firm</strong>{" "}
-                means choosing trust, transparency, and results. Whether you are
-                an individual, a corporate client, or a government entity, our
-                mission is to deliver unmatched legal solutions tailored to your
-                needs.
-              </p>
+              <p
+                className="text-base md:text-lg text-white/90 leading-relaxed mb-6 md:mb-8"
+                dangerouslySetInnerHTML={{ __html: t("closing.description") }}
+              />
 
               <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-                <button
-                  onClick={() => setShowConsultationModal(true)}
-                  className="bg-white text-[#494c52] px-6 md:px-8 py-3 rounded-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
-                >
-                  Get Consultation
+                <button className="bg-white text-[#494c52] px-6 md:px-8 py-3 rounded-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+                  {t("closing.buttons.consultation")}
                 </button>
                 <button className="border-2 border-white text-white px-6 md:px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-[#494c52] transition-all duration-300">
-                  Learn More
+                  {t("closing.buttons.learnMore")}
                 </button>
               </div>
             </div>

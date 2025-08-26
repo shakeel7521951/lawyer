@@ -3,9 +3,7 @@ import Information from "./components/home/Information";
 import Objectives from "./components/home/Objectives";
 import Paragraph from "./components/home/Paragraph";
 import Comment from "./components/home/Comment";
-import Move from "./components/home/Move";
 import Points from "./components/home/Points";
-import Dignity from "./components/home/Dignity";
 import Convince from "./components/home/Convince";
 import HeroSection from "./components/home/Hero";
 // import Header from "./components/home/Header";
@@ -18,13 +16,9 @@ export default function Home() {
       <Information/>
       <Paragraph/>
       <Points/>
-      {/*<Dignity/>*/}
       <Objectives/>
-
       <Comment/>
       <Convince/>
-      
-      {/*<Move/>*/}
     </div>
   );
 }
