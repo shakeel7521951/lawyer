@@ -1,9 +1,20 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import { FaBalanceScale, FaHandshake, FaUserShield, FaClock, FaCheckCircle, FaAward, FaUsers, FaGavel } from "react-icons/fa";
+import {
+  FaBalanceScale,
+  FaHandshake,
+  FaUserShield,
+  FaClock,
+  FaCheckCircle,
+  FaAward,
+  FaUsers,
+  FaGavel,
+} from "react-icons/fa";
+import ConsultationForm from "../common/ConsultationForm";
 
 const Convince = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [showConsultationModal, setShowConsultationModal] = useState(false);
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -27,34 +38,38 @@ const Convince = () => {
     {
       icon: FaBalanceScale,
       title: "Comprehensive Legal Coverage",
-      description: "Our expertise covers all aspects of legal matters including commercial, criminal, civil, corporate, investment, and family law across all court levels.",
-      color: "from-[#9f8660] to-[#c0b688]"
+      description:
+        "Our expertise covers all aspects of legal matters including commercial, criminal, civil, corporate, investment, and family law across all court levels.",
+      color: "from-[#9f8660] to-[#c0b688]",
     },
     {
       icon: FaHandshake,
       title: "Professional Ethics & Standards",
-      description: "We maintain the highest professional ethics standards and confidentiality of information when dealing with our clients, ensuring complete trust.",
-      color: "from-[#c0b688] to-[#9f8660]"
+      description:
+        "We maintain the highest professional ethics standards and confidentiality of information when dealing with our clients, ensuring complete trust.",
+      color: "from-[#c0b688] to-[#9f8660]",
     },
     {
       icon: FaUserShield,
       title: "Client Information Protection",
-      description: "Our commitment to maintaining professional standards and confidentiality guarantees the security and protection of all client information.",
-      color: "from-[#494c52] to-[#9f8660]"
+      description:
+        "Our commitment to maintaining professional standards and confidentiality guarantees the security and protection of all client information.",
+      color: "from-[#494c52] to-[#9f8660]",
     },
     {
       icon: FaClock,
       title: "Professional Associations Network",
-      description: "Our lawyers are members of relevant professional associations locally, regionally, and internationally, ensuring global standards.",
-      color: "from-[#9f8660] to-[#494c52]"
-    }
+      description:
+        "Our lawyers are members of relevant professional associations locally, regionally, and internationally, ensuring global standards.",
+      color: "from-[#9f8660] to-[#494c52]",
+    },
   ];
 
   const stats = [
     { icon: FaAward, number: "25+", label: "Years Experience" },
     { icon: FaUsers, number: "500+", label: "Satisfied Clients" },
     { icon: FaGavel, number: "98%", label: "Success Rate" },
-    { icon: FaCheckCircle, number: "6", label: "GCC Countries" }
+    { icon: FaCheckCircle, number: "6", label: "GCC Countries" },
   ];
 
   return (
@@ -67,16 +82,22 @@ const Convince = () => {
 
       {/* Subtle Pattern Overlay */}
       <div className="absolute inset-0 opacity-3">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, #c0b688 1px, transparent 0)`,
-          backgroundSize: '20px 20px'
-        }}></div>
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, #c0b688 1px, transparent 0)`,
+            backgroundSize: "20px 20px",
+          }}
+        ></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
         {/* Header Section */}
-        <div className={`text-center mb-12 md:mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div
+          className={`text-center mb-12 md:mb-16 transition-all duration-700 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           {/* Badge */}
           <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 border border-[#c0b688]/20 mb-6 shadow-sm">
             <FaAward className="w-4 h-4 text-[#9f8660]" />
@@ -87,37 +108,44 @@ const Convince = () => {
 
           {/* Simple, Clean Title */}
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-[#494c52] leading-tight">
-            Why Choose{' '}
+            Why Choose{" "}
             <span className="text-[#c0b688]">Al Khaldi Law Firm</span>
           </h1>
 
           {/* Simple Description */}
           <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Selecting the right legal partner is crucial. We combine legal expertise, client-first approach,
-            and proven results to deliver excellence.
+            Selecting the right legal partner is crucial. We combine legal
+            expertise, client-first approach, and proven results to deliver
+            excellence.
           </p>
         </div>
 
         {/* Hero Image & Content Section */}
-        <div className={`mb-16 md:mb-20 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div
+          className={`mb-16 md:mb-20 transition-all duration-700 delay-300 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
-
             {/* Content Side - Left */}
             <div className="space-y-6 md:space-y-8 order-2 lg:order-1">
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold text-[#494c52] mb-4 leading-tight">
-                  Our Commitment to{' '}
+                  Our Commitment to{" "}
                   <span className="text-[#c0b688]">Excellence</span>
                 </h2>
 
                 <div className="space-y-4">
                   <p className="text-gray-700 leading-relaxed">
-                    We understand that legal issues can be stressful and complex. Our team works tirelessly
-                    to ensure your rights are protected and your case is handled with utmost professionalism.
+                    We understand that legal issues can be stressful and
+                    complex. Our team works tirelessly to ensure your rights are
+                    protected and your case is handled with utmost
+                    professionalism.
                   </p>
                   <p className="text-gray-700 leading-relaxed">
-                    Our dedication goes beyond legal representation — we aim to be a trusted advisor,
-                    strong advocate, and reliable partner in every step of your legal journey.
+                    Our dedication goes beyond legal representation — we aim to
+                    be a trusted advisor, strong advocate, and reliable partner
+                    in every step of your legal journey.
                   </p>
                 </div>
               </div>
@@ -125,7 +153,10 @@ const Convince = () => {
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-3 md:gap-4">
                 {stats.map((stat, index) => (
-                  <div key={index} className="bg-white rounded-xl p-4 shadow-lg border border-gray-100 hover:border-[#c0b688]/30 transition-all duration-300 text-center group">
+                  <div
+                    key={index}
+                    className="bg-white rounded-xl p-4 shadow-lg border border-gray-100 hover:border-[#c0b688]/30 transition-all duration-300 text-center group"
+                  >
                     <stat.icon className="w-5 h-5 md:w-6 md:h-6 text-[#9f8660] mx-auto mb-2 group-hover:scale-110 transition-transform duration-300" />
                     <div className="text-xl md:text-2xl font-bold text-[#494c52] mb-1">
                       {stat.number}
@@ -166,7 +197,11 @@ const Convince = () => {
         </div>
 
         {/* Features Grid */}
-        <div className={`mb-16 transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div
+          className={`mb-16 transition-all duration-700 delay-500 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {features.map((feature, index) => (
               <div
@@ -174,11 +209,15 @@ const Convince = () => {
                 className="group relative bg-white rounded-xl p-4 md:p-6 shadow-lg border border-gray-100 hover:border-[#c0b688]/30 transition-all duration-300 hover:shadow-xl cursor-pointer"
               >
                 {/* Background Gradient on Hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-5 rounded-xl transition-opacity duration-300`}></div>
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-5 rounded-xl transition-opacity duration-300`}
+                ></div>
 
                 {/* Icon */}
                 <div className="relative z-10 mb-4">
-                  <div className={`w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300`}>
+                  <div
+                    className={`w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300`}
+                  >
                     <feature.icon className="w-5 h-5 md:w-6 md:h-6 text-white" />
                   </div>
                 </div>
@@ -194,16 +233,21 @@ const Convince = () => {
                 </div>
 
                 {/* Hover Effect Indicator */}
-                <div className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r ${feature.color} rounded-b-xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300`}></div>
+                <div
+                  className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r ${feature.color} rounded-b-xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300`}
+                ></div>
               </div>
             ))}
           </div>
         </div>
 
         {/* Closing Statement */}
-        <div className={`transition-all duration-700 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div
+          className={`transition-all duration-700 delay-700 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           <div className="bg-gradient-to-br from-[#494c52] to-[#9f8660] rounded-2xl p-6 md:p-8 lg:p-12 shadow-2xl relative overflow-hidden">
-
             <div className="relative z-10 max-w-4xl mx-auto text-center">
               <div className="w-12 h-12 md:w-16 md:h-16 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg">
                 <FaGavel className="w-6 h-6 md:w-8 md:h-8 text-white" />
@@ -214,13 +258,19 @@ const Convince = () => {
               </h3>
 
               <p className="text-base md:text-lg text-white/90 leading-relaxed mb-6 md:mb-8">
-                Choosing <strong className="text-[#c0b688]">Al Khaldi Law Firm</strong> means choosing trust, transparency, and results.
-                Whether you are an individual, a corporate client, or a government entity, our mission is to deliver
-                unmatched legal solutions tailored to your needs.
+                Choosing{" "}
+                <strong className="text-[#c0b688]">Al Khaldi Law Firm</strong>{" "}
+                means choosing trust, transparency, and results. Whether you are
+                an individual, a corporate client, or a government entity, our
+                mission is to deliver unmatched legal solutions tailored to your
+                needs.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-                <button className="bg-white text-[#494c52] px-6 md:px-8 py-3 rounded-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+                <button
+                  onClick={() => setShowConsultationModal(true)}
+                  className="bg-white text-[#494c52] px-6 md:px-8 py-3 rounded-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
                   Get Consultation
                 </button>
                 <button className="border-2 border-white text-white px-6 md:px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-[#494c52] transition-all duration-300">
@@ -231,6 +281,12 @@ const Convince = () => {
           </div>
         </div>
       </div>
+
+      {/* Consultation Form Modal */}
+      <ConsultationForm
+        isOpen={showConsultationModal}
+        onClose={() => setShowConsultationModal(false)}
+      />
     </section>
   );
 };
