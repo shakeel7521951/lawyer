@@ -1,0 +1,77 @@
+{
+  "hero": {
+    "title_ar": "لماذا تختارنا",
+    "title_en": "WHY CHOOSE US",
+    "tagline": "LEGAL EXCELLENCE",
+    "heading": "Experience ",
+    "headingtwo": "Legal Excellence",
+    "headingthree": "& Professional Ethics",
+    "description": "Our office includes elite legal consultants and lawyers with expertise and comprehensive knowledge of all legalities. We maintain professional ethics standards and confidentiality while delivering exceptional legal services.",
+    "stats": {
+      "experience": {
+        "label": "Experience",
+        "value": "Years"
+      },
+      "committees": {
+        "label": "Legislative Committees"
+        
+      },
+      "courts": {
+        "label": "Court Levels",
+        "value": "All"
+      }
+    },
+    "cta": {
+      "services": "Our Services",
+      "consult": "Consult with Us"
+    }
+  },
+  "whyChoose": {
+    "badge": "WHY AL KHALDI",
+    "heading": "Your Trusted",
+    "headingtwo": "Legal Partner",
+    "description": "We combine academic excellence with practical experience, maintaining the highest standards of professional ethics while delivering comprehensive legal solutions across all areas of law.",
+    "reasons": [
+      {
+        "title": "Elite Legal Consultants",
+        "description": "Our office includes elite legal consultants and lawyers with expertise and comprehensive knowledge of all legalities across commercial, criminal, civil, corporate, investment, and family law."
+      },
+      {
+        "title": "19+ Years of Experience",
+        "description": "Professional career spanning from 2005 with leadership positions including Director of Legal Affairs, Head of Legislation, and participation in 22 legislative committees."
+      },
+      {
+        "title": "All Court Levels Expertise",
+        "description": "Our lawyers specialize in litigation before all levels of courts, from First Instance to the Supreme Court, including Administrative, Labor, and Tenancy Dispute Settlement Committees."
+      },
+      {
+        "title": "Professional Association Members",
+        "description": "Our lawyers are members of relevant professional associations locally, regionally, and internationally, ensuring adherence to the highest professional standards."
+      },
+      {
+        "title": "Uncompromising Ethics",
+        "description": "Our commitment is to maintain professional ethics standards and confidentiality of information in dealing with our valued clients, ensuring trust and integrity."
+      },
+      {
+        "title": "International Experience",
+        "description": "Represented the State of Qatar in regional and international forums, bilateral agreements committees, International Labor Organization, and UPR Committee."
+      },
+      {
+        "title": "Academic Excellence",
+        "description": "Team of legal scholars with high academic competence, grounding consultations and solutions in scientific knowledge and professional accumulations."
+      },
+      {
+        "title": "Comprehensive Coverage",
+        "description": "Expertise covers all aspects including commercial, criminal, civil, corporate, investment, family law, banking, electronic transactions, and international cases."
+      }
+    ],
+    "cta": {
+      "heading": "Ready to Experience Legal Excellence?",
+      "description": "Trust AL KHALDI for your legal matters. Our expert team is ready to provide you with comprehensive legal solutions.",
+      "buttons": {
+        "consult": "Schedule Consultation",
+        "services": "View Our Services"
+      }
+    }
+  }
+}
