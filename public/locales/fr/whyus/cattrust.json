@@ -1,0 +1,67 @@
+{
+  "trust_indicator": {
+    "badge": "EXCELLENCE PROUVÉE",
+    "heading": "De Confiance par",
+    "headingtwo": "Nos Clients",
+    "headingthree": "À Travers le Qatar",
+    "subtext": "Notre parcours parle de lui-même..."
+  },
+  "stats": [
+    {
+      "value": "19+",
+      "label": "Années d’excellence juridique"
+    },
+    {
+      "value": "22",
+      "label": "Comités législatifs"
+    },
+    {
+      "value": "1000+",
+      "label": "Clients satisfaits"
+    },
+    {
+      "value": "Tous",
+      "label": "Niveaux de juridiction couverts"
+    }
+  ],
+  "achievements_section": {
+    "heading": "Nos Réalisations Clés",
+    "achievements": [
+      {
+        "title": "Représentation Internationale",
+        "description": "Représenté l’État du Qatar dans des forums régionaux et internationaux"
+      },
+      {
+        "title": "Leadership Législatif",
+        "description": "Membre de 22 comités législatifs ayant amendé et créé la plupart des lois"
+      },
+      {
+        "title": "Excellence Professionnelle",
+        "description": "Consultants juridiques d’élite avec une connaissance complète dans tous les domaines du droit"
+      },
+      {
+        "title": "Normes Éthiques",
+        "description": "Engagement indéfectible envers l’éthique professionnelle et la confidentialité des clients"
+      }
+    ]
+  },
+  "cta_section": {
+    "heading": "Prêt à Commencer Votre Parcours Juridique ?",
+    "subtext": "Réservez une consultation gratuite avec nos experts dès aujourd’hui...",
+    "buttons": [
+      {
+        "text": "Réserver une Consultation Gratuite",
+        "link": "/contact"
+      },
+      {
+        "text": "WhatsApp Notre Équipe",
+        "link": "https://wa.me/97466164000"
+      }
+    ]
+  },
+  "final_trust_section": {
+    "heading": "AL KHALDI - Votre Partenaire Juridique de Confiance",
+    "subtext": "Alliant",
+    "subtexttwo": "des années d’expérience et un engagement indéfectible envers l’éthique professionnelle, nous fournissons des solutions juridiques complètes dans tous les domaines du droit au Qatar et dans la région."
+  }
+}

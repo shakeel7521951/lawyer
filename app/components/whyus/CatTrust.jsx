@@ -227,7 +227,7 @@ const CatTrust = () => {
                   data-aos="zoom-in-right"
                 >
                   <Phone className="w-5 h-5" />
-                  <span>{t("cta_section.buttons.text")}</span>
+                  <span>{t("cta_section.buttons.0.text")}</span>
                 </a>
 
                 {/* Button 2 */}
@@ -240,7 +240,7 @@ const CatTrust = () => {
                   data-aos-delay="200"
                 >
                   <MessageCircle className="w-5 h-5" />
-                  <span>{t("cta_section.buttons.text")}</span>
+                  <span>{t("cta_section.buttons.1.text")}</span>
                 </a>
               </div>
             </div>
