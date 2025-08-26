@@ -1,0 +1,25 @@
+{
+  "header": {
+    "title": "Connexion"
+  },
+  "welcome_section": {
+    "heading": "Bon retour"
+  },
+  "form_fields": {
+    "email": {
+      "label": "Adresse e-mail",
+      "placeholder": "Entrez votre e-mail"
+    },
+    "password": {
+      "label": "Mot de passe"
+    }
+  },
+  "links": {
+    "forgot_password": "Mot de passe oublié ?",
+    "signup_prompt": "Vous n’avez pas de compte ? ",
+    "signup_link": "Inscrivez-vous"
+  },
+  "buttons": {
+    "login": "Se connecter"
+  }
+}

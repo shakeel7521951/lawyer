@@ -1,0 +1,25 @@
+{
+  "header": {
+    "title": "Al Khaldi Law Firm"
+  },
+  "welcome_section": {
+    "heading": "Welcome Back"
+  },
+  "form_fields": {
+    "email": {
+      "label": "Email Address",
+      "placeholder": "example@example.com"
+    },
+    "password": {
+      "label": "Password"
+    }
+  },
+  "links": {
+    "forgot_password": "Forgot Password?",
+    "signup_prompt": "Don't have an account?",
+    "signup_link": "Sign Up"
+  },
+  "buttons": {
+    "login": "Login"
+  }
+}
