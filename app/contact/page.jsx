@@ -1,13 +1,15 @@
 import React from "react";
 import Hero from "../components/contact/Hero";
-import ContactForm from "../components/contact/ContactForm";
 import Map from "../components/contact/Map";
+import ContactForm from "../components/contact/ContactForm";
+
+
 
 const page = () => {
   return (
     <div>
       <Hero />
-      <ContactForm />
+      <ContactForm/>
       <Map />
     </div>
   );
