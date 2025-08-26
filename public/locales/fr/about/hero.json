@@ -1,0 +1,26 @@
+{
+  "about": {
+    "hero": {
+      "brandNameAr": "عن الخالـــــدي",
+      "subtitleEn": "À propos d'Al Khaldi",
+      "intro": "Découvrez l’histoire du cabinet AL KHALDI, le parcours de notre fondateur distingué et notre engagement constant envers l’excellence des services juridiques au Qatar et au-delà.",
+      "cards": {
+        "location": {
+          "title": "Notre emplacement",
+          "address": "Rue 150, Al Rayyan\nBâtiment n°143, Zone 22\nFereej Bin Mahmoud\n3ème étage"
+        },
+        "website": {
+          "title": "Visitez en ligne",
+          "url": "www.alkhaldi.com"
+        },
+        "contact": {
+          "title": "Contactez-nous",
+          "phones": [
+            "+974 6616 4000",
+            "+974 4009 8889"
+          ]
+        }
+      }
+    }
+  }
+}

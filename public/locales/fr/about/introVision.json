@@ -1,0 +1,22 @@
+{
+  "about": {
+    "introVision": {
+      "title": "À propos de nous",
+      "tagline": "EXCELLENCE • INTÉGRITÉ • CONFIANCE",
+      "intro": "Notre cabinet s’engage à fournir des services juridiques de haute qualité, à établir une relation de confiance durable avec les clients et la communauté. Nous valorisons l’excellence, l’intégrité et le partenariat dans tout ce que nous faisons.",
+      "mission": {
+        "title": "Mission",
+        "text": "Fournir des services juridiques professionnels tout en protégeant les droits des clients et en renforçant la confiance."
+      },
+      "vision": {
+        "title": "Vision",
+        "text": "Devenir une institution juridique de premier plan au niveau local et international grâce à l’innovation et à l’excellence."
+      },
+      "coreValues": [
+        "Excellence",
+        "Confiance",
+        "Partenariat"
+      ]
+    }
+  }
+}

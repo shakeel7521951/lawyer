@@ -1,0 +1,45 @@
+{
+  "about": {
+    "whyChoose": {
+      "header": {
+        "title": "Pourquoi nous choisir ?",
+        "subtitle": "Découvrez ce qui nous distingue dans le secteur juridique et pourquoi les clients nous confient leurs affaires les plus importantes."
+      },
+      "advantages": [
+        {
+          "title": "Consultants juridiques d’élite",
+          "description": "Notre cabinet regroupe des consultants juridiques et des avocats d’élite, possédant une expertise et une connaissance approfondie couvrant tous les aspects du droit."
+        },
+        {
+          "title": "Expertise professionnelle",
+          "description": "Une connaissance complète en droit commercial, pénal, civil, des sociétés, de l’investissement et de la famille, avec adhésion à des associations professionnelles."
+        },
+        {
+          "title": "Spécialistes du contentieux",
+          "description": "Spécialisés dans le contentieux devant toutes les juridictions, de la première instance à la Cour suprême, y compris les comités de règlement des litiges."
+        },
+        {
+          "title": "Éthique professionnelle",
+          "description": "Un engagement indéfectible à maintenir les normes d’éthique professionnelle et la confidentialité dans toutes les relations avec les clients."
+        }
+      ],
+      "commitment": {
+        "title": "Notre engagement envers l’excellence",
+        "points": [
+          {
+            "title": "Normes professionnelles",
+            "description": "Membres des associations professionnelles pertinentes au niveau local, régional et international"
+          },
+          {
+            "title": "Couverture complète",
+            "description": "Expertise dans toutes les juridictions et comités spécialisés de règlement des litiges"
+          },
+          {
+            "title": "Confiance des clients",
+            "description": "Engagement indéfectible envers les normes d’éthique professionnelle et de confidentialité"
+          }
+        ]
+      }
+    }
+  }
+}
