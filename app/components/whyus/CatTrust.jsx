@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import {
@@ -12,9 +13,9 @@ import {
   MessageCircle,
   CheckCircle,
 } from "lucide-react";
-import ConsultationForm from "../common/ConsultationForm";
 
 const CatTrust = () => {
+  const {t} = useTranslation ('whyus/cattrust')
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -157,44 +158,45 @@ const CatTrust = () => {
               {t("achievements_section.heading")}
             </h3>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8">
-              {achievements.map((achievement, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl border border-gray-100 group transition-all duration-300"
-                  data-aos="zoom-in"
-                  data-aos-delay={index * 200}
-                >
-                  <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
-                    {/* Icon */}
-                    <div
-                      className="w-12 h-12 bg-gradient-to-br from-[#9f8660] to-[#c0b688] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
-                      data-aos="flip-right"
-                    >
-                      <achievement.icon className="w-6 h-6 text-white" />
-                    </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8">
+  {achievements.map((achievement, index) => (
+    <div
+      key={index}
+      className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl border border-gray-100 group transition-all duration-300"
+      data-aos="zoom-in"
+      data-aos-delay={index * 200}
+    >
+      <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
+        {/* Icon */}
+        <div
+          className="w-12 h-12 bg-gradient-to-br from-[#9f8660] to-[#c0b688] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+          data-aos="flip-right"
+        >
+          <achievement.icon className="w-6 h-6 text-white" />
+        </div>
 
-                    <div className="text-center sm:text-left">
-                      {/* Title */}
-                      <h4
-                        className="text-lg font-semibold text-[#494c52] mb-2 group-hover:text-[#9f8660]"
-                        data-aos="fade-up"
-                      >
-                        {achievement.title}
-                      </h4>
-                      {/* Description */}
-                      <p
-                        className="text-gray-600 leading-relaxed text-sm sm:text-base"
-                        data-aos="fade-left"
-                        data-aos-delay="300"
-                      >
-                        {achievement.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+        <div className="text-center sm:text-left">
+          {/* Title */}
+          <h4
+            className="text-lg font-semibold text-[#494c52] mb-2 group-hover:text-[#9f8660]"
+            data-aos="fade-up"
+          >
+            {achievement.title}
+          </h4>
+          {/* Description */}
+          <p
+            className="text-gray-600 leading-relaxed text-sm sm:text-base"
+            data-aos="fade-left"
+            data-aos-delay="300"
+          >
+            {achievement.description}
+          </p>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
           </div>
 
           {/* CTA Section */}
@@ -219,13 +221,13 @@ const CatTrust = () => {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 {/* Button 1 */}
-                <button
-                  onClick={() => setShowConsultationModal(true)}
+                <a
+                  href="/contact"
                   className="bg-white text-[#494c52] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
                   data-aos="zoom-in-right"
                 >
                   <Phone className="w-5 h-5" />
-                  <span>Book Free Consultation</span>
+                  <span>{t("cta_section.buttons.text")}</span>
                 </a>
 
                 {/* Button 2 */}
@@ -243,12 +245,8 @@ const CatTrust = () => {
               </div>
             </div>
           </div>
-          {/* Final Trust Section */}
-          <div
-            className="mt-8 text-center"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
+           {/* Final Trust Section */}
+          <div className="mt-8 text-center" data-aos="fade-up" data-aos-delay="400">
             <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
               <h4
                 className="text-xl font-semibold text-[#494c52] mb-4"
@@ -266,12 +264,6 @@ const CatTrust = () => {
           </div>
         </div>
       </section>
-
-      {/* Consultation Form Modal */}
-      <ConsultationForm
-        isOpen={showConsultationModal}
-        onClose={() => setShowConsultationModal(false)}
-      />
     </>
   );
 };
