@@ -1,8 +1,10 @@
 // components/FounderProfile.jsx
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-
+import { useTranslation } from "react-i18next";
 export default function FounderProfile() {
+    const { t }= useTranslation("about/founderProfile");
+  
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
@@ -45,16 +47,18 @@ export default function FounderProfile() {
                 className="text-3xl sm:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#494c52] via-[#9f8660] to-[#c0b688]"
                 style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Meet Our Founder
+              {t("about.founderProfile.heading")}
             </h2>
             <h3 className="text-xl sm:text-2xl font-semibold text-[#494c52]" style={{ fontFamily: "'Inter', sans-serif" }}>
-              Founder & Managing Partner
+              {t("about.founderProfile.subheading")}
             </h3>
             <p className="text-[#c0b688] text-lg font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
-              Alkhaldi Law Firm & Legal Consultations
+                           {t("about.founderProfile.firmName")}
+
             </p>
             <p className="text-[#494c52]/80 leading-relaxed max-w-md" style={{ fontFamily: "'Inter', sans-serif" }}>
-              Leading with integrity, expertise, and vision in legal services for over 18 years.
+                                        {t("about.founderProfile.description")}
+
             </p>
             <div className="flex justify-center md:justify-start mt-4 space-x-3">
               <span className="w-6 h-0.5 bg-gradient-to-r from-[#c0b688] to-[#9f8660] rounded-full"></span>
