@@ -1,38 +1,36 @@
 {
   "badge": "OUR MISSION",
-  "title": "Strategic Objectives for Legal Excellence",
-  "description": "At Al-Khaldi, our mission is guided by five core objectives that ensure exceptional legal services.",
-
-  "objectives": {
-    "1": {
-      "title": "Establish Sound Legal Practice",
-      "description": "We strive to establish an entity rooted in sound legal practice, respecting laws and institutions."
-    },
-    "2": {
-      "title": "Complete Professional Competence",
-      "description": "Our professionalism is achieved through complete competence, experience, and unwavering credibility in all legal matters."
-    },
-    "3": {
-      "title": "Engage with Local Community",
-      "description": "We engage with our local environment by understanding community needs and providing legal assistance to those in need."
-    },
-    "4": {
-      "title": "Expand International Practice",
-      "description": "We broaden our client base and expand our practice to a wider geographic scope within the international community."
-    },
-    "5": {
-      "title": "Innovation in Legal Services",
-      "description": "We embrace new methods that align with technological advancements and current scientific progress."
-    }
-  },
-
+  "title": "Strategic",
+  "highlight": "Objectives",
+  "subtitle": "for Legal Excellence",
+  "description": "At",
+  "description2" : "our mission is guided by five core objectives that ensure exceptional legal services.",
+  "learnMore": "Learn More",
   "cta": {
     "title": "Experience Our Commitment to Excellence",
     "description": "Let Al-Khaldi guide you through your legal journey with our proven objectives and unwavering dedication.",
     "button": "Get Started Today"
   },
-
-  "buttons": {
-    "learnMore": "Learn More"
-  }
+  "objectives": [
+    {
+      "title": "Establish Sound Legal Practice",
+      "description": "We strive to establish an entity rooted in sound legal practice, respecting laws and institutions."
+    },
+    {
+      "title": "Complete Professional Competence",
+      "description": "Our professionalism is achieved through complete competence, experience, and unwavering credibility in all legal matters."
+    },
+    {
+      "title": "Engage with Local Community",
+      "description": "We engage with our local environment by understanding community needs and providing legal assistance to those in need."
+    },
+    {
+      "title": "Expand International Practice",
+      "description": "We broaden our client base and expand our practice to a wider geographic scope within the international community."
+    },
+    {
+      "title": "Innovation in Legal Services",
+      "description": "We embrace new methods that align with technological advancements and current scientific progress."
+    }
+  ]
 }

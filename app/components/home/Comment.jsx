@@ -11,7 +11,7 @@ import {
 import { useTranslation } from "react-i18next";
 
 const Comment = () => {
-  const { t } = useTranslation("hero");
+  const { t } = useTranslation("home/comment");
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
@@ -19,43 +19,43 @@ const Comment = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Ahmed Al-Rashid",
-      role: "CEO",
-      company: "Qatar Investment Holdings",
-      text: "Al Khaldi provided exceptional corporate legal services for our company incorporation and IP protection. Their expertise in commercial law and attention to regulatory compliance made our business expansion seamless across the GCC region.",
+      name: t("testimonials.1.name"),
+      role: t("testimonials.1.role"),
+      company: t("testimonials.1.company"),
+      text: t("testimonials.1.text"),
       img: "https://randomuser.me/api/portraits/men/44.jpg",
       rating: 5,
-      service: "Corporate Services",
+      service: t("testimonials.1.service"),
     },
     {
       id: 2,
-      name: "Dr. Fatima Al-Zahra",
-      role: "Legal Director",
-      company: "Ministry of Commerce & Industry",
-      text: "Working with Al Khaldi on legislative consultations and governance practices has been outstanding. Their understanding of regulatory compliance and institutional requirements exceeded our expectations.",
+      name: t("testimonials.2.name"),
+      role: t("testimonials.2.role"),
+      company: t("testimonials.2.company"),
+      text: t("testimonials.2.text"),
       img: "https://randomuser.me/api/portraits/women/46.jpg",
       rating: 5,
-      service: "Government Relations",
+      service: t("testimonials.2.service"),
     },
     {
       id: 3,
-      name: "Khalid Al-Mansouri",
-      role: "Private Individual",
-      company: "Family Legal Matters",
-      text: "The team handled my family law case with complete confidentiality and professionalism. Their expertise in civil and criminal law gave me confidence throughout the entire process.",
+      name: t("testimonials.3.name"),
+      role: t("testimonials.3.role"),
+      company: t("testimonials.3.company"),
+      text: t("testimonials.3.text"),
       img: "https://randomuser.me/api/portraits/men/65.jpg",
       rating: 5,
-      service: "Individual Services",
+      service: t("testimonials.3.service"),
     },
     {
       id: 4,
-      name: "Noura Al-Thani",
-      role: "Risk Manager",
-      company: "Qatar National Bank",
-      text: "Al Khaldi's banking legal services and AML compliance consultations have been invaluable. Their risk management expertise ensures we meet all international standards.",
+      name: t("testimonials.4.name"),
+      role: t("testimonials.4.role"),
+      company: t("testimonials.4.company"),
+      text: t("testimonials.4.text"),
       img: "https://randomuser.me/api/portraits/women/32.jpg",
       rating: 5,
-      service: "Legal Support Services",
+      service: t("testimonials.4.service"),
     },
   ];
 
@@ -124,19 +124,19 @@ const Comment = () => {
           <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 border border-[#c0b688]/20 mb-6 shadow-sm">
             <Users className="w-4 h-4 text-[#9f8660]" />
             <span className="text-[#494c52] font-medium text-sm">
-              CLIENT TESTIMONIALS
+              {t("badge")}
             </span>
           </div>
 
           {/* Simple, Clean Title */}
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-[#494c52] leading-tight">
-            What Our <span className="text-[#c0b688]">Clients Say</span>
+            {t("title.part1")}{" "}
+            <span className="text-[#c0b688]">{t("title.part2")}</span>
           </h2>
 
           {/* Simple Description */}
           <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Trusted by government, corporate, and individual clients across
-            Qatar
+            {t("description")}
           </p>
         </div>
 
