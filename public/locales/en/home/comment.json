@@ -1,0 +1,39 @@
+{
+  "badge": "CLIENT TESTIMONIALS",
+  "title": {
+    "part1": "What Our ",
+    "highlight": "Clients Say",
+    "part2": ""
+  },
+  "description": "Trusted by government, corporate, and individual clients across Qatar",
+  "testimonials": {
+    "1": {
+      "name": "Ahmed Al-Rashid",
+      "role": "CEO",
+      "company": "Qatar Investment Holdings",
+      "text": "Al Khaldi provided exceptional corporate legal services for our company incorporation and IP protection. Their expertise in commercial law and attention to regulatory compliance made our business expansion seamless across the GCC region.",
+      "service": "Corporate Services"
+    },
+    "2": {
+      "name": "Dr. Fatima Al-Zahra",
+      "role": "Legal Director",
+      "company": "Ministry of Commerce & Industry",
+      "text": "Working with Al Khaldi on legislative consultations and governance practices has been outstanding. Their understanding of regulatory compliance and institutional requirements exceeded our expectations.",
+      "service": "Government Relations"
+    },
+    "3": {
+      "name": "Khalid Al-Mansouri",
+      "role": "Private Individual",
+      "company": "Family Legal Matters",
+      "text": "The team handled my family law case with complete confidentiality and professionalism. Their expertise in civil and criminal law gave me confidence throughout the entire process.",
+      "service": "Individual Services"
+    },
+    "4": {
+      "name": "Noura Al-Thani",
+      "role": "Risk Manager",
+      "company": "Qatar National Bank",
+      "text": "Al Khaldi's banking legal services and AML compliance consultations have been invaluable. Their risk management expertise ensures we meet all international standards.",
+      "service": "Legal Support Services"
+    }
+  }
+}
