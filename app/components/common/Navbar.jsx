@@ -4,8 +4,10 @@ import Link from "next/link";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { usePathname } from "next/navigation";
 import i18n from "@/i18n";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar({ children }) {
+  const { t } = useTranslation("navbar/navbar");
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -37,12 +39,12 @@ export default function Navbar({ children }) {
   }, [prevScrollPos]);
 
   const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/services", label: "Services", hasDropdown: true },
-    { href: "/whyus", label: "Why Us" },
-    { href: "/blog", label: "Blog" },
-    { href: "/", label: "Language", hasDropdown: "language" },
+    { href: "/", label: t("labels.home") },
+    { href: "/about", label: t("labels.about") },
+    { href: "/services", label: t("labels.services"), hasDropdown: true },
+    { href: "/whyus", label: t("labels.whyus") },
+    { href: "/blog", label: t("labels.blog") },
+    { href: "/", label: t("labels.language"), hasDropdown: "language" },
   ];
 
   const languages = [
@@ -53,20 +55,20 @@ export default function Navbar({ children }) {
 
   const serviceCategories = [
     {
-      title: "Corporates",
-      description: "Legal services for businesses and corporations",
+      title: t("serviceCategories.0.title"),
+      description: t("serviceCategories.0.description"),
       href: "/services/corporate-services",
       slug: "corporate-services",
     },
     {
-      title: "Government/Semi-government",
-      description: "Legal support for government entities",
+      title: t("serviceCategories.1.title"),
+      description: t("serviceCategories.1.description"),
       href: "/services/government-services",
       slug: "government-services",
     },
     {
-      title: "Individuals",
-      description: "Personal legal services for individuals",
+      title: t("serviceCategories.2.title"),
+      description: t("serviceCategories.2.description"),
       href: "/services/individual-services",
       slug: "individual-services",
     },
@@ -165,10 +167,10 @@ export default function Navbar({ children }) {
                           <div className="p-6">
                             <div className="mb-4">
                               <h3 className="text-[#494c52] font-semibold text-base mb-1">
-                                Our Services
+                                {t("ourServices")}
                               </h3>
                               <p className="text-[#9f8660] text-sm opacity-80">
-                                Comprehensive legal solutions
+                                {t("comprehensiveLegalSolutions")}
                               </p>
                             </div>
                             <div className="space-y-2">
@@ -197,7 +199,7 @@ export default function Navbar({ children }) {
                                 href="/services"
                                 className="flex items-center justify-center space-x-2 bg-gradient-to-r from-[#9f8660] to-[#c0b688] text-white px-4 py-2 rounded-xl text-sm font-medium transform hover:scale-105 transition-all duration-300"
                               >
-                                <span>View All Services</span>
+                                <span>{t("allServices")}</span>
                               </Link>
                             </div>
                           </div>
@@ -272,7 +274,7 @@ export default function Navbar({ children }) {
                   className="hidden md:flex items-center space-x-2 bg-gradient-to-r from-[#9f8660] to-[#c0b688] text-white px-5 py-2.5 rounded-xl text-sm font-medium transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   <Phone className="w-4 h-4" />
-                  <span>Contact</span>
+                  <span>{t("labels.contact")}</span>
                 </Link>
 
                 <button
