@@ -1,10 +1,13 @@
 "use client";
-import React, { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { Award, ChevronRight } from 'lucide-react';
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { Award, ChevronRight } from "lucide-react";
+import ConsultationForm from "../common/ConsultationForm";
 
 const BottomCta = () => {
+  const [showConsultationModal, setShowConsultationModal] = useState(false);
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
@@ -12,7 +15,6 @@ const BottomCta = () => {
   return (
     <div className="mt-6 mb-10 ">
       <div className="bg-gradient-to-r from-[#494c52] to-[#9f8660] rounded-2xl p-6 sm:p-8 text-white relative overflow-hidden max-w-6xl mx-auto">
-
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div
@@ -49,12 +51,14 @@ const BottomCta = () => {
             className="text-base text-white/90 leading-relaxed mb-6 max-w-2xl mx-auto"
             style={{ fontFamily: "'Crimson Text', serif" }}
           >
-            Contact Al-Khaldi Law Firm today for comprehensive legal solutions tailored to your specific needs.
+            Contact Al-Khaldi Law Firm today for comprehensive legal solutions
+            tailored to your specific needs.
           </p>
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <button
+              onClick={() => setShowConsultationModal(true)}
               data-aos="fade-up"
               data-aos-delay="300"
               className="bg-white text-[#494c52] px-6 py-2 rounded-lg font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-2 justify-center text-sm"
@@ -75,6 +79,12 @@ const BottomCta = () => {
           </div>
         </div>
       </div>
+
+      {/* Consultation Form Modal */}
+      <ConsultationForm
+        isOpen={showConsultationModal}
+        onClose={() => setShowConsultationModal(false)}
+      />
     </div>
   );
 };
