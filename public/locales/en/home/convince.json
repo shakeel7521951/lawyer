@@ -1,0 +1,54 @@
+{
+  "badge": "WHY CHOOSE US",
+  "title": {
+    "part1": "Why Choose ",
+    "highlight": "Al Khaldi Law Firm"
+  },
+  "description": "Selecting the right legal partner is crucial. We combine legal expertise, client-first approach, and proven results to deliver excellence.",
+
+  "commitment": {
+    "title": {
+      "part1": "Our Commitment to ",
+      "highlight": "Excellence"
+    },
+    "paragraph1": "We understand that legal issues can be stressful and complex. Our team works tirelessly to ensure your rights are protected and your case is handled with utmost professionalism.",
+    "paragraph2": "Our dedication goes beyond legal representation — we aim to be a trusted advisor, strong advocate, and reliable partner in every step of your legal journey."
+  },
+
+  "stats": {
+    "1": { "number": "25+", "label": "Years Experience" },
+    "2": { "number": "500+", "label": "Satisfied Clients" },
+    "3": { "number": "98%", "label": "Success Rate" },
+    "4": { "number": "6", "label": "GCC Countries" }
+  },
+
+  "features": {
+    "1": {
+      "title": "Comprehensive Legal Coverage",
+      "description": "Our expertise covers all aspects of legal matters including commercial, criminal, civil, corporate, investment, and family law across all court levels."
+    },
+    "2": {
+      "title": "Professional Ethics & Standards",
+      "description": "We maintain the highest professional ethics standards and confidentiality of information when dealing with our clients, ensuring complete trust."
+    },
+    "3": {
+      "title": "Client Information Protection",
+      "description": "Our commitment to maintaining professional standards and confidentiality guarantees the security and protection of all client information."
+    },
+    "4": {
+      "title": "Professional Associations Network",
+      "description": "Our lawyers are members of relevant professional associations locally, regionally, and internationally, ensuring global standards."
+    }
+  },
+
+  "imageBadge": "Trusted Partner",
+
+  "closing": {
+    "title": "Your Trusted Legal Partner in the GCC",
+    "description": "Choosing <strong class='text-[#c0b688]'>Al Khaldi Law Firm</strong> means choosing trust, transparency, and results. Whether you are an individual, a corporate client, or a government entity, our mission is to deliver unmatched legal solutions tailored to your needs.",
+    "buttons": {
+      "consultation": "Get Consultation",
+      "learnMore": "Learn More"
+    }
+  }
+}

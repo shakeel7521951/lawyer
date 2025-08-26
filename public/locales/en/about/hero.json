@@ -1,0 +1,26 @@
+{
+  "about": {
+    "hero": {
+      "brandNameAr": "عن الخالـــــدي",
+      "subtitleEn": "About Al Khaldi",
+      "intro": "Discover the story behind AL KHALDI Law Firm, our distinguished founder's journey, and our unwavering commitment to excellence in legal services across Qatar and beyond.",
+      "cards": {
+        "location": {
+          "title": "Our Location",
+          "address": "Street 150, Al Rayyan\nBuilding No. 143, Area 22\nFereej Bin Mahmoud\n3rd Floor"
+        },
+        "website": {
+          "title": "Visit Online",
+          "url": "www.alkhaldi.com"
+        },
+        "contact": {
+          "title": "Contact Us",
+          "phones": [
+            "+974 6616 4000",
+            "+974 4009 8889"
+          ]
+        }
+      }
+    }
+  }
+}

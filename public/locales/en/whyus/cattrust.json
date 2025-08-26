@@ -1,0 +1,68 @@
+{
+  "trust_indicator": {
+    "badge": "PROVEN EXCELLENCE",
+    "heading": "Trusted by",
+    "headingtwo": "Clients",
+    "headingthree": "Across Qatar",
+    "subtext": "Our track record speaks for itself..."
+  },
+  "stats": [
+    {
+      "value": "19+",
+      "label": "Years of Legal Excellence"
+    },
+    {
+      "value": "22",
+      "label": "Legislative Committees"
+    },
+    {
+      "value": "1000+",
+      "label": "Satisfied Clients"
+    },
+    {
+      "value": "All",
+      "label": "Court Levels Covered"
+    }
+  ],
+  "achievements_section": {
+    "heading": "Our Key Achievements",
+    "achievements": [
+      {
+        "title": "International Representation",
+        "description": "Represented the State of Qatar in regional and international forums"
+      },
+      {
+        "title": "Legislative Leadership",
+        "description": "Member of 22 legislative committees that amended and created most laws"
+      },
+      {
+        "title": "Professional Excellence",
+        "description": "Elite legal consultants with comprehensive knowledge across all legal areas"
+      },
+      {
+        "title": "Ethical Standards",
+        "description": "Unwavering commitment to professional ethics and client confidentiality"
+      }
+    ]
+  },
+  "cta_section": {
+    "heading": "Ready to Start Your Legal Journey?",
+    "subtext": "Book a free consultation with our experts today...",
+    "buttons": [
+      {
+        "text": "Book Free Consultation",
+        "link": "/contact"
+      },
+      {
+        "text": "WhatsApp Our Team",
+        "link": "https://wa.me/97466164000"
+      }
+    ]
+  },
+  "final_trust_section": {
+    "heading": "AL KHALDI - Your Trusted Legal Partner",
+    "subtext": "Combining",
+    "subtexttwo":"years of experience with unwavering commitment to professional ethics, we provide comprehensive legal solutions across all areas of law in Qatar and the region."
+
+  }
+}

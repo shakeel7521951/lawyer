@@ -1,0 +1,70 @@
+{
+  "badge": "EXPERTISE JURIDIQUE",
+
+  "title": "Nos services juridiques",
+  "subtitle": "Al-Khaldi offre des services juridiques complets avec une expertise couvrant plusieurs secteurs.",
+
+  "stats": {
+    "years_experience": "Années d’expérience",
+    "legislative_committees": "Comités législatifs",
+    "clients_served": "Clients servis",
+    "service_categories": "Catégories de services"
+  },
+
+  "services": {
+    "corporate": {
+      "title": "Services corporatifs",
+      "category": "Solutions d’affaires",
+      "description": "Consultations juridiques pour la création d’entreprise, la protection de la propriété intellectuelle, les investissements étrangers et les contrats commerciaux.",
+      "features": [
+        "Création d’entreprise",
+        "Protection de la propriété intellectuelle",
+        "Contrats commerciaux",
+        "Consultations en droit fiscal"
+      ]
+    },
+    "government": {
+      "title": "Secteur gouvernemental & semi-gouvernemental",
+      "category": "Secteur public",
+      "description": "Conseils juridiques spécialisés pour les institutions gouvernementales, y compris les consultations législatives, les pratiques de gouvernance et la conformité réglementaire.",
+      "features": [
+        "Consultations législatives",
+        "Gouvernance & transparence",
+        "Conformité réglementaire",
+        "Appels d’offres gouvernementaux"
+      ]
+    },
+    "individual": {
+      "title": "Services individuels",
+      "category": "Juridique personnel",
+      "description": "Services juridiques personnels couvrant les affaires civiles, pénales et familiales, la gestion des entreprises individuelles et les litiges du travail.",
+      "features": [
+        "Droit de la famille & pénal",
+        "Entreprise individuelle",
+        "Litiges du travail",
+        "Recouvrement de créances"
+      ]
+    },
+    "specialized": {
+      "title": "Services spécialisés",
+      "category": "Conseil d’experts",
+      "description": "Services juridiques bancaires, arbitrage, consultations en gestion des risques et services de conformité réglementaire.",
+      "features": [
+        "Services juridiques bancaires",
+        "Arbitrage",
+        "Gestion des risques",
+        "Conformité réglementaire"
+      ]
+    }
+  },
+
+  "buttons": {
+    "learn_more": "En savoir plus",
+    "contact_us": "Contactez-nous dès aujourd’hui"
+  },
+
+  "cta": {
+    "title": "Besoin d’une assistance juridique ?",
+    "subtitle": "Obtenez une consultation juridique professionnelle adaptée à vos besoins spécifiques."
+  }
+}

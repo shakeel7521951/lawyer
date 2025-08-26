@@ -1,0 +1,62 @@
+{
+  "badge": "WHY CHOOSE US",
+  "title": {
+    "part1": "Four Reasons to ",
+    "highlight": "Trust Al-Khaldi"
+  },
+  "description": "Our expertise covers all aspects of legal matters with professional associations membership and specialized dispute resolution capabilities.",
+  "services": {
+    "1": {
+      "title": "Comprehensive Legal Coverage",
+      "subtitle": "All Legal Aspects Covered",
+      "desc": "Our expertise covers all aspects of legal matters including commercial, criminal, civil, corporate, investment, and family law.",
+      "highlights": [
+        "Commercial & Criminal Law",
+        "Civil & Corporate Matters",
+        "Investment & Family Law",
+        "All Court Levels"
+      ]
+    },
+    "2": {
+      "title": "Professional Associations",
+      "subtitle": "Regional & International Recognition",
+      "desc": "Our lawyers are members of relevant professional associations locally, regionally, and internationally.",
+      "highlights": [
+        "Local Professional Associations",
+        "Regional Legal Networks",
+        "International Recognition",
+        "Ethics & Confidentiality"
+      ]
+    },
+    "3": {
+      "title": "Specialized Dispute Resolution",
+      "subtitle": "Expert Arbitration & Mediation",
+      "desc": "We possess expertise in resolving disputes at Administrative, Labor, and Tenancy Dispute Settlement Committees.",
+      "highlights": [
+        "Administrative Disputes",
+        "Labor & Tenancy Matters",
+        "Arbitration Services",
+        "Professional Standards"
+      ]
+    },
+    "4": {
+      "title": "Client Information Protection",
+      "subtitle": "Confidentiality & Professional Ethics",
+      "desc": "Our commitment is to maintain professional ethics standards and confidentiality of information when dealing with our clients.",
+      "highlights": [
+        "Information Confidentiality",
+        "Professional Ethics",
+        "Client Trust & Security",
+        "Highest Service Standards"
+      ]
+    }
+  },
+  "stats": {
+    "1": { "label": "Years Experience" },
+    "2": { "label": "Cases Won" },
+    "3": { "label": "Clients Served" },
+    "4": { "label": "GCC Countries" }
+  },
+  "key": "Key Services",
+  "cta": "Learn More"
+}

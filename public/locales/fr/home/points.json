@@ -1,0 +1,62 @@
+{
+  "badge": "POURQUOI NOUS CHOISIR",
+  "title": {
+    "part1": "Quatre raisons de ",
+    "highlight": "faire confiance à Al-Khaldi"
+  },
+  "description": "Notre expertise couvre tous les aspects des affaires juridiques avec une adhésion aux associations professionnelles et des compétences spécialisées en résolution de litiges.",
+  "services": {
+    "1": {
+      "title": "Couverture Juridique Complète",
+      "subtitle": "Tous les aspects juridiques couverts",
+      "desc": "Notre expertise couvre tous les domaines du droit, y compris commercial, pénal, civil, sociétés, investissement et droit de la famille.",
+      "highlights": [
+        "Droit commercial et pénal",
+        "Affaires civiles et sociétaires",
+        "Droit de l’investissement et de la famille",
+        "Tous niveaux de juridictions"
+      ]
+    },
+    "2": {
+      "title": "Associations Professionnelles",
+      "subtitle": "Reconnaissance régionale et internationale",
+      "desc": "Nos avocats sont membres des associations professionnelles pertinentes au niveau local, régional et international.",
+      "highlights": [
+        "Associations professionnelles locales",
+        "Réseaux juridiques régionaux",
+        "Reconnaissance internationale",
+        "Éthique et confidentialité"
+      ]
+    },
+    "3": {
+      "title": "Résolution Spécialisée des Litiges",
+      "subtitle": "Experts en arbitrage et médiation",
+      "desc": "Nous avons une expertise dans la résolution des litiges devant les comités de règlement des litiges administratifs, du travail et de location.",
+      "highlights": [
+        "Litiges administratifs",
+        "Affaires du travail et de location",
+        "Services d’arbitrage",
+        "Normes professionnelles"
+      ]
+    },
+    "4": {
+      "title": "Protection des Informations Clients",
+      "subtitle": "Confidentialité et éthique professionnelle",
+      "desc": "Notre engagement est de maintenir les normes d’éthique professionnelle et la confidentialité des informations lors du traitement de nos clients.",
+      "highlights": [
+        "Confidentialité des informations",
+        "Éthique professionnelle",
+        "Confiance et sécurité des clients",
+        "Normes de service les plus élevées"
+      ]
+    }
+  },
+  "stats": {
+    "1": { "label": "Années d'expérience" },
+    "2": { "label": "Affaires gagnées" },
+    "3": { "label": "Clients servis" },
+    "4": { "label": "Pays du CCG" }
+  },
+  "key": "Services Clés",
+  "cta": "En savoir plus"
+}
