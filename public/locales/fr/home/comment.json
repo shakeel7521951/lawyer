@@ -1,0 +1,38 @@
+{
+  "badge": "TÉMOIGNAGES CLIENTS",
+  "title": {
+    "part1": "Ce que disent ",
+    "part2": "nos clients"
+  },
+  "description": "De confiance auprès des clients gouvernementaux, corporatifs et particuliers à travers le Qatar",
+  "testimonials": {
+    "1": {
+      "name": "Ahmed Al-Rashid",
+      "role": "PDG",
+      "company": "Qatar Investment Holdings",
+      "text": "Al Khaldi a fourni des services juridiques d’entreprise exceptionnels pour la création de notre société et la protection de notre propriété intellectuelle. Leur expertise en droit commercial et leur attention à la conformité réglementaire ont rendu notre expansion dans la région du CCG fluide.",
+      "service": "Services corporatifs"
+    },
+    "2": {
+      "name": "Dr. Fatima Al-Zahra",
+      "role": "Directrice juridique",
+      "company": "Ministère du Commerce et de l’Industrie",
+      "text": "Collaborer avec Al Khaldi sur les consultations législatives et les pratiques de gouvernance a été remarquable. Leur compréhension de la conformité réglementaire et des exigences institutionnelles a dépassé nos attentes.",
+      "service": "Relations gouvernementales"
+    },
+    "3": {
+      "name": "Khalid Al-Mansouri",
+      "role": "Particulier",
+      "company": "Affaires familiales juridiques",
+      "text": "L’équipe a traité mon affaire de droit de la famille avec une confidentialité totale et un grand professionnalisme. Leur expertise en droit civil et pénal m’a donné confiance tout au long du processus.",
+      "service": "Services individuels"
+    },
+    "4": {
+      "name": "Noura Al-Thani",
+      "role": "Responsable des risques",
+      "company": "Banque Nationale du Qatar",
+      "text": "Les services juridiques bancaires d’Al Khaldi et leurs consultations en matière de conformité AML ont été inestimables. Leur expertise en gestion des risques garantit que nous respectons toutes les normes internationales.",
+      "service": "Services de soutien juridique"
+    }
+  }
+}

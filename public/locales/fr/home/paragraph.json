@@ -1,0 +1,47 @@
+{
+  "badge": "NOTRE MISSION",
+  "heading": {
+    "title": "Excellence",
+    "highlight": "Juridique",
+    "subtitle": "& Engagement Professionnel"
+  },
+  "paragraphs": [
+    "Notre cabinet s’engage à fournir des services juridiques fondés sur une expertise professionnelle et une haute compétence académique. Nous garantissons une équipe de juristes spécialisés dans divers domaines, y compris le civil, le commercial, le pénal, le droit de la famille et les affaires internationales.",
+    "Notre objectif est d’offrir des consultations et solutions juridiques basées sur le savoir scientifique, répondant aux objectifs du client tout en adoptant de nouvelles méthodes adaptées aux progrès actuels."
+  ],
+  "stats": {
+    "experience": {
+      "label": "Années d’expérience"
+    },
+    "committees": {
+      "label": "Comités législatifs"
+    },
+    "courts": {
+      "number": "Tous",
+      "label": "Niveaux de juridiction"
+    }
+  },
+  "image": {
+    "alt": "Excellence Juridique - Al-Khaldi",
+    "title": "Cadre Juridique",
+    "description": "Solutions juridiques complètes couvrant les secteurs des entreprises, du gouvernement et des particuliers."
+  },
+  "trust": [
+    {
+      "title": "Excellence Juridique",
+      "subtitle": "Qualité intransigeante"
+    },
+    {
+      "title": "Expertise CCG",
+      "subtitle": "Connaissance régionale"
+    },
+    {
+      "title": "Partenaires Stratégiques",
+      "subtitle": "Approche axée sur les affaires"
+    },
+    {
+      "title": "Résultats Prouvés",
+      "subtitle": "Histoires de réussite"
+    }
+  ]
+}

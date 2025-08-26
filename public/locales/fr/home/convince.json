@@ -1,0 +1,54 @@
+{
+  "badge": "POURQUOI NOUS CHOISIR",
+  "title": {
+    "part1": "Pourquoi choisir ",
+    "highlight": "Al Khaldi Law Firm"
+  },
+  "description": "Choisir le bon partenaire juridique est essentiel. Nous combinons expertise juridique, approche centrée sur le client et résultats éprouvés pour offrir l’excellence.",
+
+  "commitment": {
+    "title": {
+      "part1": "Notre engagement envers ",
+      "highlight": "l’excellence"
+    },
+    "paragraph1": "Nous comprenons que les questions juridiques peuvent être stressantes et complexes. Notre équipe travaille sans relâche pour garantir la protection de vos droits et le traitement de votre affaire avec le plus grand professionnalisme.",
+    "paragraph2": "Notre dévouement va au-delà de la simple représentation juridique — nous visons à être un conseiller de confiance, un défenseur solide et un partenaire fiable à chaque étape de votre parcours juridique."
+  },
+
+  "stats": {
+    "1": { "number": "25+", "label": "Années d’expérience" },
+    "2": { "number": "500+", "label": "Clients satisfaits" },
+    "3": { "number": "98%", "label": "Taux de réussite" },
+    "4": { "number": "6", "label": "Pays du CCG" }
+  },
+
+  "features": {
+    "1": {
+      "title": "Couverture juridique complète",
+      "description": "Notre expertise couvre tous les aspects du droit, y compris commercial, pénal, civil, corporatif, investissement et droit de la famille à tous les niveaux de juridiction."
+    },
+    "2": {
+      "title": "Éthique et normes professionnelles",
+      "description": "Nous respectons les normes professionnelles et éthiques les plus élevées ainsi que la confidentialité des informations de nos clients, garantissant une confiance totale."
+    },
+    "3": {
+      "title": "Protection des informations clients",
+      "description": "Notre engagement à maintenir les normes professionnelles et la confidentialité assure la sécurité et la protection de toutes les informations clients."
+    },
+    "4": {
+      "title": "Réseau d’associations professionnelles",
+      "description": "Nos avocats sont membres d’associations professionnelles pertinentes aux niveaux local, régional et international, garantissant le respect des normes mondiales."
+    }
+  },
+
+  "imageBadge": "Partenaire de confiance",
+
+  "closing": {
+    "title": "Votre partenaire juridique de confiance dans le CCG",
+    "description": "Choisir <strong class='text-[#c0b688]'>Al Khaldi Law Firm</strong> signifie choisir la confiance, la transparence et les résultats. Que vous soyez un particulier, un client corporatif ou une entité gouvernementale, notre mission est de fournir des solutions juridiques inégalées adaptées à vos besoins.",
+    "buttons": {
+      "consultation": "Obtenir une consultation",
+      "learnMore": "En savoir plus"
+    }
+  }
+}

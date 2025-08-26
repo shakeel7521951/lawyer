@@ -1,0 +1,36 @@
+{
+  "badge": "NOTRE MISSION",
+  "title": "Objectifs",
+  "highlight": "stratégiques",
+  "subtitle": "pour l’excellence juridique",
+  "description": "Chez",
+  "description2": "notre mission est guidée par cinq objectifs fondamentaux garantissant des services juridiques exceptionnels.",
+  "learnMore": "En savoir plus",
+  "cta": {
+    "title": "Découvrez notre engagement envers l’excellence",
+    "description": "Laissez Al-Khaldi vous accompagner dans votre parcours juridique grâce à nos objectifs éprouvés et notre dévouement constant.",
+    "button": "Commencez dès aujourd’hui"
+  },
+  "objectives": [
+    {
+      "title": "Établir une pratique juridique solide",
+      "description": "Nous nous efforçons d’établir une entité fondée sur une pratique juridique solide, respectueuse des lois et des institutions."
+    },
+    {
+      "title": "Compétence professionnelle complète",
+      "description": "Notre professionnalisme repose sur une compétence complète, une expérience solide et une crédibilité inébranlable dans toutes les affaires juridiques."
+    },
+    {
+      "title": "S’engager auprès de la communauté locale",
+      "description": "Nous interagissons avec notre environnement local en comprenant les besoins de la communauté et en offrant une assistance juridique à ceux qui en ont besoin."
+    },
+    {
+      "title": "Développer la pratique internationale",
+      "description": "Nous élargissons notre clientèle et développons notre pratique à une échelle géographique plus vaste au sein de la communauté internationale."
+    },
+    {
+      "title": "Innovation dans les services juridiques",
+      "description": "Nous adoptons de nouvelles méthodes alignées sur les avancées technologiques et le progrès scientifique actuel."
+    }
+  ]
+}
