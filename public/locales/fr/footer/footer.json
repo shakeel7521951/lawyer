@@ -1,0 +1,53 @@
+{
+  "company": {
+    "name": "الخالدي",
+    "tagline": "CABINET D'AVOCATS",
+    "description": "Al-Khaldi offre une excellence juridique stratégique dans toute la région du CCG, fournissant des solutions complètes pour les clients gouvernementaux, corporatifs et individuels avec une expertise et un dévouement inégalés.",
+    "award": "25+ ans d'excellence juridique"
+  },
+  "sections": {
+    "quickLinks": "Liens rapides",
+    "legalServices": "Services juridiques",
+    "contactUs": "Contactez-nous"
+  },
+  "quickLinks": [
+    { "href": "/", "label": "Accueil" },
+    { "href": "/about", "label": "À propos" },
+    { "href": "/services", "label": "Services" },
+    { "href": "/whyus", "label": "Pourquoi nous choisir" },
+    { "href": "/blog", "label": "Blog" },
+    { "href": "/contact", "label": "Contact" }
+  ],
+  "services": [
+    { "href": "/corporate", "label": "Droit des sociétés" },
+    { "href": "/governorg", "label": "Relations gouvernementales" },
+    { "href": "/IndvidualCustomer", "label": "Services aux particuliers" },
+    { "href": "/legalsupport", "label": "Soutien juridique" }
+  ],
+  "contactInfo": [
+    { "label": "+974 6616 4000", "href": "tel:+97466164000" },
+    { "label": "+974 4009 8889", "href": "tel:+97440098889" },
+    { "label": "info@alkhaldi.com", "href": "mailto:info@alkhaldi.com" },
+    { "label": "www.alkhaldi.com", "href": "http://www.alkhaldi.com" },
+    { "label": "Rue 150, Al Rayyan, Bâtiment n° 143, Zone 22, Fereej Bin Mahmoud, 3ème étage", "href": "#" }
+  ],
+  "social": {
+    "follow": "Suivez-nous"
+  },
+  "newsletter": {
+    "title": "Restez informé des actualités juridiques",
+    "description": "Abonnez-vous à notre newsletter pour les dernières mises à jour juridiques, informations et nouvelles du cabinet d'avocats Al-Khaldi.",
+    "placeholder": "Entrez votre adresse e-mail",
+    "button": "S'abonner"
+  },
+  "copyright": "© 2024 الخالدي Cabinet d'avocats Al-Khaldi. Tous droits réservés.",
+  "stats": {
+    "casesWon": "Affaires gagnées",
+    "clients": "Clients",
+    "countries": "Pays"
+  },
+  "legalLinks": {
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation"
+  }
+}
