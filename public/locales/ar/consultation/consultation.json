@@ -1,0 +1,104 @@
+{
+  "consultationLanguages": {
+    "english": "الإنجليزية",
+    "arabic": "العربية",
+    "both": "كلاهما"
+  },
+  "caseCategories": {
+    "contracts": "العقود",
+    "employment": "التوظيف",
+    "family": "الأحوال الشخصية",
+    "real-estate": "العقارات",
+    "business": "الأعمال",
+    "criminal": "الجنائي",
+    "corporate": "الخدمات المؤسسية",
+    "banking": "الخدمات القانونية المصرفية",
+    "arbitration": "التحكيم",
+    "other": "أخرى"
+  },
+  "consultationMethods": {
+    "in-person": "حضور شخصي",
+    "online": "عبر الإنترنت",
+    "phone": "مكالمة هاتفية"
+  },
+  "urgencyLevels": {
+    "normal": "عادي",
+    "urgent": "عاجل",
+    "very-urgent": "عاجل جدًا"
+  },
+  "validation": {
+    "honeypot": "تم تفعيل الحماية من الرسائل المزعجة",
+    "fullNameRequired": "الاسم الكامل مطلوب",
+    "phoneRequired": "رقم الهاتف مطلوب",
+    "emailRequired": "البريد الإلكتروني مطلوب",
+    "emailInvalid": "يرجى إدخال بريد إلكتروني صالح",
+    "consultationLanguageRequired": "يرجى اختيار لغة الاستشارة",
+    "caseCategoryRequired": "يرجى اختيار فئة القضية",
+    "caseDetailsRequired": "تفاصيل القضية مطلوبة",
+    "caseDetailsMinLength": "يرجى تقديم معلومات أكثر تفصيلاً عن القضية (20 حرفًا على الأقل)",
+    "consultationMethodRequired": "يرجى اختيار طريقة الاستشارة",
+    "preferredDateTimeRequired": "يرجى اختيار التاريخ والوقت المفضل",
+    "urgencyLevelRequired": "يرجى اختيار مستوى الأهمية",
+    "consentGivenRequired": "يرجى قبول اتفاقية الموافقة"
+  },
+  "fileValidation": {
+    "File": "الملف",
+    "tooLarge": "كبير جدًا. يرجى تحميل ملفات أقل من 10 ميغابايت.",
+    "unsupportedType": "غير مدعوم. يرجى تحميل ملفات PDF أو Word أو صور فقط."
+  },
+  "formkeys": {
+    "fullName": "الاسم الكامل",
+    "phone": "الهاتف",
+    "email": "البريد الإلكتروني",
+    "consultationLanguage": "لغة الاستشارة",
+    "caseCategory": "فئة القضية",
+    "caseDetails": "تفاصيل القضية",
+    "uploadedFiles": "الملفات المرفوعة",
+    "consultationMethod": "طريقة الاستشارة",
+    "preferredDateTime": "التاريخ والوقت المفضل",
+    "urgencyLevel": "مستوى الأهمية",
+    "consentGiven": "الموافقة",
+    "honeypot": "الحماية من السبام"
+  },
+  "consultation": {
+    "modalTitle": "حجز استشارة قانونية",
+    "modalSubtitle": "مكتب الخالدي للمحاماة والاستشارات القانونية",
+    "successMessage": "تم إرسال طلب الاستشارة بنجاح! سنتواصل معك قريبًا عبر واتساب.",
+    "errorMessage": "خطأ في إرسال طلب الاستشارة. يرجى المحاولة مرة أخرى.",
+    "sections": {
+      "personalInfo": "المعلومات الشخصية",
+      "consultationPreferences": "تفضيلات الاستشارة",
+      "caseInformation": "معلومات القضية",
+      "consentAgreement": "الموافقة والاتفاقية"
+    },
+    "fields": {
+      "fullName": "الاسم الكامل *",
+      "fullNamePlaceholder": "أدخل اسمك الكامل",
+      "phoneNumber": "رقم الهاتف (واتساب) *",
+      "phoneNumberPlaceholder": "+974 XXXX XXXX",
+      "email": "البريد الإلكتروني *",
+      "emailPlaceholder": "أدخل بريدك الإلكتروني",
+      "consultationLanguage": "لغة الاستشارة المفضلة *",
+      "consultationLanguageSelect": "اختر اللغة",
+      "consultationMethod": "طريقة الاستشارة المفضلة *",
+      "consultationMethodSelect": "اختر الطريقة",
+      "preferredDateTime": "التاريخ والوقت المفضل *",
+      "urgencyLevel": "مستوى الأهمية *",
+      "urgencyLevelSelect": "اختر المستوى",
+      "caseCategory": "فئة القضية *",
+      "caseCategorySelect": "اختر الفئة",
+      "caseDetails": "تفاصيل القضية *",
+      "caseDetailsPlaceholder": "يرجى تقديم وصف واضح ومفصل لقضيتك القانونية، بما في ذلك الحقائق ذات الصلة والجدول الزمني وأي مخاوف محددة لديك...",
+      "fileUpload": "تحميل المستندات (اختياري)",
+      "fileUploadDesc": "قم بتحميل المستندات ذات الصلة (PDF, Word, صور)",
+      "fileUploadLimit": "الحد الأقصى لحجم الملف: 10 ميغابايت، الحد الأقصى للملفات: 5",
+      "chooseFiles": "اختر الملفات"
+    },
+    "consentText": "أؤكد أن المعلومات المقدمة دقيقة وأن هذا الطلب لا ينشئ علاقة محامٍ-عميل حتى يتم قبوله رسميًا من قبل مكتب الخالدي للمحاماة. أفهم أن هذا الحجز يخضع للتوافر والتأكيد من المكتب.",
+    "submit": {
+      "sending": "جاري الإرسال...",
+      "sendRequest": "إرسال طلب الاستشارة",
+      "note": "سيتم إرسال طلب الاستشارة الخاص بك عبر واتساب إلى فريقنا القانوني"
+    }
+  }
+}

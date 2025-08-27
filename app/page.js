@@ -6,12 +6,10 @@ import Comment from "./components/home/Comment";
 import Points from "./components/home/Points";
 import Convince from "./components/home/Convince";
 import HeroSection from "./components/home/Hero";
-// import Header from "./components/home/Header";
 
 export default function Home() {
   return (
     <div>
-      {/* <Header /> */}
       <HeroSection/>
       <Information/>
       <Paragraph/>
