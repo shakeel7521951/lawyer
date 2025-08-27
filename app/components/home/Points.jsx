@@ -10,6 +10,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import Link from "next/link";
 
 const Points = () => {
   const { t } = useTranslation("home/points");
@@ -102,11 +103,10 @@ const Points = () => {
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header Section */}
           <div
-            className={`text-center mb-12 sm:mb-16 transition-all duration-700 ${
-              isVisible
+            className={`text-center mb-12 sm:mb-16 transition-all duration-700 ${isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
-            }`}
+              }`}
           >
             {/* Badge */}
             <div className="inline-flex items-center space-x-2 bg-[#c0b688]/10 rounded-full px-4 py-2 border border-[#c0b688]/20 mb-4 sm:mb-6">
@@ -151,11 +151,10 @@ const Points = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className={`bg-white rounded-2xl p-6 shadow-lg border border-gray-100 transition-all duration-500 ${
-                  isVisible
+                className={`bg-white rounded-2xl p-6 shadow-lg border border-gray-100 transition-all duration-500 ${isVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8"
-                }`}
+                  }`}
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
                 {/* Mobile Card Header */}
@@ -214,11 +213,10 @@ const Points = () => {
 
           {/* Desktop Slider - Hidden on Mobile */}
           <div
-            className={`hidden md:block relative mb-12 transition-all duration-700 delay-300 ${
-              isVisible
+            className={`hidden md:block relative mb-12 transition-all duration-700 delay-300 ${isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
-            }`}
+              }`}
           >
             {/* Cards Container */}
             <div className="relative overflow-hidden py-8">
@@ -305,12 +303,14 @@ const Points = () => {
                             </div>
 
                             {/* CTA Button */}
-                            <button
-                              className="bg-gradient-to-r from-[#c0b688] to-[#9f8660] text-white px-6 py-3 rounded-lg hover:from-[#9f8660] hover:to-[#494c52] transition-all duration-300 font-medium shadow-lg"
-                              style={{ fontFamily: "'Inter', sans-serif" }}
-                            >
-                              {t("cta")}
-                            </button>
+                            <Link href="/services" passHref>
+                              <button
+                                className="bg-gradient-to-r from-[#c0b688] to-[#9f8660] text-white px-6 py-3 rounded-lg hover:from-[#9f8660] hover:to-[#494c52] transition-all duration-300 font-medium shadow-lg"
+                                style={{ fontFamily: "'Inter', sans-serif" }}
+                              >
+                                {t("cta")}
+                              </button>
+                            </Link>
                           </div>
                         </div>
                       </div>
@@ -341,11 +341,10 @@ const Points = () => {
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    currentSlide === index
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${currentSlide === index
                       ? "bg-[#c0b688] scale-125"
                       : "bg-gray-300 hover:bg-[#c0b688]/50"
-                  }`}
+                    }`}
                 />
               ))}
             </div>
@@ -353,11 +352,10 @@ const Points = () => {
 
           {/* Bottom Stats - Mobile Optimized */}
           <div
-            className={`grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 text-center transition-all duration-700 delay-500 ${
-              isVisible
+            className={`grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 text-center transition-all duration-700 delay-500 ${isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
-            }`}
+              }`}
           >
             <div className="bg-white rounded-xl p-4 sm:p-6 shadow-md border border-gray-100">
               <div

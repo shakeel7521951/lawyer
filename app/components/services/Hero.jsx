@@ -11,6 +11,7 @@ import {
   ChevronRight,
   Star,
 } from "lucide-react";
+import Link from "next/link";
 
 const Hero = () => {
   const { t } = useTranslation("services/hero");
@@ -23,18 +24,18 @@ const Hero = () => {
   const rawStats = t("stats", { returnObjects: true });
   const stats = Array.isArray(rawStats)
     ? rawStats.map((stat, index) => ({
-        ...stat,
-        icon: [Scale, Star, Building2, Users][index] || Scale,
-      }))
+      ...stat,
+      icon: [Scale, Star, Building2, Users][index] || Scale,
+    }))
     : [];
 
   // Services ko safely handle karna
   const rawServices = t("services", { returnObjects: true });
   const services = Array.isArray(rawServices)
     ? rawServices.map((service, index) => ({
-        ...service,
-        icon: [Building2, Shield, Users, Scale][index] || Scale,
-      }))
+      ...service,
+      icon: [Building2, Shield, Users, Scale][index] || Scale,
+    }))
     : [];
 
   return (
@@ -110,20 +111,24 @@ const Hero = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8 w-full sm:w-auto">
-                <button
-                  className="bg-gradient-to-r from-[#c0b688] to-[#9f8660] text-white px-6 sm:px-8 py-3 rounded-xl font-semibold flex items-center justify-center space-x-2 text-center w-full sm:w-auto"
-                  data-aos="zoom-in-right"
-                >
-                  <span>{t("cta.primary")}</span>
-                  <ChevronRight className="w-5 h-5" />
-                </button>
+                <Link href="/services/legal-support" passHref>
+                  <button
+                    className="bg-gradient-to-r from-[#c0b688] to-[#9f8660] text-white px-6 sm:px-8 py-3 rounded-xl font-semibold flex items-center justify-center space-x-2 text-center w-full sm:w-auto"
+                    data-aos="zoom-in-right"
+                  >
+                    <span>{t("cta.primary")}</span>
+                    <ChevronRight className="w-5 h-5" />
+                  </button>
+                </Link>
 
-                <button
-                  className="border-2 border-white/30 text-white px-6 sm:px-8 py-3 rounded-xl font-semibold w-full sm:w-auto"
-                  data-aos="zoom-in-left"
-                >
-                  {t("cta.secondary")}
-                </button>
+                <Link href="/contact" passHref>
+                  <button
+                    className="border-2 border-white/30 text-white px-6 sm:px-8 py-3 rounded-xl font-semibold w-full sm:w-auto"
+                    data-aos="zoom-in-left"
+                  >
+                    {t("cta.secondary")}
+                  </button>
+                </Link>
               </div>
 
               {/* Stats Mini Grid */}

@@ -2,6 +2,7 @@
 import { useTranslation } from "react-i18next";
 import React from "react";
 import ConsultationForm from "../common/ConsultationForm";
+import Link from "next/link";
 
 export default function HeroSection() {
   const { t } = useTranslation("home/hero");
@@ -30,7 +31,7 @@ export default function HeroSection() {
         </div>
 
         {/* Main Content */}
-        <div className="relative z-10 flex items-center min-h-screen">
+        <div className="relative flex items-center min-h-screen">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
               {/* Left Side - Text */}
@@ -69,9 +70,11 @@ export default function HeroSection() {
                   >
                     {t("hero.buttonConsultation")}
                   </button>
-                  <button className="px-5 lg:px-7 py-3 lg:py-4 border-2 border-[#c0b688] text-[#c0b688] font-medium rounded-lg hover:bg-[#c0b688] hover:text-white transition-transform duration-300 hover:scale-105 text-sm lg:text-base">
-                    {t("hero.buttonServices")}
-                  </button>
+                  <Link href="/services" passHref>
+                    <button className="px-5 lg:px-7 py-3 lg:py-4 border-2 border-[#c0b688] text-[#c0b688] font-medium rounded-lg hover:bg-[#c0b688] hover:text-white transition-transform duration-300 hover:scale-105 text-sm lg:text-base">
+                      {t("hero.buttonServices")}
+                    </button>
+                  </Link>
                 </div>
 
                 {/* Trust Indicators */}
