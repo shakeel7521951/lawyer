@@ -1,33 +1,57 @@
 "use client";
 import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Scale, Building2, Users, Shield, ChevronRight, Star } from "lucide-react";
+import {
+  Scale,
+  Building2,
+  Users,
+  Shield,
+  ChevronRight,
+  Star,
+} from "lucide-react";
 
 const Hero = () => {
+  const { t } = useTranslation("services/hero");
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
-  const stats = [
-    { number: "500+", label: "Cases Handled", icon: Scale },
-    { number: "25+", label: "Years Experience", icon: Star },
-    { number: "4", label: "Service Categories", icon: Building2 },
-    { number: "6", label: "GCC Countries", icon: Users },
-  ];
+  // Stats ko safely handle karna
+  const rawStats = t("stats", { returnObjects: true });
+  const stats = Array.isArray(rawStats)
+    ? rawStats.map((stat, index) => ({
+        ...stat,
+        icon: [Scale, Star, Building2, Users][index] || Scale,
+      }))
+    : [];
+
+  // Services ko safely handle karna
+  const rawServices = t("services", { returnObjects: true });
+  const services = Array.isArray(rawServices)
+    ? rawServices.map((service, index) => ({
+        ...service,
+        icon: [Building2, Shield, Users, Scale][index] || Scale,
+      }))
+    : [];
 
   return (
     <>
       {/* Google Fonts */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+      <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossOrigin="true"
+      />
       <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600;700&family=Crimson+Text:wght@400;600&display=swap"
         rel="stylesheet"
       />
 
       <section className="relative w-full bg-gradient-to-br from-[#494c52] via-[#494c52] to-[#9f8660] py-20 sm:py-24 overflow-hidden">
-
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div
@@ -38,17 +62,8 @@ const Hero = () => {
           ></div>
         </div>
 
-        {/* Floating Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-2 h-2 bg-[#c0b688] rounded-full animate-pulse opacity-40"></div>
-          <div className="absolute top-40 right-20 w-1 h-1 bg-[#c0b688] rounded-full animate-pulse opacity-30 delay-1000"></div>
-          <div className="absolute bottom-32 left-32 w-3 h-3 bg-[#9f8660] rounded-full animate-pulse opacity-35 delay-500"></div>
-          <div className="absolute top-1/3 right-1/4 w-1.5 h-1.5 bg-white rounded-full animate-pulse opacity-25 delay-700"></div>
-        </div>
-
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
             {/* Left Content */}
             <div data-aos="fade-right">
               {/* Badge */}
@@ -58,7 +73,7 @@ const Hero = () => {
               >
                 <Scale className="w-4 h-4 text-[#c0b688]" />
                 <span className="text-[#c0b688] font-semibold text-sm tracking-wider">
-                  COMPREHENSIVE LEGAL SERVICES
+                  {t("badge")}
                 </span>
               </div>
 
@@ -67,12 +82,12 @@ const Hero = () => {
                 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight"
                 data-aos="fade-up"
               >
-                Expert Legal{" "}
+                {t("heading.title")}{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c0b688] to-[#9f8660]">
-                  Services
+                  {t("heading.titletwo")}
                 </span>
                 <br />
-                Across the GCC
+                {t("heading.titlethree")}
               </h1>
 
               {/* Decorative Line */}
@@ -90,9 +105,7 @@ const Hero = () => {
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                From corporate law to individual representation, from government institutions to specialized banking services,
-                <span className="font-semibold text-[#c0b688]"> Al-Khaldi Law Firm</span> provides comprehensive legal solutions
-                backed by over 25 years of professional excellence and deep expertise across all legal domains.
+                {t("description")}
               </p>
 
               {/* CTA Buttons */}
@@ -101,7 +114,7 @@ const Hero = () => {
                   className="bg-gradient-to-r from-[#c0b688] to-[#9f8660] text-white px-6 sm:px-8 py-3 rounded-xl font-semibold flex items-center justify-center space-x-2 text-center w-full sm:w-auto"
                   data-aos="zoom-in-right"
                 >
-                  <span>Explore Our Services</span>
+                  <span>{t("cta.primary")}</span>
                   <ChevronRight className="w-5 h-5" />
                 </button>
 
@@ -109,10 +122,9 @@ const Hero = () => {
                   className="border-2 border-white/30 text-white px-6 sm:px-8 py-3 rounded-xl font-semibold w-full sm:w-auto"
                   data-aos="zoom-in-left"
                 >
-                  Contact Us Today
+                  {t("cta.secondary")}
                 </button>
               </div>
-
 
               {/* Stats Mini Grid */}
               <div className="grid grid-cols-2 gap-4">
@@ -146,16 +158,11 @@ const Hero = () => {
                     className="text-2xl font-bold text-white mb-6 text-center"
                     data-aos="fade-down"
                   >
-                    Our Service Categories
+                    {t("serviceCategoriesHeading")}
                   </h3>
 
                   <div className="space-y-4">
-                    {[
-                      { icon: Building2, title: "Corporate Services", desc: "Company incorporation, IP protection, mergers & acquisitions" },
-                      { icon: Shield, title: "Government Relations", desc: "Legislative consultations, regulatory compliance, governance" },
-                      { icon: Users, title: "Individual Services", desc: "Family law, criminal defense, personal legal matters" },
-                      { icon: Scale, title: "Legal Support", desc: "Banking services, arbitration, risk management" }
-                    ].map((service, index) => (
+                    {services.map((service, index) => (
                       <div
                         key={index}
                         className="flex items-center space-x-4 p-4 bg-white/10 rounded-xl border border-white/20"
@@ -185,7 +192,7 @@ const Hero = () => {
                             data-aos="fade-left"
                             data-aos-delay={index * 200 + 300}
                           >
-                            {service.desc}
+                            {service.description}
                           </p>
                         </div>
 
@@ -206,8 +213,9 @@ const Hero = () => {
                   data-aos="zoom-in"
                 >
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-white">25+</div>
-                    <div className="text-xs text-white/90">Years</div>
+                    <div className="text-2xl font-bold text-white">
+                      {t("floatingStats.years")}
+                    </div>
                   </div>
                 </div>
 
@@ -218,16 +226,13 @@ const Hero = () => {
                 >
                   <div className="text-center">
                     <Shield className="w-6 h-6 text-white mx-auto mb-1" />
-                    <div className="text-xs text-white/90">Trusted</div>
+                    <div className="text-xs text-white/90">
+                      {t("floatingStats.trusted")}
+                    </div>
                   </div>
                 </div>
-
-                {/* Decorative Background */}
-                <div className="absolute -z-10 top-8 right-8 w-32 h-32 bg-[#c0b688]/20 rounded-full blur-xl"></div>
-                <div className="absolute -z-10 bottom-8 left-8 w-24 h-24 bg-white/10 rounded-full blur-xl"></div>
               </div>
             </div>
-
           </div>
 
           {/* Bottom Stats Row */}
@@ -242,8 +247,12 @@ const Hero = () => {
                 <div className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center mx-auto mb-4 border border-white/20">
                   <stat.icon className="w-6 h-6 text-[#c0b688]" />
                 </div>
-                <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
-                <div className="text-sm text-white/70 font-medium">{stat.label}</div>
+                <div className="text-2xl font-bold text-white mb-1">
+                  {stat.number}
+                </div>
+                <div className="text-sm text-white/70 font-medium">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>
