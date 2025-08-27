@@ -1,0 +1,53 @@
+{
+  "company": {
+    "name": "الخالدي",
+    "tagline": "مكتب محاماة",
+    "description": "يوفر الخالدي تميزًا قانونيًا استراتيجيًا في جميع أنحاء منطقة الخليج، ويقدم حلولاً شاملة للحكومة والشركات والأفراد مع خبرة وتفانٍ لا مثيل لهما.",
+    "award": "25+ عامًا من التميز القانوني"
+  },
+  "sections": {
+    "quickLinks": "روابط سريعة",
+    "legalServices": "الخدمات القانونية",
+    "contactUs": "اتصل بنا"
+  },
+  "quickLinks": [
+    { "href": "/", "label": "الرئيسية" },
+    { "href": "/about", "label": "من نحن" },
+    { "href": "/services", "label": "الخدمات" },
+    { "href": "/whyus", "label": "لماذا تختارنا" },
+    { "href": "/blog", "label": "المدونة" },
+    { "href": "/contact", "label": "اتصل بنا" }
+  ],
+  "services": [
+    { "href": "/corporate", "label": "القانون الشركات" },
+    { "href": "/governorg", "label": "العلاقات الحكومية" },
+    { "href": "/IndvidualCustomer", "label": "خدمات الأفراد" },
+    { "href": "/legalsupport", "label": "الدعم القانوني" }
+  ],
+  "contactInfo": [
+    { "label": "+974 6616 4000", "href": "tel:+97466164000" },
+    { "label": "+974 4009 8889", "href": "tel:+97440098889" },
+    { "label": "info@alkhaldi.com", "href": "mailto:info@alkhaldi.com" },
+    { "label": "www.alkhaldi.com", "href": "http://www.alkhaldi.com" },
+    { "label": "الشارع 150، الريان، مبنى رقم 143، منطقة 22، فريج بن محمود، الطابق الثالث", "href": "#" }
+  ],
+  "social": {
+    "follow": "تابعنا"
+  },
+  "newsletter": {
+    "title": "ابق على اطلاع بالأفكار القانونية",
+    "description": "اشترك في نشرتنا الإخبارية للحصول على آخر التحديثات القانونية والأفكار والأخبار من مكتب الخالدي للمحاماة.",
+    "placeholder": "أدخل عنوان بريدك الإلكتروني",
+    "button": "اشتراك"
+  },
+  "copyright": "© 2024 الخالدي مكتب الخالدي للمحاماة. جميع الحقوق محفوظة.",
+  "stats": {
+    "casesWon": "قضايا ربحت",
+    "clients": "عملاء",
+    "countries": "دول"
+  },
+  "legalLinks": {
+    "privacy": "سياسة الخصوصية",
+    "terms": "شروط الخدمة"
+  }
+}
