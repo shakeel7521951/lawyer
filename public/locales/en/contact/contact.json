@@ -10,6 +10,10 @@
         "phone":"Phone Number",
         "serviceType":"Service Type ",
         "selectServ":"Select a service",
+        "nameRequired":"Full name is required",
+        "emailRequ":"Email is required",
+        "phoneRequ":"Phone number is required",
+
 
         "corporate":"Corporate Services",
         "govt":"Government/Semi-Government",
@@ -19,10 +23,12 @@
         "risk":    "Risk Management",
         "compliance":    "Regulatory Compliance",
         "other":    "Other",
+        "contactInfor":"Contact Information",
 
         "Msg":"Message",
         "mesgDesc":"Please Subscribe Your legal needs in detail...",
-        "sending":"Sending",
+        "sending":"Sending...",
+        "sendReq":"Send Request",
         "sendMsg":"Send Message",
         "wtsp":"Whatsapp",
         "firm":"Law Firm and Legal Consultations",
@@ -32,6 +38,11 @@
         "quickContact":"Quick Contact",
         "callNow":"Call Now",
         "SendEmail":"Send Email",
-        "wtspChat":"Whatsapp Chat"
+        "wtspChat":"Whatsapp Chat",
+
+
+
+        "MsgSendSucfu":"Message sent successfully! We'll contact you soon. ",
+        "MsgSendErro":"    There was an error sending your message. Please try again."
     }
 }

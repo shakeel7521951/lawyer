@@ -43,7 +43,7 @@ const CorporatePg = () => {
 
   return (
     <div className="bg-white text-black min-h-screen">
-      {/* Hero Section */}
+      {/* Hero Sections */}
       <div className="bg-[#0D1B2A] text-white py-20 px-6 text-center">
         <h1 className="text-4xl font-bold mb-4 text-gold">Corporate Services</h1>
         <p className="max-w-2xl mx-auto text-lg">

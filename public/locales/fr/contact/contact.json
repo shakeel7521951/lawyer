@@ -2,7 +2,7 @@
   "form": {
     "contactform": "FORMULAIRE DE CONTACT",
     "sendmsg": "Envoyez-nous un message",
-    "desc": "Contactez nos experts juridiques. Nous vous répondrons sous 24 heures pour discuter de vos besoins juridiques.",
+    "desc": "Contactez nos experts juridiques. Nous répondrons dans les 24 heures pour discuter de vos besoins juridiques.",
     "name": "Nom complet",
     "inputName": "Entrez votre nom complet",
     "email": "Adresse e-mail",
@@ -10,28 +10,36 @@
     "phone": "Numéro de téléphone",
     "serviceType": "Type de service",
     "selectServ": "Sélectionnez un service",
+    "nameRequired": "Le nom complet est requis",
+    "emailRequ": "L'adresse e-mail est requise",
+    "phoneRequ": "Le numéro de téléphone est requis",
 
     "corporate": "Services aux entreprises",
-    "govt": "Gouvernement / Semi-gouvernement",
+    "govt": "Gouvernement/Semi-gouvernement",
     "individual": "Services individuels",
     "banking": "Services juridiques bancaires",
     "arbitration": "Arbitrage",
     "risk": "Gestion des risques",
     "compliance": "Conformité réglementaire",
     "other": "Autre",
+    "contactInfor": "Informations de contact",
 
     "Msg": "Message",
     "mesgDesc": "Veuillez décrire vos besoins juridiques en détail...",
-    "sending": "Envoi en cours",
+    "sending": "Envoi...",
+    "sendReq": "Envoyer la demande",
     "sendMsg": "Envoyer le message",
     "wtsp": "Whatsapp",
-    "firm": "Cabinet d’avocats et consultations juridiques",
+    "firm": "Cabinet d'avocats et consultations juridiques",
     "officeAddress": "Adresse du bureau",
-    "address": "Rue 150, Al Rayyan, Bâtiment n° 143, Zone 22, Fereej Bin Mahmoud, 3ème étage",
-    "businessHour": "Heures de bureau",
+    "address": "Rue 150, Al Rayyan, Bâtiment n° 143, Zone 22, Fereej Bin Mahmoud, 3e étage",
+    "businessHour": "Heures d'ouverture",
     "quickContact": "Contact rapide",
     "callNow": "Appeler maintenant",
     "SendEmail": "Envoyer un e-mail",
-    "wtspChat": "Chat Whatsapp"
+    "wtspChat": "Discussion Whatsapp",
+
+    "MsgSendSucfu": "Message envoyé avec succès ! Nous vous contacterons bientôt.",
+    "MsgSendErro": "Une erreur est survenue lors de l'envoi de votre message. Veuillez réessayer."
   }
 }
