@@ -1,0 +1,43 @@
+{
+  "badge": "SERVICES JURIDIQUES COMPLETS",
+  "heading": {
+    "title": "Services Juridiques",
+    "titletwo": "Experts",
+    "titlethree": "à Travers le CCG",
+    "highlight": "Services"
+  },
+  "description": "Du droit des sociétés à la représentation individuelle, des institutions gouvernementales aux services bancaires spécialisés, le cabinet Al-Khaldi offre des solutions juridiques complètes avec plus de 25 ans d’excellence professionnelle et une expertise approfondie dans tous les domaines du droit.",
+  "cta": {
+    "primary": "Découvrez Nos Services",
+    "secondary": "Contactez-nous dès aujourd’hui"
+  },
+  "stats": [
+    { "number": "500+", "label": "Affaires traitées" },
+    { "number": "25+", "label": "Années d’expérience" },
+    { "number": "4", "label": "Catégories de services" },
+    { "number": "6", "label": "Pays du CCG" }
+  ],
+  "services": [
+    {
+      "title": "Services aux entreprises",
+      "description": "Création de sociétés, protection de la propriété intellectuelle, fusions et acquisitions"
+    },
+    {
+      "title": "Relations gouvernementales",
+      "description": "Consultations législatives, conformité réglementaire, gouvernance"
+    },
+    {
+      "title": "Services individuels",
+      "description": "Droit de la famille, défense pénale, affaires personnelles"
+    },
+    {
+      "title": "Support juridique",
+      "description": "Services bancaires, arbitrage, gestion des risques"
+    }
+  ],
+  "serviceCategoriesHeading": "Nos Catégories de Services",
+  "floatingStats": {
+    "years": "25+ Ans",
+    "trusted": "Fiable"
+  }
+}

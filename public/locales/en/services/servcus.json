@@ -1,0 +1,49 @@
+{
+  "header": {
+    "badge": "OUR SERVICES",
+    "title": "Expert Legal",
+    "titletwo": "Solutions",
+    "description": "Comprehensive legal expertise across four core service areas, ensuring complete coverage for all your legal needs."
+  },
+  "services": [
+    {
+      "title": "Corporate Services",
+      "subtitle": "Business Legal Solutions",
+      "description": "Complete legal framework for corporations including incorporation, IP protection, and commercial transactions.",
+      "features": ["Company Incorporation", "IP Protection", "Foreign Investments", "Commercial Contracts"],
+      "btnText": "Explore Services"
+    },
+    {
+      "title": "Government Relations",
+      "subtitle": "Public Sector Excellence",
+      "description": "Specialized counsel for government institutions including legislative consultations and compliance.",
+      "features": ["Legislative Consultations", "Governance Practices", "Regulatory Compliance", "Government Tendering"],
+      "btnText": "View Services"
+    },
+    {
+      "title": "Individual Services",
+      "subtitle": "Personal Legal Protection",
+      "description": "Comprehensive personal legal services covering family law, immigration, and personal matters.",
+      "features": ["Family & Criminal Law", "Immigration Services", "Estate Planning", "Personal Contracts"],
+      "btnText": "Learn More"
+    },
+    {
+      "title": "Legal Support",
+      "subtitle": "Specialized Framework",
+      "description": "Advanced legal support including banking services, arbitration, and compliance consulting.",
+      "features": ["Banking Legal Services", "Arbitration & Mediation", "Risk Management", "AML Compliance"],
+      "btnText": "Discover More"
+    }
+  ],
+  "cardFooter": {
+    "title": "Professional Legal Excellence",
+    "description": "25+ years of expertise across all legal domains with unmatched service quality."
+  },
+  "stats": [
+    { "icon": "Scale", "number": "500+", "label": "Cases" },
+    { "icon": "Award", "number": "25+", "label": "Years" },
+    { "icon": "Building2", "number": "100+", "label": "Clients" },
+    { "icon": "Globe", "number": "6", "label": "Countries" }
+  ],
+  "imageOverlay": "PROFESSIONAL EXPERTISE"
+}

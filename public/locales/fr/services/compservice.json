@@ -1,0 +1,139 @@
+{
+  "header": {
+    "badge": "PORTFOLIO DE SERVICES",
+    "title": "Détail",
+    "titletwo": "des",
+    "titlethree": "Services",
+    "description": "Découvrez notre gamme complète de services juridiques spécialisés, adaptés à vos besoins spécifiques."
+  },
+  "categories": [
+    {
+      "title": "Services aux Entreprises",
+      "subtitle": "Solutions Juridiques pour les Affaires",
+      "description": "Cadre juridique complet pour les entreprises, de la constitution à la gestion de transactions commerciales complexes.",
+      "services": [
+        {
+          "title": "Constitution de Société",
+          "description": "Consultations juridiques pour la création d’entreprises et l’installation commerciale dans la région du CCG."
+        },
+        {
+          "title": "Protection de la Propriété Intellectuelle",
+          "description": "Protection complète des brevets, marques, droits d’auteur et droits de propriété intellectuelle."
+        },
+        {
+          "title": "Investissements Étrangers & Filiales",
+          "description": "Accompagnement juridique pour les investissements internationaux et l’établissement de filiales à l’étranger."
+        },
+        {
+          "title": "Gouvernance & Transparence",
+          "description": "Consultations sur les meilleures pratiques en matière de gouvernance d’entreprise et de transparence."
+        },
+        {
+          "title": "Consultations en Droit Fiscal",
+          "description": "Conseils d’experts sur la réglementation fiscale et la conformité des entités commerciales."
+        },
+        {
+          "title": "Contentieux Commercial",
+          "description": "Représentation devant les tribunaux pour litiges commerciaux, avec mémoires de défense et plaidoyers."
+        }
+      ]
+    },
+    {
+      "title": "Services Gouvernementaux & Quasi-Gouvernementaux",
+      "subtitle": "Excellence Juridique pour le Secteur Public",
+      "description": "Conseil juridique spécialisé pour les institutions publiques et la conformité réglementaire.",
+      "services": [
+        {
+          "title": "Consultations Législatives",
+          "description": "Avis juridiques sur les dernières évolutions législatives et réglementaires pertinentes."
+        },
+        {
+          "title": "Bonnes Pratiques de Gouvernance",
+          "description": "Conseils sur les meilleures pratiques en matière de gouvernance et de transparence dans les institutions publiques."
+        },
+        {
+          "title": "Enquêtes Réglementaires",
+          "description": "Assistance juridique pour répondre aux demandes du Bureau d’audit et des comités administratifs."
+        },
+        {
+          "title": "Conformité aux Appels d’Offres",
+          "description": "Vérification de la conformité légale des procédures d’appels d’offres et de soumissions publiques."
+        },
+        {
+          "title": "Consultations en Investissement d’Actifs",
+          "description": "Conseils juridiques sur l’investissement des actifs institutionnels publics et des ressources étatiques."
+        },
+        {
+          "title": "Accords Internationaux",
+          "description": "Rédaction d’accords judiciaires, internationaux et de règlements institutionnels."
+        }
+      ]
+    },
+    {
+      "title": "Services aux Particuliers",
+      "subtitle": "Protection Juridique Personnelle",
+      "description": "Services juridiques complets pour toutes les affaires légales individuelles.",
+      "services": [
+        {
+          "title": "Droit de la Famille & Droit Pénal",
+          "description": "Consultations juridiques en matière civile, pénale et familiale avec représentation experte."
+        },
+        {
+          "title": "Création d’Entreprise Individuelle",
+          "description": "Consultations juridiques pour la constitution et la gestion d’entreprises individuelles."
+        },
+        {
+          "title": "Faillite & Règlements Financiers",
+          "description": "Assistance juridique pour les particuliers confrontés à la faillite et aux difficultés financières."
+        },
+        {
+          "title": "Propriété Intellectuelle",
+          "description": "Consultations juridiques en matière de droit de la propriété intellectuelle et dépôts de brevets."
+        },
+        {
+          "title": "Immigration & Services de Visa",
+          "description": "Conseils pour les demandes de visa et de résidence, que ce soit pour études ou travail à l’étranger."
+        },
+        {
+          "title": "Planification Successorale",
+          "description": "Rédaction de testaments, gestion de successions, affaires d’héritage et services de règlement de litiges."
+        }
+      ]
+    },
+    {
+      "title": "Services de Soutien Juridique",
+      "subtitle": "Cadre Juridique Spécialisé",
+      "description": "Support juridique avancé incluant services bancaires, arbitrage et conformité réglementaire.",
+      "services": [
+        {
+          "title": "Services Juridiques Bancaires",
+          "description": "Services juridiques complets pour les banques incluant rédaction de contrats et résolution de litiges."
+        },
+        {
+          "title": "Services d’Arbitrage",
+          "description": "Équipe spécialisée en arbitrage avec arbitres certifiés pour les litiges nationaux et internationaux."
+        },
+        {
+          "title": "Gestion des Risques",
+          "description": "Évaluation des risques, élaboration de politiques et mise en place de systèmes de gestion des risques d’entreprise."
+        },
+        {
+          "title": "Lutte contre le Blanchiment d’Argent",
+          "description": "Évaluations de conformité LBA, rédaction de politiques et conseils en conformité réglementaire."
+        },
+        {
+          "title": "Gouvernance d’Entreprise",
+          "description": "Évaluation des systèmes de gouvernance, élaboration de politiques et mise en place de structures de gouvernance."
+        },
+        {
+          "title": "Recouvrement de Créances",
+          "description": "Département spécialisé dans l’exécution des jugements civils et le recouvrement de dettes dans tous les secteurs."
+        }
+      ]
+    }
+  ],
+  "footer": {
+    "services_count_label": "services spécialisés dans cette catégorie",
+    "button": "Voir Tous les Services"
+  }
+}
