@@ -1,9 +1,12 @@
+"use client";
 import React from "react";
-import { notFound } from "next/navigation";
+import { useTranslation } from "react-i18next";
 import ServiceDetail from "../../components/services/ServiceDetail";
-import ServiceDetailClient from "./ServiceDetailClient";
 
- const servicesData = {
+export default function ServiceDetailClient({ servicesData }) {
+  const { t } = useTranslation("home/home");
+
+  const translated = {
     "corporate-services": {
       id: "corporate-services",
       title: "Corporate Services",
@@ -585,35 +588,5 @@ import ServiceDetailClient from "./ServiceDetailClient";
     },
   };
 
-export default function ServiceDetailPage({ params }) {
-  const { slug } = params;
-  const serviceData = servicesData[slug];
-
-  if (!serviceData) {
-    notFound();
-  }
-
-  return <ServiceDetail serviceData={serviceData} />;
-}
-
-export async function generateStaticParams() {
-  return Object.keys(servicesData).map((slug) => ({
-    slug: slug,
-  }));
-}
-
-export async function generateMetadata({ params }) {
-  const { slug } = params;
-  const serviceData = servicesData[slug];
-
-  if (!serviceData) {
-    return {
-      title: "Service Not Found",
-    };
-  }
-
-  return {
-    title: `${serviceData.title} - Al-Khaldi Law Firm`,
-    description: serviceData.description,
-  };
+  return <ServiceDetail serviceData={translated} />;
 }
