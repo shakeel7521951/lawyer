@@ -64,7 +64,7 @@ const Individual = () => {
         </p>
       </div>
 
-      {/* Image and Info */}
+      {/* Image and Info ok */}
       <div className="flex flex-col md:flex-row items-center gap-10 p-6 md:p-12">
       <div className="w-1/2 h-100 ">
           <img
