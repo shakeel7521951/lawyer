@@ -11,6 +11,7 @@ import {
   Award,
   CheckCircle,
 } from "lucide-react";
+import Link from "next/link";
 
 const Information = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -37,6 +38,7 @@ const Information = () => {
       image: "/about/corporate.jpeg",
       features: t("services.corporate.features", { returnObjects: true }),
       icon: Building2,
+      href: "/services/corporate-services",
     },
     {
       id: 2,
@@ -46,6 +48,7 @@ const Information = () => {
       image: "/home/government.jpg",
       features: t("services.government.features", { returnObjects: true }),
       icon: Shield,
+      href: "/services/government-services",
     },
     {
       id: 3,
@@ -55,6 +58,7 @@ const Information = () => {
       image: "/about/individual.jpeg",
       features: t("services.individual.features", { returnObjects: true }),
       icon: Users,
+      href: "/services/individual-services",
     },
     {
       id: 4,
@@ -64,6 +68,7 @@ const Information = () => {
       image: "/about/legalsprt.jpeg",
       features: t("services.specialized.features", { returnObjects: true }),
       icon: Scale,
+      href: "/services",
     },
   ];
 
@@ -138,11 +143,10 @@ const Information = () => {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className={`text-center transition-all duration-500 ${
-                  isVisible
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-4"
-                }`}
+                className={`text-center transition-all duration-500 ${isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-4"
+                  }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-4 sm:p-6 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
@@ -167,15 +171,15 @@ const Information = () => {
           </div>
 
           {/* Services Section */}
+          {/* Services Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {services.map((service, index) => (
               <div
                 key={service.id}
-                className={`group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden ${
-                  isVisible
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-8"
-                }`}
+                className={`group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col h-full ${isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
+                  }`}
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
                 {/* Image Section */}
@@ -206,7 +210,7 @@ const Information = () => {
                 </div>
 
                 {/* Content Section */}
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-grow">
                   {/* Title */}
                   <h3
                     className="text-xl sm:text-2xl font-semibold text-[#494c52] mb-3 group-hover:text-[#9f8660] transition-colors duration-300"
@@ -217,7 +221,7 @@ const Information = () => {
 
                   {/* Description */}
                   <p
-                    className="text-gray-600 text-sm sm:text-base mb-4 leading-relaxed"
+                    className="text-gray-600 text-sm sm:text-base mb-4 leading-relaxed flex-grow"
                     style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     {service.description}
@@ -240,17 +244,20 @@ const Information = () => {
                   </div>
 
                   {/* Learn More Button */}
-                  <button
-                    className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 bg-[#c0b688] text-white rounded-lg hover:bg-[#9f8660] transition-colors duration-300 text-sm font-medium"
-                    style={{ fontFamily: "'Inter', sans-serif" }}
-                  >
-                    {t("buttons.learn_more")}
-                    <ChevronRight className="w-4 h-4 ml-1" />
-                  </button>
+                  <Link href={service.href} passHref>
+                    <button
+                      className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 bg-[#c0b688] text-white rounded-lg hover:bg-[#9f8660] transition-colors duration-300 text-sm font-medium mt-auto"
+                      style={{ fontFamily: "'Inter', sans-serif" }}
+                    >
+                      {t("buttons.learn_more")}
+                      <ChevronRight className="w-4 h-4 ml-1" />
+                    </button>
+                  </Link>
                 </div>
               </div>
             ))}
           </div>
+
 
           {/* Call to Action */}
           <div className="text-center mt-12 sm:mt-16">
@@ -267,6 +274,7 @@ const Information = () => {
               >
                 {t("cta.subtitle")}
               </p>
+              <Link href="/contact" passHref>
               <button
                 className="inline-flex items-center px-6 py-3 bg-white text-[#494c52] rounded-lg hover:bg-gray-50 transition-colors duration-300 font-medium"
                 style={{ fontFamily: "'Inter', sans-serif" }}
@@ -274,6 +282,7 @@ const Information = () => {
                 {t("buttons.contact_us")}
                 <ChevronRight className="w-5 h-5 ml-2" />
               </button>
+              </Link>
             </div>
           </div>
         </div>

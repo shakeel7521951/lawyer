@@ -12,11 +12,13 @@ import {
 } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import ConsultationForm from "../common/ConsultationForm";
+import Link from "next/link";
 
 const Convince = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [showConsultationModal, setShowConsultationModal] = useState(false);
   const sectionRef = useRef(null);
+
   const { t } = useTranslation("home/convince");
 
   useEffect(() => {
@@ -96,9 +98,8 @@ const Convince = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div
-          className={`text-center mb-12 md:mb-16 transition-all duration-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+          className={`text-center mb-12 md:mb-16 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
         >
           {/* Badge */}
           <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 border border-[#c0b688]/20 mb-6 shadow-sm">
@@ -122,9 +123,8 @@ const Convince = () => {
 
         {/* Hero Image & Content Section */}
         <div
-          className={`mb-16 md:mb-20 transition-all duration-700 delay-300 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+          className={`mb-16 md:mb-20 transition-all duration-700 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
         >
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Content Side - Left */}
@@ -195,9 +195,8 @@ const Convince = () => {
 
         {/* Features Grid */}
         <div
-          className={`mb-16 transition-all duration-700 delay-500 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+          className={`mb-16 transition-all duration-700 delay-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {features.map((feature, index) => (
@@ -240,9 +239,8 @@ const Convince = () => {
 
         {/* Closing Statement */}
         <div
-          className={`transition-all duration-700 delay-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+          className={`transition-all duration-700 delay-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
         >
           <div className="bg-gradient-to-br from-[#494c52] to-[#9f8660] rounded-2xl p-6 md:p-8 lg:p-12 shadow-2xl relative overflow-hidden">
             <div className="relative z-10 max-w-4xl mx-auto text-center">
@@ -259,12 +257,16 @@ const Convince = () => {
               />
 
               <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-                <button className="bg-white text-[#494c52] px-6 md:px-8 py-3 rounded-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+                <button
+                  onClick={() => setShowConsultationModal(true)}
+                  className="bg-white text-[#494c52] px-6 md:px-8 py-3 rounded-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
                   {t("closing.buttons.consultation")}
                 </button>
-                <button className="border-2 border-white text-white px-6 md:px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-[#494c52] transition-all duration-300">
-                  {t("closing.buttons.learnMore")}
-                </button>
+                <Link href="/about" passHref>
+                  <button className="border-2 border-white text-white px-6 md:px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-[#494c52] transition-all duration-300">
+                    {t("closing.buttons.learnMore")}
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

@@ -9,12 +9,16 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import Link from "next/link";
+import ConsultationForm from "../common/ConsultationForm";
 
 const Objectives = () => {
   const [activeObjective, setActiveObjective] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
   const { t } = useTranslation("home/objectives");
+  const [showConsultationModal, setShowConsultationModal] =
+    React.useState(false);
 
   const objectives = [
     {
@@ -101,15 +105,18 @@ const Objectives = () => {
             }}
           ></div>
         </div>
+        <ConsultationForm
+              isOpen={showConsultationModal}
+              onClose={() => setShowConsultationModal(false)}
+            />
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div
-            className={`text-center mb-12 sm:mb-16 transition-all duration-700 ${
-              isVisible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-8"
-            }`}
+            className={`text-center mb-12 sm:mb-16 transition-all duration-700 ${isVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-8"
+              }`}
           >
             {/* Badge */}
             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-[#c0b688]/30 mb-4 sm:mb-6">
@@ -153,15 +160,13 @@ const Objectives = () => {
             {objectives.map((objective, index) => (
               <div
                 key={objective.id}
-                className={`bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-lg transition-all duration-500 ${
-                  isVisible
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-8"
-                } ${
-                  index === activeObjective
+                className={`bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-lg transition-all duration-500 ${isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
+                  } ${index === activeObjective
                     ? "border-[#c0b688]/50 bg-white/15 scale-105"
                     : ""
-                }`}
+                  }`}
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
                 {/* Mobile Card Header */}
@@ -195,20 +200,18 @@ const Objectives = () => {
 
           {/* Desktop Layout - Hidden on Mobile */}
           <div
-            className={`hidden md:block transition-all duration-700 delay-300 ${
-              isVisible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-8"
-            }`}
+            className={`hidden md:block transition-all duration-700 delay-300 ${isVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-8"
+              }`}
           >
             {/* Vertical Connecting Line */}
             <div className="absolute left-1/2 transform -translate-x-0.5 top-0 bottom-0 w-0.5 bg-white/20 hidden lg:block">
               <div
                 className="w-full bg-gradient-to-b from-[#c0b688] to-[#9f8660] transition-all duration-1000 ease-out"
                 style={{
-                  height: `${
-                    ((activeObjective + 1) / objectives.length) * 100
-                  }%`,
+                  height: `${((activeObjective + 1) / objectives.length) * 100
+                    }%`,
                 }}
               ></div>
             </div>
@@ -217,27 +220,24 @@ const Objectives = () => {
               {objectives.map((objective, index) => (
                 <div
                   key={objective.id}
-                  className={`relative transition-all duration-700 ${
-                    index <= activeObjective
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-60 translate-y-8"
-                  }`}
+                  className={`relative transition-all duration-700 ${index <= activeObjective
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-60 translate-y-8"
+                    }`}
                   style={{ transitionDelay: `${index * 200}ms` }}
                 >
                   {/* Desktop Zigzag Layout */}
                   <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     {/* Content Side */}
                     <div
-                      className={`${
-                        index % 2 === 0 ? "lg:order-1" : "lg:order-2"
-                      } space-y-6`}
+                      className={`${index % 2 === 0 ? "lg:order-1" : "lg:order-2"
+                        } space-y-6`}
                     >
                       <div
-                        className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 lg:p-8 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 ${
-                          index === activeObjective
-                            ? "border-[#c0b688]/50 bg-white/15"
-                            : ""
-                        } group cursor-pointer`}
+                        className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 lg:p-8 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 ${index === activeObjective
+                          ? "border-[#c0b688]/50 bg-white/15"
+                          : ""
+                          } group cursor-pointer`}
                         onClick={() => setActiveObjective(index)}
                       >
                         {/* Number Badge */}
@@ -270,22 +270,23 @@ const Objectives = () => {
                           </p>
 
                           {/* Action Button */}
-                          <button
-                            className="inline-flex items-center text-[#c0b688] hover:text-white transition-colors duration-300 text-sm font-medium"
-                            style={{ fontFamily: "'Inter', sans-serif" }}
-                          >
-                            {t("learnMore")}
-                            <ChevronRight className="w-4 h-4 ml-1" />
-                          </button>
+                          <Link href="/service" passHref>
+                            <button
+                              className="inline-flex items-center text-[#c0b688] hover:text-white transition-colors duration-300 text-sm font-medium"
+                              style={{ fontFamily: "'Inter', sans-serif" }}
+                            >
+                              {t("learnMore")}
+                              <ChevronRight className="w-4 h-4 ml-1" />
+                            </button>
+                          </Link>
                         </div>
                       </div>
                     </div>
 
                     {/* Visual Side - Placeholder for future enhancement */}
                     <div
-                      className={`${
-                        index % 2 === 0 ? "lg:order-2" : "lg:order-1"
-                      } hidden lg:flex items-center justify-center`}
+                      className={`${index % 2 === 0 ? "lg:order-2" : "lg:order-1"
+                        } hidden lg:flex items-center justify-center`}
                     >
                       <div className="w-32 h-32 bg-white/5 rounded-full flex items-center justify-center border border-white/10">
                         <objective.icon className="w-16 h-16 text-white/30" />
@@ -296,11 +297,10 @@ const Objectives = () => {
                   {/* Connection Node for Desktop */}
                   <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-1/2 hidden lg:block">
                     <div
-                      className={`w-6 h-6 rounded-full border-4 transition-all duration-500 ${
-                        index <= activeObjective
-                          ? "border-[#c0b688] bg-gradient-to-br from-[#c0b688] to-[#9f8660]"
-                          : "border-white/30 bg-white/10"
-                      } shadow-lg`}
+                      className={`w-6 h-6 rounded-full border-4 transition-all duration-500 ${index <= activeObjective
+                        ? "border-[#c0b688] bg-gradient-to-br from-[#c0b688] to-[#9f8660]"
+                        : "border-white/30 bg-white/10"
+                        } shadow-lg`}
                     ></div>
                   </div>
                 </div>
@@ -313,11 +313,10 @@ const Objectives = () => {
                 <button
                   key={index}
                   onClick={() => setActiveObjective(index)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    index === activeObjective
-                      ? "bg-[#c0b688] scale-125"
-                      : "bg-white/30 hover:bg-[#c0b688]/50"
-                  }`}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${index === activeObjective
+                    ? "bg-[#c0b688] scale-125"
+                    : "bg-white/30 hover:bg-[#c0b688]/50"
+                    }`}
                 />
               ))}
             </div>
@@ -325,11 +324,10 @@ const Objectives = () => {
 
           {/* Bottom CTA */}
           <div
-            className={`text-center mt-12 sm:mt-16 transition-all duration-700 delay-500 ${
-              isVisible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-8"
-            }`}
+            className={`text-center mt-12 sm:mt-16 transition-all duration-700 delay-500 ${isVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-8"
+              }`}
           >
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 sm:p-8 text-white border border-white/20">
               <h3
@@ -345,6 +343,7 @@ const Objectives = () => {
                 {t("cta.description")}
               </p>
               <button
+                onClick={() => setShowConsultationModal(true)}
                 className="bg-gradient-to-r from-[#c0b688] to-[#9f8660] text-white px-6 py-3 rounded-lg font-medium hover:from-[#9f8660] hover:to-[#494c52] transition-all duration-300 shadow-lg"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >

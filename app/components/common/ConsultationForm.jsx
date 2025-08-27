@@ -300,7 +300,7 @@ Sent via AL KHALDI Law Firm Consultation Form`;
       />
 
       {/* Modal Overlay */}
-      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 pt-10 h-screen">
+      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex items-center justify-center p-4 pt-10 h-screen">
         <div className="bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden relative">
           {/* Modal Header */}
           <div className="bg-gradient-to-r from-[#494c52] to-[#9f8660] p-6 relative overflow-hidden">
