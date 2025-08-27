@@ -41,7 +41,7 @@ export default function ConsultationForm({ isOpen, onClose }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
-  // Form options
+  // Form options all
   const consultationLanguages = [
     { value: "english", label: t("consultationLanguages.english") },
     { value: "arabic", label: t("consultationLanguages.arabic") },
