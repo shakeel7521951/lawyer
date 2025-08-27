@@ -1,0 +1,55 @@
+{
+  "header": {
+    "title": "مكتب الخالدي للمحاماة",
+    "subtitle": "تميز قانوني موثوق منذ 2004"
+  },
+  "form": {
+    "heading": "إنشاء حساب جديد",
+    "account_types": ["فردي", "شركات", "حكومي"],
+    "fields": {
+      "individual": {
+        "full_name": {
+          "label": "الاسم الكامل",
+          "placeholder": "محمد أحمد"
+        }
+      },
+      "corporate": {
+        "company_name": {
+          "label": "اسم الشركة",
+          "placeholder": "شركة ذات مسؤولية محدودة"
+        }
+      },
+      "government": {
+        "department_name": {
+          "label": "اسم الجهة",
+          "placeholder": "وزارة ..."
+        }
+      },
+      "email": {
+        "label": "البريد الإلكتروني",
+        "placeholder": "example@example.com"
+      },
+      "phone": {
+        "label": "رقم الهاتف",
+        "placeholder": "+974 1234 5678"
+      },
+      "password": {
+        "label": "كلمة المرور"
+      },
+      "confirm_password": {
+        "label": "تأكيد كلمة المرور"
+      }
+    },
+    "terms": {
+      "text": "أوافق على ",
+      "links": ["الشروط", "و", "سياسة الخصوصية"]
+    },
+    "buttons": {
+      "signup": "إنشاء حساب"
+    },
+    "footer": {
+      "prompt": "هل لديك حساب بالفعل؟",
+      "login_link": "تسجيل الدخول"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "header": {
+    "title": "Al Khaldi Law Firm",
+    "subtitle": "Trusted Legal Excellence Since 2004"
+  },
+  "form": {
+    "heading": "Create Your Account",
+    "account_types": ["Individual", "Corporate", "Government"],
+    "fields": {
+      "individual": {
+        "full_name": {
+          "label": "Full Name",
+          "placeholder": "John Doe"
+        }
+      },
+      "corporate": {
+        "company_name": {
+          "label": "Company Name",
+          "placeholder": "Company LLC"
+        }
+      },
+      "government": {
+        "department_name": {
+          "label": "Department Name",
+          "placeholder": "Ministry of..."
+        }
+      },
+      "email": {
+        "label": "Email Address",
+        "placeholder": "example@example.com"
+      },
+      "phone": {
+        "label": "Phone Number",
+        "placeholder": "+974 1234 5678"
+      },
+      "password": {
+        "label": "Password"
+      },
+      "confirm_password": {
+        "label": "Confirm Password"
+      }
+    },
+    "terms": {
+      "text": "I agree to the ",
+      "links": ["Terms", "and", "Privacy Policy"]
+    },
+    "buttons": {
+      "signup": "Sign Up"
+    },
+    "footer": {
+      "prompt": "Already have an account?",
+      "login_link": "Login"
+    }
+  }
+}
