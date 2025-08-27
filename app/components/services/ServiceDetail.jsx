@@ -1,4 +1,5 @@
 "use client";
+import { useTranslation } from "react-i18next";
 import React, { useState, useEffect, useRef } from "react";
 import {
   Scale,
@@ -29,6 +30,8 @@ import Link from "next/link";
 import ConsultationForm from "../common/ConsultationForm";
 
 const ServiceDetail = ({ serviceData }) => {
+  const { t } = useTranslation("mainservic/detail")
+
   const [isVisible, setIsVisible] = useState(false);
   const [activeTab, setActiveTab] = useState("overview");
   const [showConsultationModal, setShowConsultationModal] = useState(false);
@@ -457,12 +460,11 @@ const ServiceDetail = ({ serviceData }) => {
               <Phone className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-              Ready to Get Started?
+              {t("ctaSection.heading")}
             </h3>
             <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-              Contact Al-Khaldi Law Firm today to discuss your{" "}
-              {serviceData.title.toLowerCase()} needs. Our expert team is ready
-              to provide you with comprehensive legal solutions.
+              {t("ctaSection.desc1")}{" "}
+              {serviceData.title.toLowerCase()} {t("ctaSection.desc2")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
@@ -471,7 +473,7 @@ const ServiceDetail = ({ serviceData }) => {
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 <Phone className="w-5 h-5" />
-                <span>Schedule Consultation</span>
+                <span>{t("ctaSection.buttons.consultation")}</span>
               </button>
               <button
                 className="border-2 border-white/30 text-white px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-[#494c52] transition-all duration-300 flex items-center space-x-2 justify-center"

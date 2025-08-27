@@ -1,12 +1,8 @@
 {
-  "corpor-services": {
-    "id": "corporate-services",
+  "corporate": {
     "title": "Corporate Services",
     "subtitle": "Business Legal Solutions",
     "description": "Comprehensive legal services for corporations including company incorporation, intellectual property protection, foreign investments, governance consultations, tax law advice, and commercial dispute resolution.",
-    "category": "Business",
-    "image": "/about/corporate.jpeg",
-    "heroImage": "/corporates.jpg",
     "overview": "Our corporate legal services are designed to support businesses of all sizes, from startups to multinational corporations. We provide end-to-end legal solutions that ensure your business operates within legal frameworks while maximizing growth opportunities.",
     "services": [
       {
@@ -86,14 +82,11 @@
       }
     ]
   },
-  "govern-services": {
-    "id": "government-services",
+
+  "government": {
     "title": "Government & Quasi-Government Services",
     "subtitle": "Public Sector Legal Excellence",
     "description": "Specialized legal counsel for government institutions including legislative consultations, governance practices, regulatory compliance, tendering procedures, and institutional dispute resolution.",
-    "category": "Public Sector",
-    "image": "/about/govt.jpeg",
-    "heroImage": "/semi-gov.jpg",
     "overview": "Our government services are tailored to meet the unique needs of public sector institutions. We provide specialized legal counsel that ensures compliance with regulatory frameworks while supporting efficient government operations.",
     "services": [
       {
@@ -173,14 +166,11 @@
       }
     ]
   },
-  "indivi-services": {
-    "id": "individual-services",
+
+  "individual": {
     "title": "Individual Customer Services",
     "subtitle": "Personal Legal Protection",
     "description": "Comprehensive personal legal services covering family law, criminal and civil cases, business incorporation, bankruptcy assistance, immigration matters, and personal legal protection.",
-    "category": "Personal Legal",
-    "image": "/about/individual.jpeg",
-    "heroImage": "/individuals.jpg",
     "overview": "Our individual services are designed to protect and support individuals through various legal challenges. We provide personalized legal solutions that address your specific needs with compassion and expertise.",
     "services": [
       {
@@ -265,14 +255,11 @@
       }
     ]
   },
-  "lega-support": {
-    "id": "legal-support",
+
+  "legalSupport": {
     "title": "Legal Support Services",
     "subtitle": "Specialized Legal Framework",
     "description": "Full-spectrum legal support including banking legal services, arbitration, risk management consultations, anti-money laundering compliance, governance consultations, and debt collection services.",
-    "category": "Specialized Support",
-    "image": "/about/legalsprt.jpeg",
-    "heroImage": "/about/ab4.jpeg",
     "overview": "Our legal support services provide specialized expertise in complex legal areas that require advanced knowledge and experience. We offer comprehensive support for banking, compliance, and specialized legal matters.",
     "services": [
       {
