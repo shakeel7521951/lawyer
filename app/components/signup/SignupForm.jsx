@@ -26,7 +26,6 @@ export default function SignupForm() {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
-  // Safe translation array
   const accountTypes = t("form.account_types", { returnObjects: true }) || [];
 
   return (
