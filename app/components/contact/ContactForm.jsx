@@ -19,20 +19,17 @@ import {
   Shield,
   X,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function ContactForm() {
+  const {t}= useTranslation("contact/contact")
   const [formData, setFormData] = useState({
     fullName: "",
     phone: "",
     email: "",
-    consultationLanguage: "",
-    caseCategory: "",
-    caseDetails: "",
-    consultationMethod: "",
-    preferredDateTime: "",
-    urgencyLevel: "",
-    consentGiven: false,
-    honeypot: "", // Added missing field
+    services: "",
+    message: "",
+    honeypot: "",
   });
 
   const [errors, setErrors] = useState({});
@@ -43,31 +40,23 @@ export default function ContactForm() {
   // AL KHALDI Law Firm contact information
   const firmInfo = {
     address:
-      "Street 150, Al Rayyan, Building No. 143, Area 22, Fereej Bin Mahmoud, 3rd Floor",
+      t("form.address"),
     phones: ["+974 6616 4000", "+974 4009 8889"],
-    email: "info@alkhaldilaw firm.net",
-    website: "www.alkhaldilaw firm.net",
+    email: "info@alkhaldilawfirm.net",
+    website: "www.alkhaldilawfirm.net",
     whatsapp: "+97466164000",
   };
 
-  // Form options
-  const consultationLanguages = [
-    { value: "english", label: "English" },
-    { value: "arabic", label: "Arabic" },
-    { value: "both", label: "Both" },
-  ];
-
-  const caseCategories = [
-    { value: "contracts", label: "Contracts" },
-    { value: "employment", label: "Employment" },
-    { value: "family", label: "Family" },
-    { value: "real-estate", label: "Real Estate" },
-    { value: "business", label: "Business" },
-    { value: "criminal", label: "Criminal" },
-    { value: "corporate", label: "Corporate Services" },
-    { value: "banking", label: "Banking Legal Services" },
-    { value: "arbitration", label: "Arbitration" },
-    { value: "other", label: "Other" },
+  // Services options
+  const servicesOptions = [
+    { value: "corporate", label: t("form.corporate") },
+    { value: "government", label: t("form.govt") },
+    { value: "individual", label:t("form.individual")  },
+    { value: "banking", label: t("form.banking") },
+    { value: "arbitration", label: t("form.arbitration") },
+    { value: "risk-management", label: t("form.risk") },
+    { value: "compliance", label:t("form.compliance") },
+    { value: "other", label: t("form.other") },
   ];
 
   // Handle form input changes
@@ -87,9 +76,9 @@ export default function ContactForm() {
     
     // Simple validation
     const newErrors = {};
-    if (!formData.fullName) newErrors.fullName = "Full name is required";
-    if (!formData.phone) newErrors.phone = "Phone number is required";
-    if (!formData.email) newErrors.email = "Email is required";
+    if (!formData.fullName) newErrors.fullName =t("form.nameRequired");
+    if (!formData.phone) newErrors.phone = t("form.phoneRequ");
+    if (!formData.email) newErrors.email =  t("form.emailRequ");
     
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
@@ -100,8 +89,8 @@ export default function ContactForm() {
     setErrors({});
 
     try {
-      // Format WhatsApp message directly since formatWhatsAppMessage was undefined
-      const whatsappMessage = `New Consultation Request:\n\nName: ${formData.fullName}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nCase Category: ${formData.caseCategory}\nDetails: ${formData.caseDetails}`;
+      // Format WhatsApp message
+      const whatsappMessage = `New Contact Request:\n\nName: ${formData.fullName}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nServices: ${formData.services}\nMessage: ${formData.message}`;
 
       // Open WhatsApp with the formatted message
       const whatsappUrl = `https://wa.me/${firmInfo.whatsapp.replace(
@@ -118,13 +107,8 @@ export default function ContactForm() {
           fullName: "",
           phone: "",
           email: "",
-          consultationLanguage: "",
-          caseCategory: "",
-          caseDetails: "",
-          consultationMethod: "",
-          preferredDateTime: "",
-          urgencyLevel: "",
-          consentGiven: false,
+          services: "",
+          message: "",
           honeypot: "",
         });
         setSubmitStatus(null);
@@ -139,10 +123,10 @@ export default function ContactForm() {
   const openWhatsApp = () => {
     const message = `Hello AL KHALDI Law Firm,\n\nI would like to inquire about legal services.\n\nName: ${
       formData.fullName || "[Your Name]"
-    }\nCase Category: ${
-      caseCategories.find((c) => c.value === formData.caseCategory)?.label ||
-      "[Case Category]"
-    }\nMessage: ${formData.caseDetails || "[Your Message]"}\n\nThank you.`;
+    }\nServices: ${
+      servicesOptions.find((s) => s.value === formData.services)?.label ||
+      "[Service]"
+    }\nMessage: ${formData.message || "[Your Message]"}\n\nThank you.`;
     const whatsappUrl = `https://wa.me/${firmInfo.whatsapp.replace(
       /[^\d]/g,
       ""
@@ -196,7 +180,7 @@ export default function ContactForm() {
                         className="text-[#494c52] font-medium text-sm"
                         style={{ fontFamily: "'Inter', sans-serif" }}
                       >
-                        CONSULTATION BOOKING
+                      {t("form.contactform")}
                       </span>
                     </div>
                   </div>
@@ -223,7 +207,7 @@ export default function ContactForm() {
                         style={{ fontFamily: "'Cormorant Garamond', serif" }}
                       >
                         <User className="w-5 h-5 text-[#9f8660]" />
-                        <span>Personal Information</span>
+                        <span>{t("form.contactInfor")}</span>
                       </h3>
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -233,7 +217,7 @@ export default function ContactForm() {
                             className="block text-sm font-medium text-[#494c52] mb-2"
                             style={{ fontFamily: "'Inter', sans-serif" }}
                           >
-                            Full Name *
+                            {t("form.name")} *
                           </label>
                           <div className="relative">
                             <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -247,7 +231,7 @@ export default function ContactForm() {
                                   ? "border-red-300 bg-red-50"
                                   : "border-gray-200 hover:border-[#c0b688]/50"
                               }`}
-                              placeholder="Enter your full name"
+                              placeholder={t("form.inputName")}
                               style={{ fontFamily: "'Inter', sans-serif" }}
                             />
                           </div>
@@ -265,7 +249,7 @@ export default function ContactForm() {
                             className="block text-sm font-medium text-[#494c52] mb-2"
                             style={{ fontFamily: "'Inter', sans-serif" }}
                           >
-                            Phone Number (WhatsApp) *
+                            {t("form.phone")} ({t("form.wtsp")}) *
                           </label>
                           <div className="relative">
                             <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -290,14 +274,13 @@ export default function ContactForm() {
                             </p>
                           )}
                         </div>
-
-                        {/* Email */}
-                        <div className="md:col-span-2">
+                         {/* Email */}
+                        <div>
                           <label
                             className="block text-sm font-medium text-[#494c52] mb-2"
                             style={{ fontFamily: "'Inter', sans-serif" }}
                           >
-                            Email Address *
+                            {t("form.email")} *
                           </label>
                           <div className="relative">
                             <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -311,7 +294,7 @@ export default function ContactForm() {
                                   ? "border-red-300 bg-red-50"
                                   : "border-gray-200 hover:border-[#c0b688]/50"
                               }`}
-                              placeholder="Enter your email address"
+                              placeholder={t("form.inputEmail")}
                               style={{ fontFamily: "'Inter', sans-serif" }}
                             />
                           </div>
@@ -322,36 +305,58 @@ export default function ContactForm() {
                             </p>
                           )}
                         </div>
-                         {/* Email */}
+
+                        {/* Services */}
+                        <div>
+                          <label
+                            className="block text-sm font-medium text-[#494c52] mb-2"
+                            style={{ fontFamily: "'Inter', sans-serif" }}
+                          >
+                           {t("form.serviceType")}
+                          </label>
+                          <div className="relative">
+                            <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                            <select
+                              name="services"
+                              value={formData.services}
+                              onChange={handleChange}
+                              className="w-full pl-11 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#c0b688]/50 focus:border-[#c0b688] transition-all duration-300 hover:border-[#c0b688]/50 appearance-none"
+                              style={{ fontFamily: "'Inter', sans-serif" }}
+                            >
+                              <option value="">{t("form.selectServ")}</option>
+                              {servicesOptions.map((service) => (
+                                <option key={service.value} value={service.value}>
+                                  {service.label}
+                                </option>
+                              ))}
+                            </select>
+                            <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none">
+                              <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Message */}
                         <div className="md:col-span-2">
                           <label
                             className="block text-sm font-medium text-[#494c52] mb-2"
                             style={{ fontFamily: "'Inter', sans-serif" }}
                           >
-                            Message
+                            {t("form.Msg")}
                           </label>
                           <div className="relative">
-                           
+                            <MessageSquare className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
                             <textarea
-                              type="email"
-                              name="email"
-                              value={formData.email}
+                              name="message"
+                              value={formData.message}
                               onChange={handleChange}
-                              className={`w-full pl-2 pr-4 py-3 h-25 border rounded-xl focus:ring-2 focus:ring-[#c0b688]/50 focus:border-[#c0b688] transition-all duration-300 ${
-                                errors.email
-                                  ? "border-red-300 bg-red-50"
-                                  : "border-gray-200 hover:border-[#c0b688]/50"
-                              }`}
-                              placeholder="Enter Your Message"
+                              className="w-full pl-11 pr-4 py-3 h-32 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#c0b688]/50 focus:border-[#c0b688] transition-all duration-300 hover:border-[#c0b688]/50"
+                              placeholder={t("form.mesgDesc")}
                               style={{ fontFamily: "'Inter', sans-serif" }}
                             />
                           </div>
-                          {errors.email && (
-                            <p className="mt-1 text-sm text-red-600 flex items-center space-x-1">
-                              <AlertCircle className="w-4 h-4" />
-                              <span>{errors.email}</span>
-                            </p>
-                          )}
                         </div>
                       </div>
                     </div>
@@ -371,11 +376,29 @@ export default function ContactForm() {
                         )}
                         <span>
                           {isSubmitting
-                            ? "Sending..."
-                            : "Send Consultation Request"}
+                            ? t("form.sending")
+                            : t("form.sendReq")}
                         </span>
                       </button>
                     </div>
+
+                    {/* Status Messages */}
+                    {submitStatus === "success" && (
+                      <div className="bg-green-50 border border-green-200 rounded-xl p-4 flex items-center space-x-3">
+                        <CheckCircle className="w-5 h-5 text-green-600" />
+                        <p className="text-green-800" style={{ fontFamily: "'Inter', sans-serif" }}>
+                          {t("form.MsgSendSucfu")}
+                        </p>
+                      </div>
+                    )}
+                    {submitStatus === "error" && (
+                      <div className="bg-red-50 border border-red-200 rounded-xl p-4 flex items-center space-x-3">
+                        <AlertCircle className="w-5 h-5 text-red-600" />
+                        <p className="text-red-800" style={{ fontFamily: "'Inter', sans-serif" }}>
+                          {t("form.MsgSendErro")}
+                        </p>
+                      </div>
+                    )}
                   </form>
                 </div>
               </div>
@@ -401,7 +424,7 @@ export default function ContactForm() {
                       className="text-[#c0b688] font-medium"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
-                      Law Firm and Legal Consultations
+                     {t("form.firm")}
                     </p>
                   </div>
 
@@ -416,7 +439,7 @@ export default function ContactForm() {
                           className="font-semibold mb-1"
                           style={{ fontFamily: "'Inter', sans-serif" }}
                         >
-                          Office Address
+                        {t("form.officeAddress")}
                         </h4>
                         <p
                           className="text-white/90 text-sm leading-relaxed"
@@ -437,7 +460,7 @@ export default function ContactForm() {
                           className="font-semibold mb-2"
                           style={{ fontFamily: "'Inter', sans-serif" }}
                         >
-                          Phone Numbers
+                          {t("form.phone")}
                         </h4>
                        {firmInfo.phones.map((phone, index) => (
                           <a
@@ -462,7 +485,7 @@ export default function ContactForm() {
                           className="font-semibold mb-1"
                           style={{ fontFamily: "'Inter', sans-serif" }}
                         >
-                          Email
+                          {t("form.email")}
                         </h4>
                         <a
                           href={`mailto:${firmInfo.email}`}
@@ -484,7 +507,7 @@ export default function ContactForm() {
                           className="font-semibold mb-2"
                           style={{ fontFamily: "'Inter', sans-serif" }}
                         >
-                          Business Hours
+                          {t("form.businessHour")}
                         </h4>
                         <div
                           className="space-y-1 text-sm"
@@ -519,7 +542,7 @@ export default function ContactForm() {
                   className="text-xl font-bold text-[#494c52] mb-4"
                   style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
-                  Quick Contact
+                 {t("form.quickContact")}
                 </h3>
 
                 <div className="space-y-3">
@@ -532,7 +555,7 @@ export default function ContactForm() {
                       className="font-medium text-[#494c52]"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
-                      Call Now
+                      {t("form.callNow")}
                     </span>
                   </a>
 
@@ -545,7 +568,7 @@ export default function ContactForm() {
                       className="font-medium text-[#494c52]"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
-                      Send Email
+                      {t("form.SendEmail")}
                     </span>
                   </a>
 
@@ -564,7 +587,7 @@ export default function ContactForm() {
                       className="font-medium text-green-700"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
-                      WhatsApp Chat
+                     {t("form.wtspChat")}
                     </span>
                   </button>
                 </div>
