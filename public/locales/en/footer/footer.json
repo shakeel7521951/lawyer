@@ -1,0 +1,53 @@
+{
+  "company": {
+    "name": "الخالدي",
+    "tagline": "LAW FIRM",
+    "description": "Al-Khaldi delivers strategic legal excellence across the GCC region, providing comprehensive solutions for government, corporate, and individual clients with unmatched expertise and dedication.",
+    "award": "25+ Years of Legal Excellence"
+  },
+  "sections": {
+    "quickLinks": "Quick Links",
+    "legalServices": "Legal Services",
+    "contactUs": "Contact Us"
+  },
+  "quickLinks": [
+    { "href": "/", "label": "Home" },
+    { "href": "/about", "label": "About Us" },
+    { "href": "/services", "label": "Services" },
+    { "href": "/whyus", "label": "Why Choose Us" },
+    { "href": "/blog", "label": "Blog" },
+    { "href": "/contact", "label": "Contact" }
+  ],
+  "services": [
+    { "href": "/corporate", "label": "Corporate Law" },
+    { "href": "/governorg", "label": "Government Relations" },
+    { "href": "/IndvidualCustomer", "label": "Individual Services" },
+    { "href": "/legalsupport", "label": "Legal Support" }
+  ],
+  "contactInfo": [
+    { "label": "+974 6616 4000", "href": "tel:+97466164000" },
+    { "label": "+974 4009 8889", "href": "tel:+97440098889" },
+    { "label": "info@alkhaldi.com", "href": "mailto:info@alkhaldi.com" },
+    { "label": "www.alkhaldi.com", "href": "http://www.alkhaldi.com" },
+    { "label": "Street 150, Al Rayyan, Building No. 143, Area 22, Fereej Bin Mahmoud, 3rd Floor", "href": "#" }
+  ],
+  "social": {
+    "follow": "Follow Us"
+  },
+  "newsletter": {
+    "title": "Stay Updated with Legal Insights",
+    "description": "Subscribe to our newsletter for the latest legal updates, insights, and news from Al-Khaldi Law Firm.",
+    "placeholder": "Enter your email address",
+    "button": "Subscribe"
+  },
+  "copyright": "© 2024 الخالدي Al-Khaldi Law Firm. All rights reserved.",
+  "stats": {
+    "casesWon": "Cases Won",
+    "clients": "Clients",
+    "countries": "Countries"
+  },
+  "legalLinks": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}
