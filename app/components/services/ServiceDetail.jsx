@@ -487,7 +487,7 @@ const ServiceDetail = ({ serviceData }) => {
         </section>
       </div>
 
-      {/* Consultation Form Modal */}
+      {/* Consultation Form Modals */}
       <ConsultationForm
         isOpen={showConsultationModal}
         onClose={() => setShowConsultationModal(false)}
