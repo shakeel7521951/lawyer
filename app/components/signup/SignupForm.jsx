@@ -1,4 +1,5 @@
 "use client";
+
 import {
   FaUser,
   FaEnvelope,
@@ -11,17 +12,21 @@ import {
   FaPhoneAlt
 } from "react-icons/fa";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function SignupForm() {
+  const { t } = useTranslation("signup/signupform");
   const [showPassword, setShowPassword] = useState(false);
   const [accountType, setAccountType] = useState("individual");
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
+
+  const accountTypes = t("form.account_types", { returnObjects: true }) || [];
 
   return (
     <div className="min-h-screen flex items-center justify-center py-30 px-4 sm:px-8 md:px-12 lg:px-16 sm:py-36 bg-[#494c52]">
@@ -32,10 +37,10 @@ export default function SignupForm() {
         {/* Header */}
         <div className="bg-[#c0b688] py-5 px-4 sm:px-8 text-center">
           <h1 className="text-[#9f8660] font-serif text-2xl sm:text-3xl font-bold">
-            Al Khaldi Law Firm
+            {t("header.title")}
           </h1>
           <p className="text-white text-sm mt-2 tracking-wide">
-            Trusted Legal Excellence Since 2004
+            {t("header.subtitle")}
           </p>
         </div>
 
@@ -45,30 +50,38 @@ export default function SignupForm() {
             className="text-2xl sm:text-3xl font-serif font-bold text-[#494c52] mb-8 text-center"
             data-aos="fade-up"
           >
-            Create Your Account
+            {t("form.heading")}
           </h2>
 
           {/* Account Type Selector */}
           <div className="mb-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {[
-              { type: "individual", icon: FaUser, label: "Individual" },
-              { type: "corporate", icon: FaBuilding, label: "Corporate" },
-              { type: "government", icon: FaLandmark, label: "Government" }
-            ].map(({ type, icon: Icon, label }) => (
-              <button
-                key={type}
-                onClick={() => setAccountType(type)}
-                className={`flex items-center justify-center gap-2 py-2 px-4 rounded-lg border transition-all duration-200 font-semibold text-sm
-                  ${
-                    accountType === type
-                      ? "bg-[#c0b688] text-white border-[#9f8660]"
-                      : " text-[#494c52] border-[#9f8660] hover:border-[#c0b688] hover:text-[#0D1B2A]"
-                  }`}
-              >
-                <Icon size={18} />
-                {label}
-              </button>
-            ))}
+            {Array.isArray(accountTypes) &&
+              accountTypes.map((label, idx) => {
+                const icons = [FaUser, FaBuilding, FaLandmark];
+                const Icon = icons[idx];
+                const type =
+                  idx === 0
+                    ? "individual"
+                    : idx === 1
+                    ? "corporate"
+                    : "government";
+
+                return (
+                  <button
+                    key={label}
+                    onClick={() => setAccountType(type)}
+                    className={`flex items-center justify-center gap-2 py-2 px-4 rounded-lg border transition-all duration-200 font-semibold text-sm
+                      ${
+                        accountType === type
+                          ? "bg-[#c0b688] text-white border-[#9f8660]"
+                          : " text-[#494c52] border-[#9f8660] hover:border-[#c0b688] hover:text-[#0D1B2A]"
+                      }`}
+                  >
+                    <Icon size={18} />
+                    {label}
+                  </button>
+                );
+              })}
           </div>
 
           {/* Input Fields */}
@@ -76,16 +89,16 @@ export default function SignupForm() {
             {
               label:
                 accountType === "individual"
-                  ? "Full Name"
+                  ? t("form.fields.individual.full_name.label")
                   : accountType === "corporate"
-                  ? "Company Name"
-                  : "Department Name",
+                  ? t("form.fields.corporate.company_name.label")
+                  : t("form.fields.government.department_name.label"),
               placeholder:
                 accountType === "individual"
-                  ? "John Doe"
+                  ? t("form.fields.individual.full_name.placeholder")
                   : accountType === "corporate"
-                  ? "Company LLC"
-                  : "Ministry of...",
+                  ? t("form.fields.corporate.company_name.placeholder")
+                  : t("form.fields.government.department_name.placeholder"),
               icon:
                 accountType === "individual"
                   ? FaUser
@@ -95,14 +108,14 @@ export default function SignupForm() {
               type: "text"
             },
             {
-              label: "Email Address",
-              placeholder: "example@example.com",
+              label: t("form.fields.email.label"),
+              placeholder: t("form.fields.email.placeholder"),
               icon: FaEnvelope,
               type: "email"
             },
             {
-              label: "Phone Number",
-              placeholder: "+974 1234 5678",
+              label: t("form.fields.phone.label"),
+              placeholder: t("form.fields.phone.placeholder"),
               icon: FaPhoneAlt,
               type: "tel"
             }
@@ -126,7 +139,10 @@ export default function SignupForm() {
           ))}
 
           {/* Password & Confirm Password */}
-          {["Password", "Confirm Password"].map((label, idx) => (
+          {[
+            { label: t("form.fields.password.label") },
+            { label: t("form.fields.confirm_password.label") }
+          ].map(({ label }, idx) => (
             <div className="mb-5" key={label}>
               <label className="block text-[#494c52] font-semibold mb-2">
                 {label}
@@ -146,7 +162,11 @@ export default function SignupForm() {
                     onClick={() => setShowPassword(!showPassword)}
                     className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#494c52] hover:text-[#9f8660]"
                   >
-                    {showPassword ? <FaEyeSlash size={18} /> : <FaEye size={18} />}
+                    {showPassword ? (
+                      <FaEyeSlash size={18} />
+                    ) : (
+                      <FaEye size={18} />
+                    )}
                   </button>
                 )}
               </div>
@@ -161,30 +181,30 @@ export default function SignupForm() {
               className="mt-1 sm:mt-0 h-4 w-4 text-[#494c52] border-[#9f8660] rounded focus:ring-[#494c52]"
             />
             <label htmlFor="terms" className="ml-2 text-sm text-gray-700">
-              I agree to the{" "}
+              {t("form.terms.text")}
               <Link href="#" className="text-[#9f8660] hover:underline">
-                Terms
+                {t("form.terms.links.0")}
               </Link>{" "}
-              and{" "}
+              {t("form.terms.links.1")}{" "}
               <Link href="#" className="text-[#9f8660] hover:underline">
-                Privacy Policy
+                {t("form.terms.links.2")}
               </Link>
             </label>
           </div>
 
-          {/* Sign Up */}
+          {/* Sign Up Button */}
           <button className="w-full bg-gradient-to-r from-[#9f8660] to-[#c0b688] text-white font-semibold py-2 px-4 rounded-lg transform hover:scale-101 transition-all duration-300 shadow-lg hover:shadow-xl">
-            Sign Up
+            {t("form.buttons.signup")}
           </button>
 
           {/* Already have an account */}
           <div className="text-center mt-4 text-[#0D1B2A]">
-            Already have an account?{" "}
+            {t("form.footer.prompt")}{" "}
             <Link
               href="/login"
               className="text-[#494c52] hover:text-[#9f8660] hover:underline font-medium"
             >
-              Login
+              {t("form.footer.login_link")}
             </Link>
           </div>
         </div>

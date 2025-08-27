@@ -18,8 +18,10 @@ import {
   Shield,
   Users,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function ConsultationForm({ isOpen, onClose }) {
+  const { t } = useTranslation("consultation/consultation");
   const [formData, setFormData] = useState({
     fullName: "",
     phone: "",
@@ -32,43 +34,43 @@ export default function ConsultationForm({ isOpen, onClose }) {
     preferredDateTime: "",
     urgencyLevel: "",
     consentGiven: false,
-    honeypot: "", // Hidden field for spam protection
+    honeypot: "",
   });
 
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
-  // Form options
+  // Form options all
   const consultationLanguages = [
-    { value: "english", label: "English" },
-    { value: "arabic", label: "Arabic" },
-    { value: "both", label: "Both" },
+    { value: "english", label: t("consultationLanguages.english") },
+    { value: "arabic", label: t("consultationLanguages.arabic") },
+    { value: "both", label: t("consultationLanguages.both") },
   ];
 
   const caseCategories = [
-    { value: "contracts", label: "Contracts" },
-    { value: "employment", label: "Employment" },
-    { value: "family", label: "Family" },
-    { value: "real-estate", label: "Real Estate" },
-    { value: "business", label: "Business" },
-    { value: "criminal", label: "Criminal" },
-    { value: "corporate", label: "Corporate Services" },
-    { value: "banking", label: "Banking Legal Services" },
-    { value: "arbitration", label: "Arbitration" },
-    { value: "other", label: "Other" },
+    { value: "contracts", label: t("caseCategories.contracts") },
+    { value: "employment", label: t("caseCategories.employment") },
+    { value: "family", label: t("caseCategories.family") },
+    { value: "real-estate", label: t("caseCategories.real-estate") },
+    { value: "business", label: t("caseCategories.business") },
+    { value: "criminal", label: t("caseCategories.criminal") },
+    { value: "corporate", label: t("caseCategories.corporate") },
+    { value: "banking", label: t("caseCategories.banking") },
+    { value: "arbitration", label: t("caseCategories.arbitration") },
+    { value: "other", label: t("caseCategories.other") },
   ];
 
   const consultationMethods = [
-    { value: "in-person", label: "In-Person" },
-    { value: "online", label: "Online" },
-    { value: "phone", label: "Phone Call" },
+    { value: "in-person", label: t("consultationMethods.in-person") },
+    { value: "online", label: t("consultationMethods.online") },
+    { value: "phone", label: t("consultationMethods.phone") },
   ];
 
   const urgencyLevels = [
-    { value: "normal", label: "Normal" },
-    { value: "urgent", label: "Urgent" },
-    { value: "very-urgent", label: "Very Urgent" },
+    { value: "normal", label: t("urgencyLevels.normal") },
+    { value: "urgent", label: t("urgencyLevels.urgent") },
+    { value: "very-urgent", label: t("urgencyLevels.very-urgent") },
   ];
 
   // Form validation
@@ -77,52 +79,53 @@ export default function ConsultationForm({ isOpen, onClose }) {
 
     // Check honeypot (spam protection)
     if (formData.honeypot) {
-      return false;
+      return false; // or optionally: newErrors.honeypot = t("validation.honeypot");
     }
 
     if (!formData.fullName.trim()) {
-      newErrors.fullName = "Full name is required";
+      newErrors.fullName = t("validation.fullNameRequired");
     }
 
     if (!formData.phone.trim()) {
-      newErrors.phone = "Phone number is required";
+      newErrors.phone = t("validation.phoneRequired");
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = "Email is required";
+      newErrors.email = t("validation.emailRequired");
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = "Please enter a valid email address";
+      newErrors.email = t("validation.emailInvalid");
     }
 
     if (!formData.consultationLanguage) {
-      newErrors.consultationLanguage = "Please select consultation language";
+      newErrors.consultationLanguage = t(
+        "validation.consultationLanguageRequired"
+      );
     }
 
     if (!formData.caseCategory) {
-      newErrors.caseCategory = "Please select case category";
+      newErrors.caseCategory = t("validation.caseCategoryRequired");
     }
 
     if (!formData.caseDetails.trim()) {
-      newErrors.caseDetails = "Case details are required";
+      newErrors.caseDetails = t("validation.caseDetailsRequired");
     } else if (formData.caseDetails.trim().length < 20) {
-      newErrors.caseDetails =
-        "Please provide more detailed case information (at least 20 characters)";
+      newErrors.caseDetails = t("validation.caseDetailsMinLength");
     }
 
     if (!formData.consultationMethod) {
-      newErrors.consultationMethod = "Please select consultation method";
+      newErrors.consultationMethod = t("validation.consultationMethodRequired");
     }
 
     if (!formData.preferredDateTime) {
-      newErrors.preferredDateTime = "Please select preferred date and time";
+      newErrors.preferredDateTime = t("validation.preferredDateTimeRequired");
     }
 
     if (!formData.urgencyLevel) {
-      newErrors.urgencyLevel = "Please select urgency level";
+      newErrors.urgencyLevel = t("validation.urgencyLevelRequired");
     }
 
     if (!formData.consentGiven) {
-      newErrors.consentGiven = "Please accept the consent agreement";
+      newErrors.consentGiven = t("validation.consentGivenRequired");
     }
 
     setErrors(newErrors);
@@ -144,14 +147,14 @@ export default function ConsultationForm({ isOpen, onClose }) {
     const validFiles = files.filter((file) => {
       if (!allowedTypes.includes(file.type)) {
         alert(
-          `File ${file.name} is not supported. Please upload PDF, Word, or Image files only.`
+          `{t("fileValidation.File")} ${file.name} t("fileValidation.unsupportedType")`
         );
         return false;
       }
       if (file.size > 10 * 1024 * 1024) {
         // 10MB limit
         alert(
-          `File ${file.name} is too large. Please upload files under 10MB.`
+          `t("fileValidation.File") ${file.name} t("fileValidation.tooLarge")`
         );
         return false;
       }
@@ -315,13 +318,13 @@ Sent via AL KHALDI Law Firm Consultation Form`;
                     className="text-2xl font-bold text-white"
                     style={{ fontFamily: "'Cormorant Garamond', serif" }}
                   >
-                    Book Legal Consultation
+                    {t("consultation.modalTitle")}
                   </h2>
                   <p
                     className="text-[#c0b688] text-sm"
                     style={{ fontFamily: "'Inter', sans-serif" }}
                   >
-                    AL KHALDI Law Firm & Legal Consultations
+                    {t("consultation.modalSubtitle")}
                   </p>
                 </div>
               </div>
@@ -357,8 +360,8 @@ Sent via AL KHALDI Law Firm Consultation Form`;
                     style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     {submitStatus === "success"
-                      ? "Consultation request sent successfully! We'll contact you soon via WhatsApp."
-                      : "Error sending consultation request. Please try again."}
+                      ? t("consultation.successMessage")
+                      : t("consultation.errorMessage")}
                   </span>
                 </div>
               </div>
@@ -384,7 +387,7 @@ Sent via AL KHALDI Law Firm Consultation Form`;
                   style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
                   <User className="w-5 h-5 text-[#9f8660]" />
-                  <span>Personal Information</span>
+                  <span>{t("consultation.sections.personalInfo")}</span>
                 </h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -394,7 +397,7 @@ Sent via AL KHALDI Law Firm Consultation Form`;
                       className="block text-sm font-medium text-[#494c52] mb-2"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
-                      Full Name *
+                      {t("consultation.fields.fullName")}
                     </label>
                     <div className="relative">
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -408,7 +411,9 @@ Sent via AL KHALDI Law Firm Consultation Form`;
                             ? "border-red-300 bg-red-50"
                             : "border-gray-200 hover:border-[#c0b688]/50"
                         }`}
-                        placeholder="Enter your full name"
+                        placeholder={t(
+                          "consultation.fields.fullNamePlaceholder"
+                        )}
                         style={{ fontFamily: "'Inter', sans-serif" }}
                       />
                     </div>
@@ -426,7 +431,7 @@ Sent via AL KHALDI Law Firm Consultation Form`;
                       className="block text-sm font-medium text-[#494c52] mb-2"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
-                      Phone Number (WhatsApp) *
+                      {t("consultation.fields.phoneNumber")}
                     </label>
                     <div className="relative">
                       <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -458,7 +463,7 @@ Sent via AL KHALDI Law Firm Consultation Form`;
                       className="block text-sm font-medium text-[#494c52] mb-2"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
-                      Email Address *
+                      {t("consultation.fields.email")}
                     </label>
                     <div className="relative">
                       <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -472,7 +477,7 @@ Sent via AL KHALDI Law Firm Consultation Form`;
                             ? "border-red-300 bg-red-50"
                             : "border-gray-200 hover:border-[#c0b688]/50"
                         }`}
-                        placeholder="Enter your email address"
+                        placeholder={t("consultation.fields.emailPlaceholder")}
                         style={{ fontFamily: "'Inter', sans-serif" }}
                       />
                     </div>
@@ -493,7 +498,9 @@ Sent via AL KHALDI Law Firm Consultation Form`;
                   style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
                   <MessageSquare className="w-5 h-5 text-[#9f8660]" />
-                  <span>Consultation Preferences</span>
+                  <span>
+                    {t("consultation.sections.consultationPreferences")}
+                  </span>
                 </h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -503,7 +510,7 @@ Sent via AL KHALDI Law Firm Consultation Form`;
                       className="block text-sm font-medium text-[#494c52] mb-2"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
-                      Preferred Consultation Language *
+                      {t("consultation.fields.consultationLanguage")}
                     </label>
                     <select
                       name="consultationLanguage"
@@ -516,7 +523,10 @@ Sent via AL KHALDI Law Firm Consultation Form`;
                       }`}
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
-                      <option value="">Select language</option>
+                      <option value="">
+                        {" "}
+                        {t("consultation.fields.consultationLanguageSelect")}
+                      </option>
                       {consultationLanguages.map((lang) => (
                         <option key={lang.value} value={lang.value}>
                           {lang.label}
@@ -537,7 +547,7 @@ Sent via AL KHALDI Law Firm Consultation Form`;
                       className="block text-sm font-medium text-[#494c52] mb-2"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
-                      Preferred Consultation Method *
+                      {t("consultation.fields.consultationMethod")}
                     </label>
                     <select
                       name="consultationMethod"
@@ -550,7 +560,9 @@ Sent via AL KHALDI Law Firm Consultation Form`;
                       }`}
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
-                      <option value="">Select method</option>
+                      <option value="">
+                        {t("consultation.fields.consultationMethodSelect")}
+                      </option>
                       {consultationMethods.map((method) => (
                         <option key={method.value} value={method.value}>
                           {method.label}
@@ -571,7 +583,7 @@ Sent via AL KHALDI Law Firm Consultation Form`;
                       className="block text-sm font-medium text-[#494c52] mb-2"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
-                      Preferred Date & Time *
+                      {t("consultation.fields.preferredDateTime")}
                     </label>
                     <div className="relative">
                       <Calendar className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -603,7 +615,7 @@ Sent via AL KHALDI Law Firm Consultation Form`;
                       className="block text-sm font-medium text-[#494c52] mb-2"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
-                      Urgency Level *
+                      {t("consultation.fields.urgencyLevel")}
                     </label>
                     <select
                       name="urgencyLevel"
@@ -616,7 +628,10 @@ Sent via AL KHALDI Law Firm Consultation Form`;
                       }`}
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
-                      <option value="">Select urgency</option>
+                      <option value="">
+                        {" "}
+                        {t("consultation.fields.urgencyLevelSelect")}
+                      </option>
                       {urgencyLevels.map((level) => (
                         <option key={level.value} value={level.value}>
                           {level.label}
@@ -640,7 +655,7 @@ Sent via AL KHALDI Law Firm Consultation Form`;
                   style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
                   <Scale className="w-5 h-5 text-[#9f8660]" />
-                  <span>Case Information</span>
+                  <span> {t("consultation.sections.caseInformation")}</span>
                 </h3>
 
                 {/* Case Category */}
@@ -649,7 +664,7 @@ Sent via AL KHALDI Law Firm Consultation Form`;
                     className="block text-sm font-medium text-[#494c52] mb-2"
                     style={{ fontFamily: "'Inter', sans-serif" }}
                   >
-                    Case Category *
+                    {t("consultation.fields.caseCategory")}
                   </label>
                   <select
                     name="caseCategory"
@@ -662,7 +677,9 @@ Sent via AL KHALDI Law Firm Consultation Form`;
                     }`}
                     style={{ fontFamily: "'Inter', sans-serif" }}
                   >
-                    <option value="">Select case category</option>
+                    <option value="">
+                      {t("consultation.fields.caseCategorySelect")}
+                    </option>
                     {caseCategories.map((category) => (
                       <option key={category.value} value={category.value}>
                         {category.label}
@@ -683,7 +700,7 @@ Sent via AL KHALDI Law Firm Consultation Form`;
                     className="block text-sm font-medium text-[#494c52] mb-2"
                     style={{ fontFamily: "'Inter', sans-serif" }}
                   >
-                    Case Details *
+                    {t("consultation.fields.caseDetails")}
                   </label>
                   <textarea
                     name="caseDetails"
@@ -695,7 +712,9 @@ Sent via AL KHALDI Law Firm Consultation Form`;
                         ? "border-red-300 bg-red-50"
                         : "border-gray-200 hover:border-[#c0b688]/50"
                     }`}
-                    placeholder="Please provide a clear and detailed description of your legal case, including relevant facts, timeline, and any specific concerns you have..."
+                    placeholder={t(
+                      "consultation.fields.caseDetailsPlaceholder"
+                    )}
                     style={{ fontFamily: "'Inter', sans-serif" }}
                   />
                   {errors.caseDetails && (
@@ -712,7 +731,7 @@ Sent via AL KHALDI Law Firm Consultation Form`;
                     className="block text-sm font-medium text-[#494c52] mb-2"
                     style={{ fontFamily: "'Inter', sans-serif" }}
                   >
-                    Upload Documents (Optional)
+                    {t("consultation.fields.fileUpload")}
                   </label>
                   <div className="border-2 border-dashed border-gray-300 rounded-xl p-6 text-center hover:border-[#c0b688]/50 transition-colors duration-300">
                     <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
@@ -720,13 +739,13 @@ Sent via AL KHALDI Law Firm Consultation Form`;
                       className="text-sm text-gray-600 mb-2"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
-                      Upload relevant documents (PDF, Word, Images)
+                      {t("consultation.fields.fileUploadDesc")}
                     </p>
                     <p
                       className="text-xs text-gray-500 mb-3"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
-                      Max file size: 10MB, Max files: 5
+                      {t("consultation.fields.fileUploadLimit")}
                     </p>
                     <input
                       type="file"
@@ -742,7 +761,7 @@ Sent via AL KHALDI Law Firm Consultation Form`;
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
                       <FileText className="w-4 h-4 mr-2" />
-                      Choose Files
+                      {t("consultation.fields.chooseFiles")}
                     </label>
                   </div>
 
@@ -784,7 +803,7 @@ Sent via AL KHALDI Law Firm Consultation Form`;
                   style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
                   <Shield className="w-5 h-5 text-[#9f8660]" />
-                  <span>Consent & Agreement</span>
+                  <span>{t("consultation.sections.consentAgreement")}</span>
                 </h3>
 
                 <div className="flex items-start space-x-3">
@@ -800,11 +819,7 @@ Sent via AL KHALDI Law Firm Consultation Form`;
                       className="text-sm text-gray-700 leading-relaxed"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
-                      I confirm that the information provided is accurate and
-                      that this request does not create a lawyer-client
-                      relationship until formally accepted by AL KHALDI Law
-                      Firm. I understand that this consultation booking is
-                      subject to availability and confirmation from the firm.
+                      {t("consultation.consentText")}
                     </p>
                     {errors.consentGiven && (
                       <p className="mt-2 text-sm text-red-600 flex items-center space-x-1">
@@ -830,7 +845,9 @@ Sent via AL KHALDI Law Firm Consultation Form`;
                     <Send className="w-5 h-5" />
                   )}
                   <span>
-                    {isSubmitting ? "Sending..." : "Send Consultation Request"}
+                    {isSubmitting
+                      ? t("consultation.submit.sending")
+                      : t("consultation.submit.sendRequest")}
                   </span>
                 </button>
 
@@ -838,8 +855,7 @@ Sent via AL KHALDI Law Firm Consultation Form`;
                   className="text-xs text-gray-500 text-center mt-3"
                   style={{ fontFamily: "'Inter', sans-serif" }}
                 >
-                  Your consultation request will be sent via WhatsApp to our
-                  legal team
+                  {t("consultation.submit.note")}
                 </p>
               </div>
             </form>
