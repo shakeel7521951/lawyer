@@ -1,0 +1,49 @@
+{
+  "header": {
+    "badge": "NOS SERVICES",
+    "title": "Solutions Juridiques",
+    "titletwo": "Expertes",
+    "description": "Une expertise juridique complète couvrant quatre domaines principaux, garantissant une prise en charge totale de tous vos besoins juridiques."
+  },
+  "services": [
+    {
+      "title": "Services aux entreprises",
+      "subtitle": "Solutions Juridiques pour les Affaires",
+      "description": "Un cadre juridique complet pour les sociétés, incluant la création, la protection de la propriété intellectuelle et les transactions commerciales.",
+      "features": ["Création d’entreprise", "Protection de la PI", "Investissements étrangers", "Contrats commerciaux"],
+      "btnText": "Explorer les services"
+    },
+    {
+      "title": "Relations gouvernementales",
+      "subtitle": "Excellence du Secteur Public",
+      "description": "Conseils spécialisés pour les institutions gouvernementales, y compris les consultations législatives et la conformité réglementaire.",
+      "features": ["Consultations législatives", "Pratiques de gouvernance", "Conformité réglementaire", "Appels d’offres publics"],
+      "btnText": "Voir les services"
+    },
+    {
+      "title": "Services individuels",
+      "subtitle": "Protection Juridique Personnelle",
+      "description": "Des services juridiques complets pour les particuliers, couvrant le droit de la famille, l’immigration et les affaires personnelles.",
+      "features": ["Droit de la famille et pénal", "Services d’immigration", "Planification successorale", "Contrats personnels"],
+      "btnText": "En savoir plus"
+    },
+    {
+      "title": "Support juridique",
+      "subtitle": "Cadre Spécialisé",
+      "description": "Un support juridique avancé incluant les services bancaires, l’arbitrage et le conseil en conformité.",
+      "features": ["Services juridiques bancaires", "Arbitrage et médiation", "Gestion des risques", "Conformité LBC/FT"],
+      "btnText": "Découvrir plus"
+    }
+  ],
+  "cardFooter": {
+    "title": "Excellence Juridique Professionnelle",
+    "description": "25+ ans d’expérience dans tous les domaines juridiques avec une qualité de service inégalée."
+  },
+  "stats": [
+    { "icon": "Scale", "number": "500+", "label": "Affaires" },
+    { "icon": "Award", "number": "25+", "label": "Années" },
+    { "icon": "Building2", "number": "100+", "label": "Clients" },
+    { "icon": "Globe", "number": "6", "label": "Pays" }
+  ],
+  "imageOverlay": "EXPERTISE PROFESSIONNELLE"
+}

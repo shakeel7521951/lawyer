@@ -1,11 +1,13 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Award, ChevronRight } from "lucide-react";
 import ConsultationForm from "../common/ConsultationForm";
 
 const BottomCta = () => {
+  const { t } = useTranslation("services/bottomcta");
   const [showConsultationModal, setShowConsultationModal] = useState(false);
 
   useEffect(() => {
@@ -41,7 +43,7 @@ const BottomCta = () => {
             className="text-xl sm:text-2xl font-bold mb-3 leading-tight"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
-            Ready for Expert Legal Consultation?
+            {t("cta_section.heading")}
           </h3>
 
           {/* Text */}
@@ -51,8 +53,7 @@ const BottomCta = () => {
             className="text-base text-white/90 leading-relaxed mb-6 max-w-2xl mx-auto"
             style={{ fontFamily: "'Crimson Text', serif" }}
           >
-            Contact Al-Khaldi Law Firm today for comprehensive legal solutions
-            tailored to your specific needs.
+            {t("cta_section.text")}
           </p>
 
           {/* Buttons */}
@@ -64,7 +65,7 @@ const BottomCta = () => {
               className="bg-white text-[#494c52] px-6 py-2 rounded-lg font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-2 justify-center text-sm"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              <span>Schedule Consultation</span>
+              <span>{t("cta_section.buttons.schedule_consultation")}</span>
               <ChevronRight className="w-4 h-4" />
             </button>
 
@@ -74,7 +75,7 @@ const BottomCta = () => {
               className="border border-white/30 text-white px-6 py-2 rounded-lg font-semibold hover:bg-white hover:text-[#494c52] transition-all duration-300 text-sm"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              Download Brochure
+              {t("cta_section.buttons.download_brochure")}
             </button>
           </div>
         </div>
