@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { notFound } from "next/navigation";
 import ServiceDetail from "../../components/services/ServiceDetail";
@@ -6,17 +7,17 @@ import ServiceDetail from "../../components/services/ServiceDetail";
 const servicesData = {
   "corporate-services": {
     id: "corporate-services",
-    title: "Corporate Services",
-    subtitle: "Business Legal Solutions",
-    description: "Comprehensive legal services for corporations including company incorporation, intellectual property protection, foreign investments, governance consultations, tax law advice, and commercial dispute resolution.",
-    category: "Business",
+    title: "Corporate Legal Services",
+    subtitle: "Business Legal Excellence",
+    description: "Comprehensive corporate legal solutions including company formation, intellectual property protection, foreign investments, governance, tax law, commercial litigation, contract drafting, and financial support.",
+    category: "Corporate",
     image: "/about/corporate.jpeg",
     heroImage: "/corporates.jpg",
     overview: "Our corporate legal services are designed to support businesses of all sizes, from startups to multinational corporations. We provide end-to-end legal solutions that ensure your business operates within legal frameworks while maximizing growth opportunities.",
     services: [
       {
-        title: "Company Incorporation",
-        description: "Providing legal consultations for the incorporation of companies across the GCC region with complete compliance support.",
+        title: "Company Formation & Registration",
+        description: "Providing legal consultations on company formation and registration procedures in Qatar and internationally.",
         features: ["Business registration", "Legal structure setup", "Compliance documentation", "Regulatory approvals"]
       },
       {
@@ -67,7 +68,7 @@ const servicesData = {
       {
         step: 1,
         title: "Initial Consultation",
-        description: "We begin with a comprehensive consultation to understand your business needs and legal requirements."
+        description: "We begin with a detailed consultation to understand your business needs and legal requirements."
       },
       {
         step: 2,
@@ -93,7 +94,7 @@ const servicesData = {
   },
   "government-services": {
     id: "government-services",
-    title: "Government & Quasi-Government Services",
+    title: "Government Legal Services",
     subtitle: "Public Sector Legal Excellence",
     description: "Specialized legal counsel for government institutions including legislative consultations, governance practices, regulatory compliance, tendering procedures, and institutional dispute resolution.",
     category: "Public Sector",
@@ -153,7 +154,7 @@ const servicesData = {
     process: [
       {
         step: 1,
-        title: "Institutional Assessment",
+        title: "Initial Assessment",
         description: "We conduct a comprehensive assessment of your institution's legal needs and regulatory environment."
       },
       {
@@ -180,7 +181,7 @@ const servicesData = {
   },
   "individual-services": {
     id: "individual-services",
-    title: "Individual Customer Services",
+    title: "Individual Legal Services",
     subtitle: "Personal Legal Protection",
     description: "Comprehensive personal legal services covering family law, criminal and civil cases, business incorporation, bankruptcy assistance, immigration matters, and personal legal protection.",
     category: "Personal Legal",
@@ -189,7 +190,7 @@ const servicesData = {
     overview: "Our individual services are designed to protect and support individuals through various legal challenges. We provide personalized legal solutions that address your specific needs with compassion and expertise.",
     services: [
       {
-        title: "Family & Criminal Law",
+        title: "Civil & Criminal Cases",
         description: "Providing legal consultations for all kinds of civil, criminal, and family cases with expert representation.",
         features: ["Family dispute resolution", "Criminal defense", "Civil litigation", "Mediation services"]
       },
@@ -245,8 +246,8 @@ const servicesData = {
     process: [
       {
         step: 1,
-        title: "Personal Consultation",
-        description: "We begin with a confidential consultation to understand your personal legal situation and concerns."
+        title: "Initial Consultation",
+        description: "We start with a confidential consultation to understand your personal legal situation and objectives."
       },
       {
         step: 2,
@@ -272,8 +273,8 @@ const servicesData = {
   },
   "legal-support": {
     id: "legal-support",
-    title: "Legal Support Services",
-    subtitle: "Specialized Legal Framework",
+    title: "Specialized Legal Support",
+    subtitle: "Advanced Legal Solutions",
     description: "Full-spectrum legal support including banking legal services, arbitration, risk management consultations, anti-money laundering compliance, governance consultations, and debt collection services.",
     category: "Specialized Support",
     image: "/about/legalsprt.jpeg",
@@ -332,8 +333,8 @@ const servicesData = {
     process: [
       {
         step: 1,
-        title: "Specialized Assessment",
-        description: "We conduct a specialized assessment of your legal support needs and compliance requirements."
+        title: "Initial Consultation",
+        description: "We begin with a detailed consultation to understand your specialized legal requirements and challenges."
       },
       {
         step: 2,
