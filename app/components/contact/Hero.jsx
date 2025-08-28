@@ -142,7 +142,7 @@ const Hero = () => {
                   className="text-[#c0b688] text-xs sm:text-sm font-light tracking-[0.3em]"
                   style={{ fontFamily: "'Cinzel', serif" }}
                 >
-                  GET IN TOUCH
+                  {t("contact.getInTouch")}
                 </div>
                 <div className="w-2 h-2 bg-[#c0b688] rounded-full animate-pulse"></div>
                 <div className="w-16 sm:w-20 h-0.5 bg-gradient-to-l from-transparent to-[#c0b688]"></div>
@@ -260,16 +260,16 @@ const Hero = () => {
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 <div className="flex justify-between" data-aos="fade-right" data-aos-delay="100">
-                  <span>Sunday - Thursday:</span>
+                  <span>{t("contact.sunthur")}</span>
                   <span className="text-[#c0b688]">8:00 AM - 6:00 PM</span>
                 </div>
                 <div className="flex justify-between" data-aos="fade-right" data-aos-delay="200">
-                  <span>Friday:</span>
+                  <span>{t("contact.friday")}</span>
                   <span className="text-[#c0b688]">2:00 PM - 6:00 PM</span>
                 </div>
                 <div className="flex justify-between" data-aos="fade-right" data-aos-delay="300">
-                  <span>Saturday:</span>
-                  <span className="text-white/60">Closed</span>
+                  <span>{t("contact.saturday")}</span>
+                  <span className="text-white/60">{t("contact.closed")}</span>
                 </div>
               </div>
             </div>

@@ -1,5 +1,9 @@
 {
     "form":{
+        "friday":"Friday:",
+        "saturday":"Saturday:",
+        "closed":"Closed",
+        "sunthur":"Sunday - Thursday:",
         "contactform":"CONTACT FORM",
         "sendmsg":"Send Us a Message",
         "desc":"Get in touch with our legal experts. We'll respond within 24 hours to discuss your legal needs.",

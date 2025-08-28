@@ -1,4 +1,5 @@
 "use client";
+import { useTranslation } from "react-i18next";
 import React, { useState, useEffect, useRef } from "react";
 import {
   Scale,
@@ -29,6 +30,8 @@ import Link from "next/link";
 import ConsultationForm from "../common/ConsultationForm";
 
 const ServiceDetail = ({ serviceData }) => {
+  const { t } = useTranslation("mainservic/detail")
+
   const [isVisible, setIsVisible] = useState(false);
   const [activeTab, setActiveTab] = useState("overview");
   const [showConsultationModal, setShowConsultationModal] = useState(false);
@@ -64,10 +67,10 @@ const ServiceDetail = ({ serviceData }) => {
   const ServiceIcon = getServiceIcon(serviceData.id);
 
   const tabs = [
-    { id: "overview", label: "Overview", icon: FileText },
-    { id: "services", label: "Services", icon: Briefcase },
-    { id: "process", label: "Process", icon: Target },
-    { id: "benefits", label: "Benefits", icon: Award },
+    { id: "overview", label: t("ctaSection.Overview"), icon: FileText },
+    { id: "services", label: t("ctaSection.Services"), icon: Briefcase },
+    { id: "process", label: t("ctaSection.Process"), icon: Target },
+    { id: "benefits", label: t("ctaSection.Benefits"), icon: Award },
   ];
 
   return (
@@ -140,14 +143,14 @@ const ServiceDetail = ({ serviceData }) => {
                     style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     <Phone className="w-5 h-5" />
-                    <span>Schedule Consultation</span>
+                    <span>{t("ctaSection.Schedule")}</span>
                   </button>
                   <button
                     className="border-2 border-white/30 text-white px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-[#494c52] transition-all duration-300 flex items-center space-x-2"
                     style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     <Mail className="w-5 h-5" />
-                    <span>Get Quote</span>
+                    <span>{t("ctaSection.GetQuote")}</span>
                   </button>
                 </div>
               </div>
@@ -174,7 +177,7 @@ const ServiceDetail = ({ serviceData }) => {
                             className="text-xs text-white/90"
                             style={{ fontFamily: "'Inter', sans-serif" }}
                           >
-                            Years
+                            {t("ctaSection.Years")}
                           </div>
                         </div>
                         <div>
@@ -185,7 +188,7 @@ const ServiceDetail = ({ serviceData }) => {
                             className="text-xs text-white/90"
                             style={{ fontFamily: "'Inter', sans-serif" }}
                           >
-                            Cases
+                            {t("ctaSection.Cases")}
                           </div>
                         </div>
                         <div>
@@ -196,7 +199,7 @@ const ServiceDetail = ({ serviceData }) => {
                             className="text-xs text-white/90"
                             style={{ fontFamily: "'Inter', sans-serif" }}
                           >
-                            Success
+                            {t("ctaSection.Success")}
                           </div>
                         </div>
                       </div>
@@ -267,7 +270,7 @@ const ServiceDetail = ({ serviceData }) => {
                 <div className="space-y-8">
                   <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 border border-gray-100">
                     <h3 className="text-2xl font-bold text-[#494c52] mb-6">
-                      Service Overview
+                      {t("ctaSection.ServiceOverview")}
                     </h3>
                     <p className="text-gray-700 leading-relaxed text-lg">
                       {serviceData.overview}
@@ -287,7 +290,7 @@ const ServiceDetail = ({ serviceData }) => {
                         className="text-sm text-gray-600 font-medium"
                         style={{ fontFamily: "'Inter', sans-serif" }}
                       >
-                        Specialized Services
+                        {t("ctaSection.SpecializedServices")}
                       </div>
                     </div>
                     <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center">
@@ -301,7 +304,7 @@ const ServiceDetail = ({ serviceData }) => {
                         className="text-sm text-gray-600 font-medium"
                         style={{ fontFamily: "'Inter', sans-serif" }}
                       >
-                        Support Available
+                        {t("ctaSection.SupportAvailable")}
                       </div>
                     </div>
                     <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center">
@@ -315,7 +318,7 @@ const ServiceDetail = ({ serviceData }) => {
                         className="text-sm text-gray-600 font-medium"
                         style={{ fontFamily: "'Inter', sans-serif" }}
                       >
-                        Years Experience
+                        {t("ctaSection.YearsExperience")}
                       </div>
                     </div>
                   </div>
@@ -326,7 +329,7 @@ const ServiceDetail = ({ serviceData }) => {
               {activeTab === "services" && (
                 <div className="space-y-6">
                   <h3 className="text-2xl font-bold text-[#494c52] mb-8 text-center">
-                    Our {serviceData.title} Portfolio
+                    {t("ctaSection.our")} {serviceData.title} {t("ctaSection.portfolio")}
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {serviceData.services.map((service, index) => (
@@ -383,7 +386,7 @@ const ServiceDetail = ({ serviceData }) => {
               {activeTab === "process" && (
                 <div className="space-y-8">
                   <h3 className="text-2xl font-bold text-[#494c52] mb-8 text-center">
-                    Our Service Process
+                    {t("ctaSection.ourserviceprocess")}
                   </h3>
                   <div className="relative">
                     {/* Process Timeline */}
@@ -424,7 +427,7 @@ const ServiceDetail = ({ serviceData }) => {
               {activeTab === "benefits" && (
                 <div className="space-y-8">
                   <h3 className="text-2xl font-bold text-[#494c52] mb-8 text-center">
-                    Why Choose Our {serviceData.title}?
+                    {t("ctaSection.whychoose")} {serviceData.title}?
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {serviceData.benefits.map((benefit, index) => (
@@ -457,12 +460,11 @@ const ServiceDetail = ({ serviceData }) => {
               <Phone className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-              Ready to Get Started?
+              {t("ctaSection.heading")}
             </h3>
             <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-              Contact Al-Khaldi Law Firm today to discuss your{" "}
-              {serviceData.title.toLowerCase()} needs. Our expert team is ready
-              to provide you with comprehensive legal solutions.
+              {t("ctaSection.desc1")}{" "}
+              {serviceData.title.toLowerCase()} {t("ctaSection.desc2")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
@@ -471,7 +473,7 @@ const ServiceDetail = ({ serviceData }) => {
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 <Phone className="w-5 h-5" />
-                <span>Schedule Consultation</span>
+                <span>{t("ctaSection.buttons.consultation")}</span>
               </button>
               <button
                 className="border-2 border-white/30 text-white px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-[#494c52] transition-all duration-300 flex items-center space-x-2 justify-center"
@@ -485,7 +487,7 @@ const ServiceDetail = ({ serviceData }) => {
         </section>
       </div>
 
-      {/* Consultation Form Modal */}
+      {/* Consultation Form Modals */}
       <ConsultationForm
         isOpen={showConsultationModal}
         onClose={() => setShowConsultationModal(false)}
