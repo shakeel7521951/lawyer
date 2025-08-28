@@ -1,13 +1,27 @@
 "use client";
 import { useTranslation } from "react-i18next";
-import React from "react";
+import React, { useEffect } from "react";
 import ConsultationForm from "../common/ConsultationForm";
 import Link from "next/link";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { Scale } from "lucide-react";
 
 export default function HeroSection() {
+  
   const { t } = useTranslation("home/hero");
   const [showConsultationModal, setShowConsultationModal] =
     React.useState(false);
+
+      useEffect(() => {
+        AOS.init({
+          duration: 1200,
+          once: true,
+          offset: 120,
+          easing: "ease-in-out",
+        });
+      }, []);
+
   return (
     <>
       {/* Google Fonts */}
@@ -21,13 +35,17 @@ export default function HeroSection() {
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet"
       />
-
-      <section className="relative w-full min-h-screen overflow-hidden pb-16 pt-22 md:pt-18">
-        {/* Background Gradients */}
+      <section className="relative w-full min-h-screen overflow-hidden pt-25">
+        {/* Background */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#2c3e50] via-[#3d4a5c] to-[#34495e]"></div>
-          <div className="absolute inset-0 bg-gradient-to-tr from-[#9f8660]/15 via-transparent to-[#c0b688]/25"></div>
-          <div className="absolute inset-0 bg-gradient-to-bl from-transparent via-[#494c52]/30 to-[#2c3e50]/50"></div>
+          <img
+            src="/about/legalsprt.jpeg"
+            alt="Legal Victory - Al Khaldi Law Firm"
+            className="w-full h-full object-cover scale-105 transform"
+            data-aos="zoom-out"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#494c52]/60 via-[#494c52]/50 to-[#9f8660]/55"></div>
+          <div className="absolute inset-0 bg-black/30"></div>
         </div>
 
         {/* Main Content */}
@@ -37,25 +55,25 @@ export default function HeroSection() {
               {/* Left Side - Text */}
               <div className="space-y-6 lg:space-y-8 text-center lg:text-left">
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
-                  <span className="block text-[#c0b688]">
+                  <span data-aos="zoom-in" data-aos-delay="100" className="block text-[#c0b688]">
                     الخالدي للمحاماة والاستشارات القانونية
                   </span>
-                  <span className="block text-white text-xl sm:text-2xl lg:text-3xl font-normal tracking-wide mt-2">
+                  <span data-aos="fade-up" data-aos-delay="200" className="block text-white text-xl sm:text-2xl lg:text-3xl font-normal tracking-wide mt-2">
                     {t("hero.title")}
                   </span>
                 </h1>
 
                 <div className="flex items-center justify-center lg:justify-start space-x-3 mt-2">
-                  <div className="w-10 lg:w-14 h-0.5 bg-[#c0b688]"></div>
-                  <span className="text-[#c0b688] text-xs sm:text-sm tracking-[0.2em] font-medium uppercase">
+                  <div data-aos="fade-up" data-aos-delay="200" className="w-10 lg:w-14 h-0.5 bg-[#c0b688]"></div>
+                  <span data-aos="fade-up" data-aos-delay="200" className="text-[#c0b688] text-xs sm:text-sm tracking-[0.2em] font-medium uppercase">
                     {t("hero.badge")}
                   </span>
                 </div>
 
-                <h2 className="text-lg sm:text-xl lg:text-2xl text-white font-medium leading-relaxed mt-4">
+                <h2 data-aos="fade-down" data-aos-delay="400" className="text-lg sm:text-xl lg:text-2xl text-white font-medium leading-relaxed mt-4">
                   {t("hero.subtitle")}
                 </h2>
-                <p className="text-sm sm:text-base text-gray-200 leading-relaxed max-w-md mx-auto lg:mx-0">
+                <p data-aos="fade-down" data-aos-delay="400" className="text-sm sm:text-base text-gray-200 leading-relaxed max-w-md mx-auto lg:mx-0">
                   {t("hero.description")}
                 </p>
                 <ConsultationForm
@@ -63,7 +81,7 @@ export default function HeroSection() {
                   onClose={() => setShowConsultationModal(false)}
                 />
                 {/* CTA Buttons */}
-                <div className="flex flex-row gap-3 lg:gap-4 pt-4 justify-evenly lg:justify-start">
+                <div data-aos="zoom-in-up" data-aos-delay="600" className="flex flex-row gap-3 lg:gap-4 pt-4 justify-evenly lg:justify-start">
                   <button
                     className="px-5 lg:px-7 py-3 lg:py-4 bg-[#c0b688] text-white font-medium rounded-lg hover:bg-[#9f8660] transition-transform duration-300 transform hover:scale-105 text-sm lg:text-base"
                     onClick={() => setShowConsultationModal(true)}
@@ -78,7 +96,7 @@ export default function HeroSection() {
                 </div>
 
                 {/* Trust Indicators */}
-                <div className="flex items-center justify-center lg:justify-start space-x-5 lg:space-x-8 pt-6">
+                <div data-aos="fade-up" data-aos-delay="300" className="flex items-center justify-center lg:justify-start space-x-5 lg:space-x-8 pt-6">
                   <div className="text-center">
                     <div className="text-lg lg:text-xl font-bold text-[#c0b688]">
                       15+
@@ -107,7 +125,7 @@ export default function HeroSection() {
               </div>
 
               {/* Right Side - Image */}
-              <div className="relative flex justify-center mt-6 lg:mt-0">
+              <div data-aos="zoom-in-down" data-aos-delay="600" className="relative flex justify-center mt-6 lg:mt-0">
                 <div className="relative w-64 sm:w-72 md:w-80 lg:w-96 h-64 sm:h-72 md:h-80 lg:h-[460px] rounded-2xl overflow-hidden shadow-2xl">
                   <img
                     src="/logo.png"
@@ -118,7 +136,7 @@ export default function HeroSection() {
                 </div>
 
                 {/* Floating Card */}
-                <div className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 bg-white/95 backdrop-blur-sm p-3 sm:p-5 rounded-xl shadow-xl max-w-xs">
+                <div data-aos="zoom-in-down" data-aos-delay="300" className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 bg-white/95 backdrop-blur-sm p-3 sm:p-5 rounded-xl shadow-xl max-w-xs">
                   <div className="flex items-center space-x-2 sm:space-x-3">
                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#c0b688] rounded-full flex items-center justify-center">
                       <svg
