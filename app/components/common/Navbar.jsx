@@ -306,7 +306,7 @@ export default function Navbar({ children }) {
 
         {/* Sidebar Panel */}
         <div
-          className={`absolute right-0 top-0 h-full w-80 md:w-100 max-w-full bg-white/95 backdrop-blur-xl transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full"
+          className={`absolute right-0 top-0 h-full w-full md:w-100 max-w-full bg-white/95 backdrop-blur-xl transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full"
             } shadow-2xl border-l border-[#c0b688]/20`}
         >
           <div className="flex flex-col h-full">
