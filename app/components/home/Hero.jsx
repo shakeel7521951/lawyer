@@ -63,7 +63,7 @@ export default function HeroSection() {
                   onClose={() => setShowConsultationModal(false)}
                 />
                 {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 pt-4 justify-center lg:justify-start">
+                <div className="flex flex-row gap-3 lg:gap-4 pt-4 justify-evenly lg:justify-start">
                   <button
                     className="px-5 lg:px-7 py-3 lg:py-4 bg-[#c0b688] text-white font-medium rounded-lg hover:bg-[#9f8660] transition-transform duration-300 transform hover:scale-105 text-sm lg:text-base"
                     onClick={() => setShowConsultationModal(true)}
@@ -71,7 +71,7 @@ export default function HeroSection() {
                     {t("hero.buttonConsultation")}
                   </button>
                   <Link href="/services" passHref>
-                    <button className="px-5 lg:px-7 py-3 lg:py-4 border-2 border-[#c0b688] text-[#c0b688] font-medium rounded-lg hover:bg-[#c0b688] hover:text-white transition-transform duration-300 hover:scale-105 text-sm lg:text-base">
+                    <button className="w-full sm:w-auto px-5 lg:px-7 py-3 lg:py-4 border-2 border-[#c0b688] text-[#c0b688] font-medium rounded-lg hover:bg-[#c0b688] hover:text-white transition-transform duration-300 hover:scale-105 text-sm lg:text-base">
                       {t("hero.buttonServices")}
                     </button>
                   </Link>
