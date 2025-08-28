@@ -1,5 +1,10 @@
 {
   "contact": {
+     "friday": "Vendredi :",
+     "saturday": "Samedi :",
+     "closed": "Fermé",
+     "sunthur": "Dimanche - Jeudi :",
+    "getInTouch": "Contactez-nous",
     "maintitle": "Contactez-nous",
     "title1": "Prêt à discuter de",
     "title2": "vos affaires juridiques ?",

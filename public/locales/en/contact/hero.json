@@ -1,5 +1,10 @@
 {
     "contact":{
+        "friday":"Friday:",
+        "saturday":"Saturday:",
+        "closed":"Closed",
+        "sunthur":"Sunday - Thursday:",
+        "getInTouch" : "GET IN TOUCH",
         "maintitle":"Contact",
         "title1":"Ready to Discuss Your",
         "title2":"Legal Matters?",

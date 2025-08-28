@@ -225,10 +225,10 @@ const MapSection = () => {
                       <Clock className="w-5 h-5 text-[#c0b688] flex-shrink-0" />
                       <div>
                         <p className="text-sm text-white/90">
-                          Open Sun-Thu: 8AM-6PM
+                          {t("map.opensunthur")} 8AM-6PM
                         </p>
                         <p className="text-sm text-white/70">
-                          Friday: 2PM-6PM
+                          {t("map.friday")} 2PM-6PM
                         </p>
                       </div>
                     </div>

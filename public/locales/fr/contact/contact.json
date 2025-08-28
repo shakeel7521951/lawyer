@@ -1,5 +1,9 @@
 {
   "form": {
+    "friday": "الجمعة:",
+    "saturday": "السبت:",
+    "closed": "مغلق",
+    "sunthur": "الأحد - الخميس:",
     "contactform": "FORMULAIRE DE CONTACT",
     "sendmsg": "Envoyez-nous un message",
     "desc": "Contactez nos experts juridiques. Nous répondrons dans les 24 heures pour discuter de vos besoins juridiques.",

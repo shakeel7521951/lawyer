@@ -514,20 +514,20 @@ export default function ContactForm() {
                           style={{ fontFamily: "'Inter', sans-serif" }}
                         >
                           <div className="flex justify-between text-white/90">
-                            <span>Sun - Thu:</span>
+                            <span>{t("form.sunthur")}</span>
                             <span className="text-[#c0b688]">
                               8:00 AM - 6:00 PM
                             </span>
                           </div>
                           <div className="flex justify-between text-white/90">
-                            <span>Friday:</span>
+                            <span>{t("form.friday")}</span>
                             <span className="text-[#c0b688]">
                               2:00 PM - 6:00 PM
                             </span>
                           </div>
                           <div className="flex justify-between text-white/90">
-                            <span>Saturday:</span>
-                            <span className="text-white/60">Closed</span>
+                            <span>{t("form.saturday")}</span>
+                            <span className="text-white/60">{t("form.closed")}</span>
                           </div>
                         </div>
                       </div>
