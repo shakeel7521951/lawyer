@@ -1,4 +1,4 @@
-"use client"; 
+"use client";
 import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import {
@@ -6,6 +6,7 @@ import {
   FileText, Globe, Briefcase, CreditCard, Gavel, TrendingUp,
   Lock, AlertTriangle, Target, Award, ArrowUpRight
 } from "lucide-react";
+import Link from "next/link";
 
 const iconMap = {
   Scale,
@@ -115,11 +116,10 @@ const CompService = () => {
                   <button
                     key={index}
                     onClick={() => setActiveCategory(index)}
-                    className={`group relative flex items-center justify-center px-4 py-3 rounded-xl transition-all duration-300 ${
-                      activeCategory === index
+                    className={`group relative flex items-center justify-center px-4 py-3 rounded-xl transition-all duration-300 ${activeCategory === index
                         ? "bg-white shadow-lg text-[#494c52] scale-105"
                         : "bg-transparent text-gray-600 hover:bg-white/50 hover:text-[#9f8660]"
-                    }`}
+                      }`}
                   >
                     <span className="font-medium text-xs" style={{ fontFamily: "'Inter', sans-serif" }}>
                       {category.title.split(" ")[0]}
@@ -150,7 +150,7 @@ const CompService = () => {
                 {categories[activeCategory].services.map((service, index) => (
                   <div
                     key={index}
-                    className="group bg-white rounded-xl p-5 shadow-sm border border-gray-100 hover:shadow-md transition-all"
+                    className="group bg-white rounded-xl p-5 shadow-sm border border-gray-100 hover:scale-105 transition-transform duration-300 hover:shadow-md"
                     onMouseEnter={() => setHoveredService(index)}
                     onMouseLeave={() => setHoveredService(null)}
                   >
@@ -162,18 +162,6 @@ const CompService = () => {
                     </p>
                   </div>
                 ))}
-              </div>
-
-              {/* Footer */}
-              <div className="mt-8 pt-6 border-t border-gray-200/50 flex flex-col sm:flex-row items-center justify-between">
-                <p className="text-sm text-gray-600">
-                  <span className="font-semibold text-[#494c52]">{categories[activeCategory].services.length}</span>{" "}
-                  {t("footer.services_count_label")}
-                </p>
-                <button className="bg-gradient-to-r from-[#494c52] to-[#9f8660] text-white px-6 py-2 rounded-lg font-medium flex items-center space-x-2 text-sm">
-                  <span>{t("footer.button")}</span>
-                  <ChevronRight className="w-4 h-4" />
-                </button>
               </div>
             </div>
           )}

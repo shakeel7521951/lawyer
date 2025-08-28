@@ -25,9 +25,9 @@ const ServCus = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="relative w-full bg-gradient-to-b from-white to-gray-50 py-12 sm:py-16 overflow-hidden">
+    <section ref={sectionRef} className="relative w-full bg-gradient-to-b from-white to-gray-50 py-12 sm:py-16  overflow-hidden">
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center mb-12" data-aos="fade-up">
           <div className="inline-flex items-center space-x-2 bg-[#c0b688]/10 rounded-full px-5 py-2 border border-[#c0b688]/20 mb-4">
@@ -48,7 +48,7 @@ const ServCus = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {serviceData.map((service, index) => {
             const IconComp = iconMap[service.icon];
             const features = t(`services.${service.id - 1}.features`, { returnObjects: true });
@@ -63,14 +63,14 @@ const ServCus = () => {
                 data-aos="fade-up"
                 data-aos-delay={index * 150}
               >
-                <div className="relative bg-white rounded-3xl p-6 shadow-lg border border-gray-100 hover:shadow-2xl transition-all">
-                  
+                <div className="relative bg-white rounded-3xl p-6 shadow-lg border border-gray-100 hover:shadow-2xl transition-transform duration-400 hover:translate-y-[-px] hover:scale-102 group">
+
                   {/* Top Icon + Number */}
                   <div className="relative z-10 flex items-start justify-between mb-4">
                     <div className={`w-14 h-14 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center`}>
                       <IconComp className="w-7 h-7 text-white" />
                     </div>
-                    <div className="text-right text-[#494c52]/30 text-3xl font-bold">
+                    <div className="text-right text-[#494c52]/30 text-3xl font-bold transition-colors group-hover:text-[#494c52]/60">
                       0{service.id}
                     </div>
                   </div>
@@ -80,38 +80,40 @@ const ServCus = () => {
                     <p className="text-[#9f8660] text-xs font-bold uppercase">
                       {t(`services.${service.id - 1}.subtitle`)}
                     </p>
-                    <h3 className="text-xl font-bold text-[#494c52] mb-3 leading-tight">
+                    <h3 className="text-xl font-bold text-[#494c52] mb-3 leading-tight text-nowrap">
                       {t(`services.${service.id - 1}.title`)}
                     </h3>
                     <p className="text-gray-600 text-sm leading-relaxed mb-4">
                       {t(`services.${service.id - 1}.description`)}
                     </p>
 
-                    <div className={`${hoveredCard === service.id ? "max-h-40 opacity-100" : "max-h-0 opacity-0"} overflow-hidden transition-all`}>
-                      <div className="grid grid-cols-2 gap-2 mb-4">
-                        {safeFeatures.map((feature, idx) => (
-                          <div key={idx} className="flex items-center space-x-1">
-                            <div className={`w-1.5 h-1.5 bg-gradient-to-r ${service.color} rounded-full`}></div>
-                            <span className="text-gray-700 text-xs font-medium">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
+                    <div className="grid grid-cols-2 gap-2 mb-4">
+                      {safeFeatures.map((feature, idx) => (
+                        <div key={idx} className="flex items-center space-x-1">
+                          <div className={`w-1.5 h-1.5 bg-gradient-to-r ${service.color} rounded-full`}></div>
+                          <span className="text-gray-700 text-xs font-medium">{feature}</span>
+                        </div>
+                      ))}
                     </div>
 
                     {/* Image Overlay */}
                     <div className="relative h-16 rounded-xl overflow-hidden mb-4">
                       <img src={service.image} alt={t(`services.${service.id - 1}.title`)} className="w-full h-full object-cover" />
                       <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-80`}></div>
-                      <div className="absolute inset-0 flex items-center justify-center text-white text-xs font-bold">
+                      <div className="absolute inset-0 flex items-center justify-center text-white text-sm font-bold">
                         {t("imageOverlay")}
                       </div>
                     </div>
 
                     <Link href={service.link}>
-                      <button className={`w-full bg-gradient-to-r ${service.color} text-white px-4 py-3 rounded-xl font-semibold flex items-center justify-center space-x-2 text-sm`}>
+                      <button
+                        className={`w-full bg-gradient-to-r ${service.color} text-white px-4 py-3 rounded-xl font-semibold flex items-center justify-center space-x-2 text-sm 
+                        transition-all duration-300 hover:scale-105 hover:shadow-lg hover:opacity-90`}
+                      >
                         <span>{t(`services.${service.id - 1}.btnText`)}</span>
                         <ChevronRight className="w-4 h-4" />
                       </button>
+
                     </Link>
                   </div>
                 </div>
