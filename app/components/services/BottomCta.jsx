@@ -5,6 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Award, ChevronRight } from "lucide-react";
 import ConsultationForm from "../common/ConsultationForm";
+import Link from "next/link";
 
 const BottomCta = () => {
   const { t } = useTranslation("services/bottomcta");
@@ -62,21 +63,23 @@ const BottomCta = () => {
               onClick={() => setShowConsultationModal(true)}
               data-aos="fade-up"
               data-aos-delay="300"
-              className="bg-white text-[#494c52] px-6 py-2 rounded-lg font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-2 justify-center text-sm"
+              className="bg-white text-[#494c52] px-6 py-2 rounded-lg font-semibold transition-transform duration-300 hover:scale-105  shadow-lg hover:shadow-xl flex items-center space-x-2 justify-center text-sm"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
               <span>{t("cta_section.buttons.schedule_consultation")}</span>
               <ChevronRight className="w-4 h-4" />
             </button>
-
-            <button
-              data-aos="fade-up"
-              data-aos-delay="400"
-              className="border border-white/30 text-white px-6 py-2 rounded-lg font-semibold hover:bg-white hover:text-[#494c52] transition-all duration-300 text-sm"
-              style={{ fontFamily: "'Inter', sans-serif" }}
-            >
-              {t("cta_section.buttons.download_brochure")}
-            </button>
+            <Link href="/blog" >
+              <button
+                data-aos="fade-up"
+                data-aos-delay="400"
+                className="flex items-center gap-2 border border-white/30 text-white px-6 py-2 rounded-lg font-semibold hover:bg-white hover:text-[#494c52] transition-all duration-300 text-sm"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                {t("cta_section.buttons.download_brochure")}
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            </Link>
           </div>
         </div>
       </div>
