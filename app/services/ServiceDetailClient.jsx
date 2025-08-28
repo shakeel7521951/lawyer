@@ -22,6 +22,7 @@ export default function ServiceDetailClient({ serviceData, slug }) {
     // Translate basic text fields
     title: t(`${translationKey}.title`, { defaultValue: serviceData.title }),
     subtitle: t(`${translationKey}.subtitle`, { defaultValue: serviceData.subtitle }),
+    category: t(`${translationKey}.category`, { defaultValue: serviceData.category }),
     description: t(`${translationKey}.description`, { defaultValue: serviceData.description }),
     overview: t(`${translationKey}.overview`, { defaultValue: serviceData.overview }),
     

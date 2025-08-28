@@ -2,6 +2,7 @@
   "corporate": {
     "title": "Services aux entreprises",
     "subtitle": "Solutions juridiques pour les affaires",
+    "category": "Affaires",
     "description": "Services juridiques complets pour les entreprises, y compris la création de sociétés, la protection de la propriété intellectuelle, les investissements étrangers, les consultations en gouvernance, les conseils en droit fiscal et la résolution des litiges commerciaux.",
     "overview": "Nos services juridiques aux entreprises sont conçus pour accompagner les sociétés de toutes tailles, des startups aux multinationales. Nous fournissons des solutions juridiques complètes qui garantissent que votre entreprise opère dans le cadre légal tout en maximisant les opportunités de croissance.",
     "services": [
@@ -86,6 +87,7 @@
   "government": {
     "title": "Services gouvernementaux et quasi-gouvernementaux",
     "subtitle": "Excellence juridique du secteur public",
+    "category": "Secteur public",
     "description": "Conseils juridiques spécialisés pour les institutions gouvernementales, y compris les consultations législatives, les pratiques de gouvernance, la conformité réglementaire, les procédures d’appel d’offres et la résolution des litiges institutionnels.",
     "overview": "Nos services gouvernementaux sont adaptés pour répondre aux besoins uniques des institutions du secteur public. Nous fournissons des conseils juridiques spécialisés qui garantissent la conformité aux cadres réglementaires tout en soutenant l’efficacité opérationnelle.",
     "services": [
@@ -170,6 +172,7 @@
   "individual": {
     "title": "Services aux particuliers",
     "subtitle": "Protection juridique personnelle",
+    "category": "Droit personnel",
     "description": "Services juridiques complets pour les particuliers couvrant le droit de la famille, les affaires pénales et civiles, la création d’entreprises, l’assistance en faillite, les questions d’immigration et la protection juridique personnelle.",
     "overview": "Nos services aux particuliers sont conçus pour protéger et accompagner les individus face à divers défis juridiques. Nous fournissons des solutions personnalisées adaptées à vos besoins spécifiques avec compassion et expertise.",
     "services": [
@@ -258,6 +261,7 @@
     "legalSupport": {
     "title": "Services de Soutien Juridique",
     "subtitle": "Cadre Juridique Spécialisé",
+    "category": "خدمات قانونية شاملة",
     "description": "Un soutien juridique complet incluant les services juridiques bancaires, l’arbitrage, les consultations en gestion des risques, la conformité à la lutte contre le blanchiment d’argent, les consultations en gouvernance et les services de recouvrement de créances.",
     "overview": "Nos services de soutien juridique offrent une expertise spécialisée dans des domaines juridiques complexes nécessitant des connaissances et une expérience avancées. Nous proposons un accompagnement complet pour les questions bancaires, de conformité et juridiques spécialisées.",
     "services": [

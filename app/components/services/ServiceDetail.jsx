@@ -67,10 +67,10 @@ const ServiceDetail = ({ serviceData }) => {
   const ServiceIcon = getServiceIcon(serviceData.id);
 
   const tabs = [
-    { id: "overview", label: "Overview", icon: FileText },
-    { id: "services", label: "Services", icon: Briefcase },
-    { id: "process", label: "Process", icon: Target },
-    { id: "benefits", label: "Benefits", icon: Award },
+    { id: "overview", label: t("ctaSection.Overview"), icon: FileText },
+    { id: "services", label: t("ctaSection.Services"), icon: Briefcase },
+    { id: "process", label: t("ctaSection.Process"), icon: Target },
+    { id: "benefits", label: t("ctaSection.Benefits"), icon: Award },
   ];
 
   return (
@@ -143,14 +143,14 @@ const ServiceDetail = ({ serviceData }) => {
                     style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     <Phone className="w-5 h-5" />
-                    <span>Schedule Consultation</span>
+                    <span>{t("ctaSection.Schedule")}</span>
                   </button>
                   <button
                     className="border-2 border-white/30 text-white px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-[#494c52] transition-all duration-300 flex items-center space-x-2"
                     style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     <Mail className="w-5 h-5" />
-                    <span>Get Quote</span>
+                    <span>{t("ctaSection.GetQuote")}</span>
                   </button>
                 </div>
               </div>
@@ -177,7 +177,7 @@ const ServiceDetail = ({ serviceData }) => {
                             className="text-xs text-white/90"
                             style={{ fontFamily: "'Inter', sans-serif" }}
                           >
-                            Years
+                            {t("ctaSection.Years")}
                           </div>
                         </div>
                         <div>
@@ -188,7 +188,7 @@ const ServiceDetail = ({ serviceData }) => {
                             className="text-xs text-white/90"
                             style={{ fontFamily: "'Inter', sans-serif" }}
                           >
-                            Cases
+                            {t("ctaSection.Cases")}
                           </div>
                         </div>
                         <div>
@@ -199,7 +199,7 @@ const ServiceDetail = ({ serviceData }) => {
                             className="text-xs text-white/90"
                             style={{ fontFamily: "'Inter', sans-serif" }}
                           >
-                            Success
+                            {t("ctaSection.Success")}
                           </div>
                         </div>
                       </div>
@@ -270,7 +270,7 @@ const ServiceDetail = ({ serviceData }) => {
                 <div className="space-y-8">
                   <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 border border-gray-100">
                     <h3 className="text-2xl font-bold text-[#494c52] mb-6">
-                      Service Overview
+                      {t("ctaSection.ServiceOverview")}
                     </h3>
                     <p className="text-gray-700 leading-relaxed text-lg">
                       {serviceData.overview}
@@ -290,7 +290,7 @@ const ServiceDetail = ({ serviceData }) => {
                         className="text-sm text-gray-600 font-medium"
                         style={{ fontFamily: "'Inter', sans-serif" }}
                       >
-                        Specialized Services
+                        {t("ctaSection.SpecializedServices")}
                       </div>
                     </div>
                     <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center">
@@ -304,7 +304,7 @@ const ServiceDetail = ({ serviceData }) => {
                         className="text-sm text-gray-600 font-medium"
                         style={{ fontFamily: "'Inter', sans-serif" }}
                       >
-                        Support Available
+                        {t("ctaSection.SupportAvailable")}
                       </div>
                     </div>
                     <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center">
@@ -318,7 +318,7 @@ const ServiceDetail = ({ serviceData }) => {
                         className="text-sm text-gray-600 font-medium"
                         style={{ fontFamily: "'Inter', sans-serif" }}
                       >
-                        Years Experience
+                        {t("ctaSection.YearsExperience")}
                       </div>
                     </div>
                   </div>
@@ -329,7 +329,7 @@ const ServiceDetail = ({ serviceData }) => {
               {activeTab === "services" && (
                 <div className="space-y-6">
                   <h3 className="text-2xl font-bold text-[#494c52] mb-8 text-center">
-                    Our {serviceData.title} Portfolio
+                    {t("ctaSection.our")} {serviceData.title} {t("ctaSection.portfolio")}
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {serviceData.services.map((service, index) => (
@@ -386,7 +386,7 @@ const ServiceDetail = ({ serviceData }) => {
               {activeTab === "process" && (
                 <div className="space-y-8">
                   <h3 className="text-2xl font-bold text-[#494c52] mb-8 text-center">
-                    Our Service Process
+                    {t("ctaSection.ourserviceprocess")}
                   </h3>
                   <div className="relative">
                     {/* Process Timeline */}
@@ -427,7 +427,7 @@ const ServiceDetail = ({ serviceData }) => {
               {activeTab === "benefits" && (
                 <div className="space-y-8">
                   <h3 className="text-2xl font-bold text-[#494c52] mb-8 text-center">
-                    Why Choose Our {serviceData.title}?
+                    {t("ctaSection.whychoose")} {serviceData.title}?
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {serviceData.benefits.map((benefit, index) => (
