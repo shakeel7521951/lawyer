@@ -9,19 +9,19 @@
     "contact": "Contact"
   },
   "serviceCategories": [
-    {
-      "title": "Entreprises",
-      "description": "Services juridiques pour les entreprises et les sociétés"
-    },
-    {
-      "title": "Gouvernement / Semi-gouvernement",
-      "description": "Soutien juridique pour les entités gouvernementales"
-    },
-    {
-      "title": "Particuliers",
-      "description": "Services juridiques personnels pour les particuliers"
-    }
-  ],
+  {
+    "title": "Entreprises",
+    "description": "Services juridiques pour les entreprises et sociétés"
+  },
+  {
+    "title": "Gouvernement/Semi-gouvernement",
+    "description": "Assistance juridique pour les entités gouvernementales"
+  },
+  {
+    "title": "Individus",
+    "description": "Services juridiques personnels pour les particuliers"
+  }
+],
   "ourServices": "Nos services",
   "comprehensiveLegalSolutions": "Solutions juridiques complètes",
   "allServices": "Voir tous les services"
