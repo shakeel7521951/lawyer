@@ -71,10 +71,10 @@ const TimelineProfile = () => {
                 className="flex flex-wrap items-center justify-center gap-8 mb-12 pb-8 mt-2 sm:mt-0 border-b border-[#c0b688]/20"
               >
                 {[
-                  { Icon: Calendar, text: "February 16, 2025" },
+                  { Icon: Calendar, text:t("timeline.february") },
                   { Icon: User, text: t("timeline.ceoName") },
                   { Icon: MapPin, text: t("timeline.news")},
-                  { Icon: Clock, text: "11 months proceedings" },
+                  { Icon: Clock, text: t("timeline.monthproceding")},
                 ].map(({ Icon, text }, i) => (
                   <div
                     key={i}
@@ -118,7 +118,7 @@ const TimelineProfile = () => {
                       {t("timeline.ceoName")}
                       </h3>
                     <p className="text-lg text-[#9f8660] font-semibold">
-                      Founder & CEO - AL KHALDI Law Firm
+                      {t("timeline.founderAndCeo")}
                     </p>
                     <p className="text-[#494c52]/80 leading-relaxed">
                       {t("timeline.passage2")}

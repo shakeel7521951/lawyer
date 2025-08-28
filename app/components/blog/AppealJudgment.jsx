@@ -266,7 +266,7 @@ const AppealJudgment = () => {
                  className="inline-flex items-center p-4 sm:px-8 py-4 bg-gradient-to-r from-[#c0b688] to-[#9f8660] text-white font-semibold rounded-full shadow-xl hover:from-[#9f8660] hover:to-[#494c52] hover:scale-110 transition-all duration-500 group"
                >
                  <Phone className="w-5 h-5 mr-3" />
-                 Call +974 6616 4000
+                 {t("appeal.Call")} +974 6616 4000
                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                </a>
                <a
