@@ -1,5 +1,6 @@
 {
     "appeal":{
+        "Call" : "Call",
         "title":"Appeal Judgment & Final Ruling",
         "t1":"Public Prosecution Appeal",
         "t1psg":"The Public Prosecution also appealed against the First Instance Court ruling that acquitted some of the defendants.",
@@ -23,8 +24,8 @@
         "won":"Cases Won",
         "satisfy":"Client Satisfaction",
         "title3":"Need Expert Legal Representation?",
-        "emailtext":"Email Consultaion",
-        "schedule":"Schedule Meeting"
+        "emailtext":"Email Consultation",
+        "schedule":"Request a Consultation"
 
     }
 }

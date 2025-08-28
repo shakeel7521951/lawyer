@@ -4,8 +4,10 @@ import Link from "next/link";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { usePathname } from "next/navigation";
 import i18n from "@/i18n";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar({ children }) {
+  const { t } = useTranslation("navbar/navbar");
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -39,12 +41,12 @@ export default function Navbar({ children }) {
   }, [prevScrollPos]);
 
   const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/services", label: "Services", hasDropdown: true },
-    { href: "/whyus", label: "Why Us" },
-    { href: "/blog", label: "Blog" },
-    { href: "/", label: "Language", hasDropdown: "language" },
+    { href: "/", label: t("labels.home") },
+    { href: "/about", label: t("labels.about") },
+    { href: "/services", label: t("labels.services"), hasDropdown: true },
+    { href: "/whyus", label: t("labels.whyus") },
+    { href: "/blog", label: t("labels.blog") },
+    { href: "/", label: t("labels.language"), hasDropdown: "language" },
   ];
 
   const languages = [
@@ -55,20 +57,20 @@ export default function Navbar({ children }) {
 
   const serviceCategories = [
     {
-      title: "Corporates",
-      description: "Legal services for businesses and corporations",
+      title: t("serviceCategories.0.title"),
+      description: t("serviceCategories.0.description"),
       href: "/services/corporate-services",
       slug: "corporate-services",
     },
     {
-      title: "Government/Semi-government",
-      description: "Legal support for government entities",
+      title: t("serviceCategories.1.title"),
+      description: t("serviceCategories.1.description"),
       href: "/services/government-services",
       slug: "government-services",
     },
     {
-      title: "Individuals",
-      description: "Personal legal services for individuals",
+      title: t("serviceCategories.2.title"),
+      description: t("serviceCategories.2.description"),
       href: "/services/individual-services",
       slug: "individual-services",
     },
@@ -85,15 +87,17 @@ export default function Navbar({ children }) {
     <>
       {/* Navbar */}
       <nav
-        className={`fixed w-full z-50 transition-all duration-700 ease-in-out transform ${visible ? "translate-y-0" : "-translate-y-full"
-          }`}
+        className={`fixed w-full z-50 transition-all duration-700 ease-in-out transform ${
+          visible ? "translate-y-0" : "-translate-y-full"
+        }`}
       >
-        <div className="max-w-6xl mx-auto px-8 py-4">
+        <div className="max-w-6xl mx-auto md:px-8 px-2 py-4">
           <div
-            className={`transition-all duration-700 rounded-2xl ${scrolled
-              ? "bg-white/90 backdrop-blur-lg shadow-lg border border-[#c0b688]/10"
-              : "bg-white/5 backdrop-blur-sm border border-white/10"
-              } px-6 py-3`}
+            className={`transition-all duration-700 rounded-2xl ${
+              scrolled
+                ? "bg-white/90 backdrop-blur-lg shadow-lg border border-[#c0b688]/10"
+                : "bg-white/5 backdrop-blur-sm border border-white/10"
+            } px-6 py-3`}
           >
             <div className="flex justify-between items-center">
               {/* Logo */}
@@ -110,8 +114,9 @@ export default function Navbar({ children }) {
                 </div>
                 <div className="flex flex-col">
                   <h1
-                    className={`text-lg font-bold tracking-tight transition-colors duration-300 ${scrolled ? "text-[#494c52]" : "text-white"
-                      }`}
+                    className={`text-lg font-bold tracking-tight transition-colors duration-300 ${
+                      scrolled ? "text-[#494c52]" : "text-white"
+                    }`}
                     style={{
                       fontFamily: "'Inter', 'Helvetica Neue', sans-serif",
                     }}
@@ -119,8 +124,9 @@ export default function Navbar({ children }) {
                     الخالـــــدي
                   </h1>
                   <p
-                    className={`text-sm font-medium tracking-wide transition-colors duration-300 ${scrolled ? "text-[#9f8660]" : "text-[#c0b688]"
-                      }`}
+                    className={`text-sm font-medium tracking-wide transition-colors duration-300 ${
+                      scrolled ? "text-[#9f8660]" : "text-[#c0b688]"
+                    }`}
                     style={{
                       fontFamily: "'Inter', 'Helvetica Neue', sans-serif",
                     }}
@@ -142,35 +148,38 @@ export default function Navbar({ children }) {
                         onMouseLeave={() => setServicesDropdownOpen(false)}
                       >
                         <button
-                          className={`flex items-center space-x-1 px-4 py-2 rounded-lg text-sm font-medium tracking-wide transition-all duration-300 group ${scrolled
-                            ? "text-[#494c52] hover:text-[#9f8660] hover:bg-[#c0b688]/5"
-                            : "text-white hover:text-[#c0b688] hover:bg-white/5"
-                            }`}
+                          className={`flex items-center space-x-1 px-4 py-2 rounded-lg text-sm font-medium tracking-wide transition-all duration-300 group ${
+                            scrolled
+                              ? "text-[#494c52] hover:text-[#9f8660] hover:bg-[#c0b688]/5"
+                              : "text-white hover:text-[#c0b688] hover:bg-white/5"
+                          }`}
                           style={{
                             fontFamily: "'Inter', 'Helvetica Neue', sans-serif",
                           }}
                         >
                           <span>{link.label}</span>
                           <ChevronDown
-                            className={`w-4 h-4 transition-transform duration-300 ${servicesDropdownOpen ? "rotate-180" : ""
-                              }`}
+                            className={`w-4 h-4 transition-transform duration-300 ${
+                              servicesDropdownOpen ? "rotate-180" : ""
+                            }`}
                           />
                         </button>
 
                         {/* Services Dropdown Menu */}
                         <div
-                          className={`absolute top-full left-0 mt-2 w-80 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-[#c0b688]/20 overflow-hidden transition-all duration-300 transform ${servicesDropdownOpen
-                            ? "opacity-100 translate-y-0 visible"
-                            : "opacity-0 -translate-y-2 invisible"
-                            }`}
+                          className={`absolute top-full left-0 mt-2 w-80 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-[#c0b688]/20 overflow-hidden transition-all duration-300 transform ${
+                            servicesDropdownOpen
+                              ? "opacity-100 translate-y-0 visible"
+                              : "opacity-0 -translate-y-2 invisible"
+                          }`}
                         >
                           <div className="p-6">
                             <div className="mb-4">
                               <h3 className="text-[#494c52] font-semibold text-base mb-1">
-                                Our Services
+                                {t("ourServices")}
                               </h3>
                               <p className="text-[#9f8660] text-sm opacity-80">
-                                Comprehensive legal solutions
+                                {t("comprehensiveLegalSolutions")}
                               </p>
                             </div>
                             <div className="space-y-2">
@@ -199,7 +208,7 @@ export default function Navbar({ children }) {
                                 href="/services"
                                 className="flex items-center justify-center space-x-2 bg-gradient-to-r from-[#9f8660] to-[#c0b688] text-white px-4 py-2 rounded-xl text-sm font-medium transform hover:scale-105 transition-all duration-300"
                               >
-                                <span>View All Services</span>
+                                <span>{t("allServices")}</span>
                               </Link>
                             </div>
                           </div>
@@ -213,24 +222,27 @@ export default function Navbar({ children }) {
                         onMouseLeave={() => setLanguageDropdownOpen(false)}
                       >
                         <button
-                          className={`flex items-center space-x-1 px-4 py-2 rounded-lg text-sm font-medium tracking-wide transition-all duration-300 group ${scrolled
-                            ? "text-[#494c52] hover:text-[#9f8660] hover:bg-[#c0b688]/5"
-                            : "text-white hover:text-[#c0b688] hover:bg-white/5"
-                            }`}
+                          className={`flex items-center space-x-1 px-4 py-2 rounded-lg text-sm font-medium tracking-wide transition-all duration-300 group ${
+                            scrolled
+                              ? "text-[#494c52] hover:text-[#9f8660] hover:bg-[#c0b688]/5"
+                              : "text-white hover:text-[#c0b688] hover:bg-white/5"
+                          }`}
                         >
                           <span>{link.label}</span>
                           <ChevronDown
-                            className={`w-4 h-4 transition-transform duration-300 ${languageDropdownOpen ? "rotate-180" : ""
-                              }`}
+                            className={`w-4 h-4 transition-transform duration-300 ${
+                              languageDropdownOpen ? "rotate-180" : ""
+                            }`}
                           />
                         </button>
 
                         {/* Language Dropdown Menu */}
                         <div
-                          className={`absolute top-full left-0 mt-2 w-40 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-[#c0b688]/20 overflow-hidden transition-all duration-300 transform ${languageDropdownOpen
-                            ? "opacity-100 translate-y-0 visible"
-                            : "opacity-0 -translate-y-2 invisible"
-                            }`}
+                          className={`absolute top-full left-0 mt-2 w-40 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-[#c0b688]/20 overflow-hidden transition-all duration-300 transform ${
+                            languageDropdownOpen
+                              ? "opacity-100 translate-y-0 visible"
+                              : "opacity-0 -translate-y-2 invisible"
+                          }`}
                         >
                           <div className="py-2">
                             {languages.map((lng) => (
@@ -251,10 +263,11 @@ export default function Navbar({ children }) {
                     ) : (
                       <Link
                         href={link.href}
-                        className={`relative px-4 py-2 rounded-lg text-sm font-medium tracking-wide transition-all duration-300 group ${scrolled
-                          ? "text-[#494c52] hover:text-[#9f8660] hover:bg-[#c0b688]/5"
-                          : "text-white hover:text-[#c0b688] hover:bg-white/5"
-                          }`}
+                        className={`relative px-4 py-2 rounded-lg text-sm font-medium tracking-wide transition-all duration-300 group ${
+                          scrolled
+                            ? "text-[#494c52] hover:text-[#9f8660] hover:bg-[#c0b688]/5"
+                            : "text-white hover:text-[#c0b688] hover:bg-white/5"
+                        }`}
                       >
                         {link.label}
                       </Link>
@@ -270,15 +283,16 @@ export default function Navbar({ children }) {
                   className="hidden md:flex items-center space-x-2 bg-gradient-to-r from-[#9f8660] to-[#c0b688] text-white px-5 py-2.5 rounded-xl text-sm font-medium transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   <Phone className="w-4 h-4" />
-                  <span>Contact</span>
+                  <span>{t("labels.contact")}</span>
                 </Link>
 
                 <button
                   onClick={() => setIsOpen(!isOpen)}
-                  className={`lg:hidden p-2 rounded-xl transition-all duration-300 ${scrolled
-                    ? "text-[#494c52] hover:bg-[#c0b688]/10"
-                    : "text-white hover:bg-white/10"
-                    }`}
+                  className={`lg:hidden p-2 rounded-xl transition-all duration-300 ${
+                    scrolled
+                      ? "text-[#494c52] hover:bg-[#c0b688]/10"
+                      : "text-white hover:bg-white/10"
+                  }`}
                 >
                   {isOpen ? (
                     <X className="w-5 h-5" />
@@ -294,20 +308,23 @@ export default function Navbar({ children }) {
 
       {/* Mobile/Tablet Sidebar */}
       <div
-        className={`fixed inset-0 z-50 lg:hidden transition-opacity duration-300 ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"
-          }`}
+        className={`fixed inset-0 z-50 lg:hidden transition-opacity duration-300 ${
+          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
       >
         {/* Backdrop */}
         <div
-          className={`absolute inset-0 bg-black transition-opacity duration-300 ${isOpen ? "opacity-50" : "opacity-0"
-            }`}
+          className={`absolute inset-0 bg-black transition-opacity duration-300 ${
+            isOpen ? "opacity-50" : "opacity-0"
+          }`}
           onClick={() => setIsOpen(false)}
         />
 
         {/* Sidebar Panel */}
         <div
-          className={`absolute right-0 top-0 h-full w-full md:w-100 max-w-full bg-white/95 backdrop-blur-xl transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full"
-            } shadow-2xl border-l border-[#c0b688]/20`}
+          className={`absolute right-0 top-0 h-full w-full md:w-100 max-w-full bg-white/95 backdrop-blur-xl transform transition-transform duration-300 ease-in-out ${
+            isOpen ? "translate-x-0" : "translate-x-full"
+          } shadow-2xl border-l border-[#c0b688]/20`}
         >
           <div className="flex flex-col h-full">
             {/* Header */}
@@ -323,7 +340,9 @@ export default function Navbar({ children }) {
                   className="w-10 h-10 object-contain"
                 />
                 <div className="flex flex-col">
-                  <h1 className="text-lg font-bold text-[#494c52]">الخالـــــدي</h1>
+                  <h1 className="text-lg font-bold text-[#494c52]">
+                    الخالـــــدي
+                  </h1>
                   <p className="text-sm text-[#9f8660]">Al Khaldi</p>
                 </div>
               </Link>
@@ -339,32 +358,39 @@ export default function Navbar({ children }) {
             <nav className="flex-1 overflow-y-auto py-6 px-4">
               <div className="space-y-2">
                 {navLinks.map((link, index) => (
-                  <div key={index} className="border-b border-[#c0b688]/10 last:border-0 pb-2 last:pb-0">
+                  <div
+                    key={index}
+                    className="border-b border-[#c0b688]/10 last:border-0 pb-2 last:pb-0"
+                  >
                     {link.hasDropdown === true ? (
                       <div>
                         <button
-                          onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                          onClick={() =>
+                            setMobileServicesOpen(!mobileServicesOpen)
+                          }
                           className="flex items-center justify-between w-full px-4 py-3 text-[#494c52] hover:text-[#9f8660] hover:bg-[#c0b688]/5 rounded-xl text-left transition-all duration-300"
                         >
                           <span className="font-medium">{link.label}</span>
                           <ChevronDown
-                            className={`w-4 h-4 transition-transform duration-300 ${mobileServicesOpen ? "rotate-180" : ""
-                              }`}
+                            className={`w-4 h-4 transition-transform duration-300 ${
+                              mobileServicesOpen ? "rotate-180" : ""
+                            }`}
                           />
                         </button>
 
                         {/* Mobile Services Dropdown */}
                         <div
-                          className={`overflow-hidden transition-all duration-300 ${mobileServicesOpen ? "max-h-96" : "max-h-0"
-                            }`}
+                          className={`overflow-hidden transition-all duration-300 ${
+                            mobileServicesOpen ? "max-h-96" : "max-h-0"
+                          }`}
                         >
                           <div className="pl-6 pr-4 py-3 space-y-3">
                             <div className="mb-2">
                               <h3 className="text-[#494c52] font-semibold text-sm mb-1">
-                                Our Services
+                                {t("ourServices")}
                               </h3>
                               <p className="text-[#9f8660] text-xs opacity-80">
-                                Comprehensive legal solutions
+                                {t("comprehensiveLegalSolutions")}
                               </p>
                             </div>
 
@@ -395,7 +421,7 @@ export default function Navbar({ children }) {
                                 onClick={handleLinkClick}
                                 className="flex items-center justify-center space-x-2 bg-gradient-to-r from-[#9f8660] to-[#c0b688] text-white px-4 py-2 rounded-xl text-sm font-medium transform hover:scale-105 transition-all duration-300"
                               >
-                                <span>View All Services</span>
+                                <span>{t("allServices")}</span>
                               </Link>
                             </div>
                           </div>
@@ -404,20 +430,24 @@ export default function Navbar({ children }) {
                     ) : link.hasDropdown === "language" ? (
                       <div>
                         <button
-                          onClick={() => setMobileLanguageOpen(!mobileLanguageOpen)}
+                          onClick={() =>
+                            setMobileLanguageOpen(!mobileLanguageOpen)
+                          }
                           className="flex items-center justify-between w-full px-4 py-3 text-[#494c52] hover:text-[#9f8660] hover:bg-[#c0b688]/5 rounded-xl text-left transition-all duration-300"
                         >
                           <span className="font-medium">{link.label}</span>
                           <ChevronDown
-                            className={`w-4 h-4 transition-transform duration-300 ${mobileLanguageOpen ? "rotate-180" : ""
-                              }`}
+                            className={`w-4 h-4 transition-transform duration-300 ${
+                              mobileLanguageOpen ? "rotate-180" : ""
+                            }`}
                           />
                         </button>
 
                         {/* Mobile Language Dropdown */}
                         <div
-                          className={`overflow-hidden transition-all duration-300 ${mobileLanguageOpen ? "max-h-40" : "max-h-0"
-                            }`}
+                          className={`overflow-hidden transition-all duration-300 ${
+                            mobileLanguageOpen ? "max-h-40" : "max-h-0"
+                          }`}
                         >
                           <div className="pl-6 pr-4 py-2 space-y-1">
                             {languages.map((lng) => (
@@ -457,7 +487,7 @@ export default function Navbar({ children }) {
                 className="flex items-center justify-center space-x-2 bg-gradient-to-r from-[#9f8660] to-[#c0b688] text-white px-5 py-3 rounded-xl text-sm font-medium transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 <Phone className="w-4 h-4" />
-                <span>Contact Us</span>
+                <span>{t("labels.contact")}</span>
               </Link>
             </div>
           </div>

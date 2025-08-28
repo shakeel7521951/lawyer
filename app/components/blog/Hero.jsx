@@ -105,7 +105,7 @@ const Hero = () => {
               <div className="w-12 h-0.5 bg-gradient-to-r from-transparent to-[#c0b688]"></div>
               <div className="w-2 h-2 bg-[#c0b688] rounded-full animate-bounce"></div>
               <div className="text-[#c0b688] text-sm sm:text-base tracking-[0.4em]" style={{ fontFamily: "'Cinzel', serif" }}>
-                AL KHALDI LAW FIRM
+                {t("blog.ALKHALDILAWFIRM")}
               </div>
               <div className="w-2 h-2 bg-[#c0b688] rounded-full animate-bounce"></div>
               <div className="w-12 h-0.5 bg-gradient-to-l from-transparent to-[#c0b688]"></div>

@@ -1,5 +1,6 @@
 {
   "appeal": {
+    "Call": "Appeler",
     "title": "Jugement en appel et décision finale",
     "t1": "Appel du ministère public",
     "t1psg": "Le ministère public a également fait appel du jugement de première instance qui a acquitté certains des prévenus.",
@@ -24,6 +25,6 @@
     "satisfy": "Satisfaction des clients",
     "title3": "Besoin d'une représentation juridique experte ?",
     "emailtext": "Consultation par e-mail",
-    "schedule": "Planifier une réunion"
+    "schedule": "Demander une consultation"
   }
 }
