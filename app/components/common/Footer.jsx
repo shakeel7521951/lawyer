@@ -48,10 +48,10 @@ const Footer = () => {
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
 
           {/* Top Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12  mb-12">
 
             {/* Company Info */}
-            <div className="lg:col-span-1 space-y-6">
+            <div className="lg:col-span-1 md:col-span-3 space-y-6">
 
               {/* Logo */}
               <Link href="/" className="flex items-center space-x-3 group">
@@ -91,7 +91,7 @@ const Footer = () => {
               <h3 className="text-xl font-bold text-white mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                 {t("sections.quickLinks")}
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-3 md:space-y-5">
                 {Array.isArray(quickLinks) &&
                   quickLinks.map((link, index) => (
                     <li key={index}>
@@ -115,7 +115,7 @@ const Footer = () => {
               <h3 className="text-xl font-bold text-white mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                 {t("sections.legalServices")}
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-3  md:space-y-5">
                 {Array.isArray(services) &&
                   services.map((service, index) => {
                     const icons = [Building2, Shield, Users, Scale];
@@ -158,7 +158,7 @@ const Footer = () => {
                         className="group flex items-center space-x-3 text-white/80 hover:text-[#c0b688] transition-colors duration-300"
                       >
                         <div className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center border border-white/20 group-hover:border-[#c0b688]/50 transition-all duration-300">
-                          <IconComponent className="w-4 h-4" />
+                          <IconComponent className="w-10 h-4" />
                         </div>
                         <span className="text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>{contact.label}</span>
                       </Link>
@@ -166,10 +166,11 @@ const Footer = () => {
                   })}
               </div>
 
+            </div>
               {/* Social Links */}
-              <div className="pt-4">
-                <h4 className="text-white font-semibold mb-3 text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
-                  {t("social.follow")}
+              <div className="pt-4 flex gap-4 md:gap-12 text-nowrap items-center md:mt-[-20px]">
+                <h4 className="text-white text-xl font-semibold mb-3" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  {t("social.follow")} :
                 </h4>
                 <div className="flex space-x-3">
                   {socialLinks.map((social, index) => (
@@ -184,7 +185,6 @@ const Footer = () => {
                   ))}
                 </div>
               </div>
-            </div>
           </div>
 
           {/* Newsletter Section */}
