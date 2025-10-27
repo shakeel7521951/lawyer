@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import {
@@ -14,6 +15,7 @@ import {
 } from "lucide-react";
 
 const CatTrust = () => {
+  const {t} = useTranslation ('whyus/cattrust')
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -25,25 +27,25 @@ const CatTrust = () => {
   const stats = [
     {
       value: "19+",
-      label: "Years of Legal Excellence",
+      label: t("stats.0.label"),
       icon: Award,
       color: "from-[#9f8660] to-[#c0b688]",
     },
     {
       value: "22",
-      label: "Legislative Committees",
+      label: t("stats.1.label"),
       icon: Scale,
       color: "from-[#c0b688] to-[#9f8660]",
     },
     {
       value: "1000+",
-      label: "Satisfied Clients",
+      label: t("stats.2.label"),
       icon: Users,
       color: "from-[#494c52] to-[#9f8660]",
     },
     {
-      value: "All",
-      label: "Court Levels Covered",
+      value: t("stats.3.value"),
+      label: t("stats.3.label"),
       icon: Globe,
       color: "from-[#9f8660] to-[#494c52]",
     },
@@ -51,27 +53,27 @@ const CatTrust = () => {
 
   const achievements = [
     {
-      title: "International Representation",
+      title: t("achievements_section.achievements.0.title"),
       description:
-        "Represented the State of Qatar in regional and international forums",
+        t("achievements_section.achievements.0.description"),
       icon: Globe,
     },
     {
-      title: "Legislative Leadership",
+      title: t("achievements_section.achievements.1.title"),
       description:
-        "Member of 22 legislative committees that amended and created most laws",
+        t("achievements_section.achievements.1.description"),
       icon: Scale,
     },
     {
-      title: "Professional Excellence",
+      title: t("achievements_section.achievements.2.title"),
       description:
-        "Elite legal consultants with comprehensive knowledge across all legal areas",
+        t("achievements_section.achievements.2.description"),
       icon: Award,
     },
     {
-      title: "Ethical Standards",
+      title: t("achievements_section.achievements.3.title"),
       description:
-        "Unwavering commitment to professional ethics and client confidentiality",
+        t("achievements_section.achievements.3.description"),
       icon: CheckCircle,
     },
   ];
@@ -88,25 +90,25 @@ const CatTrust = () => {
             >
               <Award className="w-4 h-4 text-[#9f8660]" />
               <span className="text-[#494c52] font-semibold text-sm tracking-wider">
-                PROVEN EXCELLENCE
+                {t("trust_indicator.badge")}
               </span>
             </div>
             <h2
               className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-[#494c52]"
               data-aos="fade-up"
             >
-              Trusted by{" "}
+              {t("trust_indicator.heading")}{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9f8660] to-[#c0b688]">
-                Clients
+                {t("trust_indicator.headingtwo")}
               </span>
               <br />
-              Across Qatar
+              {t("trust_indicator.headingthree")}
             </h2>
             <p
               className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed"
               data-aos="fade-right"
             >
-              Our track record speaks for itself...
+              {t("trust_indicator.subtext")}
             </p>
           </div>
 
@@ -153,7 +155,7 @@ const CatTrust = () => {
               className="text-2xl lg:text-3xl font-bold text-center text-[#494c52] mb-12"
               data-aos="fade-up"
             >
-              Our Key Achievements
+              {t("achievements_section.heading")}
             </h3>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8">
@@ -207,14 +209,14 @@ const CatTrust = () => {
                 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4"
                 data-aos="fade-down"
               >
-                Ready to Start Your Legal Journey?
+                {t("cta_section.heading")}
               </h3>
               <p
                 className="text-lg sm:text-xl text-white/90 mb-8 max-w-3xl mx-auto"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                Book a free consultation with our experts today...
+                {t("cta_section.heading")}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -225,7 +227,7 @@ const CatTrust = () => {
                   data-aos="zoom-in-right"
                 >
                   <Phone className="w-5 h-5" />
-                  <span>Book Free Consultation</span>
+                  <span>{t("cta_section.buttons.0.text")}</span>
                 </a>
 
                 {/* Button 2 */}
@@ -238,7 +240,7 @@ const CatTrust = () => {
                   data-aos-delay="200"
                 >
                   <MessageCircle className="w-5 h-5" />
-                  <span>WhatsApp Our Team</span>
+                  <span>{t("cta_section.buttons.1.text")}</span>
                 </a>
               </div>
             </div>
@@ -250,15 +252,13 @@ const CatTrust = () => {
                 className="text-xl font-semibold text-[#494c52] mb-4"
                 style={{ fontFamily: "'Cormorant Garamond', serif" }}
               >
-                الخالدي AL KHALDI - Your Trusted Legal Partner
+                الخالدي {t("final_trust_section.heading")}
               </h4>
               <p
                 className="text-gray-600 max-w-2xl mx-auto leading-relaxed"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
-                Combining 19+ years of experience with unwavering commitment to
-                professional ethics, we provide comprehensive legal solutions
-                across all areas of law in Qatar and the region.
+                {t("final_trust_section.subtext")} 19+ {t("final_trust_section.subtexttwo")}
               </p>
             </div>
           </div>

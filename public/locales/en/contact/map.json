@@ -1,0 +1,36 @@
+{
+    "map":{
+        "opensunthur":"Open Sun-Thu:",
+        "friday":"Friday:",
+        "find":"FIND US",
+        "title1":"Visit Our",
+        "title2":"Office",
+        "desc":"Located in the heart of Al Rayyan, our office is easily accessible and equipped with modern facilities to serve our clients.",
+        "firm":"AL KHALDI Law Firm",
+        "addres":"Al Rayyan, Qatar",
+        "address":"Street 150, Al Rayyan, Building No. 143, Area 22, Fereej Bin Mahmoud, 3rd Floor",
+        "mapview":"Map View",
+        "direct":"Direction",
+        "click":" Click the button below to get turn-by-turn directions to our office using Google Maps.",
+
+        "info":"Office Information",
+        "quickAction":"Quick Actions",
+
+
+        "call":"Call Us",
+        "calDesc":"Speak directly with our team",
+        "direction":"Get Direction",
+        "getDesc":"Navigate to our office",
+        "wtsp":"Whatsapp",
+        "wtspPsg":"Quick chat support",
+
+
+        "park":"Parking & Accessibility",
+        "line1":"Free parking available",
+        "line2":"Wheelchair accessible",
+        "line3":"3rd floor - elevator available",
+        "line4":"Conference rooms available"
+
+
+    }
+}

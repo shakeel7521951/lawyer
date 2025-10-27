@@ -1,0 +1,70 @@
+{
+  "badge": "LEGAL EXPERTISE",
+
+  "title": "Our Legal Services",
+  "subtitle": "Al-Khaldi provides comprehensive legal services with expertise across multiple sectors.",
+
+  "stats": {
+    "years_experience": "Years Experience",
+    "legislative_committees": "Legislative Committees",
+    "clients_served": "Clients Served",
+    "service_categories": "Service Categories"
+  },
+
+  "services": {
+    "corporate": {
+      "title": "Corporate Services",
+      "category": "Business Solutions",
+      "description": "Legal consultations for company incorporation, intellectual property protection, foreign investments, and commercial contracts.",
+      "features": [
+        "Company Incorporation",
+        "IP Protection",
+        "Commercial Contracts",
+        "Tax Law Consultations"
+      ]
+    },
+    "government": {
+      "title": "Government & Semi-Government",
+      "category": "Public Sector",
+      "description": "Specialized legal counsel for government institutions including legislative consultations, governance practices, and regulatory compliance.",
+      "features": [
+        "Legislative Consultations",
+        "Governance & Transparency",
+        "Regulatory Compliance",
+        "Government Tendering"
+      ]
+    },
+    "individual": {
+      "title": "Individual Services",
+      "category": "Personal Legal",
+      "description": "Personal legal services covering civil, criminal, family cases, sole proprietorship management, and labor disputes.",
+      "features": [
+        "Family & Criminal Law",
+        "Sole Proprietorship",
+        "Labor Disputes",
+        "Debt Collection"
+      ]
+    },
+    "specialized": {
+      "title": "Specialized Services",
+      "category": "Expert Advisory",
+      "description": "Banking legal services, arbitration, risk management consultations, and regulatory compliance services.",
+      "features": [
+        "Banking Legal Services",
+        "Arbitration",
+        "Risk Management",
+        "Regulatory Compliance"
+      ]
+    }
+  },
+
+  "buttons": {
+    "learn_more": "Learn More",
+    "contact_us": "Contact Us Today"
+  },
+
+  "cta": {
+    "title": "Need Legal Assistance?",
+    "subtitle": "Get professional legal consultation tailored to your specific needs."
+  }
+}

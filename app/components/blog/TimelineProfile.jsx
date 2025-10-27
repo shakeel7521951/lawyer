@@ -12,8 +12,10 @@ import {
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 
 const TimelineProfile = () => {
+  const {t} = useTranslation("blog/timelineprofile")
   useEffect(() => {
     AOS.init({ duration: 1000, once: true, easing: "ease-out-cubic" });
   }, []);
@@ -53,11 +55,10 @@ const TimelineProfile = () => {
                   </div>
                 </div>
                 <h1 className="text-2xl md:text-4xl  font-bold mb-6 leading-tight">
-                  Legal Victory: Acquittal in Major Bribery Case
+                  {t("timeline.title")}
                 </h1>
                 <p className="text-sx sm:text-lg text-blue-200 max-w-3xl mx-auto leading-relaxed">
-                  Court of Appeal acquits 11 defendants including public
-                  employee in complex bribery and money laundering case
+                 {t("timeline.passage")}
                 </p>
               </div>
             </div>
@@ -70,10 +71,10 @@ const TimelineProfile = () => {
                 className="flex flex-wrap items-center justify-center gap-8 mb-12 pb-8 mt-2 sm:mt-0 border-b border-[#c0b688]/20"
               >
                 {[
-                  { Icon: Calendar, text: "February 16, 2025" },
-                  { Icon: User, text: "Lawyer Saleh Ali Al-Khaldi" },
-                  { Icon: MapPin, text: "Al Sharq News" },
-                  { Icon: Clock, text: "11 months proceedings" },
+                  { Icon: Calendar, text:t("timeline.february") },
+                  { Icon: User, text: t("timeline.ceoName") },
+                  { Icon: MapPin, text: t("timeline.news")},
+                  { Icon: Clock, text: t("timeline.monthproceding")},
                 ].map(({ Icon, text }, i) => (
                   <div
                     key={i}
@@ -114,23 +115,21 @@ const TimelineProfile = () => {
                   {/* Lawyer Info */}
                   <div data-aos="fade-left" className="lg:col-span-2 space-y-4">
                     <h3 className="text-2xl md:text-3xl font-bold text-[#494c52]">
-                      Lawyer Saleh Ali Al-Khaldi
-                    </h3>
+                      {t("timeline.ceoName")}
+                      </h3>
                     <p className="text-lg text-[#9f8660] font-semibold">
-                      Founder & CEO - AL KHALDI Law Firm
+                      {t("timeline.founderAndCeo")}
                     </p>
                     <p className="text-[#494c52]/80 leading-relaxed">
-                      Successfully defended the innocence of 11 defendants in a
-                      complex bribery and money laundering case, showing
-                      exceptional legal expertise and commitment to justice.
+                      {t("timeline.passage2")}
                     </p>
 
                     {/* Stats */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
   {[
-    { value: "11", label: "Defendants" },
-    { value: "100%", label: "Acquittal" },
-    { value: "11", label: "Months" },
+    { value: "11", label: t("timeline.defend") },
+    { value: "100%", label:t("timeline.acquittal") },
+    { value: "11", label: t("timeline.month") },
   ].map((stat, i) => (
     <div
       key={i}
@@ -158,28 +157,21 @@ const TimelineProfile = () => {
                 <div data-aos="fade-up" className="mb-8">
                   <h2 className="text-2xl md:text-3xl font-bold text-[#494c52] mb-6 flex items-center">
                     <Gavel className="w-8 h-8 text-[#9f8660] mr-3" />
-                    Case Overview
+                    {t("timeline.overview")}
                   </h2>
                   <p className="text-lg text-[#494c52]/80 leading-relaxed mb-6">
-                    The Court of Appeal acquitted 11 defendants, including a
-                    public employee, of charges related to bribery and money
-                    laundering, as well as intentionally acquiring and
-                    possessing funds derived from those crimes.
+                   {t("timeline.overviewPsg")}
                   </p>
                 </div>
 
                 {/* Defense Strategy */}
                 <div data-aos="fade-up" className="mb-8">
                   <h3 className="text-xl font-bold text-[#494c52] mb-4">
-                    Defense Strategy
+                      {t("timeline.strategy")}
                   </h3>
                   <div className="bg-gradient-to-br from-[#9f8660]/5 to-[#494c52]/5 p-6 rounded-2xl border border-[#9f8660]/20 mb-6">
                     <p className="text-[#494c52]/80 leading-relaxed">
-                      <strong>Lawyer Saleh Ali Al-Khaldi</strong> appealed the
-                      initial ruling before the Court of Appeal, arguing that
-                      the first judgment should be overturned and the defendants
-                      acquitted, citing errors in the application of law and
-                      lack of sufficient evidence.
+                      {t("timeline.strategyPsg")}
                     </p>
                   </div>
                 </div>
@@ -187,7 +179,7 @@ const TimelineProfile = () => {
                 {/* Court of Appeal Ruling */}
                 <div data-aos="fade-up" className="mb-8">
                   <h3 className="text-xl font-bold text-[#494c52] mb-4">
-                    Court of Appeal Ruling
+                   {t("timeline.court")}
                   </h3>
                   <div className="space-y-4">
                     <div
@@ -196,10 +188,7 @@ const TimelineProfile = () => {
                     >
                       <Award className="w-5 h-5 text-[#c0b688] mt-1 flex-shrink-0" />
                       <p className="text-[#494c52]/80 leading-relaxed">
-                        The Appeal Court{" "}
-                        <strong>accepted the defense arguments</strong>,
-                        acquitting the defendants and{" "}
-                        <strong>upholding their innocence</strong>.
+                       {t("timeline.coutLine1")}
                       </p>
                     </div>
                     <div
@@ -209,8 +198,7 @@ const TimelineProfile = () => {
                     >
                       <Clock className="w-5 h-5 text-[#c0b688] mt-1 flex-shrink-0" />
                       <p className="text-[#494c52]/80 leading-relaxed">
-                        The proceedings lasted <strong>11 months</strong> before
-                        the final judgment was issued.
+                        {t("timeline.coutLine2")}
                       </p>
                     </div>
                   </div>
@@ -220,16 +208,13 @@ const TimelineProfile = () => {
                 <div data-aos="fade-up" className="mb-8">
                   <h3 className="text-xl font-bold text-[#494c52] mb-4 flex items-center">
                     <Gavel className="w-6 h-6 text-[#9f8660] mr-2" />
-                    Court's Reasoning
+                    {t("timeline.reasoning")}
                   </h3>
                   <blockquote
                     data-aos="fade-up"
                     className="text-lg text-[#494c52] leading-relaxed italic border-l-4 border-[#c0b688] pl-6 bg-gradient-to-br from-[#c0b688]/10 to-[#9f8660]/10 p-6 rounded-2xl border border-[#c0b688]/20"
                   >
-                    "The case was surrounded by doubts, assumptions, and lack of
-                    clear evidence. The documents and testimonies failed to
-                    establish conclusive proof of the defendants' involvement in
-                    bribery or money laundering."
+                    "{t("timeline.resonPsg")}"
                   </blockquote>
                 </div>
               </div>

@@ -1,0 +1,52 @@
+{
+    "form":{
+        "friday":"Friday:",
+        "saturday":"Saturday:",
+        "closed":"Closed",
+        "sunthur":"Sunday - Thursday:",
+        "contactform":"CONTACT FORM",
+        "sendmsg":"Send Us a Message",
+        "desc":"Get in touch with our legal experts. We'll respond within 24 hours to discuss your legal needs.",
+        "name":"Full Name",
+        "inputName":"Enter your full name",
+        "email":"Email Address",
+        "inputEmail":"Enter your email address",
+        "phone":"Phone Number",
+        "serviceType":"Service Type ",
+        "selectServ":"Select a service",
+        "nameRequired":"Full name is required",
+        "emailRequ":"Email is required",
+        "phoneRequ":"Phone number is required",
+
+
+        "corporate":"Corporate Services",
+        "govt":"Government/Semi-Government",
+        "individual":    "Individual Services",
+        "banking":    "Banking Legal Services",
+        "arbitration":    "Arbitration",
+        "risk":    "Risk Management",
+        "compliance":    "Regulatory Compliance",
+        "other":    "Other",
+        "contactInfor":"Contact Information",
+
+        "Msg":"Message",
+        "mesgDesc":"Please Subscribe Your legal needs in detail...",
+        "sending":"Sending...",
+        "sendReq":"Send Request",
+        "sendMsg":"Send Message",
+        "wtsp":"Whatsapp",
+        "firm":"Law Firm and Legal Consultations",
+        "officeAddress":"Office Address",
+        "address":"Street 150, Al Rayyan, Building No. 143, Area 22, Fereej Bin Mahmoud, 3rd Floor",
+        "businessHour":"Business Hour",
+        "quickContact":"Quick Contact",
+        "callNow":"Call Now",
+        "SendEmail":"Send Email",
+        "wtspChat":"Whatsapp Chat",
+
+
+
+        "MsgSendSucfu":"Message sent successfully! We'll contact you soon. ",
+        "MsgSendErro":"    There was an error sending your message. Please try again."
+    }
+}

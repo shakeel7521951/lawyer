@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next"; 
 import AOS from "aos";
 import "aos/dist/aos.css";
 import {
@@ -14,6 +15,7 @@ import {
 } from "lucide-react";
 
 const OurProcess = () => {
+  const {t} = useTranslation ('whyus/ourprocess')
   const [isVisible, setIsVisible] = useState(false);
   const [activeStep, setActiveStep] = useState(0);
   const sectionRef = useRef(null);
@@ -55,49 +57,49 @@ const OurProcess = () => {
   const processSteps = [
     {
       step: "1",
-      title: "Initial Consultation",
+      title: t("steps.0.title"),
       description:
-        "Free comprehensive consultation to understand your legal needs and provide initial legal assessment based on our expertise across all areas of law.",
+        t("steps.0.description"),
       icon: MessageCircle,
       color: "from-[#9f8660] to-[#c0b688]",
     },
     {
       step: "2",
-      title: "Legal Analysis",
+      title: t("steps.1.title"),
       description:
-        "Our team of legal scholars conducts thorough analysis grounded in scientific knowledge and professional accumulations to develop the optimal legal strategy.",
+        t("steps.1.description"),
       icon: FileText,
       color: "from-[#c0b688] to-[#9f8660]",
     },
     {
       step: "3",
-      title: "Documentation & Preparation",
+      title: t("steps.2.title"),
       description:
-        "Meticulous preparation of all legal documents, contracts, and pleadings with attention to detail and adherence to applicable laws and regulations.",
+        t("steps.2.description"),
       icon: Scale,
       color: "from-[#494c52] to-[#9f8660]",
     },
     {
       step: "4",
-      title: "Legal Representation",
+      title: t("steps.3.title"),
       description:
-        "Expert representation before all levels of courts, from First Instance to Supreme Court, including specialized committees and arbitration tribunals.",
+        t("steps.3.description"),
       icon: Users,
       color: "from-[#9f8660] to-[#494c52]",
     },
     {
       step: "5",
-      title: "Case Resolution",
+      title: t("steps.4.title"),
       description:
-        "Efficient resolution of legal matters through our expedited procedures without compromising service quality, ensuring optimal outcomes for our clients.",
+        t("steps.4.description"),
       icon: CheckCircle,
       color: "from-[#c0b688] to-[#9f8660]",
     },
     {
       step: "6",
-      title: "Ongoing Support",
+      title: t("steps.5.title"),
       description:
-        "Continuous legal advisory and support, embracing new methods and technological advancements to provide modern legal solutions for future needs.",
+        t("steps.5.description"),
       icon: TrendingUp,
       color: "from-[#9f8660] to-[#c0b688]",
     },
@@ -123,7 +125,7 @@ const OurProcess = () => {
                 className="text-[#c0b688] font-semibold text-sm tracking-wider"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
-                OUR APPROACH
+                {t("header.badge")}
               </span>
             </div>
 
@@ -132,9 +134,9 @@ const OurProcess = () => {
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
               data-aos="zoom-in"
             >
-              Our{" "}
+              {t("header.title")}{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c0b688] to-[#9f8660]">
-                Legal Process
+                {t("header.titletwo")}
               </span>
             </h2>
 
@@ -143,9 +145,7 @@ const OurProcess = () => {
               style={{ fontFamily: "'Crimson Text', serif" }}
               data-aos="fade-up"
             >
-              From initial consultation to successful resolution, we follow a
-              proven methodology that combines academic excellence with
-              practical expertise to deliver optimal legal outcomes.
+             {t("header.description")}
             </p>
           </div>
 

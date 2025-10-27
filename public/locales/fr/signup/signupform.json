@@ -1,0 +1,55 @@
+{
+  "header": {
+    "title": "Cabinet d’Avocats Al Khaldi",
+    "subtitle": "Excellence juridique de confiance depuis 2004"
+  },
+  "form": {
+    "heading": "Créer votre compte",
+    "account_types": ["Individuel", "Entreprise", "Gouvernement"],
+    "fields": {
+      "individual": {
+        "full_name": {
+          "label": "Nom complet",
+          "placeholder": "Jean Dupont"
+        }
+      },
+      "corporate": {
+        "company_name": {
+          "label": "Nom de l’entreprise",
+          "placeholder": "Société SARL"
+        }
+      },
+      "government": {
+        "department_name": {
+          "label": "Nom du département",
+          "placeholder": "Ministère de..."
+        }
+      },
+      "email": {
+        "label": "Adresse e-mail",
+        "placeholder": "exemple@exemple.com"
+      },
+      "phone": {
+        "label": "Numéro de téléphone",
+        "placeholder": "+974 1234 5678"
+      },
+      "password": {
+        "label": "Mot de passe"
+      },
+      "confirm_password": {
+        "label": "Confirmer le mot de passe"
+      }
+    },
+    "terms": {
+      "text": "J’accepte les ",
+      "links": ["Conditions", "et", "Politique de confidentialité"]
+    },
+    "buttons": {
+      "signup": "S’inscrire"
+    },
+    "footer": {
+      "prompt": "Vous avez déjà un compte ?",
+      "login_link": "Se connecter"
+    }
+  }
+}

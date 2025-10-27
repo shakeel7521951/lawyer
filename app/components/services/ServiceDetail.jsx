@@ -1,16 +1,40 @@
 "use client";
+import { useTranslation } from "react-i18next";
 import React, { useState, useEffect, useRef } from "react";
 import {
-  Scale, Building2, Users, Shield, ChevronRight, CheckCircle,
-  FileText, Globe, Briefcase, CreditCard, Gavel, TrendingUp,
-  Lock, AlertTriangle, Target, Award, ArrowUpRight, Phone,
-  Mail, MapPin, Star, Clock, User
+  Scale,
+  Building2,
+  Users,
+  Shield,
+  ChevronRight,
+  CheckCircle,
+  FileText,
+  Globe,
+  Briefcase,
+  CreditCard,
+  Gavel,
+  TrendingUp,
+  Lock,
+  AlertTriangle,
+  Target,
+  Award,
+  ArrowUpRight,
+  Phone,
+  Mail,
+  MapPin,
+  Star,
+  Clock,
+  User,
 } from "lucide-react";
 import Link from "next/link";
+import ConsultationForm from "../common/ConsultationForm";
 
 const ServiceDetail = ({ serviceData }) => {
+  const { t } = useTranslation("mainservic/detail")
+
   const [isVisible, setIsVisible] = useState(false);
   const [activeTab, setActiveTab] = useState("overview");
+  const [showConsultationModal, setShowConsultationModal] = useState(false);
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -35,7 +59,7 @@ const ServiceDetail = ({ serviceData }) => {
       "corporate-services": Building2,
       "government-services": Shield,
       "individual-services": Users,
-      "legal-support": Scale
+      "legal-support": Scale,
     };
     return icons[serviceId] || Scale;
   };
@@ -43,27 +67,29 @@ const ServiceDetail = ({ serviceData }) => {
   const ServiceIcon = getServiceIcon(serviceData.id);
 
   const tabs = [
-    { id: "overview", label: "Overview", icon: FileText },
-    { id: "services", label: "Services", icon: Briefcase },
-    { id: "process", label: "Process", icon: Target },
-    { id: "benefits", label: "Benefits", icon: Award }
+    { id: "overview", label: t("ctaSection.Overview"), icon: FileText },
+    { id: "services", label: t("ctaSection.Services"), icon: Briefcase },
+    { id: "process", label: t("ctaSection.Process"), icon: Target },
+    { id: "benefits", label: t("ctaSection.Benefits"), icon: Award },
   ];
 
   return (
     <>
       {/* Google Fonts */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+      <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossOrigin="true"
+      />
       <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
         rel="stylesheet"
       />
 
       <div className="min-h-screen bg-white">
-
         {/* Hero Section */}
         <section className="relative w-full bg-gradient-to-br from-[#494c52] via-[#494c52] to-[#9f8660] py-16 sm:py-20 overflow-hidden">
-
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-10">
             <div
@@ -76,55 +102,55 @@ const ServiceDetail = ({ serviceData }) => {
 
           <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
               {/* Left Content */}
               <div className="space-y-6">
-
-                {/* Breadcrumb */}
-                {/*<nav className="flex items-center space-x-2 text-sm">*/}
-                {/*  <Link href="/" className="text-white/70 hover:text-[#c0b688] transition-colors">*/}
-                {/*    Home*/}
-                {/*  </Link>*/}
-                {/*  <ChevronRight className="w-4 h-4 text-white/50" />*/}
-                {/*  <Link href="/services" className="text-white/70 hover:text-[#c0b688] transition-colors">*/}
-                {/*    Services*/}
-                {/*  </Link>*/}
-                {/*  <ChevronRight className="w-4 h-4 text-white/50" />*/}
-                {/*  <span className="text-[#c0b688]">{serviceData.title}</span>*/}
-                {/*</nav>*/}
+         
 
                 {/* Badge */}
                 <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-5 py-2 border border-[#c0b688]/30 mt-5">
                   <ServiceIcon className="w-4 h-4 text-[#c0b688]" />
-                  <span className="text-[#c0b688] font-semibold text-sm tracking-wider" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  <span
+                    className="text-[#c0b688] font-semibold text-sm tracking-wider"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
                     {serviceData.category}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight" >
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
                   {serviceData.title}
                 </h1>
 
                 {/* Subtitle */}
-                <p className="text-xl text-[#c0b688] font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
+                <p
+                  className="text-xl text-[#c0b688] font-medium"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
                   {serviceData.subtitle}
                 </p>
 
                 {/* Description */}
-                <p className="text-lg text-white/90 leading-relaxed" >
+                <p className="text-lg text-white/90 leading-relaxed">
                   {serviceData.description}
                 </p>
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="bg-gradient-to-r from-[#c0b688] to-[#9f8660] text-white px-8 py-3 rounded-xl font-semibold hover:from-[#9f8660] hover:to-[#494c52] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center space-x-2" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  <button
+                    onClick={() => setShowConsultationModal(true)}
+                    className="bg-gradient-to-r from-[#c0b688] to-[#9f8660] text-white px-8 py-3 rounded-xl font-semibold hover:from-[#9f8660] hover:to-[#494c52] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center space-x-2"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
                     <Phone className="w-5 h-5" />
-                    <span>Schedule Consultation</span>
+                    <span>{t("ctaSection.Schedule")}</span>
                   </button>
-                  <button className="border-2 border-white/30 text-white px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-[#494c52] transition-all duration-300 flex items-center space-x-2" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  <button
+                    className="border-2 border-white/30 text-white px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-[#494c52] transition-all duration-300 flex items-center space-x-2"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
                     <Mail className="w-5 h-5" />
-                    <span>Get Quote</span>
+                    <span>{t("ctaSection.GetQuote")}</span>
                   </button>
                 </div>
               </div>
@@ -144,16 +170,37 @@ const ServiceDetail = ({ serviceData }) => {
                     <div className="bg-white/15 backdrop-blur-lg rounded-xl p-4 border border-white/20 shadow-lg">
                       <div className="grid grid-cols-3 gap-4 text-center">
                         <div>
-                          <div className="text-2xl font-bold text-white" >25+</div>
-                          <div className="text-xs text-white/90" style={{ fontFamily: "'Inter', sans-serif" }}>Years</div>
+                          <div className="text-2xl font-bold text-white">
+                            25+
+                          </div>
+                          <div
+                            className="text-xs text-white/90"
+                            style={{ fontFamily: "'Inter', sans-serif" }}
+                          >
+                            {t("ctaSection.Years")}
+                          </div>
                         </div>
                         <div>
-                          <div className="text-2xl font-bold text-white" >500+</div>
-                          <div className="text-xs text-white/90" style={{ fontFamily: "'Inter', sans-serif" }}>Cases</div>
+                          <div className="text-2xl font-bold text-white">
+                            500+
+                          </div>
+                          <div
+                            className="text-xs text-white/90"
+                            style={{ fontFamily: "'Inter', sans-serif" }}
+                          >
+                            {t("ctaSection.Cases")}
+                          </div>
                         </div>
                         <div>
-                          <div className="text-2xl font-bold text-white" >98%</div>
-                          <div className="text-xs text-white/90" style={{ fontFamily: "'Inter', sans-serif" }}>Success</div>
+                          <div className="text-2xl font-bold text-white">
+                            98%
+                          </div>
+                          <div
+                            className="text-xs text-white/90"
+                            style={{ fontFamily: "'Inter', sans-serif" }}
+                          >
+                            {t("ctaSection.Success")}
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -171,9 +218,14 @@ const ServiceDetail = ({ serviceData }) => {
         {/* Main Content */}
         <section ref={sectionRef} className="py-16 sm:py-20">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-
             {/* Navigation Tabs */}
-            <div className={`mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div
+              className={`mb-12 transition-all duration-700 ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
+              }`}
+            >
               <div className="bg-gray-50 rounded-2xl p-2">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
                   {tabs.map((tab) => (
@@ -182,12 +234,21 @@ const ServiceDetail = ({ serviceData }) => {
                       onClick={() => setActiveTab(tab.id)}
                       className={`flex items-center justify-center space-x-2 px-4 py-3 rounded-xl transition-all duration-300 ${
                         activeTab === tab.id
-                          ? 'bg-white shadow-lg text-[#494c52] scale-105'
-                          : 'bg-transparent text-gray-600 hover:bg-white/50 hover:text-[#9f8660]'
+                          ? "bg-white shadow-lg text-[#494c52] scale-105"
+                          : "bg-transparent text-gray-600 hover:bg-white/50 hover:text-[#9f8660]"
                       }`}
                     >
-                      <tab.icon className={`w-4 h-4 ${activeTab === tab.id ? 'text-[#9f8660]' : 'text-gray-500'}`} />
-                      <span className="font-medium text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
+                      <tab.icon
+                        className={`w-4 h-4 ${
+                          activeTab === tab.id
+                            ? "text-[#9f8660]"
+                            : "text-gray-500"
+                        }`}
+                      />
+                      <span
+                        className="font-medium text-sm"
+                        style={{ fontFamily: "'Inter', sans-serif" }}
+                      >
                         {tab.label}
                       </span>
                     </button>
@@ -197,16 +258,21 @@ const ServiceDetail = ({ serviceData }) => {
             </div>
 
             {/* Tab Content */}
-            <div className={`transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-
+            <div
+              className={`transition-all duration-700 delay-300 ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
+              }`}
+            >
               {/* Overview Tab */}
               {activeTab === "overview" && (
                 <div className="space-y-8">
                   <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 border border-gray-100">
-                    <h3 className="text-2xl font-bold text-[#494c52] mb-6" >
-                      Service Overview
+                    <h3 className="text-2xl font-bold text-[#494c52] mb-6">
+                      {t("ctaSection.ServiceOverview")}
                     </h3>
-                    <p className="text-gray-700 leading-relaxed text-lg" >
+                    <p className="text-gray-700 leading-relaxed text-lg">
                       {serviceData.overview}
                     </p>
                   </div>
@@ -217,33 +283,42 @@ const ServiceDetail = ({ serviceData }) => {
                       <div className="w-12 h-12 bg-gradient-to-br from-[#c0b688] to-[#9f8660] rounded-xl flex items-center justify-center mx-auto mb-4">
                         <ServiceIcon className="w-6 h-6 text-white" />
                       </div>
-                      <div className="text-2xl font-bold text-[#494c52] mb-2" >
+                      <div className="text-2xl font-bold text-[#494c52] mb-2">
                         {serviceData.services.length}+
                       </div>
-                      <div className="text-sm text-gray-600 font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
-                        Specialized Services
+                      <div
+                        className="text-sm text-gray-600 font-medium"
+                        style={{ fontFamily: "'Inter', sans-serif" }}
+                      >
+                        {t("ctaSection.SpecializedServices")}
                       </div>
                     </div>
                     <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center">
                       <div className="w-12 h-12 bg-gradient-to-br from-[#9f8660] to-[#494c52] rounded-xl flex items-center justify-center mx-auto mb-4">
                         <Clock className="w-6 h-6 text-white" />
                       </div>
-                      <div className="text-2xl font-bold text-[#494c52] mb-2" >
+                      <div className="text-2xl font-bold text-[#494c52] mb-2">
                         24/7
                       </div>
-                      <div className="text-sm text-gray-600 font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
-                        Support Available
+                      <div
+                        className="text-sm text-gray-600 font-medium"
+                        style={{ fontFamily: "'Inter', sans-serif" }}
+                      >
+                        {t("ctaSection.SupportAvailable")}
                       </div>
                     </div>
                     <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center">
                       <div className="w-12 h-12 bg-gradient-to-br from-[#494c52] to-[#c0b688] rounded-xl flex items-center justify-center mx-auto mb-4">
                         <Award className="w-6 h-6 text-white" />
                       </div>
-                      <div className="text-2xl font-bold text-[#494c52] mb-2" >
+                      <div className="text-2xl font-bold text-[#494c52] mb-2">
                         25+
                       </div>
-                      <div className="text-sm text-gray-600 font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
-                        Years Experience
+                      <div
+                        className="text-sm text-gray-600 font-medium"
+                        style={{ fontFamily: "'Inter', sans-serif" }}
+                      >
+                        {t("ctaSection.YearsExperience")}
                       </div>
                     </div>
                   </div>
@@ -253,35 +328,50 @@ const ServiceDetail = ({ serviceData }) => {
               {/* Services Tab */}
               {activeTab === "services" && (
                 <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-[#494c52] mb-8 text-center" >
-                    Our {serviceData.title} Portfolio
+                  <h3 className="text-2xl font-bold text-[#494c52] mb-8 text-center">
+                    {t("ctaSection.our")} {serviceData.title} {t("ctaSection.portfolio")}
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {serviceData.services.map((service, index) => (
-                      <div key={index} className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl hover:border-[#c0b688]/30 transition-all duration-300 group">
+                      <div
+                        key={index}
+                        className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl hover:border-[#c0b688]/30 transition-all duration-300 group"
+                      >
                         <div className="flex items-start justify-between mb-4">
                           <div className="w-12 h-12 bg-gradient-to-br from-[#c0b688] to-[#9f8660] rounded-xl flex items-center justify-center">
                             <FileText className="w-6 h-6 text-white" />
                           </div>
                           <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-[#9f8660] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
                         </div>
-                        <h4 className="text-lg font-bold text-[#494c52] mb-3 group-hover:text-[#9f8660] transition-colors duration-300" style={{ fontFamily: "'Inter', sans-serif" }}>
+                        <h4
+                          className="text-lg font-bold text-[#494c52] mb-3 group-hover:text-[#9f8660] transition-colors duration-300"
+                          style={{ fontFamily: "'Inter', sans-serif" }}
+                        >
                           {service.title}
                         </h4>
-                        <p className="text-gray-600 text-sm leading-relaxed mb-4" >
+                        <p className="text-gray-600 text-sm leading-relaxed mb-4">
                           {service.description}
                         </p>
                         <div className="space-y-2">
                           {service.features.slice(0, 3).map((feature, idx) => (
-                            <div key={idx} className="flex items-center space-x-2">
+                            <div
+                              key={idx}
+                              className="flex items-center space-x-2"
+                            >
                               <CheckCircle className="w-3 h-3 text-[#c0b688] flex-shrink-0" />
-                              <span className="text-gray-700 text-xs" style={{ fontFamily: "'Inter', sans-serif" }}>
+                              <span
+                                className="text-gray-700 text-xs"
+                                style={{ fontFamily: "'Inter', sans-serif" }}
+                              >
                                 {feature}
                               </span>
                             </div>
                           ))}
                           {service.features.length > 3 && (
-                            <div className="text-[#9f8660] text-xs font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
+                            <div
+                              className="text-[#9f8660] text-xs font-medium"
+                              style={{ fontFamily: "'Inter', sans-serif" }}
+                            >
                               +{service.features.length - 3} more features
                             </div>
                           )}
@@ -295,8 +385,8 @@ const ServiceDetail = ({ serviceData }) => {
               {/* Process Tab */}
               {activeTab === "process" && (
                 <div className="space-y-8">
-                  <h3 className="text-2xl font-bold text-[#494c52] mb-8 text-center" >
-                    Our Service Process
+                  <h3 className="text-2xl font-bold text-[#494c52] mb-8 text-center">
+                    {t("ctaSection.ourserviceprocess")}
                   </h3>
                   <div className="relative">
                     {/* Process Timeline */}
@@ -306,17 +396,23 @@ const ServiceDetail = ({ serviceData }) => {
 
                     <div className="space-y-8">
                       {serviceData.process.map((step, index) => (
-                        <div key={index} className="relative flex items-start space-x-6">
+                        <div
+                          key={index}
+                          className="relative flex items-start space-x-6"
+                        >
                           <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-[#c0b688] to-[#9f8660] rounded-2xl flex items-center justify-center shadow-lg">
-                            <span className="text-2xl font-bold text-white" >
+                            <span className="text-2xl font-bold text-white">
                               {step.step}
                             </span>
                           </div>
                           <div className="flex-1 bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-                            <h4 className="text-xl font-bold text-[#494c52] mb-3" style={{ fontFamily: "'Inter', sans-serif" }}>
+                            <h4
+                              className="text-xl font-bold text-[#494c52] mb-3"
+                              style={{ fontFamily: "'Inter', sans-serif" }}
+                            >
                               {step.title}
                             </h4>
-                            <p className="text-gray-600 leading-relaxed" >
+                            <p className="text-gray-600 leading-relaxed">
                               {step.description}
                             </p>
                           </div>
@@ -330,16 +426,22 @@ const ServiceDetail = ({ serviceData }) => {
               {/* Benefits Tab */}
               {activeTab === "benefits" && (
                 <div className="space-y-8">
-                  <h3 className="text-2xl font-bold text-[#494c52] mb-8 text-center" >
-                    Why Choose Our {serviceData.title}?
+                  <h3 className="text-2xl font-bold text-[#494c52] mb-8 text-center">
+                    {t("ctaSection.whychoose")} {serviceData.title}?
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {serviceData.benefits.map((benefit, index) => (
-                      <div key={index} className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl hover:border-[#c0b688]/30 transition-all duration-300 text-center group">
+                      <div
+                        key={index}
+                        className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl hover:border-[#c0b688]/30 transition-all duration-300 text-center group"
+                      >
                         <div className="w-12 h-12 bg-gradient-to-br from-[#c0b688] to-[#9f8660] rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                           <Star className="w-6 h-6 text-white" />
                         </div>
-                        <p className="text-gray-700 font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
+                        <p
+                          className="text-gray-700 font-medium"
+                          style={{ fontFamily: "'Inter', sans-serif" }}
+                        >
                           {benefit}
                         </p>
                       </div>
@@ -357,25 +459,39 @@ const ServiceDetail = ({ serviceData }) => {
             <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
               <Phone className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4" >
-              Ready to Get Started?
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+              {t("ctaSection.heading")}
             </h3>
-            <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto" >
-              Contact Al-Khaldi Law Firm today to discuss your {serviceData.title.toLowerCase()} needs. Our expert team is ready to provide you with comprehensive legal solutions.
+            <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
+              {t("ctaSection.desc1")}{" "}
+              {serviceData.title.toLowerCase()} {t("ctaSection.desc2")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-[#494c52] px-8 py-3 rounded-xl font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-2 justify-center" style={{ fontFamily: "'Inter', sans-serif" }}>
+              <button
+                onClick={() => setShowConsultationModal(true)}
+                className="bg-white text-[#494c52] px-8 py-3 rounded-xl font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-2 justify-center"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
                 <Phone className="w-5 h-5" />
-                <span>+974 6616 4000</span>
+                <span>{t("ctaSection.buttons.consultation")}</span>
               </button>
-              <button className="border-2 border-white/30 text-white px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-[#494c52] transition-all duration-300 flex items-center space-x-2 justify-center" style={{ fontFamily: "'Inter', sans-serif" }}>
+              <button
+                className="border-2 border-white/30 text-white px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-[#494c52] transition-all duration-300 flex items-center space-x-2 justify-center"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
                 <Mail className="w-5 h-5" />
-                <span>Send Email</span>
+                <span>+974 6616 4000</span>
               </button>
             </div>
           </div>
         </section>
       </div>
+
+      {/* Consultation Form Modals */}
+      <ConsultationForm
+        isOpen={showConsultationModal}
+        onClose={() => setShowConsultationModal(false)}
+      />
     </>
   );
 };

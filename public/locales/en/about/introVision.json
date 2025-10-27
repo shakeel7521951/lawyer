@@ -1,0 +1,22 @@
+{
+  "about": {
+    "introVision": {
+      "title": "About Us",
+      "tagline": "EXCELLENCE • INTEGRITY • TRUST",
+      "intro": "Our company is dedicated to providing high-quality legal services, building long-term trust with clients and the community. We value excellence, integrity, and partnership in everything we do.",
+      "mission": {
+        "title": "Mission",
+        "text": "Deliver professional legal services while protecting client rights and fostering trust."
+      },
+      "vision": {
+        "title": "Vision",
+        "text": "To become a leading legal institution locally and internationally through innovation and excellence."
+      },
+      "coreValues": [
+        "Excellence",
+        "Trust",
+        "Partnership"
+      ]
+    }
+  }
+}

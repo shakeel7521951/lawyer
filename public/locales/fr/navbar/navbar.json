@@ -1,0 +1,28 @@
+{
+  "labels": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "whyus": "Pourquoi nous",
+    "blog": "Blog",
+    "language": "Langue",
+    "contact": "Contact"
+  },
+  "serviceCategories": [
+  {
+    "title": "Entreprises",
+    "description": "Services juridiques pour les entreprises et sociétés"
+  },
+  {
+    "title": "Gouvernement/Semi-gouvernement",
+    "description": "Assistance juridique pour les entités gouvernementales"
+  },
+  {
+    "title": "Individus",
+    "description": "Services juridiques personnels pour les particuliers"
+  }
+],
+  "ourServices": "Nos services",
+  "comprehensiveLegalSolutions": "Solutions juridiques complètes",
+  "allServices": "Voir tous les services"
+}

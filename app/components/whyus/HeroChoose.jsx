@@ -1,10 +1,12 @@
 "use client";
 import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next"; 
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Scale, Award, Users, Shield, Globe, CheckCircle, BookOpen, Gavel } from "lucide-react";
 
 const HeroChoose = () => {
+  const {t} = useTranslation ('whyus/herochoose')
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -16,50 +18,50 @@ const HeroChoose = () => {
   const reasons = [
     {
       icon: Scale,
-      title: "Elite Legal Consultants",
-      description: "Our office includes elite legal consultants and lawyers with expertise and comprehensive knowledge of all legalities across commercial, criminal, civil, corporate, investment, and family law.",
+      title: t("whyChoose.reasons.0.title"),
+      description: t("whyChoose.reasons.0.description"),
       color: "from-[#9f8660] to-[#c0b688]"
     },
     {
       icon: Award,
-      title: "19+ Years of Experience",
-      description: "Professional career spanning from 2005 with leadership positions including Director of Legal Affairs, Head of Legislation, and participation in 22 legislative committees.",
+      title: 19+ t("whyChoose.reasons.1.title"),
+      description: t("whyChoose.reasons.1.description"),
       color: "from-[#c0b688] to-[#9f8660]"
     },
     {
       icon: Gavel,
-      title: "All Court Levels Expertise",
-      description: "Our lawyers specialize in litigation before all levels of courts, from First Instance to the Supreme Court, including Administrative, Labor, and Tenancy Dispute Settlement Committees.",
+      title: t("whyChoose.reasons.2.title"),
+      description: t("whyChoose.reasons.2.description"),
       color: "from-[#494c52] to-[#9f8660]"
     },
     {
       icon: Users,
-      title: "Professional Association Members",
-      description: "Our lawyers are members of relevant professional associations locally, regionally, and internationally, ensuring adherence to the highest professional standards.",
+      title: t("whyChoose.reasons.3.title"),
+      description: t("whyChoose.reasons.3.description"),
       color: "from-[#9f8660] to-[#494c52]"
     },
     {
       icon: Shield,
-      title: "Uncompromising Ethics",
-      description: "Our commitment is to maintain professional ethics standards and confidentiality of information in dealing with our valued clients, ensuring trust and integrity.",
+      title: t("whyChoose.reasons.4.title"),
+      description: t("whyChoose.reasons.4.description"),
       color: "from-[#c0b688] to-[#9f8660]"
     },
     {
       icon: Globe,
-      title: "International Experience",
-      description: "Represented the State of Qatar in regional and international forums, bilateral agreements committees, International Labor Organization, and UPR Committee.",
+      title: t("whyChoose.reasons.5.title"),
+      description: t("whyChoose.reasons.5.description"),
       color: "from-[#9f8660] to-[#c0b688]"
     },
     {
       icon: BookOpen,
-      title: "Academic Excellence",
-      description: "Team of legal scholars with high academic competence, grounding consultations and solutions in scientific knowledge and professional accumulations.",
+      title: t("whyChoose.reasons.6.title"),
+      description: t("whyChoose.reasons.6.description"),
       color: "from-[#494c52] to-[#c0b688]"
     },
     {
       icon: CheckCircle,
-      title: "Comprehensive Coverage",
-      description: "Expertise covers all aspects including commercial, criminal, civil, corporate, investment, family law, banking, electronic transactions, and international cases.",
+      title: t("whyChoose.reasons.7.title"),
+      description: t("whyChoose.reasons.7.description"),
       color: "from-[#c0b688] to-[#494c52]"
     }
   ];
@@ -119,7 +121,7 @@ const HeroChoose = () => {
                     textShadow: '0 2px 10px rgba(0,0,0,0.5)'
                   }}
                 >
-                  WHY CHOOSE US
+                  {t("hero.title_en")}
                 </p>
               </div>
 
@@ -132,7 +134,8 @@ const HeroChoose = () => {
                 <div className="w-16 sm:w-20 h-0.5 bg-gradient-to-r from-transparent to-[#c0b688]"></div>
                 <div className="w-2 h-2 bg-[#c0b688] rounded-full animate-pulse"></div>
                 <div className="text-[#c0b688] text-xs sm:text-sm font-light tracking-[0.3em]" style={{ fontFamily: "'Cinzel', serif" }}>
-                  LEGAL EXCELLENCE
+                  {t("hero.tagline")}
+                 
                 </div>
                 <div className="w-2 h-2 bg-[#c0b688] rounded-full animate-pulse"></div>
                 <div className="w-16 sm:w-20 h-0.5 bg-gradient-to-l from-transparent to-[#c0b688]"></div>
@@ -146,11 +149,11 @@ const HeroChoose = () => {
               className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
-              Experience{' '}
+              {t("hero.heading")} {' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c0b688] to-[#9f8660]">
-                Legal Excellence
+              {t("hero.headingtwo")}
               </span>
-              <br />& Professional Ethics
+              <br />{t("hero.headingthree")}
             </h2>
 
             {/* Description */}
@@ -160,7 +163,7 @@ const HeroChoose = () => {
               className="text-lg sm:text-xl leading-relaxed text-white/90 font-light text-center max-w-3xl mx-auto mb-8"
               style={{ fontFamily: "'Crimson Text', serif", lineHeight: '1.6' }}
             >
-              Our office includes elite legal consultants and lawyers with expertise and comprehensive knowledge of all legalities. We maintain professional ethics standards and confidentiality while delivering exceptional legal services.
+              {t("hero.description")}
             </p>
 
             {/* Stats */}
@@ -181,14 +184,14 @@ const HeroChoose = () => {
                   data-aos="fade-right"
                   data-aos-delay="200"
                 >
-                  Experience
+                  {t("hero.stats.experience.label")}
                 </p>
                 <p
                   className="text-[#c0b688] text-2xl font-bold"
                   data-aos="fade-up"
                   data-aos-delay="300"
                 >
-                  19+ Years
+                  19+ {t("hero.stats.experience.value")}
                 </p>
               </div>
 
@@ -204,7 +207,7 @@ const HeroChoose = () => {
                   data-aos="fade-down"
                   data-aos-delay="200"
                 >
-                  Legislative Committees
+                  {t("hero.stats.committees.label")}
                 </p>
                 <p
                   className="text-[#c0b688] text-2xl font-bold"
@@ -227,38 +230,38 @@ const HeroChoose = () => {
                   data-aos="fade-left"
                   data-aos-delay="200"
                 >
-                  Court Levels
+                  {t("hero.stats.courts.label")}
                 </p>
                 <p
                   className="text-[#c0b688] text-2xl font-bold"
                   data-aos="fade-up"
                   data-aos-delay="300"
                 >
-                  All
+                  {t("hero.stats.courts.value")}
                 </p>
               </div>
             </div>
 
 
             {/* CTA */}
-           <div
-  data-aos="fade-up"
-  data-aos-delay="700"
-  className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-3"
->
-  <a
-    href="/services"
-    className="bg-gradient-to-r from-[#9f8660] to-[#c0b688] text-white px-8 py-3 rounded-xl text-sm sm:text-base font-medium transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto text-center"
-  >
-    Our Services
-  </a>
-  <a
-    href="/contact"
-    className="border-2 border-white/30 text-white px-6 py-3 rounded-xl text-sm sm:text-base font-medium hover:bg-white/10 transition-all duration-300 w-full sm:w-auto text-center"
-  >
-    Consult with Us
-  </a>
-</div>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="700"
+              className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-3"
+            >
+              <a
+                href="/services"
+                className="bg-gradient-to-r from-[#9f8660] to-[#c0b688] text-white px-8 py-3 rounded-xl text-sm sm:text-base font-medium transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto text-center"
+              >
+                {t("hero.cta.services")}
+              </a>
+              <a
+                href="/contact"
+                className="border-2 border-white/30 text-white px-6 py-3 rounded-xl text-sm sm:text-base font-medium hover:bg-white/10 transition-all duration-300 w-full sm:w-auto text-center"
+              >
+                {t("hero.cta.consult")}
+              </a>
+            </div>
 
           </div>
         </div>
@@ -276,18 +279,18 @@ const HeroChoose = () => {
           >
             <div className="inline-flex items-center space-x-2 bg-[#c0b688]/10 rounded-full px-6 py-2 border border-[#c0b688]/20 mb-6">
               <Scale className="w-4 h-4 text-[#9f8660]" />
-              <span className="text-[#494c52] font-semibold text-sm tracking-wider">WHY AL KHALDI</span>
+              <span className="text-[#494c52] font-semibold text-sm tracking-wider">{t("whyChoose.badge")}</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-[#494c52] leading-tight">
-              Your Trusted{' '}
+              {t("whyChoose.heading")}{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9f8660] to-[#c0b688]">
-                Legal Partner
+                {t("whyChoose.headingtwo")}
               </span>
             </h2>
 
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              We combine academic excellence with practical experience, maintaining the highest standards of professional ethics while delivering comprehensive legal solutions across all areas of law.
+              {t("whyChoose.description")}
             </p>
           </div>
 
@@ -347,28 +350,28 @@ const HeroChoose = () => {
               <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-[#c0b688]/30 rounded-full blur-lg"></div>
 
               <div className="relative z-10 px-4 sm:px-6 lg:px-0 text-center">
-  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 leading-tight">
-    Ready to Experience Legal Excellence?
-  </h3>
-  <p className="text-sm sm:text-base md:text-lg text-white/90 mb-8 max-w-xl sm:max-w-2xl mx-auto leading-relaxed">
-    Trust AL KHALDI for your legal matters. Our expert team is ready to provide you with comprehensive legal solutions.
-  </p>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 leading-tight">
+                  {t("whyChoose.cta.heading")}
+                </h3>
+                <p className="text-sm sm:text-base md:text-lg text-white/90 mb-8 max-w-xl sm:max-w-2xl mx-auto leading-relaxed"> 
+                {t("whyChoose.cta.description")}
+                </p>
 
-  <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-    <a
-      href="/contact"
-      className="bg-white text-[#494c52] px-6 sm:px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto text-center"
-    >
-      Schedule Consultation
-    </a>
-    <a
-      href="/services"
-      className="border border-white/30 text-white px-6 sm:px-8 py-3 rounded-xl font-semibold hover:bg-white/10 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto text-center"
-    >
-      View Our Services
-    </a>
-  </div>
-</div>
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+                  <a
+                    href="/contact"
+                    className="bg-white text-[#494c52] px-6 sm:px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto text-center"
+                  >
+                    {t("whyChoose.cta.buttons.consult")}
+                  </a>
+                  <a
+                    href="/services"
+                    className="border border-white/30 text-white px-6 sm:px-8 py-3 rounded-xl font-semibold hover:bg-white/10 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto text-center"
+                  >
+                    {t("whyChoose.cta.buttons.services")}
+                  </a>
+                </div>
+              </div>
 
             </div>
           </div>

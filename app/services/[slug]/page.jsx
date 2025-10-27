@@ -1,6 +1,6 @@
 import React from "react";
 import { notFound } from "next/navigation";
-import ServiceDetail from "../../components/services/ServiceDetail";
+import ServiceDetailClient from './../ServiceDetailClient';
 
 // Service data with all details from the client's content
 const servicesData = {
@@ -367,7 +367,7 @@ export default function ServiceDetailPage({ params }) {
     notFound();
   }
 
-  return <ServiceDetail serviceData={serviceData} />;
+  return <ServiceDetailClient serviceData={serviceData} slug={slug} />;
 }
 
 export async function generateStaticParams() {

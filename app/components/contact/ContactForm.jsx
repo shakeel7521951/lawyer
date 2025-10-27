@@ -12,16 +12,24 @@ import {
   CheckCircle,
   AlertCircle,
   Loader2,
+  Calendar,
+  FileText,
+  Upload,
+  Scale,
+  Shield,
+  X,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function ContactForm() {
+  const {t}= useTranslation("contact/contact")
   const [formData, setFormData] = useState({
     fullName: "",
-    email: "",
     phone: "",
-    serviceType: "",
+    email: "",
+    services: "",
     message: "",
-    honeypot: "", // Hidden field for spam protection
+    honeypot: "",
   });
 
   const [errors, setErrors] = useState({});
@@ -32,88 +40,79 @@ export default function ContactForm() {
   // AL KHALDI Law Firm contact information
   const firmInfo = {
     address:
-      "Street 150, Al Rayyan, Building No. 143, Area 22, Fereej Bin Mahmoud, 3rd Floor",
+      t("form.address"),
     phones: ["+974 6616 4000", "+974 4009 8889"],
-    email: "info@alkhaldilaw firm.net",
-    website: "www.alkhaldilaw firm.net",
+    email: "info@alkhaldilawfirm.net",
+    website: "www.alkhaldilawfirm.net",
     whatsapp: "+97466164000",
   };
 
-  const serviceTypes = [
-    "Corporate Services",
-    "Government/Semi-Government",
-    "Individual Services",
-    "Banking Legal Services",
-    "Arbitration",
-    "Risk Management",
-    "Regulatory Compliance",
-    "Other",
+  // Services options
+  const servicesOptions = [
+    { value: "corporate", label: t("form.corporate") },
+    { value: "government", label: t("form.govt") },
+    { value: "individual", label:t("form.individual")  },
+    { value: "banking", label: t("form.banking") },
+    { value: "arbitration", label: t("form.arbitration") },
+    { value: "risk-management", label: t("form.risk") },
+    { value: "compliance", label:t("form.compliance") },
+    { value: "other", label: t("form.other") },
   ];
 
-  // Form validation
-  const validateForm = () => {
-    const newErrors = {};
-
-    // Check honeypot (spam protection)
-    if (formData.honeypot) {
-      return false;
-    }
-
-    if (!formData.fullName.trim()) {
-      newErrors.fullName = "Full name is required";
-    }
-
-    if (!formData.email.trim()) {
-      newErrors.email = "Email is required";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = "Please enter a valid email address";
-    }
-
-    if (!formData.phone.trim()) {
-      newErrors.phone = "Phone number is required";
-    }
-
-    if (!formData.serviceType) {
-      newErrors.serviceType = "Please select a service type";
-    }
-
-    if (!formData.message.trim()) {
-      newErrors.message = "Message is required";
-    } else if (formData.message.trim().length < 10) {
-      newErrors.message = "Message must be at least 10 characters long";
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+  // Handle form input changes
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value
+    }));
   };
 
   // Handle form submission
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    if (!validateForm()) {
-      return;
-    }
-
     setIsSubmitting(true);
     setSubmitStatus(null);
+    
+    // Simple validation
+    const newErrors = {};
+    if (!formData.fullName) newErrors.fullName =t("form.nameRequired");
+    if (!formData.phone) newErrors.phone = t("form.phoneRequ");
+    if (!formData.email) newErrors.email =  t("form.emailRequ");
+    
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      setIsSubmitting(false);
+      return;
+    }
+    
+    setErrors({});
 
     try {
-      // Simulate API call - replace with actual endpoint
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      // Format WhatsApp message
+      const whatsappMessage = `New Contact Request:\n\nName: ${formData.fullName}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nServices: ${formData.services}\nMessage: ${formData.message}`;
+
+      // Open WhatsApp with the formatted message
+      const whatsappUrl = `https://wa.me/${firmInfo.whatsapp.replace(
+        /[^\d]/g,
+        ""
+      )}?text=${encodeURIComponent(whatsappMessage)}`;
+      window.open(whatsappUrl, "_blank");
 
       setSubmitStatus("success");
-      setFormData({
-        fullName: "",
-        email: "",
-        phone: "",
-        serviceType: "",
-        message: "",
-        honeypot: "",
-      });
 
-      // Auto-hide success message after 5 seconds
-      setTimeout(() => setSubmitStatus(null), 5000);
+      // Reset form after successful submission
+      setTimeout(() => {
+        setFormData({
+          fullName: "",
+          phone: "",
+          email: "",
+          services: "",
+          message: "",
+          honeypot: "",
+        });
+        setSubmitStatus(null);
+      }, 2000);
     } catch (error) {
       setSubmitStatus("error");
     } finally {
@@ -121,22 +120,13 @@ export default function ContactForm() {
     }
   };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-
-    // Clear error when user starts typing
-    if (errors[name]) {
-      setErrors((prev) => ({ ...prev, [name]: "" }));
-    }
-  };
-
   const openWhatsApp = () => {
     const message = `Hello AL KHALDI Law Firm,\n\nI would like to inquire about legal services.\n\nName: ${
       formData.fullName || "[Your Name]"
-    }\nService: ${formData.serviceType || "[Service Type]"}\nMessage: ${
-      formData.message || "[Your Message]"
-    }\n\nThank you.`;
+    }\nServices: ${
+      servicesOptions.find((s) => s.value === formData.services)?.label ||
+      "[Service]"
+    }\nMessage: ${formData.message || "[Your Message]"}\n\nThank you.`;
     const whatsappUrl = `https://wa.me/${firmInfo.whatsapp.replace(
       /[^\d]/g,
       ""
@@ -167,7 +157,7 @@ export default function ContactForm() {
           <div
             className="absolute inset-0 bg-repeat opacity-20"
             style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23494c52' fill-opacity='0.1'%3E%3Cpath d='M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0 11.046 8.954 20 20 20s20-8.954 20-20-8.954-20-20-20-20 8.954-20 20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+              backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23494c52' fill-opacity='0.1'%3E%3Cpath d='M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0 11.046 8.954 20 20 20s20-8.954 20-20-8.954-20-20-20-20 8.954-20 20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
             }}
           ></div>
         </div>
@@ -185,62 +175,16 @@ export default function ContactForm() {
                   {/* Header */}
                   <div className="mb-8">
                     <div className="inline-flex items-center space-x-2 bg-[#c0b688]/10 rounded-full px-4 py-2 border border-[#c0b688]/20 mb-4">
-                      <MessageSquare className="w-4 h-4 text-[#9f8660]" />
+                      <Scale className="w-4 h-4 text-[#9f8660]" />
                       <span
                         className="text-[#494c52] font-medium text-sm"
                         style={{ fontFamily: "'Inter', sans-serif" }}
                       >
-                        CONTACT FORM
+                      {t("form.contactform")}
                       </span>
                     </div>
-
-                    <h2
-                      className="text-3xl lg:text-4xl font-bold text-[#494c52] mb-4 leading-tight"
-                      style={{ fontFamily: "'Cormorant Garamond', serif" }}
-                    >
-                      Send Us a{" "}
-                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9f8660] to-[#c0b688]">
-                        Message
-                      </span>
-                    </h2>
-
-                    <p
-                      className="text-lg text-gray-600 leading-relaxed"
-                      style={{ fontFamily: "'Crimson Text', serif" }}
-                    >
-                      Get in touch with our legal experts. We'll respond within
-                      24 hours to discuss your legal needs.
-                    </p>
                   </div>
 
-                  {/* Success/Error Messages */}
-                  {submitStatus && (
-                    <div
-                      className={`mb-6 p-4 rounded-xl border ${
-                        submitStatus === "success"
-                          ? "bg-green-50 border-green-200 text-green-800"
-                          : "bg-red-50 border-red-200 text-red-800"
-                      }`}
-                    >
-                      <div className="flex items-center space-x-2">
-                        {submitStatus === "success" ? (
-                          <CheckCircle className="w-5 h-5" />
-                        ) : (
-                          <AlertCircle className="w-5 h-5" />
-                        )}
-                        <span
-                          className="font-medium"
-                          style={{ fontFamily: "'Inter', sans-serif" }}
-                        >
-                          {submitStatus === "success"
-                            ? "Message sent successfully! We'll get back to you soon."
-                            : "Error sending message. Please try again or contact us directly."}
-                        </span>
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Form */}
                   <form
                     ref={formRef}
                     onSubmit={handleSubmit}
@@ -252,175 +196,169 @@ export default function ContactForm() {
                       name="honeypot"
                       value={formData.honeypot}
                       onChange={handleChange}
+                      className="hidden"
                       style={{ display: "none" }}
-                      tabIndex="-1"
-                      autoComplete="off"
                     />
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      {/* Full Name */}
-                      <div>
-                        <label
-                          className="block text-sm font-medium text-[#494c52] mb-2"
-                          style={{ fontFamily: "'Inter', sans-serif" }}
-                        >
-                          Full Name *
-                        </label>
-                        <div className="relative">
-                          <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                          <input
-                            type="text"
-                            name="fullName"
-                            value={formData.fullName}
-                            onChange={handleChange}
-                            className={`w-full pl-11 pr-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#c0b688]/50 focus:border-[#c0b688] transition-all duration-300 ${
-                              errors.fullName
-                                ? "border-red-300 bg-red-50"
-                                : "border-gray-200 hover:border-[#c0b688]/50"
-                            }`}
-                            placeholder="Enter your full name"
-                            style={{ fontFamily: "'Inter', sans-serif" }}
-                          />
-                        </div>
-                        {errors.fullName && (
-                          <p className="mt-1 text-sm text-red-600 flex items-center space-x-1">
-                            <AlertCircle className="w-4 h-4" />
-                            <span>{errors.fullName}</span>
-                          </p>
-                        )}
-                      </div>
+                    {/* Personal Information Section */}
+                    <div className="bg-gray-50 rounded-xl p-6">
+                      <h3
+                        className="text-lg font-semibold text-[#494c52] mb-4 flex items-center space-x-2"
+                        style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                      >
+                        <User className="w-5 h-5 text-[#9f8660]" />
+                        <span>{t("form.contactInfor")}</span>
+                      </h3>
 
-                      {/* Email */}
-                      <div>
-                        <label
-                          className="block text-sm font-medium text-[#494c52] mb-2"
-                          style={{ fontFamily: "'Inter', sans-serif" }}
-                        >
-                          Email Address *
-                        </label>
-                        <div className="relative">
-                          <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                          <input
-                            type="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            className={`w-full pl-11 pr-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#c0b688]/50 focus:border-[#c0b688] transition-all duration-300 ${
-                              errors.email
-                                ? "border-red-300 bg-red-50"
-                                : "border-gray-200 hover:border-[#c0b688]/50"
-                            }`}
-                            placeholder="Enter your email address"
-                            style={{ fontFamily: "'Inter', sans-serif" }}
-                          />
-                        </div>
-                        {errors.email && (
-                          <p className="mt-1 text-sm text-red-600 flex items-center space-x-1">
-                            <AlertCircle className="w-4 h-4" />
-                            <span>{errors.email}</span>
-                          </p>
-                        )}
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      {/* Phone */}
-                      <div>
-                        <label
-                          className="block text-sm font-medium text-[#494c52] mb-2"
-                          style={{ fontFamily: "'Inter', sans-serif" }}
-                        >
-                          Phone Number *
-                        </label>
-                        <div className="relative">
-                          <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                          <input
-                            type="tel"
-                            name="phone"
-                            value={formData.phone}
-                            onChange={handleChange}
-                            className={`w-full pl-11 pr-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#c0b688]/50 focus:border-[#c0b688] transition-all duration-300 ${
-                              errors.phone
-                                ? "border-red-300 bg-red-50"
-                                : "border-gray-200 hover:border-[#c0b688]/50"
-                            }`}
-                            placeholder="+974 XXXX XXXX"
-                            style={{ fontFamily: "'Inter', sans-serif" }}
-                          />
-                        </div>
-                        {errors.phone && (
-                          <p className="mt-1 text-sm text-red-600 flex items-center space-x-1">
-                            <AlertCircle className="w-4 h-4" />
-                            <span>{errors.phone}</span>
-                          </p>
-                        )}
-                      </div>
-
-                      {/* Service Type */}
-                      <div>
-                        <label
-                          className="block text-sm font-medium text-[#494c52] mb-2"
-                          style={{ fontFamily: "'Inter', sans-serif" }}
-                        >
-                          Service Type *
-                        </label>
-                        <div className="relative">
-                          <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                          <select
-                            name="serviceType"
-                            value={formData.serviceType}
-                            onChange={handleChange}
-                            className={`w-full pl-11 pr-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#c0b688]/50 focus:border-[#c0b688] transition-all duration-300 appearance-none ${
-                              errors.serviceType
-                                ? "border-red-300 bg-red-50"
-                                : "border-gray-200 hover:border-[#c0b688]/50"
-                            }`}
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {/* Full Name */}
+                        <div>
+                          <label
+                            className="block text-sm font-medium text-[#494c52] mb-2"
                             style={{ fontFamily: "'Inter', sans-serif" }}
                           >
-                            <option value="">Select a service</option>
-                            {serviceTypes.map((service) => (
-                              <option key={service} value={service}>
-                                {service}
-                              </option>
-                            ))}
-                          </select>
+                            {t("form.name")} *
+                          </label>
+                          <div className="relative">
+                            <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                            <input
+                              type="text"
+                              name="fullName"
+                              value={formData.fullName}
+                              onChange={handleChange}
+                              className={`w-full pl-11 pr-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#c0b688]/50 focus:border-[#c0b688] transition-all duration-300 ${
+                                errors.fullName
+                                  ? "border-red-300 bg-red-50"
+                                  : "border-gray-200 hover:border-[#c0b688]/50"
+                              }`}
+                              placeholder={t("form.inputName")}
+                              style={{ fontFamily: "'Inter', sans-serif" }}
+                            />
+                          </div>
+                          {errors.fullName && (
+                            <p className="mt-1 text-sm text-red-600 flex items-center space-x-1">
+                              <AlertCircle className="w-4 h-4" />
+                              <span>{errors.fullName}</span>
+                            </p>
+                          )}
                         </div>
-                        {errors.serviceType && (
-                          <p className="mt-1 text-sm text-red-600 flex items-center space-x-1">
-                            <AlertCircle className="w-4 h-4" />
-                            <span>{errors.serviceType}</span>
-                          </p>
-                        )}
-                      </div>
-                    </div>
 
-                    {/* Message */}
-                    <div>
-                      <label
-                        className="block text-sm font-medium text-[#494c52] mb-2"
-                        style={{ fontFamily: "'Inter', sans-serif" }}
-                      >
-                        Message *
-                      </label>
-                      <textarea
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        rows="5"
-                        className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#c0b688]/50 focus:border-[#c0b688] transition-all duration-300 resize-none ${
-                          errors.message
-                            ? "border-red-300 bg-red-50"
-                            : "border-gray-200 hover:border-[#c0b688]/50"
-                        }`}
-                        placeholder="Please describe your legal needs in detail..."
-                        style={{ fontFamily: "'Inter', sans-serif" }}
-                      />
-                      {errors.message && (
-                        <p className="mt-1 text-sm text-red-600 flex items-center space-x-1">
-                          <AlertCircle className="w-4 h-4" />
-                          <span>{errors.message}</span>
-                        </p>
-                      )}
+                        {/* Phone Number */}
+                        <div>
+                          <label
+                            className="block text-sm font-medium text-[#494c52] mb-2"
+                            style={{ fontFamily: "'Inter', sans-serif" }}
+                          >
+                            {t("form.phone")} ({t("form.wtsp")}) *
+                          </label>
+                          <div className="relative">
+                            <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                            <input
+                              type="tel"
+                              name="phone"
+                              value={formData.phone}
+                              onChange={handleChange}
+                              className={`w-full pl-11 pr-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#c0b688]/50 focus:border-[#c0b688] transition-all duration-300 ${
+                                errors.phone
+                                  ? "border-red-300 bg-red-50"
+                                  : "border-gray-200 hover:border-[#c0b688]/50"
+                              }`}
+                              placeholder="+974 XXXX XXXX"
+                              style={{ fontFamily: "'Inter', sans-serif" }}
+                            />
+                          </div>
+                          {errors.phone && (
+                            <p className="mt-1 text-sm text-red-600 flex items-center space-x-1">
+                              <AlertCircle className="w-4 h-4" />
+                              <span>{errors.phone}</span>
+                            </p>
+                          )}
+                        </div>
+                         {/* Email */}
+                        <div>
+                          <label
+                            className="block text-sm font-medium text-[#494c52] mb-2"
+                            style={{ fontFamily: "'Inter', sans-serif" }}
+                          >
+                            {t("form.email")} *
+                          </label>
+                          <div className="relative">
+                            <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                            <input
+                              type="email"
+                              name="email"
+                              value={formData.email}
+                              onChange={handleChange}
+                              className={`w-full pl-11 pr-4 py-3 border rounded-xl focus:ring-2 focus:ring-[#c0b688]/50 focus:border-[#c0b688] transition-all duration-300 ${
+                                errors.email
+                                  ? "border-red-300 bg-red-50"
+                                  : "border-gray-200 hover:border-[#c0b688]/50"
+                              }`}
+                              placeholder={t("form.inputEmail")}
+                              style={{ fontFamily: "'Inter', sans-serif" }}
+                            />
+                          </div>
+                          {errors.email && (
+                            <p className="mt-1 text-sm text-red-600 flex items-center space-x-1">
+                              <AlertCircle className="w-4 h-4" />
+                              <span>{errors.email}</span>
+                            </p>
+                          )}
+                        </div>
+
+                        {/* Services */}
+                        <div>
+                          <label
+                            className="block text-sm font-medium text-[#494c52] mb-2"
+                            style={{ fontFamily: "'Inter', sans-serif" }}
+                          >
+                           {t("form.serviceType")}
+                          </label>
+                          <div className="relative">
+                            <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                            <select
+                              name="services"
+                              value={formData.services}
+                              onChange={handleChange}
+                              className="w-full pl-11 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#c0b688]/50 focus:border-[#c0b688] transition-all duration-300 hover:border-[#c0b688]/50 appearance-none"
+                              style={{ fontFamily: "'Inter', sans-serif" }}
+                            >
+                              <option value="">{t("form.selectServ")}</option>
+                              {servicesOptions.map((service) => (
+                                <option key={service.value} value={service.value}>
+                                  {service.label}
+                                </option>
+                              ))}
+                            </select>
+                            <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none">
+                              <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Message */}
+                        <div className="md:col-span-2">
+                          <label
+                            className="block text-sm font-medium text-[#494c52] mb-2"
+                            style={{ fontFamily: "'Inter', sans-serif" }}
+                          >
+                            {t("form.Msg")}
+                          </label>
+                          <div className="relative">
+                            <MessageSquare className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
+                            <textarea
+                              name="message"
+                              value={formData.message}
+                              onChange={handleChange}
+                              className="w-full pl-11 pr-4 py-3 h-32 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#c0b688]/50 focus:border-[#c0b688] transition-all duration-300 hover:border-[#c0b688]/50"
+                              placeholder={t("form.mesgDesc")}
+                              style={{ fontFamily: "'Inter', sans-serif" }}
+                            />
+                          </div>
+                        </div>
+                      </div>
                     </div>
 
                     {/* Submit Buttons */}
@@ -437,26 +375,30 @@ export default function ContactForm() {
                           <Send className="w-5 h-5" />
                         )}
                         <span>
-                          {isSubmitting ? "Sending..." : "Send Message"}
+                          {isSubmitting
+                            ? t("form.sending")
+                            : t("form.sendReq")}
                         </span>
                       </button>
-
-                      <button
-                        type="button"
-                        onClick={openWhatsApp}
-                        className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-xl font-medium transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
-                        style={{ fontFamily: "'Inter', sans-serif" }}
-                      >
-                        <svg
-                          className="w-5 h-5"
-                          fill="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.513" />
-                        </svg>
-                        <span>WhatsApp</span>
-                      </button>
                     </div>
+
+                    {/* Status Messages */}
+                    {submitStatus === "success" && (
+                      <div className="bg-green-50 border border-green-200 rounded-xl p-4 flex items-center space-x-3">
+                        <CheckCircle className="w-5 h-5 text-green-600" />
+                        <p className="text-green-800" style={{ fontFamily: "'Inter', sans-serif" }}>
+                          {t("form.MsgSendSucfu")}
+                        </p>
+                      </div>
+                    )}
+                    {submitStatus === "error" && (
+                      <div className="bg-red-50 border border-red-200 rounded-xl p-4 flex items-center space-x-3">
+                        <AlertCircle className="w-5 h-5 text-red-600" />
+                        <p className="text-red-800" style={{ fontFamily: "'Inter', sans-serif" }}>
+                          {t("form.MsgSendErro")}
+                        </p>
+                      </div>
+                    )}
                   </form>
                 </div>
               </div>
@@ -482,7 +424,7 @@ export default function ContactForm() {
                       className="text-[#c0b688] font-medium"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
-                      Law Firm and Legal Consultations
+                     {t("form.firm")}
                     </p>
                   </div>
 
@@ -497,7 +439,7 @@ export default function ContactForm() {
                           className="font-semibold mb-1"
                           style={{ fontFamily: "'Inter', sans-serif" }}
                         >
-                          Office Address
+                        {t("form.officeAddress")}
                         </h4>
                         <p
                           className="text-white/90 text-sm leading-relaxed"
@@ -518,9 +460,9 @@ export default function ContactForm() {
                           className="font-semibold mb-2"
                           style={{ fontFamily: "'Inter', sans-serif" }}
                         >
-                          Phone Numbers
+                          {t("form.phone")}
                         </h4>
-                        {firmInfo.phones.map((phone, index) => (
+                       {firmInfo.phones.map((phone, index) => (
                           <a
                             key={index}
                             href={`tel:${phone}`}
@@ -543,7 +485,7 @@ export default function ContactForm() {
                           className="font-semibold mb-1"
                           style={{ fontFamily: "'Inter', sans-serif" }}
                         >
-                          Email
+                          {t("form.email")}
                         </h4>
                         <a
                           href={`mailto:${firmInfo.email}`}
@@ -565,27 +507,27 @@ export default function ContactForm() {
                           className="font-semibold mb-2"
                           style={{ fontFamily: "'Inter', sans-serif" }}
                         >
-                          Business Hours
+                          {t("form.businessHour")}
                         </h4>
                         <div
                           className="space-y-1 text-sm"
                           style={{ fontFamily: "'Inter', sans-serif" }}
                         >
                           <div className="flex justify-between text-white/90">
-                            <span>Sun - Thu:</span>
+                            <span>{t("form.sunthur")}</span>
                             <span className="text-[#c0b688]">
                               8:00 AM - 6:00 PM
                             </span>
                           </div>
                           <div className="flex justify-between text-white/90">
-                            <span>Friday:</span>
+                            <span>{t("form.friday")}</span>
                             <span className="text-[#c0b688]">
                               2:00 PM - 6:00 PM
                             </span>
                           </div>
                           <div className="flex justify-between text-white/90">
-                            <span>Saturday:</span>
-                            <span className="text-white/60">Closed</span>
+                            <span>{t("form.saturday")}</span>
+                            <span className="text-white/60">{t("form.closed")}</span>
                           </div>
                         </div>
                       </div>
@@ -600,7 +542,7 @@ export default function ContactForm() {
                   className="text-xl font-bold text-[#494c52] mb-4"
                   style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
-                  Quick Contact
+                 {t("form.quickContact")}
                 </h3>
 
                 <div className="space-y-3">
@@ -613,7 +555,7 @@ export default function ContactForm() {
                       className="font-medium text-[#494c52]"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
-                      Call Now
+                      {t("form.callNow")}
                     </span>
                   </a>
 
@@ -626,7 +568,7 @@ export default function ContactForm() {
                       className="font-medium text-[#494c52]"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
-                      Send Email
+                      {t("form.SendEmail")}
                     </span>
                   </a>
 
@@ -645,7 +587,7 @@ export default function ContactForm() {
                       className="font-medium text-green-700"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
-                      WhatsApp Chat
+                     {t("form.wtspChat")}
                     </span>
                   </button>
                 </div>

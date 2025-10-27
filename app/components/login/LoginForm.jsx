@@ -1,11 +1,13 @@
 "use client";
 import { FaLock, FaEnvelope, FaEye, FaEyeSlash } from "react-icons/fa";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next"; 
 import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function LoginForm() {
+  const {t} = useTranslation ('login/loginform')
   const [showPassword, setShowPassword] = useState(false);
 
   useEffect(() => {
@@ -25,7 +27,7 @@ export default function LoginForm() {
         {/* Gold Header */}
         <div className="bg-[#c0b688] py-6 px-4 sm:px-8 text-center">
           <h1 className="text-[#9f8660] font-serif text-2xl sm:text-3xl font-bold">
-            Al Khaldi Law Firm
+            {t("header.title")}
           </h1>
         </div>
 
@@ -35,13 +37,13 @@ export default function LoginForm() {
             className="mb-6 text-center text-2xl sm:text-3xl font-serif font-bold text-[#494c52]"
             data-aos="zoom-out"
           >
-            Welcome Back
+            {t("welcome_section.heading")}
           </h2>
 
           {/* Email Field */}
           <div className="mb-4">
             <label className="block text-[#494c52] font-semibold mb-2">
-              Email Address
+              {t("form_fields.email.label")}
             </label>
             <div className="relative">
               <FaEnvelope
@@ -50,7 +52,7 @@ export default function LoginForm() {
               />
               <input
                 type="email"
-                placeholder="example@example.com"
+                placeholder={t("form_fields.email.placeholder")}
                 className="w-full pl-10 pr-4 py-2 border border-[#9f8660] rounded-lg focus:ring-1 focus:ring-[#494c52] transition-all duration-200 outline-none"
               />
             </div>
@@ -59,7 +61,7 @@ export default function LoginForm() {
           {/* Password Field */}
           <div className="mb-6">
             <label className="block text-[#494c52] font-semibold mb-2">
-              Password
+              {t("form_fields.password.label")}
             </label>
             <div className="relative">
               <FaLock
@@ -86,23 +88,23 @@ export default function LoginForm() {
               href="/forgot-password"
               className="text-[#494c52] hover:text-[#9f8660] hover:underline text-sm"
             >
-              Forgot Password?
+              {t("links.forgot_password")}
             </Link>
           </div>
 
           {/* Login Button */}
           <button className="w-full bg-gradient-to-r from-[#9f8660] to-[#c0b688] text-white font-bold py-2 px-4 rounded transform hover:scale-101 transition-all duration-300 shadow-lg hover:shadow-xl">
-            Login
+            {t("buttons.login")}
           </button>
 
           {/* Signup Link */}
           <div className="mt-6 text-center text-[#0D1B2A]">
-            <span>Don't have an account? </span>
+            <span>{t("links.signup_prompt")}</span>
             <Link
               href="/signup"
               className="text-[#494c52] hover:text-[#9f8660] hover:underline font-medium"
             >
-              Sign Up
+              {t("links.signup_link")}
             </Link>
           </div>
         </div>

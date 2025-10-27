@@ -1,0 +1,40 @@
+{
+  "header": {
+    "badge": "OUR APPROACH",
+    "title": "Our",
+    "titletwo": "Legal Process",
+    "description": "From initial consultation to successful resolution, we follow a proven methodology that combines academic excellence with practical expertise to deliver optimal legal outcomes."
+  },
+  "steps": [
+    {
+      "step": "1",
+      "title": "Initial Consultation",
+      "description": "Free comprehensive consultation to understand your legal needs and provide initial legal assessment based on our expertise across all areas of law."
+    },
+    {
+      "step": "2",
+      "title": "Legal Analysis",
+      "description": "Our team of legal scholars conducts thorough analysis grounded in scientific knowledge and professional accumulations to develop the optimal legal strategy."
+    },
+    {
+      "step": "3",
+      "title": "Documentation & Preparation",
+      "description": "Meticulous preparation of all legal documents, contracts, and pleadings with attention to detail and adherence to applicable laws and regulations."
+    },
+    {
+      "step": "4",
+      "title": "Legal Representation",
+      "description": "Expert representation before all levels of courts, from First Instance to Supreme Court, including specialized committees and arbitration tribunals."
+    },
+    {
+      "step": "5",
+      "title": "Case Resolution",
+      "description": "Efficient resolution of legal matters through our expedited procedures without compromising service quality, ensuring optimal outcomes for our clients."
+    },
+    {
+      "step": "6",
+      "title": "Ongoing Support",
+      "description": "Continuous legal advisory and support, embracing new methods and technological advancements to provide modern legal solutions for future needs."
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "badge": "OUR MISSION",
+  "heading": {
+    "title": "Legal",
+    "highlight": "Excellence",
+    "subtitle": "& Professional Commitment"
+  },
+  "paragraphs": [
+    "Our office is committed to providing legal services based on professional expertise and high academic competence. We ensure a team of legal scholars specializing in various fields including civil, commercial, criminal, family matters, and international cases.",
+    "Our goal is to offer legal consultations and solutions grounded in scientific knowledge, fulfilling the client's objectives while embracing new methods that suit current progress."
+  ],
+  "stats": {
+    "experience": {
+      "label": "Years Experience"
+    },
+    "committees": {
+      "label": "Legislative Committees"
+    },
+    "courts": {
+      "number": "All",
+      "label": "Court Levels"
+    }
+  },
+  "image": {
+    "alt": "Al-Khaldi Legal Excellence",
+    "title": "Legal Framework",
+    "description": "Comprehensive legal solutions across corporate, government, and individual sectors."
+  },
+  "trust": [
+    {
+      "title": "Legal Excellence",
+      "subtitle": "Uncompromising quality"
+    },
+    {
+      "title": "GCC Expertise",
+      "subtitle": "Regional knowledge"
+    },
+    {
+      "title": "Strategic Partners",
+      "subtitle": "Business-focused approach"
+    },
+    {
+      "title": "Proven Results",
+      "subtitle": "success stories"
+    }
+  ]
+}

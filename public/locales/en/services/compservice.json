@@ -1,0 +1,139 @@
+{
+  "header": {
+    "badge": "SERVICE PORTFOLIO",
+    "title": "Detailed",
+    "titletwo": "Service",
+    "titlethree": "Breakdown",
+    "description": "Explore our comprehensive range of specialized legal services designed for your specific needs."
+  },
+  "categories": [
+    {
+      "title": "Corporate Services",
+      "subtitle": "Business Legal Solutions",
+      "description": "Complete legal framework for businesses from incorporation to complex commercial transactions.",
+      "services": [
+        {
+          "title": "Company Incorporation",
+          "description": "Legal consultations for company formation and business setup across the GCC region."
+        },
+        {
+          "title": "Intellectual Property Protection",
+          "description": "Comprehensive protection of patents, trademarks, copyrights, and IP rights."
+        },
+        {
+          "title": "Foreign Investments & Subsidiaries",
+          "description": "Legal guidance for international investments and establishing overseas subsidiaries."
+        },
+        {
+          "title": "Governance & Transparency",
+          "description": "Best practices consultations for corporate governance and transparency standards."
+        },
+        {
+          "title": "Tax Law Consultations",
+          "description": "Expert advice on tax regulations and compliance for corporate entities."
+        },
+        {
+          "title": "Commercial Litigation",
+          "description": "Court representation for commercial disputes with defense memoranda and lawsuit pleadings."
+        }
+      ]
+    },
+    {
+      "title": "Government & Quasi-Government Services",
+      "subtitle": "Public Sector Legal Excellence",
+      "description": "Specialized legal counsel for government institutions and regulatory compliance.",
+      "services": [
+        {
+          "title": "Legislative Consultations",
+          "description": "Legal consultations on latest developments in relevant legislation and regulatory changes."
+        },
+        {
+          "title": "Governance Best Practices",
+          "description": "Consultations on best practices for governance and transparency in public institutions."
+        },
+        {
+          "title": "Regulatory Inquiries",
+          "description": "Legal support for dealing with inquiries from Audit Bureau and administrative committees."
+        },
+        {
+          "title": "Tendering & Bidding Compliance",
+          "description": "Ensuring legal compliance through reviewing government tendering and bidding procedures."
+        },
+        {
+          "title": "Asset Investment Consultations",
+          "description": "Legal advice on investing government institutional assets and public resources."
+        },
+        {
+          "title": "International Agreements",
+          "description": "Preparing judicial and international agreements and institutional regulations."
+        }
+      ]
+    },
+    {
+      "title": "Individual Customer Services",
+      "subtitle": "Personal Legal Protection",
+      "description": "Comprehensive personal legal services for all individual legal matters.",
+      "services": [
+        {
+          "title": "Family & Criminal Law",
+          "description": "Legal consultations for civil, criminal, and family cases with expert representation."
+        },
+        {
+          "title": "Business Incorporation",
+          "description": "Legal consultations for incorporation and managing sole proprietorships."
+        },
+        {
+          "title": "Bankruptcy & Financial Settlements",
+          "description": "Legal assistance for individuals facing bankruptcy and financial difficulties."
+        },
+        {
+          "title": "Intellectual Property",
+          "description": "Legal consultations on intellectual property law and patent applications."
+        },
+        {
+          "title": "Immigration & Visa Services",
+          "description": "Consultations on visa and residency applications for studying or working abroad."
+        },
+        {
+          "title": "Estate Planning",
+          "description": "Drafting wills, estates, inheritance cases, and dispute resolution services."
+        }
+      ]
+    },
+    {
+      "title": "Legal Support Services",
+      "subtitle": "Specialized Legal Framework",
+      "description": "Advanced legal support including banking, arbitration, and compliance services.",
+      "services": [
+        {
+          "title": "Banking Legal Services",
+          "description": "Comprehensive legal services for banks including contract drafting and dispute resolution."
+        },
+        {
+          "title": "Arbitration Services",
+          "description": "Specialized arbitration team with certified arbitrators for domestic and international disputes."
+        },
+        {
+          "title": "Risk Management",
+          "description": "Risk assessment, policy preparation, and corporate risk management system setup."
+        },
+        {
+          "title": "Anti-Money Laundering",
+          "description": "AML compliance evaluation, policy preparation, and regulatory compliance consulting."
+        },
+        {
+          "title": "Corporate Governance",
+          "description": "Governance system evaluation, policy preparation, and corporate governance setup."
+        },
+        {
+          "title": "Debt Collection",
+          "description": "Specialized department for civil judgments execution and debt collection across all sectors."
+        }
+      ]
+    }
+  ],
+  "footer": {
+    "services_count_label": "specialized services in this category",
+    "button": "View All Services"
+  }
+}

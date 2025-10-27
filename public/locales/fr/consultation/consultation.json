@@ -1,0 +1,104 @@
+{
+  "consultationLanguages": {
+    "english": "Anglais",
+    "arabic": "Arabe",
+    "both": "Les deux"
+  },
+  "caseCategories": {
+    "contracts": "Contrats",
+    "employment": "Emploi",
+    "family": "Famille",
+    "real-estate": "Immobilier",
+    "business": "Affaires",
+    "criminal": "Pénal",
+    "corporate": "Services Corporatifs",
+    "banking": "Services Juridiques Bancaires",
+    "arbitration": "Arbitrage",
+    "other": "Autre"
+  },
+  "consultationMethods": {
+    "in-person": "En personne",
+    "online": "En ligne",
+    "phone": "Appel téléphonique"
+  },
+  "urgencyLevels": {
+    "normal": "Normal",
+    "urgent": "Urgent",
+    "very-urgent": "Très urgent"
+  },
+  "validation": {
+    "honeypot": "Protection anti-spam activée",
+    "fullNameRequired": "Le nom complet est requis",
+    "phoneRequired": "Le numéro de téléphone est requis",
+    "emailRequired": "L'email est requis",
+    "emailInvalid": "Veuillez entrer une adresse email valide",
+    "consultationLanguageRequired": "Veuillez sélectionner une langue de consultation",
+    "caseCategoryRequired": "Veuillez sélectionner une catégorie de dossier",
+    "caseDetailsRequired": "Les détails du dossier sont requis",
+    "caseDetailsMinLength": "Veuillez fournir des informations plus détaillées (au moins 20 caractères)",
+    "consultationMethodRequired": "Veuillez sélectionner une méthode de consultation",
+    "preferredDateTimeRequired": "Veuillez sélectionner la date et l'heure préférées",
+    "urgencyLevelRequired": "Veuillez sélectionner le niveau d'urgence",
+    "consentGivenRequired": "Veuillez accepter l'accord de consentement"
+  },
+  "fileValidation": {
+    "File": "Fichier",
+    "tooLarge": " est trop volumineux. Veuillez télécharger des fichiers de moins de 10 Mo.",
+    "unsupportedType": "n'est pas pris en charge. Veuillez télécharger uniquement des fichiers PDF, Word ou Images."
+  },
+  "formkeys": {
+    "fullName": "Nom complet",
+    "phone": "Téléphone",
+    "email": "Email",
+    "consultationLanguage": "Langue de consultation",
+    "caseCategory": "Catégorie du dossier",
+    "caseDetails": "Détails du dossier",
+    "uploadedFiles": "Fichiers téléchargés",
+    "consultationMethod": "Méthode de consultation",
+    "preferredDateTime": "Date et heure préférées",
+    "urgencyLevel": "Niveau d'urgence",
+    "consentGiven": "Consentement donné",
+    "honeypot": "Protection anti-spam"
+  },
+  "consultation": {
+    "modalTitle": "Réserver une consultation juridique",
+    "modalSubtitle": "Cabinet AL KHALDI & Consultations Juridiques",
+    "successMessage": "Demande de consultation envoyée avec succès ! Nous vous contacterons bientôt via WhatsApp.",
+    "errorMessage": "Erreur lors de l'envoi de la demande. Veuillez réessayer.",
+    "sections": {
+      "personalInfo": "Informations personnelles",
+      "consultationPreferences": "Préférences de consultation",
+      "caseInformation": "Informations sur le dossier",
+      "consentAgreement": "Consentement & Accord"
+    },
+    "fields": {
+      "fullName": "Nom complet *",
+      "fullNamePlaceholder": "Entrez votre nom complet",
+      "phoneNumber": "Numéro de téléphone (WhatsApp) *",
+      "phoneNumberPlaceholder": "+974 XXXX XXXX",
+      "email": "Adresse email *",
+      "emailPlaceholder": "Entrez votre adresse email",
+      "consultationLanguage": "Langue de consultation préférée *",
+      "consultationLanguageSelect": "Sélectionnez la langue",
+      "consultationMethod": "Méthode de consultation préférée *",
+      "consultationMethodSelect": "Sélectionnez la méthode",
+      "preferredDateTime": "Date et heure préférées *",
+      "urgencyLevel": "Niveau d'urgence *",
+      "urgencyLevelSelect": "Sélectionnez le niveau",
+      "caseCategory": "Catégorie du dossier *",
+      "caseCategorySelect": "Sélectionnez la catégorie",
+      "caseDetails": "Détails du dossier *",
+      "caseDetailsPlaceholder": "Veuillez fournir une description claire et détaillée de votre dossier juridique, y compris les faits pertinents, la chronologie et toute préoccupation spécifique que vous pourriez avoir...",
+      "fileUpload": "Télécharger des documents (Optionnel)",
+      "fileUploadDesc": "Téléchargez les documents pertinents (PDF, Word, Images)",
+      "fileUploadLimit": "Taille max. : 10 Mo, Fichiers max. : 5",
+      "chooseFiles": "Choisir des fichiers"
+    },
+    "consentText": "Je confirme que les informations fournies sont exactes et que cette demande ne crée pas de relation avocat-client tant qu'elle n'est pas acceptée formellement par le Cabinet AL KHALDI. Je comprends que cette réservation est soumise à la disponibilité et à la confirmation du cabinet.",
+    "submit": {
+      "sending": "Envoi en cours...",
+      "sendRequest": "Envoyer la demande de consultation",
+      "note": "Votre demande sera envoyée via WhatsApp à notre équipe juridique"
+    }
+  }
+}

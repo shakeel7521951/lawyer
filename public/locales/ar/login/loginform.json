@@ -1,0 +1,25 @@
+{
+  "header": {
+    "title": "تسجيل الدخول"
+  },
+  "welcome_section": {
+    "heading": "مرحباً بعودتك"
+  },
+  "form_fields": {
+    "email": {
+      "label": "البريد الإلكتروني",
+      "placeholder": "أدخل بريدك الإلكتروني"
+    },
+    "password": {
+      "label": "كلمة المرور"
+    }
+  },
+  "links": {
+    "forgot_password": "هل نسيت كلمة المرور؟",
+    "signup_prompt": "ليس لديك حساب؟ ",
+    "signup_link": "سجّل الآن"
+  },
+  "buttons": {
+    "login": "تسجيل الدخول"
+  }
+}

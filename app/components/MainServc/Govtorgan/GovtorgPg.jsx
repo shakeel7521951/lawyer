@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { FaBalanceScale, FaHandshake, FaGavel, FaRegFileAlt } from "react-icons/fa";
 import Link from "next/link";
-
+import { useTranslation } from "react-i18next";
 const govtServices = [
   {
     title: "Administrative Law & Public Policy",
@@ -35,6 +35,9 @@ const govtServices = [
 ];
 
 const GovtorgPg = () => {
+
+  const {t}=useTranslation("mainservic/govt")
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedService, setSelectedService] = useState(null);
 

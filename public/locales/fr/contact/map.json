@@ -1,0 +1,32 @@
+{
+  "map": {
+    "opensunthur": "مفتوح الأحد - الخميس:",
+    "friday": "الجمعة:",
+    "find": "TROUVEZ-NOUS",
+    "title1": "Visitez",
+    "title2": "Notre Bureau",
+    "desc": "Situé au cœur d'Al Rayyan, notre bureau est facilement accessible et équipé d'installations modernes pour servir nos clients.",
+    "firm": "Cabinet d'avocats Al Khaldi",
+    "addres": "Al Rayyan, Qatar",
+    "address": "Rue 150, Al Rayyan, Bâtiment n°143, Zone 22, Fereej Bin Mahmoud, 3ème étage",
+    "mapview": "Vue de la carte",
+    "direct": "Itinéraire",
+    "click": "Cliquez sur le bouton ci-dessous pour obtenir un itinéraire étape par étape vers notre bureau via Google Maps.",
+
+    "info": "Informations du bureau",
+    "quickAction": "Actions rapides",
+
+    "call": "Appelez-nous",
+    "calDesc": "Parlez directement avec notre équipe",
+    "direction": "Obtenir l’itinéraire",
+    "getDesc": "Accédez à notre bureau",
+    "wtsp": "WhatsApp",
+    "wtspPsg": "Assistance par chat rapide",
+
+    "park": "Stationnement et accessibilité",
+    "line1": "Parking gratuit disponible",
+    "line2": "Accès pour fauteuils roulants",
+    "line3": "3ème étage - ascenseur disponible",
+    "line4": "Salles de réunion disponibles"
+  }
+}

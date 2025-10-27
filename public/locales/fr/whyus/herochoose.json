@@ -1,0 +1,75 @@
+{
+  "hero": {
+    "title_en": "POURQUOI NOUS CHOISIR",
+    "tagline": "EXCELLENCE JURIDIQUE",
+    "heading": "Expérience",
+    "headingtwo": "Excellence Juridique",
+    "headingthree": "& Éthique Professionnelle",
+    "description": "Notre cabinet regroupe des consultants juridiques et des avocats d’élite dotés d’une expertise et d’une connaissance complète de toutes les matières juridiques. Nous respectons les normes d’éthique professionnelle et la confidentialité tout en offrant des services juridiques exceptionnels.",
+    "stats": {
+      "experience": {
+        "label": "Expérience",
+        "value": "Années"
+      },
+      "committees": {
+        "label": "Comités Législatifs"
+      },
+      "courts": {
+        "label": "Niveaux de Juridiction",
+        "value": "Tous"
+      }
+    },
+    "cta": {
+      "services": "Nos Services",
+      "consult": "Consultez-nous"
+    }
+  },
+  "whyChoose": {
+    "badge": "POURQUOI AL KHALDI",
+    "heading": "Votre Partenaire",
+    "headingtwo": "Juridique de Confiance",
+    "description": "Nous allions excellence académique et expérience pratique, en respectant les plus hauts standards d’éthique professionnelle et en offrant des solutions juridiques complètes dans tous les domaines du droit.",
+    "reasons": [
+      {
+        "title": "Consultants Juridiques d’Élite",
+        "description": "Notre cabinet comprend des consultants et avocats expérimentés avec une connaissance approfondie du droit commercial, pénal, civil, des sociétés, de l’investissement et du droit de la famille."
+      },
+      {
+        "title": "Années d’Expérience",
+        "description": "Carrière professionnelle depuis 2005 avec des postes de direction tels que Directeur des Affaires Juridiques, Chef de la Législation et participation à 22 comités législatifs."
+      },
+      {
+        "title": "Expertise à Tous les Niveaux de Juridiction",
+        "description": "Nos avocats sont spécialisés dans le contentieux devant toutes les juridictions, de première instance à la Cour suprême, y compris les comités administratifs, du travail et de règlement des litiges locatifs."
+      },
+      {
+        "title": "Membres d’Associations Professionnelles",
+        "description": "Nos avocats sont membres d’associations professionnelles locales, régionales et internationales, garantissant le respect des normes les plus élevées."
+      },
+      {
+        "title": "Éthique Intransigeante",
+        "description": "Nous nous engageons à respecter les normes d’éthique professionnelle et la confidentialité des informations de nos clients, garantissant confiance et intégrité."
+      },
+      {
+        "title": "Expérience Internationale",
+        "description": "Représentation de l’État du Qatar dans des forums régionaux et internationaux, comités d’accords bilatéraux, Organisation Internationale du Travail et Comité de l’Examen Périodique Universel."
+      },
+      {
+        "title": "Excellence Académique",
+        "description": "Équipe de juristes universitaires hautement qualifiés, fondant leurs conseils et solutions sur la connaissance scientifique et une solide expérience professionnelle."
+      },
+      {
+        "title": "Couverture Complète",
+        "description": "Notre expertise couvre tous les aspects, y compris commercial, pénal, civil, sociétés, investissement, droit de la famille, bancaire, transactions électroniques et affaires internationales."
+      }
+    ],
+    "cta": {
+      "heading": "Prêt à Découvrir l’Excellence Juridique ?",
+      "description": "Faites confiance à AL KHALDI pour vos affaires juridiques. Notre équipe d’experts est prête à vous offrir des solutions juridiques complètes.",
+      "buttons": {
+        "consult": "Planifier une Consultation",
+        "services": "Voir Nos Services"
+      }
+    }
+  }
+}

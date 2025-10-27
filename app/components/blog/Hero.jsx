@@ -3,8 +3,13 @@ import React, { useEffect } from "react";
 import { Scale } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
+
 
 const Hero = () => {
+
+  const {t}= useTranslation("blog/hero")
+  
   useEffect(() => {
     AOS.init({
       duration: 1200,
@@ -63,7 +68,7 @@ const Hero = () => {
               <div className="inline-flex items-center space-x-2 bg-[#c0b688]/20 backdrop-blur-sm border border-[#c0b688]/30 rounded-full px-6 py-2">
                 <Scale className="w-4 h-4 text-[#c0b688]" />
                 <span className="text-[#c0b688] font-semibold text-sm tracking-wider" style={{ fontFamily: "'Cinzel', serif" }}>
-                  LEGAL VICTORY
+                  {t("blog.startopic")}
                 </span>
               </div>
             </div>
@@ -91,7 +96,7 @@ const Hero = () => {
                    letterSpacing: '0.15em',
                    textShadow: '0 2px 10px rgba(0,0,0,0.6)',
                  }}>
-                Legal News & Updates
+                {t("blog.title")}
               </p>
             </div>
 
@@ -100,7 +105,7 @@ const Hero = () => {
               <div className="w-12 h-0.5 bg-gradient-to-r from-transparent to-[#c0b688]"></div>
               <div className="w-2 h-2 bg-[#c0b688] rounded-full animate-bounce"></div>
               <div className="text-[#c0b688] text-sm sm:text-base tracking-[0.4em]" style={{ fontFamily: "'Cinzel', serif" }}>
-                AL KHALDI LAW FIRM
+                {t("blog.ALKHALDILAWFIRM")}
               </div>
               <div className="w-2 h-2 bg-[#c0b688] rounded-full animate-bounce"></div>
               <div className="w-12 h-0.5 bg-gradient-to-l from-transparent to-[#c0b688]"></div>

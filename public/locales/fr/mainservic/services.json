@@ -1,0 +1,345 @@
+{
+  "corporate": {
+    "title": "Services aux entreprises",
+    "subtitle": "Solutions juridiques pour les affaires",
+    "category": "Affaires",
+    "description": "Services juridiques complets pour les entreprises, y compris la création de sociétés, la protection de la propriété intellectuelle, les investissements étrangers, les consultations en gouvernance, les conseils en droit fiscal et la résolution des litiges commerciaux.",
+    "overview": "Nos services juridiques aux entreprises sont conçus pour accompagner les sociétés de toutes tailles, des startups aux multinationales. Nous fournissons des solutions juridiques complètes qui garantissent que votre entreprise opère dans le cadre légal tout en maximisant les opportunités de croissance.",
+    "services": [
+      {
+        "title": "Création de sociétés",
+        "description": "Fournir des consultations juridiques pour la création de sociétés dans toute la région du CCG avec un accompagnement complet en matière de conformité.",
+        "features": ["Enregistrement d'entreprise", "Mise en place de la structure juridique", "Documentation de conformité", "Approbations réglementaires"]
+      },
+      {
+        "title": "Protection de la propriété intellectuelle",
+        "description": "Fournir des consultations sur la protection des droits de propriété intellectuelle, des brevets, des marques, des droits d'auteur et autres.",
+        "features": ["Dépôt de brevets", "Enregistrement de marques", "Protection des droits d'auteur", "Support en contentieux PI"]
+      },
+      {
+        "title": "Investissements étrangers et filiales",
+        "description": "Fournir des consultations juridiques sur les investissements étrangers de l'entreprise et la création de filiales à l'étranger.",
+        "features": ["Structuration des investissements", "Transactions transfrontalières", "Création de filiales", "Conformité réglementaire"]
+      },
+      {
+        "title": "Gouvernance et transparence",
+        "description": "Fournir des consultations sur les meilleures pratiques de gouvernance et de transparence dans les opérations commerciales.",
+        "features": ["Cadres de gouvernance d'entreprise", "Conseil aux conseils d'administration", "Programmes de conformité", "Gestion des risques"]
+      },
+      {
+        "title": "Consultations en droit fiscal",
+        "description": "Fournir des consultations juridiques sur les lois fiscales afin d’assurer la conformité et l’optimisation.",
+        "features": ["Planification fiscale", "Revue de conformité", "Résolution des litiges fiscaux", "Questions fiscales internationales"]
+      },
+      {
+        "title": "Contentieux commercial",
+        "description": "Fournir une représentation juridique devant toutes les juridictions pour les litiges commerciaux, y compris la rédaction de mémoires de défense et d’actes de procédure.",
+        "features": ["Représentation devant les tribunaux", "Résolution des litiges", "Contentieux contractuel", "Arbitrage commercial"]
+      },
+      {
+        "title": "Rédaction et révision de contrats",
+        "description": "Préparation et rédaction de contrats et d’accords commerciaux en langues arabe et anglaise.",
+        "features": ["Accords commerciaux", "Contrats de partenariat", "Accords de fusion et acquisition", "Contrats de travail"]
+      },
+      {
+        "title": "Support financier et bancaire",
+        "description": "Préparation de contrats de financement pour les institutions financières et fourniture d’un support juridique bancaire complet.",
+        "features": ["Contrats de prêt", "Contrats bancaires", "Conformité financière", "Documentation d’investissement"]
+      }
+    ],
+    "benefits": [
+      "Conseils juridiques spécialisés pour les affaires",
+      "Support complet en conformité",
+      "Stratégies de réduction des risques",
+      "Solutions juridiques orientées vers la croissance",
+      "Support aux affaires internationales",
+      "Expertise multi-juridictionnelle"
+    ],
+    "process": [
+      {
+        "step": 1,
+        "title": "Consultation initiale",
+        "description": "Nous commençons par une consultation complète pour comprendre vos besoins commerciaux et juridiques."
+      },
+      {
+        "step": 2,
+        "title": "Évaluation juridique",
+        "description": "Notre équipe réalise une évaluation approfondie de la structure juridique et de la conformité de votre entreprise."
+      },
+      {
+        "step": 3,
+        "title": "Développement de la stratégie",
+        "description": "Nous élaborons une stratégie juridique personnalisée qui s’aligne sur vos objectifs commerciaux et vos plans de croissance."
+      },
+      {
+        "step": 4,
+        "title": "Mise en œuvre",
+        "description": "Nous exécutons la stratégie juridique avec précision, en veillant à ce que toutes les exigences de documentation et de conformité soient respectées."
+      },
+      {
+        "step": 5,
+        "title": "Support continu",
+        "description": "Nous fournissons un support juridique continu pour garantir que votre entreprise reste conforme et protégée."
+      }
+    ]
+  },
+
+  "government": {
+    "title": "Services gouvernementaux et quasi-gouvernementaux",
+    "subtitle": "Excellence juridique du secteur public",
+    "category": "Secteur public",
+    "description": "Conseils juridiques spécialisés pour les institutions gouvernementales, y compris les consultations législatives, les pratiques de gouvernance, la conformité réglementaire, les procédures d’appel d’offres et la résolution des litiges institutionnels.",
+    "overview": "Nos services gouvernementaux sont adaptés pour répondre aux besoins uniques des institutions du secteur public. Nous fournissons des conseils juridiques spécialisés qui garantissent la conformité aux cadres réglementaires tout en soutenant l’efficacité opérationnelle.",
+    "services": [
+      {
+        "title": "Consultations législatives",
+        "description": "Fournir des consultations juridiques sur les derniers développements en matière de législation et de cadres réglementaires pertinents.",
+        "features": ["Rédaction législative", "Analyse réglementaire", "Élaboration de politiques", "Revue de conformité"]
+      },
+      {
+        "title": "Gouvernance et transparence",
+        "description": "Fournir des consultations sur les meilleures pratiques de gouvernance et de transparence dans les institutions publiques.",
+        "features": ["Cadres de gouvernance", "Protocoles de transparence", "Systèmes de responsabilité", "Éthique du secteur public"]
+      },
+      {
+        "title": "Conformité réglementaire",
+        "description": "Fournir des consultations juridiques pour traiter les demandes des organismes de régulation, tels que le Bureau d’audit et les comités d’enquête administrative.",
+        "features": ["Conformité réglementaire", "Support d’audit", "Assistance aux enquêtes", "Gestion des risques"]
+      },
+      {
+        "title": "Appels d’offres et marchés publics",
+        "description": "Assurer la conformité légale en fournissant des consultations juridiques, la révision et l’audit des procédures d’appels d’offres et de marchés publics.",
+        "features": ["Documentation d’appel d’offres", "Révision du processus de soumission", "Audit de conformité", "Droit des marchés publics"]
+      },
+      {
+        "title": "Consultations sur l’investissement d’actifs",
+        "description": "Fournir des consultations juridiques sur l’investissement d’actifs par les institutions publiques en conformité réglementaire.",
+        "features": ["Stratégies d’investissement", "Gestion d’actifs", "Conformité réglementaire", "Diligence raisonnable"]
+      },
+      {
+        "title": "Rédaction de politiques et réglementations",
+        "description": "Assurer la conformité aux lois en vigueur par la révision et la rédaction de règlements exécutifs et de politiques internes des institutions.",
+        "features": ["Rédaction de politiques", "Cadres réglementaires", "Procédures internes", "Protocoles de conformité"]
+      },
+      {
+        "title": "Accords internationaux",
+        "description": "Préparation de projets de conventions judiciaires et internationales ainsi que des règlements relatifs aux ressources humaines de l’institution.",
+        "features": ["Traités internationaux", "Accords bilatéraux", "Protocoles diplomatiques", "Questions juridiques transfrontalières"]
+      },
+      {
+        "title": "Contentieux institutionnel",
+        "description": "Fournir une représentation juridique devant toutes les juridictions dans les litiges institutionnels, y compris la rédaction de mémoires de défense et d’actes de procédure.",
+        "features": ["Représentation devant les tribunaux", "Contentieux administratif", "Résolution des litiges", "Plaidoyer juridique"]
+      }
+    ],
+    "benefits": [
+      "Expertise spécialisée du secteur public",
+      "Assurance de conformité réglementaire",
+      "Soutien à la gouvernance transparente",
+      "Réduction des risques institutionnels",
+      "Coopération juridique internationale",
+      "Amélioration de l’efficacité administrative"
+    ],
+    "process": [
+      {
+        "step": 1,
+        "title": "Évaluation institutionnelle",
+        "description": "Nous réalisons une évaluation complète des besoins juridiques et de l’environnement réglementaire de votre institution."
+      },
+      {
+        "step": 2,
+        "title": "Revue de conformité",
+        "description": "Notre équipe examine l’état actuel de la conformité et identifie les domaines nécessitant des améliorations ou une réduction des risques."
+      },
+      {
+        "step": 3,
+        "title": "Développement du cadre juridique",
+        "description": "Nous développons des cadres juridiques personnalisés qui garantissent la conformité et soutiennent les objectifs institutionnels."
+      },
+      {
+        "step": 4,
+        "title": "Support à la mise en œuvre",
+        "description": "Nous fournissons un accompagnement pratique lors de la mise en œuvre, assurant une transition fluide et conforme."
+      },
+      {
+        "step": 5,
+        "title": "Conseil continu",
+        "description": "Nous offrons des services de conseil juridique continus pour maintenir la conformité et traiter les problèmes émergents."
+      }
+    ]
+  },
+
+  "individual": {
+    "title": "Services aux particuliers",
+    "subtitle": "Protection juridique personnelle",
+    "category": "Droit personnel",
+    "description": "Services juridiques complets pour les particuliers couvrant le droit de la famille, les affaires pénales et civiles, la création d’entreprises, l’assistance en faillite, les questions d’immigration et la protection juridique personnelle.",
+    "overview": "Nos services aux particuliers sont conçus pour protéger et accompagner les individus face à divers défis juridiques. Nous fournissons des solutions personnalisées adaptées à vos besoins spécifiques avec compassion et expertise.",
+    "services": [
+      {
+        "title": "Droit de la famille et droit pénal",
+        "description": "Fournir des consultations juridiques pour tous types d’affaires civiles, pénales et familiales avec une représentation experte.",
+        "features": ["Résolution des litiges familiaux", "Défense pénale", "Contentieux civil", "Services de médiation"]
+      },
+      {
+        "title": "Création d’entreprise",
+        "description": "Fournir des consultations juridiques pour la création et la gestion d’entreprises individuelles.",
+        "features": ["Enregistrement d’entreprise", "Mise en place d’entreprise individuelle", "Conformité juridique", "Orientation réglementaire"]
+      },
+      {
+        "title": "Faillite et règlements financiers",
+        "description": "Fournir une assistance et des consultations juridiques pour les particuliers confrontés à la faillite et aux règlements financiers.",
+        "features": ["Restructuration de dettes", "Procédures de faillite", "Médiation financière", "Négociations avec les créanciers"]
+      },
+      {
+        "title": "Propriété intellectuelle",
+        "description": "Fournir des consultations juridiques sur le droit de la propriété intellectuelle et les brevets pour les inventeurs et créateurs individuels.",
+        "features": ["Dépôt de brevets", "Enregistrement de marques", "Protection des droits d’auteur", "Application des droits PI"]
+      },
+      {
+        "title": "Droit du travail",
+        "description": "Fournir une assistance juridique et des consultations sur les questions liées au travail, telles que les réclamations d’indemnisation et les litiges liés au licenciement.",
+        "features": ["Litiges liés à l’emploi", "Réclamations d’indemnisation", "Droits des travailleurs", "Médiation au travail"]
+      },
+      {
+        "title": "Services d’immigration et de visa",
+        "description": "Fournir des consultations sur les demandes de visa et de résidence pour étudier ou travailler à l’étranger.",
+        "features": ["Demandes de visa", "Permis de résidence", "Conformité en immigration", "Support documentaire"]
+      },
+      {
+        "title": "Protection des consommateurs",
+        "description": "Fournir des consultations sur les lois de protection des consommateurs et les services défectueux.",
+        "features": ["Droits des consommateurs", "Responsabilité des produits", "Litiges de services", "Réclamations d’indemnisation"]
+      },
+      {
+        "title": "Planification successorale",
+        "description": "Rédaction de testaments, successions et affaires d’héritage, et assistance dans la résolution de litiges pour parvenir à des solutions satisfaisantes.",
+        "features": ["Rédaction de testaments", "Planification successorale", "Litiges d’héritage", "Planification de succession"]
+      },
+      {
+        "title": "Représentation juridique personnelle",
+        "description": "Représentation dans tous types d’affaires civiles, pénales, commerciales, de travail, familiales, d’arbitrage, de location et de résolution des litiges du travail, ainsi que devant toutes les juridictions.",
+        "features": ["Représentation devant les tribunaux", "Plaidoyer juridique", "Médiation des litiges", "Consultation juridique"]
+      }
+    ],
+    "benefits": [
+      "Attention juridique personnalisée",
+      "Protection complète des particuliers",
+      "Expertise en droit de la famille",
+      "Support en immigration",
+      "Assistance juridique financière",
+      "Protection des droits des consommateurs"
+    ],
+    "process": [
+      {
+        "step": 1,
+        "title": "Consultation personnelle",
+        "description": "Nous commençons par une consultation confidentielle pour comprendre votre situation juridique personnelle."
+      },
+      {
+        "step": 2,
+        "title": "Évaluation du dossier",
+        "description": "Notre équipe réalise une évaluation complète de votre affaire et explique vos options juridiques."
+      },
+      {
+        "step": 3,
+        "title": "Stratégie juridique",
+        "description": "Nous développons une stratégie juridique personnalisée qui sert au mieux vos intérêts et objectifs."
+      },
+      {
+        "step": 4,
+        "title": "Action juridique",
+        "description": "Nous entreprenons les démarches juridiques appropriées en votre nom, tout en vous tenant informé."
+      },
+      {
+        "step": 5,
+        "title": "Résolution et suivi",
+        "description": "Nous travaillons à la résolution et fournissons un suivi afin d’assurer la protection de vos intérêts."
+      }
+    ]
+  },
+    "legalSupport": {
+    "title": "Services de Soutien Juridique",
+    "subtitle": "Cadre Juridique Spécialisé",
+    "category": "خدمات قانونية شاملة",
+    "description": "Un soutien juridique complet incluant les services juridiques bancaires, l’arbitrage, les consultations en gestion des risques, la conformité à la lutte contre le blanchiment d’argent, les consultations en gouvernance et les services de recouvrement de créances.",
+    "overview": "Nos services de soutien juridique offrent une expertise spécialisée dans des domaines juridiques complexes nécessitant des connaissances et une expérience avancées. Nous proposons un accompagnement complet pour les questions bancaires, de conformité et juridiques spécialisées.",
+    "services": [
+      {
+        "title": "Services Juridiques Bancaires",
+        "description": "Fourniture de tous les services juridiques et de conseil aux banques en communiquant avec les clients afin de trouver des solutions et de recouvrer les montants au profit des banques.",
+        "features": ["Contrats bancaires", "Contrats de prêt", "Recouvrement de créances", "Conformité financière"]
+      },
+      {
+        "title": "Services d’Arbitrage",
+        "description": "Le cabinet dispose d’une équipe spécialisée et d’arbitres certifiés qui fournissent tous les services liés à l’arbitrage au Qatar et à l’international.",
+        "features": ["Arbitrage national", "Arbitrage international", "Résolution des litiges", "Services de médiation"]
+      },
+      {
+        "title": "Gestion des Risques",
+        "description": "Élaboration de politiques et procédures de gestion des risques, évaluation du système de gestion des risques dans les entreprises et recommandations pour l’améliorer.",
+        "features": ["Évaluation des risques", "Développement de politiques", "Évaluation des systèmes", "Cadres de conformité"]
+      },
+      {
+        "title": "Lutte contre le Blanchiment d’Argent",
+        "description": "Évaluation du système de lutte contre le blanchiment d’argent et le financement du terrorisme et recommandations pour l’améliorer.",
+        "features": ["Conformité AML", "Évaluation des systèmes", "Préparation de politiques", "Conformité réglementaire"]
+      },
+      {
+        "title": "Gouvernance d’Entreprise",
+        "description": "Préparation des politiques et procédures de gouvernance, évaluation du système de gouvernance d’entreprise et mise en place d’un système de gouvernance.",
+        "features": ["Cadres de gouvernance", "Développement de politiques", "Mise en place de systèmes", "Suivi de la conformité"]
+      },
+      {
+        "title": "Gestion de la Conformité",
+        "description": "Conseil dans le domaine du respect des lois et règlements, évaluation du système de conformité dans les entreprises.",
+        "features": ["Conformité réglementaire", "Évaluation des systèmes", "Préparation de politiques", "Programmes de formation"]
+      },
+      {
+        "title": "Enquête sur la Fraude",
+        "description": "Enquêtes sur les irrégularités, fraudes de gestion et professionnelles, évaluation et révision des contrôles dans le domaine des crimes financiers.",
+        "features": ["Enquête sur la fraude", "Évaluation des crimes financiers", "Révision des contrôles", "Programmes de prévention"]
+      },
+      {
+        "title": "Recouvrement de Créances",
+        "description": "Département spécialisé dans l’exécution des jugements civils et le recouvrement des créances dans tous les secteurs.",
+        "features": ["Exécution des jugements", "Recouvrement de créances", "Recouvrement juridique", "Recouvrement d’actifs"]
+      }
+    ],
+    "benefits": [
+      "Expertise juridique spécialisée",
+      "Assurance de conformité",
+      "Atténuation des risques",
+      "Arbitrage professionnel",
+      "Solutions juridiques avancées",
+      "Accompagnement complet"
+    ],
+    "process": [
+      {
+        "step": 1,
+        "title": "Évaluation Spécialisée",
+        "description": "Nous réalisons une évaluation spécialisée de vos besoins en soutien juridique et en conformité."
+      },
+      {
+        "step": 2,
+        "title": "Analyse d’Experts",
+        "description": "Notre équipe spécialisée analyse votre situation en utilisant des cadres et méthodologies juridiques avancés."
+      },
+      {
+        "step": 3,
+        "title": "Solution Personnalisée",
+        "description": "Nous développons des solutions juridiques adaptées qui répondent à vos besoins spécifiques."
+      },
+      {
+        "step": 4,
+        "title": "Mise en Œuvre",
+        "description": "Nous mettons en œuvre la solution avec précision, en veillant à ce que toutes les exigences spécialisées soient respectées."
+      },
+      {
+        "step": 5,
+        "title": "Soutien Continu",
+        "description": "Nous offrons un soutien continu pour maintenir la conformité et traiter les nouveaux enjeux."
+      }
+    ]
+  }
+}

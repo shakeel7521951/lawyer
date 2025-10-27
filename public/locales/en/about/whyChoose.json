@@ -1,0 +1,45 @@
+{
+  "about": {
+    "whyChoose": {
+      "header": {
+        "title": "Why Choose Us?",
+        "subtitle": "Discover what sets us apart in the legal industry and why clients trust us with their most important matters."
+      },
+      "advantages": [
+        {
+          "title": "Elite Legal Consultants",
+          "description": "Our office includes elite legal consultants and lawyers with expertise and comprehensive knowledge covering all aspects of legal matters."
+        },
+        {
+          "title": "Professional Expertise",
+          "description": "Comprehensive knowledge in commercial, criminal, civil, corporate, investment, and family law with professional association memberships."
+        },
+        {
+          "title": "Litigation Specialists",
+          "description": "Specialized in litigation before all court levels, from First Instance to Supreme Court, including dispute resolution committees."
+        },
+        {
+          "title": "Professional Ethics",
+          "description": "Unwavering commitment to maintaining professional ethics standards and confidentiality in all client dealings."
+        }
+      ],
+      "commitment": {
+        "title": "Our Commitment to Excellence",
+        "points": [
+          {
+            "title": "Professional Standards",
+            "description": "Members of relevant professional associations locally, regionally, and internationally"
+          },
+          {
+            "title": "Comprehensive Coverage",
+            "description": "Expertise across all levels of courts and specialized dispute resolution committees"
+          },
+          {
+            "title": "Client Trust",
+            "description": "Unwavering commitment to professional ethics and confidentiality standards"
+          }
+        ]
+      }
+    }
+  }
+}

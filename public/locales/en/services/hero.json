@@ -1,0 +1,43 @@
+{
+  "badge": "COMPREHENSIVE LEGAL SERVICES",
+  "heading": {
+    "title": "Expert Legal",
+    "titletwo": "Services",
+    "titlethree": "Across the GCC",
+    "highlight": "Services"
+  },
+  "description": "From corporate law to individual representation, from government institutions to specialized banking services, Al-Khaldi Law Firm provides comprehensive legal solutions backed by over 25 years of professional excellence and deep expertise across all legal domains.",
+  "cta": {
+    "primary": "Explore Our Services",
+    "secondary": "Contact Us Today"
+  },
+  "stats": [
+    { "number": "500+", "label": "Cases Handled" },
+    { "number": "25+", "label": "Years Experience" },
+    { "number": "4", "label": "Service Categories" },
+    { "number": "6", "label": "GCC Countries" }
+  ],
+  "services": [
+    {
+      "title": "Corporate Services",
+      "description": "Company incorporation, IP protection, mergers & acquisitions"
+    },
+    {
+      "title": "Government Relations",
+      "description": "Legislative consultations, regulatory compliance, governance"
+    },
+    {
+      "title": "Individual Services",
+      "description": "Family law, criminal defense, personal legal matters"
+    },
+    {
+      "title": "Legal Support",
+      "description": "Banking services, arbitration, risk management"
+    }
+  ],
+  "serviceCategoriesHeading": "Our Service Categories",
+  "floatingStats": {
+    "years": "25+ Years",
+    "trusted": "Trusted"
+  }
+}

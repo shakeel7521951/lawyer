@@ -1,0 +1,20 @@
+{
+  "contact": {
+     "friday": "Vendredi :",
+     "saturday": "Samedi :",
+     "closed": "Fermé",
+     "sunthur": "Dimanche - Jeudi :",
+    "getInTouch": "Contactez-nous",
+    "maintitle": "Contactez-nous",
+    "title1": "Prêt à discuter de",
+    "title2": "vos affaires juridiques ?",
+    "desc": "Notre équipe juridique expérimentée est là pour vous fournir des solutions juridiques complètes. Planifiez votre consultation dès aujourd'hui et laissez-nous protéger vos intérêts.",
+    "call": "Appelez-nous",
+    "email": "Envoyez-nous un email",
+    "visit": "Visitez-nous",
+    "sendMsg": "Envoyer un message",
+    "wtsp": "Whatsapp",
+    "busHour": "Heures d'ouverture"
+  }
+}
+

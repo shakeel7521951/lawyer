@@ -1,0 +1,40 @@
+{
+  "header": {
+    "badge": "NOTRE APPROCHE",
+    "title": "Notre",
+    "titletwo": "Processus Juridique",
+    "description": "De la consultation initiale à la résolution réussie, nous suivons une méthodologie éprouvée qui associe excellence académique et expertise pratique afin d’offrir des résultats juridiques optimaux."
+  },
+  "steps": [
+    {
+      "step": "1",
+      "title": "Consultation Initiale",
+      "description": "Consultation complète et gratuite pour comprendre vos besoins juridiques et fournir une première évaluation basée sur notre expertise dans tous les domaines du droit."
+    },
+    {
+      "step": "2",
+      "title": "Analyse Juridique",
+      "description": "Notre équipe de juristes effectue une analyse approfondie fondée sur des connaissances scientifiques et une expérience professionnelle afin d’élaborer la meilleure stratégie juridique."
+    },
+    {
+      "step": "3",
+      "title": "Documentation & Préparation",
+      "description": "Préparation minutieuse de tous les documents juridiques, contrats et plaidoiries avec une attention particulière aux détails et le respect des lois et règlements applicables."
+    },
+    {
+      "step": "4",
+      "title": "Représentation Juridique",
+      "description": "Représentation experte devant toutes les juridictions, de la première instance à la Cour suprême, y compris les comités spécialisés et les tribunaux d’arbitrage."
+    },
+    {
+      "step": "5",
+      "title": "Résolution de l’Affaire",
+      "description": "Résolution efficace des affaires juridiques grâce à nos procédures accélérées sans compromettre la qualité du service, garantissant les meilleurs résultats pour nos clients."
+    },
+    {
+      "step": "6",
+      "title": "Accompagnement Continu",
+      "description": "Conseil et accompagnement juridique continus, intégrant de nouvelles méthodes et avancées technologiques pour fournir des solutions juridiques modernes aux besoins futurs."
+    }
+  ]
+}
