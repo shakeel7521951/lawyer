@@ -1,5 +1,14 @@
-const { i18n } = require("./next-i18next.config");
+import pkg from './next-i18next.config.js';
+const { i18n } = pkg;
 
-module.exports = {
-  i18n,
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export', // generates /out folder for Hostinger
+  images: { unoptimized: true },
+  eslint: { ignoreDuringBuilds: true },
+  experimental: {
+    i18n,
+  },
 };
+
+export default nextConfig;
